@@ -7,6 +7,14 @@
 
 Adafruit_NeoKey_1x4 neokey;
 
+uint8_t previous_buttons = 0;
+
+const int num_keys = 4;
+
+// Physical layout is reversed
+// uint8_t notes[] = {64,67,69,71};
+uint8_t notes[] = {71,69,67,64};
+
 
 #include <BLEMidi.h>
 
@@ -93,6 +101,8 @@ void loop() {
     neokey.pixels.setPixelColor(3, 0);
   }  
 
+  previous_buttons = buttons;
+
   neokey.pixels.show();
   
   delay(10);    // don't print too fast
@@ -103,12 +113,12 @@ void loop() {
   // TODO - trigger / hold based on key down / up
   if(BLEMidiServer.isConnected()) {             // If we've got a connection, we send an A4 during one second, at full velocity (127)
 
-    if (buttons & (1<<0)) {
-      BLEMidiServer.noteOn(0, 69, 127);
-      Serial.println("NoteOn");
-      delay(10);
-      BLEMidiServer.noteOff(0, 69, 127);        // Then we make a delay of one second before returning to the beginning of the loop
-      Serial.println("NoteOff");
+    for (int i = 0; i < num_keys; i++) {
+      if (buttons & (1<<i)) {
+        BLEMidiServer.noteOn(0, notes[i], 127);
+        delay(10);
+        BLEMidiServer.noteOff(0, notes[i], 127);        // Then we make a delay of one second before returning to the beginning of the loop
+      }
     }
   }
 }
