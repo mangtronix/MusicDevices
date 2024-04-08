@@ -7,6 +7,9 @@
 
 Adafruit_NeoKey_1x4 neokey;
 
+
+#include <BLEMidi.h>
+
 // First button decreases speed
 // Second button increases speed
 
@@ -17,6 +20,12 @@ const int max_speed = 10;
 void setup() {
   Serial.begin(115200);
   while (! Serial) delay(10);
+
+  Serial.println("Initializing bluetooth");
+  BLEMidiServer.begin("M&S");
+  Serial.println("Waiting for connections...");
+  //BLEMidiServer.enableDebugging();  // Uncomment if you want to see some debugging output from the library (not much for the server class...)
+
    
   if (! neokey.begin(0x30)) {
     Serial.println("Could not start NeoKey, check wiring?");
@@ -88,6 +97,20 @@ void loop() {
   
   delay(10);    // don't print too fast
   j += speed;          // make colors cycle
+
+
+  // Send MIDI as appropriate
+  // TODO - trigger / hold based on key down / up
+  if(BLEMidiServer.isConnected()) {             // If we've got a connection, we send an A4 during one second, at full velocity (127)
+
+    if (buttons & (1<<0)) {
+      BLEMidiServer.noteOn(0, 69, 127);
+      Serial.println("NoteOn");
+      delay(10);
+      BLEMidiServer.noteOff(0, 69, 127);        // Then we make a delay of one second before returning to the beginning of the loop
+      Serial.println("NoteOff");
+    }
+  }
 }
 
 
