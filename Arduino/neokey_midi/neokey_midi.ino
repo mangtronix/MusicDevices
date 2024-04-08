@@ -1,3 +1,7 @@
+/*
+ * Adapted from https://learn.adafruit.com/neokey-1x4-qt-i2c/arduino
+ */
+
 #include "Adafruit_NeoKey_1x4.h"
 #include "seesaw_neopixel.h"
 
