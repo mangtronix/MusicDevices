@@ -13,7 +13,8 @@ const int num_keys = 4;
 
 // Physical layout is reversed
 // uint8_t notes[] = {64,67,69,71};
-uint8_t notes[] = {71,69,67,64};
+uint8_t notes[] = {71, 69, 67, 64};
+uint8_t note_on[] = {false, false, false, false}; // Track note status
 
 
 #include <BLEMidi.h>
@@ -105,6 +106,7 @@ void loop() {
 
   neokey.pixels.show();
   
+  // $$$ take out arbitrary delay
   delay(10);    // don't print too fast
   j += speed;          // make colors cycle
 
@@ -114,10 +116,19 @@ void loop() {
   if(BLEMidiServer.isConnected()) {             // If we've got a connection, we send an A4 during one second, at full velocity (127)
 
     for (int i = 0; i < num_keys; i++) {
+      // Check button state
       if (buttons & (1<<i)) {
-        BLEMidiServer.noteOn(0, notes[i], 127);
-        delay(10);
-        BLEMidiServer.noteOff(0, notes[i], 127);        // Then we make a delay of one second before returning to the beginning of the loop
+        // Button is just pressed or held
+        if (!note_on[i]) {
+          // Turn note on
+          BLEMidiServer.noteOn(0, notes[i], 127);
+          note_on[i] = true;
+        }
+      } else {
+        if (note_on[i]) {
+          BLEMidiServer.noteOff(0, notes[i], 127);
+          note_on[i] = false;
+        }
       }
     }
   }
