@@ -1,5 +1,10 @@
 /*
  * Adapted from https://learn.adafruit.com/neokey-1x4-qt-i2c/arduino
+ * 
+ * Michael Ang
+ * @mangtronix
+ #
+ # 2024-04
  */
 
 #include "Adafruit_NeoKey_1x4.h"
@@ -11,9 +16,10 @@ uint8_t previous_buttons = 0;
 
 const int num_keys = 4;
 
-// Physical layout is reversed
-// uint8_t notes[] = {64,67,69,71};
-uint8_t notes[] = {71, 69, 67, 64};
+// $$$ add more scales
+// Em pentatonic
+uint8_t notes[] = {64,67,69,71};
+// uint8_t notes[] = {71, 69, 67, 64}; // Physical layout is reversed
 uint8_t note_on[] = {false, false, false, false}; // Track note status
 
 
@@ -32,10 +38,10 @@ void setup() {
 
   Serial.println("Initializing bluetooth");
   BLEMidiServer.begin("M&S");
-  Serial.println("Waiting for connections...");
+  Serial.println("Available for connections...");
   //BLEMidiServer.enableDebugging();  // Uncomment if you want to see some debugging output from the library (not much for the server class...)
 
-   
+  Serial.println("Connecting to NeoKey");
   if (! neokey.begin(0x30)) {
     Serial.println("Could not start NeoKey, check wiring?");
     while(1) delay(10);
@@ -58,15 +64,20 @@ void setup() {
 uint8_t j=0;  // this variable tracks the colors of the LEDs cycle.
 
 void loop() {
+  // $$$ change to using interrupt?
   uint8_t buttons = neokey.read();
 
   
+  // Update pixels every loop - not timed!
+  // If the buttons are *not* pressed the color will get set to black
   for (int i=0; i< neokey.pixels.numPixels(); i++) {
     neokey.pixels.setPixelColor(i, Wheel(((i * 256 / neokey.pixels.numPixels()) + j) & 255));
   }  
   
   if (buttons & (1<<0)) {
+    #ifdef SERIAL_DEBUG
     Serial.println("Button A");
+    #endif
 
     // Increase speed
     speed += 1;
@@ -79,7 +90,9 @@ void loop() {
   }
 
   if (buttons & (1<<1)) {
+    #ifdef SERIAL_DEBUG
     Serial.println("Button B");
+    #endif
 
     // Decrease speed
     speed -= 1;
@@ -91,28 +104,32 @@ void loop() {
   }
   
   if (buttons & (1<<2)) {
+    #ifdef SERIAL_DEBUG
     Serial.println("Button C");
+    #endif
   } else {
     neokey.pixels.setPixelColor(2, 0);
   }
 
   if (buttons & (1<<3)) {
+    #ifdef SERIAL_DEBUG
     Serial.println("Button D");
+    #endif
   } else {
     neokey.pixels.setPixelColor(3, 0);
   }  
 
   previous_buttons = buttons;
 
+  // Needs to be updated every loop for (untimed) cycling animations
   neokey.pixels.show();
   
   // $$$ take out arbitrary delay
-  delay(10);    // don't print too fast
+  //delay(10);    // don't print too fast
   j += speed;          // make colors cycle
 
 
   // Send MIDI as appropriate
-  // TODO - trigger / hold based on key down / up
   if(BLEMidiServer.isConnected()) {             // If we've got a connection, we send an A4 during one second, at full velocity (127)
 
     for (int i = 0; i < num_keys; i++) {
