@@ -10,10 +10,24 @@
 #include "Adafruit_NeoKey_1x4.h"
 #include "seesaw_neopixel.h"
 
+// Serial debugging of notes, etc
+#define SERIAL_DEBUG
+
+// NeoSlider
+// A0 on back was cut to give 0x31 I2C address
+#define  NEOSLIDER_I2C_ADDR 0x31
+#define  NEOSLIDER_ANALOGIN   18
+#define  NEOSLIDER_PIXELOUT 14
+
+uint16_t last_slide_val = 0;
+uint8_t slide_tolerance = 1;
+
+Adafruit_seesaw seesaw;
+seesaw_NeoPixel slider_pixels = seesaw_NeoPixel(4, NEOSLIDER_PIXELOUT, NEO_GRB + NEO_KHZ800);
+
+// NeoKey
 Adafruit_NeoKey_1x4 neokey;
-
 uint8_t previous_buttons = 0;
-
 const int num_keys = 4;
 
 // $$$ add more scales
@@ -35,6 +49,45 @@ const int max_speed = 10;
 void setup() {
   Serial.begin(115200);
   while (! Serial) delay(10);
+
+  #ifdef SERIAL_DEBUG
+  delay(100); // For host serial to be ready to receive
+  #endif
+
+  Serial.println("Mangtronix coming online");
+
+
+  if (!seesaw.begin(NEOSLIDER_I2C_ADDR)) {
+    Serial.println(F("NeoSlider seesaw not found!"));
+    // TODO -  continue without neoslider
+    while(1) delay(10); // wait forever
+  }
+
+  uint16_t pid;
+  uint8_t year, mon, day;
+
+  seesaw.getProdDatecode(&pid, &year, &mon, &day);
+  Serial.print("seesaw found PID: ");
+  Serial.print(pid);
+  Serial.print(" datecode: ");
+  Serial.print(2000+year); Serial.print("/");
+  Serial.print(mon); Serial.print("/");
+  Serial.println(day);
+
+  if (pid != 5295) {
+    Serial.println(F("Wrong NeoSlider seesaw PID"));
+    while (1) delay(10);
+  }
+  if (!slider_pixels.begin(NEOSLIDER_I2C_ADDR)){
+    Serial.println("seesaw pixels not found!");
+    while(1) delay(10);
+  }
+  Serial.println(F("NeoSlider seesaw started OK!"));
+
+  slider_pixels.setBrightness(255);
+  slider_pixels.clear();
+  slider_pixels.show(); // Initialize all pixels
+
 
   Serial.println("Initializing bluetooth");
   BLEMidiServer.begin("M&S");
@@ -59,16 +112,35 @@ void setup() {
     neokey.pixels.show();
     delay(50);
   }
+
+  Serial.println("Setup finished");
 }
 
 uint8_t j=0;  // this variable tracks the colors of the LEDs cycle.
 
 void loop() {
   // $$$ change to using interrupt?
+  // Read buttons
   uint8_t buttons = neokey.read();
 
+  // Read slider - ignore small changes
+  uint16_t slide_val = seesaw.analogRead(NEOSLIDER_ANALOGIN);
+  if (abs(slide_val - last_slide_val) > slide_tolerance) {
+    #ifdef SERIAL_DEBUG
+    Serial.println(slide_val);
+    #endif
+    last_slide_val = slide_val;
+  }
+
+  // Update slider NeoPixels
+  // TODO - only if changed
+  for (uint8_t i=0; i< slider_pixels.numPixels(); i++) {
+    // $$$ better mapping of colours
+    slider_pixels.setPixelColor(i, Wheel(slide_val / 8)); // Go halfway through wheel (don't loop back to same color)
+  }
+  slider_pixels.show();
   
-  // Update pixels every loop - not timed!
+  // Update pixels every loop - $$$ should be timed animation instead
   // If the buttons are *not* pressed the color will get set to black
   for (int i=0; i< neokey.pixels.numPixels(); i++) {
     neokey.pixels.setPixelColor(i, Wheel(((i * 256 / neokey.pixels.numPixels()) + j) & 255));
