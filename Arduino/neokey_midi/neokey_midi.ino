@@ -30,6 +30,22 @@ Adafruit_NeoKey_1x4 neokey;
 uint8_t previous_buttons = 0;
 const int num_keys = 4;
 
+// Display
+#include <Wire.h>
+#include <Adafruit_GFX.h>
+#include <Adafruit_SH110X.h>
+#include <Adafruit_Debounce.h>
+
+Adafruit_SH1107 display = Adafruit_SH1107(64, 128, &Wire);
+
+#define BUTTON_A 15
+#define BUTTON_B 32
+#define BUTTON_C 14
+
+// BUTTON_C is physically at top in this design
+Adafruit_Debounce buttonA(BUTTON_C, LOW);
+Adafruit_Debounce buttonB(BUTTON_B, LOW);
+Adafruit_Debounce buttonC(BUTTON_A, LOW);
 
 //// MIDI
 
@@ -63,6 +79,8 @@ void setup() {
 
   Serial.println("Mangtronix coming online");
 
+  // Set up display
+  setupDisplay();
 
   if (!seesaw.begin(NEOSLIDER_I2C_ADDR)) {
     Serial.println(F("NeoSlider seesaw not found!"));
@@ -236,6 +254,37 @@ void loop() {
     BLEMidiServer.controlChange(midi_channel, cc_number, cc_val);
     last_cc_val = cc_val;
   }
+
+
+  // Update display
+  int displayNeedsRedraw = 0;
+
+  buttonA.update();
+  buttonB.update();
+  buttonC.update();
+
+  // Board is rotated, remap buttons
+
+  if(buttonA.justPressed()) {
+    display.print("A");
+    displayNeedsRedraw = true;
+  }
+
+  if(buttonB.justPressed()) {
+    display.print("B");
+    displayNeedsRedraw = true;
+  }
+
+  if(buttonC.justPressed()) {
+    // Clear screen
+    display.fillScreen(0);
+    display.setCursor(0,0);
+    displayNeedsRedraw = true;
+  }
+
+  if (displayNeedsRedraw) {
+    display.display();
+  }  
 }
 
 
@@ -259,4 +308,35 @@ uint32_t Wheel(byte WheelPos) {
 
 uint8_t sliderToCC(uint16_t sliderVal) {
   return sliderVal / 8;
+}
+
+void setupDisplay() {
+  Serial.println("128x64 OLED FeatherWing test");
+  delay(250); // wait for the OLED to power up
+  display.begin(0x3C, true); // Address 0x3C default
+
+  Serial.println("OLED begun");
+
+  // Clear the buffer.
+  display.clearDisplay();
+  display.display();
+
+  display.setRotation(3);
+
+  // text display tests
+  display.setTextSize(2);
+  display.setTextColor(SH110X_WHITE);
+  display.setCursor(0,0);
+  display.println("Mangtronix");
+  display.setTextSize(1);
+  display.display(); // actually display all of the above
+
+
+  pinMode(BUTTON_A, INPUT_PULLUP);
+  pinMode(BUTTON_B, INPUT_PULLUP);
+  pinMode(BUTTON_C, INPUT_PULLUP);
+  buttonA.begin();
+  buttonB.begin();
+  buttonC.begin();
+
 }
