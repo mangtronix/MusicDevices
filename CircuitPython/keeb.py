@@ -16,10 +16,19 @@ from digitalio import DigitalInOut, Direction, Pull
 from adafruit_debouncer import Debouncer
 import neopixel
 
+import usb_midi
+import adafruit_midi
+from adafruit_midi.note_on import NoteOn
+from adafruit_midi.note_off import NoteOff
+
+# Set true to log
+serial_debug = False
+
 
 # Pins for our keys
 keeb_pins = [board.D5, board.D6, board.D9, board.D10]
 keeb_colors = [(255, 23, 123), (255, 155, 0), (0,0,255,0), (139,0,139)]
+keeb_notes = [60,61,62,63] # MIDI notes
 
 # NeoPixel strip
 pixel_pin = board.A1
@@ -45,6 +54,12 @@ for keeb_pin in keeb_pins:
     switch = Debouncer(pin)
     keeb_switches.append(switch)
 
+
+# MIDI setup
+midi_channel = 1
+midi = adafruit_midi.MIDI(midi_out=usb_midi.ports[1],
+                          out_channel=midi_channel-1)
+
 while True:
     pixels_need_update = False # True if we need to redisplay
 
@@ -54,13 +69,16 @@ while True:
 
         # Switches are pullups - go low when pressed
         if switch.fell:
-            print("Switch %d pressed" % (index + 1))
+            if serial_debug:
+                print("Switch %d pressed" % (index + 1))
             pixels[index] = keeb_colors[index]
+            midi.send(NoteOn(keeb_notes[index]))
             pixels_need_update = True
 
         elif switch.rose:
             pixels[index] = (0, 0, 0)
             pixels_need_update = True
+            midi.send(NoteOff(keeb_notes[index]))
 
 
         # Map LED to first button
