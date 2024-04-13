@@ -10,6 +10,9 @@
 #include "Adafruit_NeoKey_1x4.h"
 #include "seesaw_neopixel.h"
 
+// Speed for I2C in attempt to go faster - $$$ causes glitches - need to change pullups?
+// #define I2C_SPEED 400000
+
 // Serial debugging of notes, etc
 // #define SERIAL_DEBUG
 
@@ -53,6 +56,7 @@ uint8_t midi_channel = 0;
 
 // $$$ add more scales
 // Em pentatonic
+uint8_t note_count = 4;
 uint8_t notes[] = {64,67,69,71};
 // uint8_t notes[] = {71, 69, 67, 64}; // Physical layout is reversed
 uint8_t note_on[] = {false, false, false, false}; // Track note status
@@ -61,6 +65,13 @@ uint8_t cc_number = 0;
 uint8_t last_cc_val = 0;
 
 #include <BLEMidi.h>
+
+int ble_midi_was_connected = 0;
+
+// It takes a long time between BLE connection and Ableton receiving the messages
+// We send all notes off multiple times after connection
+const int ble_noteoff_resends = 8;
+const int ble_resend_delay = 500;
 
 // First button decreases speed
 // Second button increases speed
@@ -71,6 +82,7 @@ const int max_speed = 10;
 
 void setup() {
   Serial.begin(115200);
+
   while (! Serial) delay(10);
 
   #ifdef SERIAL_DEBUG
@@ -85,6 +97,7 @@ void setup() {
   if (!seesaw.begin(NEOSLIDER_I2C_ADDR)) {
     Serial.println(F("NeoSlider seesaw not found!"));
     // TODO -  continue without neoslider
+
     while(1) delay(10); // wait forever
   }
 
@@ -117,6 +130,7 @@ void setup() {
   Serial.println("Initializing bluetooth");
   BLEMidiServer.begin("M&S");
   Serial.println("Available for connections...");
+  updateStatus("Waiting...");
   //BLEMidiServer.enableDebugging();  // Uncomment if you want to see some debugging output from the library (not much for the server class...)
 
   Serial.println("Connecting to NeoKey");
@@ -126,6 +140,13 @@ void setup() {
   }
   
   Serial.println("NeoKey started!");
+
+  #ifdef I2C_SPEED
+  Serial.print("Setting I2C speed ");
+  Serial.println(I2C_SPEED);
+  Wire.setClock(I2C_SPEED);
+  #endif
+
 
   for (uint16_t i=0; i<neokey.pixels.numPixels(); i++) {
     neokey.pixels.setPixelColor(i, Wheel(map(i, 0, neokey.pixels.numPixels(), 0, 255)));
@@ -144,6 +165,8 @@ void setup() {
 uint8_t j=0;  // this variable tracks the colors of the LEDs cycle.
 
 void loop() {
+  int display_needs_redraw = 0;
+
   // $$$ change to using interrupt?
   // Read buttons
   uint8_t buttons = neokey.read();
@@ -228,6 +251,27 @@ void loop() {
 
   // Send MIDI as appropriate
   if(BLEMidiServer.isConnected()) {             // If we've got a connection, we send an A4 during one second, at full velocity (127)
+    if (!ble_midi_was_connected) {
+      Serial.println("BLE MIDI connected");
+      updateStatus("Connected");
+      display.display(); // OK to do here, waiting anyway
+
+      // It takes time for the connection to be active, and then more
+      // time for Ableton to set up its connection
+      allNotesOff();
+      Serial.print(F("  Sending all notes off "));
+      Serial.print(ble_noteoff_resends);
+      Serial.println(F(" times"));
+      for (int i = 0; i < ble_noteoff_resends; i++) {
+        Serial.print(F("  Wait "));
+        Serial.print(i + 1);
+        Serial.print(" ");
+        Serial.println(ble_resend_delay);
+        delay(ble_resend_delay);
+        allNotesOff();
+      }
+      ble_midi_was_connected = true;
+    }
 
     // Send notes
     for (int i = 0; i < num_keys; i++) {
@@ -246,6 +290,14 @@ void loop() {
         }
       }
     }
+  } else {
+    // Not connected
+    if (ble_midi_was_connected) {
+      Serial.println("Disconnected");
+      updateStatus("Disconnected");
+      display_needs_redraw = true;
+      ble_midi_was_connected = 0;
+    }
   }
 
   // Send controllers
@@ -257,7 +309,6 @@ void loop() {
 
 
   // Update display
-  int displayNeedsRedraw = 0;
 
   buttonA.update();
   buttonB.update();
@@ -266,23 +317,24 @@ void loop() {
   // Board is rotated, remap buttons
 
   if(buttonA.justPressed()) {
-    display.print("A");
-    displayNeedsRedraw = true;
+    updateStatus("Button A");
+    allNotesOff(); // XXX for testing
+    display_needs_redraw = true;
   }
 
   if(buttonB.justPressed()) {
-    display.print("B");
-    displayNeedsRedraw = true;
+    updateStatus("Button B");
+    display_needs_redraw = true;
   }
 
   if(buttonC.justPressed()) {
     // Clear screen
     display.fillScreen(0);
     display.setCursor(0,0);
-    displayNeedsRedraw = true;
+    display_needs_redraw = true;
   }
 
-  if (displayNeedsRedraw) {
+  if (display_needs_redraw) {
     display.display();
   }  
 }
@@ -339,4 +391,22 @@ void setupDisplay() {
   buttonB.begin();
   buttonC.begin();
 
+}
+
+void allNotesOff() {
+  if(BLEMidiServer.isConnected()) {
+    Serial.println("All notes off");
+    BLEMidiServer.controlChange(midi_channel, 123, 0);
+  }
+}
+
+// Update status line of screen
+void updateStatus(char* message) {
+  // Use fixed length buffer so we can overwrite existing text
+  char buffer[] = "                \0";
+  int x = 0, y = 30, w = 128, h = 30; // $$$ get width from display
+  strncpy(buffer, message, strlen(buffer));
+  display.fillRect(x, y, w, h, 0);
+  display.setCursor(x, y);
+  display.print(buffer);
 }
