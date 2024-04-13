@@ -11,7 +11,7 @@
 #include "seesaw_neopixel.h"
 
 // Serial debugging of notes, etc
-#define SERIAL_DEBUG
+// #define SERIAL_DEBUG
 
 // NeoSlider
 // A0 on back was cut to give 0x31 I2C address
@@ -30,12 +30,19 @@ Adafruit_NeoKey_1x4 neokey;
 uint8_t previous_buttons = 0;
 const int num_keys = 4;
 
+
+//// MIDI
+
+uint8_t midi_channel = 0;
+
 // $$$ add more scales
 // Em pentatonic
 uint8_t notes[] = {64,67,69,71};
 // uint8_t notes[] = {71, 69, 67, 64}; // Physical layout is reversed
 uint8_t note_on[] = {false, false, false, false}; // Track note status
 
+uint8_t cc_number = 0;
+uint8_t last_cc_val = 0;
 
 #include <BLEMidi.h>
 
@@ -204,22 +211,30 @@ void loop() {
   // Send MIDI as appropriate
   if(BLEMidiServer.isConnected()) {             // If we've got a connection, we send an A4 during one second, at full velocity (127)
 
+    // Send notes
     for (int i = 0; i < num_keys; i++) {
       // Check button state
       if (buttons & (1<<i)) {
         // Button is just pressed or held
         if (!note_on[i]) {
           // Turn note on
-          BLEMidiServer.noteOn(0, notes[i], 127);
+          BLEMidiServer.noteOn(midi_channel, notes[i], 127);
           note_on[i] = true;
         }
       } else {
         if (note_on[i]) {
-          BLEMidiServer.noteOff(0, notes[i], 127);
+          BLEMidiServer.noteOff(midi_channel, notes[i], 127);
           note_on[i] = false;
         }
       }
     }
+  }
+
+  // Send controllers
+  uint8_t cc_val = sliderToCC(slide_val);
+  if (cc_val != last_cc_val) {
+    BLEMidiServer.controlChange(midi_channel, cc_number, cc_val);
+    last_cc_val = cc_val;
   }
 }
 
@@ -240,4 +255,8 @@ uint32_t Wheel(byte WheelPos) {
    return seesaw_NeoPixel::Color(0, WheelPos * 3, 255 - WheelPos * 3);
   }
   return 0;
+}
+
+uint8_t sliderToCC(uint16_t sliderVal) {
+  return sliderVal / 8;
 }
