@@ -20,3 +20,109 @@
 - [IM SHOW](#im-show) – Show final project / Update final documentation
 
 Note: Exact due dates for assignments and readings are indicated in Brightspace
+
+# Week 8
+
+## Week 8.1
+Project lifecycle - proposals, implementation plans, production, user testing, presentation, documentation
+
+## Week 8.2
+Project proposal work session and feedback
+
+### Homework - Week 8.2
+
+Due before start of next class
+
+- **Task:**  
+---
+
+# Week 9
+
+## Week 9.1
+Project proposal presentation and feedback
+
+## Week 9.2
+Workshop: Topics from proposed projects
+
+### Homework - Week 9.2
+
+Due before start of next class
+
+- **Task:**  
+---
+
+# Week 10
+
+## Week 10.1
+Telling your story / Documenting your work / Performance / Exhibition installation
+
+## Week 10.2
+Workshop: Project production
+
+### Homework - Week 10.2
+
+Due before start of next class
+
+- **Task:**  
+---
+
+# Week 11
+
+## Week 11.1
+Guest speaker: Industry professional (e.g. Mutek Dubai, Electronic Musician)
+
+## Week 11.2
+Workshop: Project production
+
+### Homework - Week 11.2
+
+Due before start of next class
+
+- **Task:**  
+---
+
+# Week 12
+
+## Week 12.1
+Music performance
+
+## Week 12.2
+Project progress presentations and feedback
+
+### Homework - Week 12.2
+
+Due before start of next class
+
+- **Task:**  
+---
+
+# Week 13
+
+## Week 13.1
+Project user testing and feedback
+
+## Week 13.2
+Workshop: Project production
+
+### Homework - Week 13.2
+
+Due before start of next class
+
+- **Task:**  
+---
+
+# Week 14
+
+## Week 14.1
+- Project check-in
+- Course review
+
+## Week 14.2
+In-class project presentations, show setup
+
+### Homework - Week 14.2
+
+Due before start of next class
+
+- **Task:**  
+---
