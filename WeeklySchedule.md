@@ -39,6 +39,8 @@ Music Devices, NIME and Sound Installations
 - [New Interfaces for Musical Expression (nime.org)](https://www.nime.org/)
 - [Push Turn Move (Bjooks)](https://bjooks.com/products/push-turn-move-the-book)
 - [10 Sound Installations that Inspire and Create Connection (Medium)](https://medium.com/@oskarlindskog/10-sound-installations-that-inspire-and-create-connection-73eabd5ce075)
+- [Cave of Sounds](https://caveofsounds.com/) - Tim Murray-Browne
+    - Public installation of 8 bespoke interactive musical instruments
 
 ### Homework - Week 1.2
 
