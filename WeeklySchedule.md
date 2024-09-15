@@ -39,7 +39,7 @@ Music Devices, NIME and Sound Installations
 - [New Interfaces for Musical Expression (nime.org)](https://www.nime.org/)
 - [Push Turn Move (Bjooks)](https://bjooks.com/products/push-turn-move-the-book)
 - [10 Sound Installations that Inspire and Create Connection (Medium)](https://medium.com/@oskarlindskog/10-sound-installations-that-inspire-and-create-connection-73eabd5ce075)
-- [Cave of Sounds](https://caveofsounds.com/) - Tim Murray-Browne
+- [Cave of Sounds](https://caveofsounds.com/) - 
     - Public installation of 8 bespoke interactive musical instruments
 
 ### Homework - Week 1.2
@@ -63,7 +63,7 @@ Applied music theory, Western and beyond
 - [tuning.ableton.com](https://tuning.ableton.com/)
     - "A tuning system is a way to organize musical pitch, by narrowing down from the infinite number of possible pitches to a usable subset."
     - [Listen (tuning.ableton.com)](https://tuning.ableton.com/introduction/listen/)
-        - Different scales
+        - Different scales and corresponding Ableton files
 
 ## Week 2.2
 Workshop: Ableton, software synthesizers
@@ -114,7 +114,9 @@ Hardware kit
 - [Adafruit NeoKey 1x4 QT I2C Breakout (Adafruit)](https://learn.adafruit.com/neokey-1x4-qt-i2c)
 - [Adafruit NeoSlider (Adafruit)](https://learn.adafruit.com/adafruit-neoslider)
 - Many more sensors / boards available for checkout from IM Lab / Connect2
-  - [https://www.nyuadim.com/resources/ (nyuadim)](NYUAD IM Resources / Booking)
+    - [NYUAD IM Resources (nyuadim)](https://www.nyuadim.com/resources/)
+        - Lab hours
+        - [Connect2 Arts Booking (Intranet)](https://nyuad-artsbooking.nyu.edu/)
 
 ## Week 3.2
 Workshop: Arduino for NIME
