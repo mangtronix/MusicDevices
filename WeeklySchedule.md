@@ -51,10 +51,13 @@ Music Devices, NIME and Sound Installations
 
 Due before start of next class
 
-- **Read** {music theory}
-  - For details on the reading see Brightspace->Discussions->Reading 1
-  - **Post** your response in the discussion forum
-  - **Be ready** to discuss the topic in class
+- **Read** [Microtonality and the Struggle for Fretlessness in the Digital Age
+ (CTM)](https://www.ctm-festival.de/magazine/microtonality-and-the-struggle-for-fretlessness-in-the-digital-age)]
+    - What do you think of Allami's statement "Modern technology, as much as it seems neutral and empowering, is heavily laden with cultural and political asymmetries that often go unnoticed and unchallenged."?
+    - Can you think of examples where technology is biased towards a certain culture? How could the technology be changed to allow a wider range of expression?
+- **Post** your response in the discussion forum
+    - See Brightspace->Discussions->Readings for details
+- **Be ready** to discuss the topic in class
 
 ---
 # Week 2
@@ -129,7 +132,21 @@ Overall Live setup - VST with Ableton tuning - playing "E" on MIDI controller
 
 Due before start of next class
 
-- **Task:**  
+- **Create** a musical composition in Ableton Live using a non-standard scale
+    - Make a short piece of music (max 2-3 minutes) with at least a main melody using Ableton's tuning feature
+        - Use the bundled (tuning aware) instruments in Ableton or VST instruments that support Ableton's tuning system (see instructions above)
+        - Feel free to add percussion and other elements as you wish
+    - What tuning system interests you and why?
+    - How does your choice of tuning system affect your composition?
+    - References
+        - [Using Tuning Systems (Ableton)](https://www.ableton.com/en/live-manual/12/using-tuning-systems/)
+        - [Ableton Tuning Guide](https://tuning.ableton.com/)
+        - [Explore the tuning systems in Live 12 (tuning.ableton.com)](https://tuning.ableton.com/introduction/where-to-go-from-here/)
+- **Post** your work in the discussion forum
+    - See Brightspace->Discussions->Exercises for details
+- **Be ready** to show / discuss the work in class
+
+
 ---
 
 # Week 3
@@ -241,6 +258,14 @@ Due before start of next class
 - **Sign up** for Autodesk Fusion personal / education license
     - [Autodesk Fusion](https://www.autodesk.com/products/fusion-360/personal)
     - Will be used later in the course
+- **Create** a basic MIDI controller
+    - Write an Arduino sketch (.ino) that implements a basic MIDI controller on our ESP32-S3 Feather board
+    - Your controller should send note on/off messages as well as continous controller messages
+    - Use your MIDI controller to control sounds in Ableton Live
+- **Post** your work in the discussion forum
+    - See Brightspace->Discussions->Exercises for details
+- **Be ready** to show / discuss your work in class
+
 ---
 
 # Week 4
