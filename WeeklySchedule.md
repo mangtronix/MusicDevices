@@ -233,7 +233,9 @@ Workshop: Arduino for NIME
 
 Due before start of next class
 
-- **Task:**  
+- **Sign up** for Autodesk Fusion personal / education license
+    - [Autodesk Fusion](https://www.autodesk.com/products/fusion-360/personal)
+    - Will be used later in the course
 ---
 
 # Week 4
@@ -353,30 +355,65 @@ Due before start of next class
 
 ## Week 6.1
 Group project overview, work examples, rapid prototyping
+- Final project overview
+- Work examples
+- Rapid prototyping
+- Laser cutting
+    - [Laser Cutting Basics](https://www.instructables.com/Laser-Cutting-Basics/)
+    - [IM Lab Laser Cutting presentation (Google Slides)](https://docs.google.com/presentation/d/1l6x9M0nAiH3uMHQKQtethxi2cAhx7vBo1srYkkMT4bA/edit?usp=sharing)
+- 3D printing
+    - [https://www.instructables.com/3D-Printing-Basics/](https://www.instructables.com/3D-Printing-Basics/)
+    - 3D design
+        - [Autodesk Fusion](https://www.autodesk.com/products/fusion-360/personal)
+            - Personal and educational licenses available
+    - Community models
+        - User uploaded models
+        - Quality varies
+        - Good for test prints and inspiration
+        - [Printables](https://www.printables.com/)
+        - [Thingiverse](https://www.thingiverse.com/)
+        - [Cults 3D](https://cults3d.com/)
 
 ## Week 6.2
-Workshop: 2D / 3D design with Autodesk Fusion
+Workshop: 3D printing with IM Lab Instructor
+    - IM Lab Print Farm
+        - 4x [Prusa MK4S](https://www.prusa3d.com/product/original-prusa-mk4s-3d-printer-5/)
+        - Ultimaker also available
+    - [Fusion 360](https://www.autodesk.com/products/fusion-360/personal)
+        - Professional 3D modeling tool for Computer Aided Design (CAD) and Manufacturing (CAM)
+    - [PrusaSlicer](https://www.prusa3d.com/page/prusaslicer_424/)
+        - Converts solid 3D model to code for 3D printer
+        - Useful for estimating print time
 
 ### Homework - Week 6.2
 
 Due before start of next class
 
-- **Task:**  
+- **Prepare** an idea for a musical device / final project
+    - Be ready to share your idea in the Idea Lab next week
 ---
 
 # Week 7
 
 ## Week 7.1
 Idea Lab
+- Opening remarks
+- Share project ideas (come to front of class and share idea)
+- Form groups
+- Refine project ideas
+
 
 ## Week 7.2
-Project group formation, start project proposal, initial project feedback
+Project proposal preparation
+- Finalize project groups
+- Start project proposal
+- Individual group feedback sessions
 
 ### Homework - Week 7.2
 
 Due before start of next class
 
-- **Task:**  
+- **Continue ideating** for your final project
 ---
 # SPRING BREAK
 
