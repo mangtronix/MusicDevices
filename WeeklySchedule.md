@@ -155,6 +155,8 @@ Due before start of next class
 Arduino for NIME
 - [Arduino in 100 Seconds (YouTube)](https://www.youtube.com/watch?v=1ENiVwk8idM)
 
+- Distribute class kits
+
 Hardware kit
 - [Adafruit ESP32-S3 Reverse TFT Feather (Adafruit)](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/overview)
     - Uses Adafruit [Feather](https://learn.adafruit.com/adafruit-feather/overview) form factor
@@ -199,24 +201,6 @@ MIDI - Musical Instrument Digital Interface
     - Designed as unidirectional protocol, sender to receiver
         - e.g. keyboard -> sound module, MIDI keyboard -> computer -> synthesizer
         - controller and receiver have to be in agreement on control mapping
-    - Wireless MIDI
-        - MIDI over paired Bluetooth (older technique, not generally used anymore)
-        - MIDI over Bluetooth LE (Low Energy)
-            - Allows wireless connection to iOS, Mac, Android, Windows
-            - iOS
-                - Look for Bluetooth symbol in your app's MIDI settings
-                - Or use [midimittr](https://apps.apple.com/us/app/midimittr/id925495245) to find and connect BLE controller
-                    - To connect a BLE controller go to Devices tab
-            - MacOS
-                - Audio MIDI Setup.app -> Window -> Show MIDI Studio -> (Bluetooth symbol)
-                    - After connecting the BLE controller will show as regular MIDI source
-            - Android
-                - [MIDI BLE Connect](https://play.google.com/store/apps/details?id=com.mobileer.example.midibtlepairing&hl=en)
-            - Windows
-                - Create a virtual loopback MIDI port using [loopMIDI](https://www.tobias-erichsen.de/software/loopmidi.html)
-                - Use [BLE-MIDI Connect](https://apps.microsoft.com/detail/9nvmlzttwwvl?hl=en-US&gl=US) to scan for BLE controller and connect to loopback MIDI port
-                - Go into your app and select loopback MIDI port
-                - Controller -> loopMIDI -> music app
 - [MIDI for Makers (Adafruit)](https://learn.adafruit.com/midi-for-makers)
 - MIDI 2.0
     - Just released in 2020, starting to be used
@@ -229,6 +213,14 @@ MIDI - Musical Instrument Digital Interface
         - "Can MIDI 2.0 make it easier to have microtonal control and different non-western scales? Yes, MIDI 2.0 Voice Channel Messages allow Per Note precise control of the pitch of every note to better support non-western scales, arbitrary pitches, note retuning, dynamic pitch fluctuations or inflections, or to escape equal temperament when using the western 12 tone scale."
     - A bit early for us to use MIDI 2.0 but something to keep an eye on
         - [AM MIDI 2.0 Lib for Arduino (GitHub)](https://github.com/midi2-dev/AM_MIDI2.0Lib)
+
+
+### Homework Week 3.1
+
+Due before start of next class
+
+**Pick up** course textbook *Push, Turn, Move* from Bookstore
+**Read** *Push, Turn, Move* pp. 14-27, 34
 
 ## Week 3.2
 Workshop: Arduino for NIME
@@ -251,6 +243,12 @@ Workshop: Arduino for NIME
 
 - [Installing Libraries (Arduino)](https://docs.arduino.cc/software/ide-v1/tutorials/installing-libraries/)
 
+- Create our first MIDI controller using ESP32-S3 Feather
+- Run sample code for sending our first note
+    - [MIDIUSB_write.ino (GitHub)](https://github.com/arduino-libraries/MIDIUSB/blob/master/examples/MIDIUSB_write/MIDIUSB_write.ino)
+    - Sends note on/off in simple loop with blocking delay
+
+
 ### Homework - Week 3.2
 
 Due before start of next class
@@ -258,6 +256,8 @@ Due before start of next class
 - **Sign up** for Autodesk Fusion personal / education license
     - [Autodesk Fusion](https://www.autodesk.com/products/fusion-360/personal)
     - Will be used later in the course
+- **Peruse** the Control section of *Push, Turn, Move* pp. 60-123 to see a catalogue of different physical UI elements
+    - Can skip the interviews for now
 - **Create** a basic MIDI controller
     - Write an Arduino sketch (.ino) that implements a basic MIDI controller on our ESP32-S3 Feather board
     - Your controller should send note on/off messages as well as continous controller messages
@@ -280,12 +280,54 @@ Musical interface design, MIDI
 - [MIDIUSB Library for Arduino
  (GitHub)](https://github.com/arduino-libraries/MIDIUSB)
 
+- Wireless MIDI
+    - MIDI over classic / paired Bluetooth (older technique, not commonly used anymore)
+    - MIDI over WiFi
+        - Possible using [RTP-MIDI](https://midi.org/rtp-midi-or-midi-over-networks)
+        - Not easily accessible for end-users
+        - Generally complicated and difficult to use
+        - [Share MIDI information over a network in Audio MIDI Setup on Mac (Apple)](https://support.apple.com/en-ae/guide/audio-midi-setup/ams1012/mac)
+    - MIDI over Bluetooth LE (Low Energy)
+        - Allows wireless connection to iOS, Mac, Android, Windows
+        - Introduces some latency
+            - Can be surprisingly low, but with larger pauses after some time
+            - Competing for bandwidth with other devices like WiFi
+        - iOS
+            - Look for Bluetooth symbol in your app's MIDI settings
+            - Or use [midimittr](https://apps.apple.com/us/app/midimittr/id925495245) to find and connect BLE controller
+                - To connect a BLE controller go to Devices tab
+        - MacOS
+            - Audio MIDI Setup.app -> Window -> Show MIDI Studio -> (Bluetooth symbol)
+                - After connecting the BLE controller will show as regular MIDI source
+        - Android
+            - [MIDI BLE Connect](https://play.google.com/store/apps/details?id=com.mobileer.example.midibtlepairing&hl=en)
+        - Windows
+            - Create a virtual loopback MIDI port using [loopMIDI](https://www.tobias-erichsen.de/software/loopmidi.html)
+            - Use [BLE-MIDI Connect](https://apps.microsoft.com/detail/9nvmlzttwwvl?hl=en-US&gl=US) to scan for BLE controller and connect to loopback MIDI port
+            - Go into your app and select loopback MIDI port
+            - Controller -> loopMIDI -> music app
+
+
+### Homework - Week 4.1
+
+Due before start of next class
+
+- **Read** an interview that interests you in *Push, Turn, Move*
+    - Summarize the points from the interview that most interest you in one paragraph
+    - What do you think is the most important contribution that the interviewee has made to electronic instrument interface design?
+    - What principles did you learn that you can apply to creating your own musical device?
+- **Post** your response in the discussion forum
+    - See Brightspace->Discussions->Readings for details
+- **Be ready** to discuss the topic in class
+
 ## Week 4.2
 Workshop: MIDI controllers, wired and wireless
-- Create our first MIDI controller using ESP32-S3 Feather
-- Run sample code for sending our first note
-    - [MIDIUSB_write.ino (GitHub)](https://github.com/arduino-libraries/MIDIUSB/blob/master/examples/MIDIUSB_write/MIDIUSB_write.ino)
-    - Sends note on/off in simple loop with blocking delay
+- Create a wireless MIDI controller
+    - Install [ESP32-BLE-MIDI library (GitHub)](https://github.com/max22-/ESP32-BLE-MIDI)
+    - Load [01-Basic-Midi-Device (GitHub)](https://github.com/max22-/ESP32-BLE-MIDI/blob/master/examples/01-Basic-Midi-Device/01-Basic-Midi-Device.ino)
+    - Modify example with your own unique device name
+        - e.g. ```BLEMidiServer.begin("Mangtronix");```
+    
 
 - Latency in audio systems
     - What is latency?
@@ -312,17 +354,20 @@ Workshop: MIDI controllers, wired and wireless
 
 Due before start of next class
 
-- **Task:**  
+- **Create** a wireless MIDI controller
+    - Write an Arduino sketch (.ino) that implements a wireless MIDI controller using Bluetooth LE
+    - Make sure your device advertises a unique device name
+    - Use your MIDI controller to control sounds in Ableton Live
+- **Post** your work in the discussion forum
+    - See Brightspace->Discussions->Exercises for details
+- **Be ready** to show / discuss your work in class
+ 
 ---
 
 # Week 5
 
 ## Week 5.1
 Musical sensors
-
-
-## Week 5.2
-Workshop: Musical sensors
 - What types of input do we want to sense?
 - How expressive are our inputs and outputs?
 - What feedback does the performer get?
@@ -374,11 +419,47 @@ Workshop: Musical sensors
 ](https://www.youtube.com/watch?v=2BCiOTJjcQQ)
         - Etc, etc
 
+### Homework
+
+Due before start of next class
+
+**Watch** [Moldover's Approach to Controllerism (1 of 2) (YouTube)](https://www.youtube.com/watch?v=L2McDeSKiOU) and [Moldover's Approach to Controllerism (2 of 2)
+ (YouTube)](https://youtu.be/dznjQIarboY?si=oWTpcaw2dQ_p_V9q)
+**Read** [Moldover-The Godfather of Controllerism
+(MIDI Association)](https://midi.org/moldover-the-godfather-of-controllerism)
+    - What makes Moldover's approach to controller design effective or not effective?
+    - What aspects of controller design and sound design can help you connect with an audience?
+- **Post** your response in the discussion forum
+    - See Brightspace->Discussions->Readings for details
+- **Be ready** to discuss the topic in class
+
+## Week 5.2
+Workshop: Musical sensors
+- Connect buttons to trigger notes
+- Connect potentiometers / faders to send CCs
+- Connect a different sensor, e.g. LDR light sensor
+    - Trigger note or CC
+
 ### Homework - Week 5.2
 
 Due before start of next class
 
-- **Task:**  
+- **Perform** using your MIDI controller
+    - Add more controls to your MIDI controller that allow you to perform a short piece of music in the style of Controllerism
+    - Use at least one non-traditional UI element (something other than key, pot, fader)
+        - e.g. light sensor, bend sensor, non-traditional switch
+    - Create an Ableton Live set that goes with your MIDI controller
+        - Some suggestions for possible integrations:
+            - Trigger notes directly in instruments
+            - Start / stop clips
+            - Map to synthesizer parameters
+            - Map to device parameters, for example arpeggiator settings
+    - Record a short video of a performance using your controller and Ableton Live set
+- **Post** your work in the discussion forum
+    - See Brightspace->Discussions->Exercises for details
+    - Host your video on a site like YouTube or Vimeo and embed it in your post
+- **Be ready** to show / discuss your work in class
+
 ---
 
 # Week 6
@@ -420,6 +501,15 @@ Workshop: 3D printing with IM Lab Instructor
 ### Homework - Week 6.2
 
 Due before start of next class
+
+- **Create** a 3D design for a custom component for a musical device
+    - For example, create a custom knob cap, enclosure, key design, sensor holder
+    - Use Autodesk Fusion and create a shareable link to your design
+    - Your design should take less than 1 hour to print
+- **Print** your design
+- **Post** your work in the discussion forum
+    - See Brightspace->Discussions->Exercises for details
+- **Be ready** to show / discuss your work in class
 
 - **Prepare** an idea for a musical device / final project
     - Be ready to share your idea in the Idea Lab next week
