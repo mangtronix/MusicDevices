@@ -153,6 +153,61 @@ Hardware kit
         - Lab hours
         - [Connect2 Arts Booking (Intranet)](https://nyuad-artsbooking.nyu.edu/)
 
+MIDI - Musical Instrument Digital Interface
+- Standard for communication between digital instruments dating back to the 80s
+- Allows e.g. a controller keyboard to be hooked up to a synthesizer module, or computer to record notes from a controller and play them back on a software or hardware synthesizer
+- [Introduction to the MIDI Standard (Indiana University)](https://cecm.indiana.edu/361/midi.html)
+- [MIDI (Wikipedia)](https://en.wikipedia.org/wiki/MIDI) - comprehensive overview
+- MIDI 1.0 is a very basic protocol
+    - Uses 7-bit values (0-127)
+    - Common messages
+        - Note on/off
+            - Based on 12-tone piano keyboard (e.g. C, C#, D, D#, E, F)
+        - Continous controllers (CC) - e.g. knob value from 0-127
+            - Can suffer from "stair stepping" audible artifacts
+        - Pitch bend - 14-bit value from 0-16383
+            - Pitch bend of 8192 means "no bend" / wheel centered
+        - Modulation wheel - 14-bit value from 0-16383
+            - Used to add expression depending on specific synthesizer / patch, e.g. player moves the mod wheel to smoothly change the sound
+        - Clock, start, stop
+        - System Exclusive - non-standard messages, e.g. upload / download synthesizer patch from software editor
+    - Transmission speed / bandwidth is low (31250 bits per second, like an old modem)
+        - Have to limit the rate of control change messages
+        - [MIDI Advantages / Disadvantages (CCRMA)](https://ccrma.stanford.edu/~gary/controllers/midi.html)
+    - Designed as unidirectional protocol, sender to receiver
+        - e.g. keyboard -> sound module, MIDI keyboard -> computer -> synthesizer
+        - controller and receiver have to be in agreement on control mapping
+    - Wireless MIDI
+        - MIDI over paired Bluetooth (older technique, not generally used anymore)
+        - MIDI over Bluetooth LE (Low Energy)
+            - Allows wireless connection to iOS, Mac, Android, Windows
+            - iOS
+                - Look for Bluetooth symbol in your app's MIDI settings
+                - Or use [midimittr](https://apps.apple.com/us/app/midimittr/id925495245) to find and connect BLE controller
+                    - To connect a BLE controller go to Devices tab
+            - MacOS
+                - Audio MIDI Setup.app -> Window -> Show MIDI Studio -> (Bluetooth symbol)
+                    - After connecting the BLE controller will show as regular MIDI source
+            - Android
+                - [MIDI BLE Connect](https://play.google.com/store/apps/details?id=com.mobileer.example.midibtlepairing&hl=en)
+            - Windows
+                - Create a virtual loopback MIDI port using [loopMIDI](https://www.tobias-erichsen.de/software/loopmidi.html)
+                - Use [BLE-MIDI Connect](https://apps.microsoft.com/detail/9nvmlzttwwvl?hl=en-US&gl=US) to scan for BLE controller and connect to loopback MIDI port
+                - Go into your app and select loopback MIDI port
+                - Controller -> loopMIDI -> music app
+- [MIDI for Makers (Adafruit)](https://learn.adafruit.com/midi-for-makers)
+- MIDI 2.0
+    - Just released in 2020, starting to be used
+    - Allows bidirectional communication, "conversation" between devices
+        - e.g. controller can ask "are you a mixer?" and configure itself accordingly or ask the name of a parameter that is being controlled in order to show it on a display as it's being manipulated
+    - Higher resolution (e.g. 32-bit control values with 4 million steps)
+    - More controllers
+    - Better timing (e.g. play notes of chord together)
+    - [What Musicians & Artists need to know about MIDI 2.0 (MIDI Association)](https://midi.org/what-musicians-artists-need-to-know-about-midi-2-0)
+        - "Can MIDI 2.0 make it easier to have microtonal control and different non-western scales? Yes, MIDI 2.0 Voice Channel Messages allow Per Note precise control of the pitch of every note to better support non-western scales, arbitrary pitches, note retuning, dynamic pitch fluctuations or inflections, or to escape equal temperament when using the western 12 tone scale."
+    - A bit early for us to use MIDI 2.0 but something to keep an eye on
+        - [AM MIDI 2.0 Lib for Arduino (GitHub)](https://github.com/midi2-dev/AM_MIDI2.0Lib)
+
 ## Week 3.2
 Workshop: Arduino for NIME
 - [Arduino IDE Setup for ESP32-S3 Reverse TFT Feather(Adafruit)](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/arduino-ide-setup-2)
@@ -236,6 +291,56 @@ Musical sensors
 
 ## Week 5.2
 Workshop: Musical sensors
+- What types of input do we want to sense?
+- How expressive are our inputs and outputs?
+- What feedback does the performer get?
+- Continuous vs quantized
+    - Fretless oud vs fretted guitar
+    - Upright bass vs Fender "Precision" Bass
+- Novice vs expert users
+- User interface elements
+    - [Workflow: Finding Inspiring Instruments (Bjooks)](https://bjooks.com/blogs/blog/workflow-finding-inspiring-instruments)
+        - Interface difficulty vs User skills
+            - Simple interface satisfies initial curiosity, but leads to boredom for advanced users
+            - Difficult interface is initially frustrating and puts off novice users, but can be rewarding for advanced users
+        - See also *Push, Turn, Move* pp. 24-27
+- Common controller interface elements
+    - Button
+    - Rotary potentiometer (pot)
+    - Linear potentiometer (fader)
+    - Keys
+    - Wheel
+    - Indicators / displays
+        - LED
+        - Numeric display
+        - Text display
+        - Graphic display
+    - Touch surface
+        - Linear
+        - XY pad
+    - Capacitive touch
+    - Pressure senstivity
+        - Keyboard aftertouch
+            - Monophonic / channel aftertouch
+            - Polyphonic (MPE) aftertouch
+    - Sensors (some examples)
+        - Breath
+        - Controller motion
+            - Gyroscope / accelerometer (attitude sensors)
+        - Presence / human motion
+            - Theremin
+            - Distance sensors
+            - Camera tracking
+        - Light
+        - Plants
+    - External data (data sonification)
+        - Note: for our class we would build a real-time sensor interface
+        - Wind
+        - DNA sequence
+        - Planetary motion
+            - [The Sounds of a New Planetary System (NASA / YouTube)
+](https://www.youtube.com/watch?v=2BCiOTJjcQQ)
+        - Etc, etc
 
 ### Homework - Week 5.2
 
