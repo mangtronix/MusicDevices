@@ -431,7 +431,7 @@ Due before start of next class
 - **Read** [Moldover-The Godfather of Controllerism
 (MIDI Association)](https://midi.org/moldover-the-godfather-of-controllerism)
     - What makes Moldover's approach to controller design effective or not effective?
-    - What aspects of controller design and sound design can help you connect with an audience?
+    - How can combining controller design and sound design help you connect with an audience? What techniques are you planning to use?
 - **Post** your response in the discussion forum
     - See Brightspace->Discussions->Readings for details
 - **Be ready** to discuss the topic in class
