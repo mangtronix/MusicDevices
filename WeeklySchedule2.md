@@ -14,8 +14,8 @@
 - [Week 9](#week-9) – Project proposal presentation, implementation starts!
 - [Week 10](#week-10) – Telling your story / documenting your work
 - [Week 11](#week-11) – Guest Speaker, project production
-- [Week 12](#week-12) – Music performance, project feedback
-- [Week 13](#week-13) – User testing
+- [Week 12](#week-12) – Music performance, project feedback, user testing
+- [Week 13](#week-13) – Final project production / polish
 - [Week 14](#week-14) – Final project presentations
 - [IM SHOW](#im-show) – Show final project / Update final documentation
 
@@ -42,6 +42,7 @@ Project proposal work session and feedback
 Due before start of next class
 
 - **Finish** your Project Proposal
+    - See [Syllabus->Project Proposal](https://docs.google.com/document/d/1NaQrfuxLaoMKMixZ_BOIEzCix7Gx2jokPu_qFPAmvVw/edit#heading=h.disn06hi3v03) for details
 - **Prepare** to present your Project Proposal in class
 ---
 
@@ -61,7 +62,8 @@ Topics from proposed projects
 
 Due before start of next class
 
-- **Task:**  
+- **Work** on your implementation plan
+    - Identify most difficult / uncertain parts of project
 ---
 
 # Week 10
@@ -110,8 +112,8 @@ Telling your story / Documenting your work / Performance / Exhibition installati
 
 Due before start of next class
 
- **Make** a storyboard for your project video
-
+- **Create** a storyboard for your project video
+- **Post** your storyboard to Brightspace->Discussions
 
 ## Week 10.2
 Storyboard presentations
@@ -120,15 +122,26 @@ Storyboard presentations
     - What are the main aspects of the device?
     - Are there areas you did not understand?
 
-Workshop: Project production
-- Share your project project progress
-- Individual consultations with each group
+User testing
+- [The complete guide to usability testing (UserTesting)](https://www.usertesting.com/resources/guides/usability-testing)
+- [Usability Testing 101
+ (NN/g)](https://www.nngroup.com/articles/usability-testing-101/)
+- Identify areas of your design that you want to test
+- Have user try to complete a set of tasks with minimal prompting
+- Record user interaction
+- Ask users questions after the test
+- Identify areas where users were confused
+- Collect qualitative experience of users
+- Analyze results and write summary
+- Make plan for resolving pain points and improving user experience
 
 ### Homework - Week 10.2
 
-Due before start of next class
+- **Post** a progress report to Brightspace->Discussions
+    - Current project status
+    - Trouble areas
+    - Next steps
 
-- **Task:**  
 ---
 
 # Week 11
@@ -147,7 +160,11 @@ Workshop: Project production
 
 Due before start of next class
 
-- **Task:**  
+- **Conduct user testing** of your project
+    - Test your project with multiple users
+- **Post** the results of your user testing
+    - See [Syllabus->Project User Test](https://docs.google.com/document/d/1NaQrfuxLaoMKMixZ_BOIEzCix7Gx2jokPu_qFPAmvVw/edit#heading=h.nptms79n6zl8) for details
+
 ---
 
 # Week 12
@@ -166,29 +183,16 @@ Music performance and documentation
  (Georgia Tech)](https://guthman.gatech.edu/feature/guthman-instruments-change-music)
 
 
+
 ## Week 12.2
 Project progress presentations and feedback
 - Present your project to the class for feedback
 
-User testing
-- [The complete guide to usability testing (UserTesting)](https://www.usertesting.com/resources/guides/usability-testing)
-- [Usability Testing 101
- (NN/g)](https://www.nngroup.com/articles/usability-testing-101/)
-- Identify areas of your design that you want to test
-- Have user try to complete a set of tasks with minimal prompting
-- Record user interaction
-- Ask users questions after the test
-- Identify areas where users were confused
-- Collect qualitative experience of users
-- Analyze results and write summary
-- Make plan for resolving pain points and improving user experience
+IM End of Semester Show preparation
+- Space allocations
+- Technical needs
 
-### Homework - Week 12.2
 
-Due before start of next class
-
-- **Conduct** your user testing
-- **Post** the results of your user testing to the class blog
 ---
 
 # Week 13
@@ -208,26 +212,38 @@ Workshop: Final project production
 
 Due before start of next class
 
-- **Finish** your final project
+- **Start** your public project page on the class website with your project documentation
+    - See [Syllabus->Project Documentation](https://docs.google.com/document/d/1NaQrfuxLaoMKMixZ_BOIEzCix7Gx2jokPu_qFPAmvVw/edit#heading=h.vksuuzysxkk4) for details
+    - Your project page does not need to be 100% complete but should include the project description and a representative image
+    - This is the *public facing* project page that will be shared externally
+        - Your "behind the scenes" technical documentation will be a separate post
+    - You can create the photos / videos now or at the IM End of Semester Show
+    - Your project page should be suitable for public viewing as a "teaser" / promo for the End of Semester Show
+    - Your project page will have a static URL that you can use to promote your project (e.g. print postcards, email NYUAD community)
 ---
 
 # Week 14
 
 ## Week 14.1
 - Project check-in
+- Review project web pages
 - Course review
+
+### Homework
+
+Due before start of next class
+
+- **Finish** your project
+- **Post** your "behind the scenes" project documentation to the class website
+    - See [Syllabus->Final Project](https://docs.google.com/document/d/1NaQrfuxLaoMKMixZ_BOIEzCix7Gx2jokPu_qFPAmvVw/edit#heading=h.2noy7dxf6pp6) for details
 
 ## Week 14.2
 In-class project presentations
 
 IM End of Semester Show setup
 - Space allocations
+- Technical needs
 
-### Homework - Week 14.2
-
-Due before start of next class
-
-- **Task:**  
 ---
 # IM End of Semester Show
 - Each group must show their project
@@ -236,4 +252,7 @@ Due before start of next class
 
 ### Homework
 
-**Update** your project web page with the final video and photos
+- **Update** your project web page with the final video and photos
+    - See [Syllabus->Project Web Page](https://docs.google.com/document/d/1NaQrfuxLaoMKMixZ_BOIEzCix7Gx2jokPu_qFPAmvVw/edit#heading=h.vksuuzysxkk4) for details
+
+# Congratulations, you've made a musical device!
