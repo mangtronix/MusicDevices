@@ -172,6 +172,8 @@ Project progress presentations and feedback
 
 User testing
 - [The complete guide to usability testing (UserTesting)](https://www.usertesting.com/resources/guides/usability-testing)
+- [Usability Testing 101
+ (NN/g)](https://www.nngroup.com/articles/usability-testing-101/)
 - Identify areas of your design that you want to test
 - Have user try to complete a set of tasks with minimal prompting
 - Record user interaction
