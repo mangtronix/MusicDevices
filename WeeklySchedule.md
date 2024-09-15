@@ -82,7 +82,6 @@ Workshop: Ableton, software synthesizers
     - [tuning.ableton.com](https://tuning.ableton.com/)
 - Using alternative scales
     - [A Guide to the Maqam Tuning Presets for Ableton Live 12 (Ableton)](https://tuning.ableton.com/arabic-maqam/maqam-guide/)
-- 
 
 ### Homework - Week 2.2
 
@@ -113,7 +112,7 @@ Hardware kit
 - [Adafruit NeoKey 1x4 QT I2C Breakout (Adafruit)](https://learn.adafruit.com/neokey-1x4-qt-i2c)
 - [Adafruit NeoSlider (Adafruit)](https://learn.adafruit.com/adafruit-neoslider)
 - Many more sensors / boards available for checkout from IM Lab / Connect2
-  - [https://www.nyuadim.com/resources/]
+  - [https://www.nyuadim.com/resources/ (nyuadim)](NYUAD IM Resources / Booking)
 
 ## Week 3.2
 Workshop: Arduino for NIME
@@ -178,7 +177,7 @@ Workshop: MIDI controllers, wired and wireless
     - Musicians can adapt to a *fixed* latency by playing notes earlier
     - Wireless connections can add a variable latency
         - Interference and transmission loss can cause packets to be retransmitted
-    - The operating system and i/o system also adds latency
+    - The operating system and input/output system also adds latency
         - [Why is there so much latency on my android device?
  (Koala Sampler)](https://www.koalasampler.com/help/android/why-is-there-so-much-latency-on-my-android-device/)
 
