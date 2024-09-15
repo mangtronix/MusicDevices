@@ -35,7 +35,10 @@ Introduction
 
 ## Week 1.2
 
-NIME, Music Devices, and Sound Installations
+Music Devices, NIME and Sound Installations
+- [New Interfaces for Musical Expression (nime.org)](https://www.nime.org/)
+- [Push Turn Move (Bjooks)](https://bjooks.com/products/push-turn-move-the-book)
+- [10 Sound Installations that Inspire and Create Connection (Medium)](https://medium.com/@oskarlindskog/10-sound-installations-that-inspire-and-create-connection-73eabd5ce075)
 
 ### Homework - Week 1.2
 
@@ -51,6 +54,14 @@ Due before start of next class
 
 ## Week 2.1
 Applied music theory, Western and beyond
+- [Learn music theory in half an hour (Andrew Huang / YouTube)](https://youtu.be/rgaTLrZGlk0?si=n52AtMMm5wVyZF4t)
+- [Music Theory For Beginners (Taetro / YouTube)](https://www.youtube.com/watch?v=CluuHrr7HG4&list=PLoO2tOP2r-XvoFc7cnfYcomf1X0XcQvDC)
+- [Arabic maqam (Wikipedia)](https://en.wikipedia.org/wiki/Arabic_maqam)
+- [Pitch is political: learning Arabic maqams and decolonizing music](https://cdm.link/2024/08/pitch-is-political/)
+- [tuning.ableton.com](https://tuning.ableton.com/)
+    - "A tuning system is a way to organize musical pitch, by narrowing down from the infinite number of possible pitches to a usable subset."
+    - [Listen (tuning.ableton.com)](https://tuning.ableton.com/introduction/listen/)
+        - Different scales
 
 ## Week 2.2
 Workshop: Ableton, software synthesizers
@@ -84,7 +95,7 @@ Due before start of next class
 
 ## Week 3.1
 Arduino for NIME
-
+- [Arduino in 100 Seconds (YouTube)](https://www.youtube.com/watch?v=1ENiVwk8idM)
 
 Hardware kit
 - [Adafruit ESP32-S3 Reverse TFT Feather (Adafruit)](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/overview)
@@ -106,8 +117,24 @@ Hardware kit
 
 ## Week 3.2
 Workshop: Arduino for NIME
-- [Arduino IDE Setup (Adafruit)(https://learn.adafruit.com/esp32-s3-reverse-tft-feather/arduino-ide-setup-2)
-    - Need to overwrite pre-installed CircuitPython with Arduino 
+- [Arduino IDE Setup for ESP32-S3 Reverse TFT Feather(Adafruit)](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/arduino-ide-setup-2)
+    - Install Arduino IDE
+    - The board we are using is the Adafruit Feather ESP32-S3 Reverse TFT
+    - We need to get the latest board support for ESP32 provided by the manufacturer (Espressif)
+    - Add third-party board URL in Arduino IDE->Settings
+        - `https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json`
+    - Install Board Support Package via Tools->Board->Board Manager->Search for 'esp32 espressif'
+    - To verify look for Tools->Board->ESP32 Arduino->Adafruit Feather ESP32-S3 Reverse TFT
+    - We need to manually reset the board by pressing the reset button after uploading new code
+- Verify that your software / hardware is working
+    - [Load classic 'Blink' sketch (Adafruit)](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/using-with-arduino-ide)
+    - The first time we load the blink sketch can be a bit tricky because we need to overwrite the CircuitPython firmware that is pre-loaded on the board
+- Run the factory shipped demo
+    - Demonstrates using the TFT display, buttons, battery monitor, etc
+    - Requires us to install several Arduino libraries into the Arduino IDE
+    - [ESP32-S3 Reverse TFT Factory Shipped Demo (Adafruit)](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/factory-shipped-demo-2)
+
+- [Installing Libraries (Arduino)](https://docs.arduino.cc/software/ide-v1/tutorials/installing-libraries/)
 
 ### Homework - Week 3.2
 
@@ -120,10 +147,20 @@ Due before start of next class
 
 ## Week 4.1
 Musical interface design, MIDI
+- [DIY USB Midi Controller With Arduino: a Beginner's Guide
+(Instructables)](https://www.instructables.com/DIY-USB-Midi-Controller-With-Arduino-a-Beginners-G/)
+- [Create a MIDI Device
+ (Arduino tutorials)](https://docs.arduino.cc/tutorials/generic/midi-device/)
+- [How to Build Arduino MIDI Controllers - The Complete Guide (Nerd Musician / YouTube)](https://www.youtube.com/watch?v=IwfycC8rLos)
+- [MIDIUSB Library for Arduino
+ (GitHub)](https://github.com/arduino-libraries/MIDIUSB)
 
 ## Week 4.2
 Workshop: MIDI controllers, wired and wireless
-- 
+- Create our first MIDI controller using ESP32-S3 Feather
+- Run sample code for sending our first note
+    - [MIDIUSB_write.ino (GitHub)](https://github.com/arduino-libraries/MIDIUSB/blob/master/examples/MIDIUSB_write/MIDIUSB_write.ino)
+    - Sends note on/off in simple loop with blocking delay
 
 - Latency in audio systems
     - What is latency?
