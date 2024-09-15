@@ -14,8 +14,8 @@
 - [Week 9](WeeklySchedule2.md#week-9) – Project proposal presentation, implementation starts!
 - [Week 10](WeeklySchedule2.md#week-10) – Telling your story / documenting your work
 - [Week 11](WeeklySchedule2.md#week-11) – Guest Speaker, project production
-- [Week 12](WeeklySchedule2.md#week-12) – Music performance, project feedback
-- [Week 13](WeeklySchedule2.md#week-13) – User testing
+- [Week 12](WeeklySchedule2.md#week-12) – Music performance, project feedback, user testing
+- [Week 13](WeeklySchedule2.md#week-13) – Final project production / polish
 - [Week 14](WeeklySchedule2.md#week-14) – Final project presentations
 - [IM SHOW](WeeklySchedule2.md#im-show) – Show final project / Update final documentation
 
@@ -368,9 +368,6 @@ Group project overview, work examples, rapid prototyping
     - [IM Lab Laser Cutting presentation (Google Slides)](https://docs.google.com/presentation/d/1l6x9M0nAiH3uMHQKQtethxi2cAhx7vBo1srYkkMT4bA/edit?usp=sharing)
 - 3D printing
     - [https://www.instructables.com/3D-Printing-Basics/](https://www.instructables.com/3D-Printing-Basics/)
-    - 3D design
-        - [Autodesk Fusion](https://www.autodesk.com/products/fusion-360/personal)
-            - Personal and educational licenses available
     - Community models
         - User uploaded models
         - Quality varies
@@ -378,6 +375,11 @@ Group project overview, work examples, rapid prototyping
         - [Printables](https://www.printables.com/)
         - [Thingiverse](https://www.thingiverse.com/)
         - [Cults 3D](https://cults3d.com/)
+- Design for rapid prototyping
+    - [Autodesk Fusion](https://www.autodesk.com/products/fusion-360/personal)
+        - Personal and educational licenses available
+    - [Fusion 360 for Absolute Beginners (Lars Christensen / YouTube)](https://www.youtube.com/playlist?list=PL40d7srwyc_Ow4aaOGXlP2idPGwD7ruKg)
+
 
 ## Week 6.2
 Workshop: 3D printing with IM Lab Instructor
