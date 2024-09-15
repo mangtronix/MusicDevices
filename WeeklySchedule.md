@@ -219,8 +219,9 @@ MIDI - Musical Instrument Digital Interface
 
 Due before start of next class
 
-**Pick up** course textbook *Push, Turn, Move* from Bookstore
-**Read** *Push, Turn, Move* pp. 14-27, 34
+- **Pick up** course textbook *Push, Turn, Move* from Bookstore
+- **Read** *Push, Turn, Move* pp. 14-27, 34
+    - No response required
 
 ## Week 3.2
 Workshop: Arduino for NIME
@@ -258,6 +259,7 @@ Due before start of next class
     - Will be used later in the course
 - **Peruse** the Control section of *Push, Turn, Move* pp. 60-123 to see a catalogue of different physical UI elements
     - Can skip the interviews for now
+    - No response required
 - **Create** a basic MIDI controller
     - Write an Arduino sketch (.ino) that implements a basic MIDI controller on our ESP32-S3 Feather board
     - Your controller should send note on/off messages as well as continous controller messages
@@ -423,9 +425,10 @@ Musical sensors
 
 Due before start of next class
 
-**Watch** [Moldover's Approach to Controllerism (1 of 2) (YouTube)](https://www.youtube.com/watch?v=L2McDeSKiOU) and [Moldover's Approach to Controllerism (2 of 2)
+- **Watch** [Moldover's Approach to Controllerism (1 of 2) (YouTube)](https://www.youtube.com/watch?v=L2McDeSKiOU)
+- **Watch** [Moldover's Approach to Controllerism (2 of 2)
  (YouTube)](https://youtu.be/dznjQIarboY?si=oWTpcaw2dQ_p_V9q)
-**Read** [Moldover-The Godfather of Controllerism
+- **Read** [Moldover-The Godfather of Controllerism
 (MIDI Association)](https://midi.org/moldover-the-godfather-of-controllerism)
     - What makes Moldover's approach to controller design effective or not effective?
     - What aspects of controller design and sound design can help you connect with an audience?
@@ -489,14 +492,14 @@ Group project overview, work examples, rapid prototyping
 
 ## Week 6.2
 Workshop: 3D printing with IM Lab Instructor
-    - IM Lab Print Farm
-        - 4x [Prusa MK4S](https://www.prusa3d.com/product/original-prusa-mk4s-3d-printer-5/)
-        - Ultimaker also available
-    - [Fusion 360](https://www.autodesk.com/products/fusion-360/personal)
-        - Professional 3D modeling tool for Computer Aided Design (CAD) and Manufacturing (CAM)
-    - [PrusaSlicer](https://www.prusa3d.com/page/prusaslicer_424/)
-        - Converts solid 3D model to code for 3D printer
-        - Useful for estimating print time
+- IM Lab Print Farm
+    - 4x [Prusa MK4S](https://www.prusa3d.com/product/original-prusa-mk4s-3d-printer-5/)
+    - Ultimaker also available
+- [Fusion 360](https://www.autodesk.com/products/fusion-360/personal)
+    - Professional 3D modeling tool for Computer Aided Design (CAD) and Manufacturing (CAM)
+- [PrusaSlicer](https://www.prusa3d.com/page/prusaslicer_424/)
+    - Converts solid 3D model to code for 3D printer
+    - Useful for estimating print time
 
 ### Homework - Week 6.2
 
@@ -535,7 +538,7 @@ Project proposal preparation
 
 Due before start of next class
 
-- **Continue ideating** for your final project
+- **Continue developing** your idea for your final project
 ---
 # SPRING BREAK
 
