@@ -1,5 +1,9 @@
-# MusicDevices - IM-UH 3XXX
+# MusicDevices - IM-UH 3XXX - Michael Ang
 
 How do our interfaces to computers shape the possibilities for musical expression? If we create our own interfaces what new forms of expression are possible? Controllers for music production are often generic - in Music Devices students will design and build a new musical device using physical computing and rapid prototyping that is tailored for a specific mode of expression. The device could be a standalone musical instrument, controller for a synthesizer or DAW, sensors for a live performance / installation, or other physical interface for creating music. We will study the historic interaction between music technologies and music culture with particular focus on how digital music technologies have both enabled and constrained musical expression. The first half of the course focuses on individual production exercises and readings while the second half is devoted to a single final project. Technologies used will include Arduino, rapid prototyping with 3D printing / laser cutting, software synthesizers, digital music production, and wired / wireless MIDI. Students work in groups on the final project and are encouraged to form teams that include members with varying degrees of expertise in technology and music in order to create a music device that deftly mixes technology and musical practice.
 
 [Music Devices Syllabus](https://docs.google.com/document/d/1NaQrfuxLaoMKMixZ_BOIEzCix7Gx2jokPu_qFPAmvVw/edit?usp=sharing)
+
+[Weekly Schedule - Weeks 1-7](WeeklySchedule.md)
+
+[Weekly Schedule - Weeks 8-14](WeeklySchedule2.md)
