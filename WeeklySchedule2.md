@@ -150,6 +150,16 @@ User testing
 Guest speaker: Industry professional (e.g. Mutek Dubai, Electronic Musician)
 - TBD
 
+### Homework
+
+Due before start of next class
+
+- **Read** [Live Performancein the Age of Supercomputing
+ (Robert Henke)](https://roberthenke.com/interviews/supercomputing.html)
+    - What, to you, makes for a good live performance of electronic music?
+    - How will you connect with your music and your audience?
+- **Post** your response to Brightspace->Discussions->Readings
+
 ## Week 11.2
 Workshop: Project production
 - Share your project progress
