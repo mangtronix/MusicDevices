@@ -266,3 +266,4 @@ IM End of Semester Show setup
     - See [Syllabus->Project Web Page](https://docs.google.com/document/d/1NaQrfuxLaoMKMixZ_BOIEzCix7Gx2jokPu_qFPAmvVw/edit#heading=h.vksuuzysxkk4) for details
 
 # Congratulations, you've made a musical device!
+- Now go play it!
