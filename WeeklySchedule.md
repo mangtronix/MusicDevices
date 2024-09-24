@@ -411,6 +411,7 @@ Musical sensors
             - Distance sensors
             - Camera tracking
         - Light
+            - Laser distance
         - Plants
     - External data (data sonification)
         - Note: for our class we would build a real-time sensor interface
