@@ -95,12 +95,13 @@ Workshop: Ableton, software synthesizers
     - Using Ableton tuning with VSTs
         - Right-click device and "Enable MPE"
         - Only works with MPE-enabled VSTs
-        - Individual notes are preceded by pitch bend messages
+        - Individual notes are sent on separate MIDI channels and are preceded by a pitch bend that achieves the pitch from the tuning system
         - VST pitch bend range must be set to 48 semitones (+/- 2 octaves)
+        - Note: unfortunately the pitch bend from a non-MPE hardware controller will **not** affect the sound in the VST so you can't actually play in an Arabic keyboard style
     - Using Ableton tuning with MPE-enabled hardware synths
         - Use External Instrument device and select MPE as the output MIDI channel
         - See [MPE/Multi-channel Settings (Ableton)](https://www.ableton.com/en/live-manual/11/editing-mpe/#mpe-in-external-plug-ins)
-        - synthesizer pitch bend range must be set to 48 semitones (+/- 2 octaves)
+        - Synthesizer pitch bend range must be set to 48 semitones (+/- 2 octaves)
 
 
 Example log sending from Ableton to Protokol with tuning and MPE enabled. Note ```PITCHBEND``` sent before each ```NOTE_ON``` so that each note is played at the desired pitch. A value of 8192 corresponds to 
