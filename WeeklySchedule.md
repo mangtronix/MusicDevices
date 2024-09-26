@@ -97,7 +97,7 @@ Workshop: Ableton, software synthesizers
         - Only works with MPE-enabled VSTs
         - Individual notes are sent on separate MIDI channels and are preceded by a pitch bend that achieves the pitch from the tuning system
         - VST pitch bend range must be set to 48 semitones (+/- 2 octaves)
-        - Note: unfortunately the pitch bend from a non-MPE hardware controller will **not** affect the sound in the VST so you can't actually play in an Arabic keyboard style
+        - Note: for the pitch to be correct the bend range must be 48 semitones. For the pitch bend wheel to work the VST must respond to the pitch wheel even in MPE mode. E.g. Repro-5 supports 48 semitones but doesn't respect the pitch wheel in MPE mode, and MiniFreak V only allows 24 semitones bend.
     - Using Ableton tuning with MPE-enabled hardware synths
         - Use External Instrument device and select MPE as the output MIDI channel
         - See [MPE/Multi-channel Settings (Ableton)](https://www.ableton.com/en/live-manual/11/editing-mpe/#mpe-in-external-plug-ins)
