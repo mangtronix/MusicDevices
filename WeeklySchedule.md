@@ -407,10 +407,10 @@ Musical sensors
     - Sensors (some examples)
         - [Breath](https://www.youtube.com/watch?v=es92GqYBge0)
         - Controller motion
-            - Gyroscope / accelerometer (attitude sensors)
+            - [Gyroscope / accelerometer (attitude sensors)](https://www.youtube.com/watch?v=Wzjms3tgF6w)
         - Presence / human motion
             - [Theremin](https://www.youtube.com/watch?v=CWPtxGrBlU8&t=499s)
-            - Distance sensors
+            - [Distance sensors](https://www.instructables.com/Musical-Instrument-Using-Arduino-Ultrasonic-Distan/)
             - Camera tracking
         - Light
             - [Light Sensors](https://www.instructables.com/Illumaphone-Light-based-Electronic-Musical-Instrum/)
