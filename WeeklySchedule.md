@@ -412,6 +412,7 @@ Musical sensors
             - Distance sensors
             - Camera tracking
         - Light
+            - [Light Sensors](https://www.instructables.com/Illumaphone-Light-based-Electronic-Musical-Instrum/)
             - Laser distance
         - Plants
     - External data (data sonification)
