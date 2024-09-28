@@ -387,7 +387,7 @@ Musical sensors
 - Common controller interface elements
     - Button
     - Rotary potentiometer (pot)
-    - Linear potentiometer (fader)
+    - [Linear potentiometer (fader)](https://www.youtube.com/watch?v=YpkzLo6yx_g)
     - Keys
     - Wheel
     - Indicators / displays
@@ -397,14 +397,15 @@ Musical sensors
         - Graphic display
     - Touch surface
         - Linear
-        - XY pad
+        - [XY pad](https://mitxela.com/projects/ribbon_controller)
     - Capacitive touch
     - Pressure senstivity
+        - [Piezo Vibration Disks](https://www.youtube.com/watch?v=TiwmAPjXFcE) 
         - Keyboard aftertouch
             - Monophonic / channel aftertouch
             - Polyphonic (MPE) aftertouch
     - Sensors (some examples)
-        - Breath
+        - [Breath](https://www.youtube.com/watch?v=es92GqYBge0)
         - Controller motion
             - Gyroscope / accelerometer (attitude sensors)
         - Presence / human motion
@@ -414,10 +415,10 @@ Musical sensors
         - Light
             - [Light Sensors](https://www.instructables.com/Illumaphone-Light-based-Electronic-Musical-Instrum/)
             - Laser distance
-        - Plants
     - External data (data sonification)
         - Note: for our class we would build a real-time sensor interface
         - Wind
+        - [Plants](https://github.com/electricityforprogress/BiodataSonificationBreadboardKit/blob/ac8b28a86406faa1d3ad3d88cac917c3296f4fc5/Biodata%20Sonification%20-%20Arduino%20Shield%20Breadboard%20Kit%20v02.pdf)
         - DNA sequence
         - Planetary motion
             - [The Sounds of a New Planetary System (NASA / YouTube)
