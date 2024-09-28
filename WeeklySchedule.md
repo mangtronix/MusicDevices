@@ -408,7 +408,7 @@ Musical sensors
         - Controller motion
             - Gyroscope / accelerometer (attitude sensors)
         - Presence / human motion
-            - Theremin
+            - Theremin (https://www.youtube.com/watch?v=CWPtxGrBlU8&t=499s)
             - Distance sensors
             - Camera tracking
         - Light
