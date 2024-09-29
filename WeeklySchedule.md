@@ -388,7 +388,7 @@ Musical sensors
     - [Button](https://www.youtube.com/watch?v=nv42rTRwKIg)
     - [Rotary potentiometer (pot)](https://youtu.be/hcm5H6f8MI8?si=NXYf7GU4oFpOLFW9&t=1797)
     - [Linear potentiometer (fader)](https://www.youtube.com/watch?v=YpkzLo6yx_g)
-    - Keys
+    - [Keys](https://www.youtube.com/watch?v=FoXk6OL8GfQ)
     - Wheel
     - Indicators / displays
         - LED
@@ -414,7 +414,7 @@ Musical sensors
             - Camera tracking
         - Light
             - [Light Sensors](https://www.instructables.com/Illumaphone-Light-based-Electronic-Musical-Instrum/)
-            - Laser distance
+            - [Laser distance](https://www.youtube.com/watch?v=pddGR5Eyc0Q)
     - External data (data sonification)
         - Note: for our class we would build a real-time sensor interface
         - Wind
