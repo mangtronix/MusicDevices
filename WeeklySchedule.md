@@ -393,7 +393,7 @@ Musical sensors
     - Indicators / displays
         - LED
         - Numeric display
-        - Text display
+        - [Text display](https://www.youtube.com/watch?v=4pqeavhW_is)
         - Graphic display
     - Touch surface
         - Linear
