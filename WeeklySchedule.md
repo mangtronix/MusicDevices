@@ -399,13 +399,15 @@ Musical sensors
         - Linear
         - [XY pad](https://mitxela.com/projects/ribbon_controller)
     - [Capacitive touch](https://youtu.be/DQ7lrEOZrwc?si=JUcSrtJURW6rNfP-&t=351)
+    - [Flex Sensor](https://www.youtube.com/watch?v=WHePx-BSZvs)
+        - [Project from NYU Shanghai Students](https://wp.nyu.edu/mattkerseydocumentationblog/2023/03/22/jazz-hands-matthew-kersey-gottfried-haider/)
     - Pressure senstivity
         - [Piezo Vibration Disks](https://www.youtube.com/watch?v=TiwmAPjXFcE) 
         - Keyboard aftertouch
             - Monophonic / channel aftertouch
             - Polyphonic (MPE) aftertouch
     - Sensors (some examples)
-        - [Breath](https://www.youtube.com/watch?v=es92GqYBge0)
+        - [Breath]([https://www.youtube.com/watch?v=es92GqYBge0](https://www.youtube.com/watch?v=y6OzpsGPxNU))
         - Controller motion
             - [Gyroscope / accelerometer (attitude sensors)](https://www.youtube.com/watch?v=Wzjms3tgF6w)
         - Presence / human motion
