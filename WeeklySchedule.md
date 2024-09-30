@@ -407,7 +407,7 @@ Musical sensors
             - Monophonic / channel aftertouch
             - Polyphonic (MPE) aftertouch
     - Sensors (some examples)
-        - [Breath]([https://www.youtube.com/watch?v=es92GqYBge0](https://www.youtube.com/watch?v=y6OzpsGPxNU))
+        - [Breath](https://www.youtube.com/watch?v=es92GqYBge0)
         - Controller motion
             - [Gyroscope / accelerometer (attitude sensors)](https://www.youtube.com/watch?v=Wzjms3tgF6w)
         - Presence / human motion
