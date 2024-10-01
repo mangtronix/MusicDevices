@@ -167,8 +167,14 @@ MIDI - Musical Instrument Digital Interface
     - Designed as unidirectional protocol, sender to receiver
         - e.g. keyboard -> sound module, MIDI keyboard -> computer -> synthesizer
         - controller and receiver have to be in agreement on control mapping
-    - Not designed to represent fretless instruments or non-Western scale
-        - Demo of trying to play 
+    - Not designed to represent fretless instruments or non-Western scales
+        - [Oud Taksim Bayātī (بياتي, Uşşâk, Bayat) by Hesham Hamra (YouTube)](https://www.youtube.com/watch?v=1DrzYlc8DAM)
+            - This performance would be very difficult to represent using MIDI as it uses notes outside the 12-tone Western scale and incorporates string articulations as an important aspect of the performance
+        - Playing quarter tone and "microtonal" scales can be accomplished using specialized software or hardware
+            - [47SOUL - Intro To Shamstep (YouTube)](https://www.youtube.com/watch?v=5N0phc4nK-0)
+                - The keyboardist makes use of a special device ([Kelfar AK tuning converter](https://kelfar.net/ak-5-pro-world-scale-tuning-converter/)) designed specifically to enable Arabic scales for live performance
+        - Demo of playing Maqam Bayati inside Ableton Live, using Western scale, Ableton tuning, and dedicated software instrument (Taqsim SOLO)
+        - What kind of music did you grow up with? What instruments do your favourite musicians play? How well do you feel these instruments are represented in electronic music? How do you think the instruments we have available affect the music we make and listen to?
 - [MIDI for Makers (Adafruit)](https://learn.adafruit.com/midi-for-makers)
 - MIDI 2.0
     - Just released in 2020, starting to be used
