@@ -404,12 +404,15 @@ Musical sensors
                 - [Musical Instrument Using Arduino + Ultrasonic Distance Sensor (AutoDesk Instructables/Maker Saga)](https://www.instructables.com/Musical-Instrument-Using-Arduino-Ultrasonic-Distan/)
             - Camera tracking
         - Light
-            - [Light Sensors](https://www.instructables.com/Illumaphone-Light-based-Electronic-Musical-Instrum/)
-            - [Laser distance](https://www.youtube.com/watch?v=pddGR5Eyc0Q)
+            - Light Sensors
+                - [Illumaphone: Light-based Musical Instrument With Arduino (AutoDesk Instructables/bonniee)](https://www.instructables.com/Illumaphone-Light-based-Electronic-Musical-Instrum/)
+            - Laser distance
+                - [Building LASER Harp with an Arduino (Science Shack/YouTube)](https://www.youtube.com/watch?v=pddGR5Eyc0Q)
     - External data (data sonification)
         - Note: for our class we would build a real-time sensor interface
         - Wind
-        - [Plants](https://github.com/electricityforprogress/BiodataSonificationBreadboardKit/blob/ac8b28a86406faa1d3ad3d88cac917c3296f4fc5/Biodata%20Sonification%20-%20Arduino%20Shield%20Breadboard%20Kit%20v02.pdf)
+        - Plants
+            - [/Biodata Sonification - Arduino Shield Breadboard Kit v02.pdf(Github)](https://github.com/electricityforprogress/BiodataSonificationBreadboardKit/blob/ac8b28a86406faa1d3ad3d88cac917c3296f4fc5/Biodata%20Sonification%20-%20Arduino%20Shield%20Breadboard%20Kit%20v02.pdf)
         - DNA sequence
         - Planetary motion
             - [The Sounds of a New Planetary System (NASA / YouTube)
