@@ -402,7 +402,7 @@ Musical sensors
     - [Capacitive touch](https://youtu.be/DQ7lrEOZrwc?si=JUcSrtJURW6rNfP-&t=351)
     - [Flex Sensor](https://www.youtube.com/watch?v=WHePx-BSZvs)
         - [Project from NYU Shanghai Students](https://wp.nyu.edu/mattkerseydocumentationblog/2023/03/22/jazz-hands-matthew-kersey-gottfried-haider/)
-    - Pressure senstivity
+    - Pressure sensitivity
         - [Piezo Vibration Disks](https://www.youtube.com/watch?v=TiwmAPjXFcE) 
         - Keyboard aftertouch
             - Monophonic / channel aftertouch
