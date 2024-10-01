@@ -173,8 +173,9 @@ MIDI - Musical Instrument Digital Interface
         - Playing quarter tone and "microtonal" scales can be accomplished using specialized software or hardware
             - [47SOUL - Intro To Shamstep (YouTube)](https://www.youtube.com/watch?v=5N0phc4nK-0)
                 - The keyboardist makes use of a special device ([Kelfar AK tuning converter](https://kelfar.net/ak-5-pro-world-scale-tuning-converter/)) designed specifically to enable Arabic scales for live performance
-        - Demo of playing Maqam Bayati inside Ableton Live, using Western scale, Ableton tuning, and dedicated software instrument (Taqsim SOLO)
-        - What kind of music did you grow up with? What instruments do your favourite musicians play? How well do you feel these instruments are represented in electronic music? How do you think the instruments we have available affect the music we make and listen to?
+        - Demo of playing Maqam Bayati inside Ableton Live, using Western scale, Ableton tuning, and dedicated software instrument ([Taqsim SOLO](https://taqs.im/shop/solo/))
+        - What kind of music did you grow up with? What instruments do your favourite musicians play? How well do you feel these instruments are represented in electronic music?
+        - How do you think the instruments we have available affect the music we make and listen to?
 - [MIDI for Makers (Adafruit)](https://learn.adafruit.com/midi-for-makers)
 - MIDI 2.0
     - Just released in 2020, starting to be used
