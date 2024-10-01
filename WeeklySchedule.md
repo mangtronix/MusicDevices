@@ -353,36 +353,42 @@ Musical sensors
         - See also *Push, Turn, Move* pp. 24-27
 - Common controller interface elements
     - Button
-    - Rotary potentiometer (pot)
-    - Linear potentiometer (fader)
-    - Keys
-    - Wheel
+        - [I built an Arcade DIY MIDI controller with an Arduino Pro Micro: The Fliper (Nerd Musician/YouTube)](https://www.youtube.com/watch?v=nv42rTRwKIg)
+    - [Rotary potentiometer (pot)](https://youtu.be/hcm5H6f8MI8?si=NXYf7GU4oFpOLFW9&t=1797)
+    - [Linear potentiometer (fader)](https://www.youtube.com/watch?v=YpkzLo6yx_g)
+    - [Keys](https://www.youtube.com/watch?v=FoXk6OL8GfQ)
+    - Pitch / Mod Wheels
     - Indicators / displays
         - LED
         - Numeric display
-        - Text display
+        - [Text display](https://www.youtube.com/watch?v=4pqeavhW_is)
         - Graphic display
     - Touch surface
         - Linear
-        - XY pad
-    - Capacitive touch
-    - Pressure senstivity
+        - [XY pad](https://mitxela.com/projects/ribbon_controller)
+    - [Capacitive touch](https://youtu.be/DQ7lrEOZrwc?si=JUcSrtJURW6rNfP-&t=351)
+    - [Flex Sensor](https://www.youtube.com/watch?v=WHePx-BSZvs)
+        - [Project from NYU Shanghai Students](https://wp.nyu.edu/mattkerseydocumentationblog/2023/03/22/jazz-hands-matthew-kersey-gottfried-haider/)
+    - Pressure sensitivity
+        - [Piezo Vibration Disks](https://www.youtube.com/watch?v=TiwmAPjXFcE) 
         - Keyboard aftertouch
             - Monophonic / channel aftertouch
             - Polyphonic (MPE) aftertouch
     - Sensors (some examples)
-        - Breath
+        - [Breath](https://www.youtube.com/watch?v=es92GqYBge0)
         - Controller motion
-            - Gyroscope / accelerometer (attitude sensors)
+            - [Gyroscope / accelerometer (attitude sensors)](https://www.youtube.com/watch?v=Wzjms3tgF6w)
         - Presence / human motion
-            - Theremin
-            - Distance sensors
+            - [Theremin](https://www.youtube.com/watch?v=CWPtxGrBlU8&t=499s)
+            - [Distance sensors](https://www.instructables.com/Musical-Instrument-Using-Arduino-Ultrasonic-Distan/)
             - Camera tracking
         - Light
-        - Plants
+            - [Light Sensors](https://www.instructables.com/Illumaphone-Light-based-Electronic-Musical-Instrum/)
+            - [Laser distance](https://www.youtube.com/watch?v=pddGR5Eyc0Q)
     - External data (data sonification)
         - Note: for our class we would build a real-time sensor interface
         - Wind
+        - [Plants](https://github.com/electricityforprogress/BiodataSonificationBreadboardKit/blob/ac8b28a86406faa1d3ad3d88cac917c3296f4fc5/Biodata%20Sonification%20-%20Arduino%20Shield%20Breadboard%20Kit%20v02.pdf)
         - DNA sequence
         - Planetary motion
             - [The Sounds of a New Planetary System (NASA / YouTube)
