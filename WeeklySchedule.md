@@ -361,33 +361,47 @@ Musical sensors
 - Common controller interface elements
     - Button
         - [I built an Arcade DIY MIDI controller with an Arduino Pro Micro: The Fliper (Nerd Musician/YouTube)](https://www.youtube.com/watch?v=nv42rTRwKIg)
-    - [Rotary potentiometer (pot)](https://youtu.be/hcm5H6f8MI8?si=NXYf7GU4oFpOLFW9&t=1797)
-    - [Linear potentiometer (fader)](https://www.youtube.com/watch?v=YpkzLo6yx_g)
-    - [Keys](https://www.youtube.com/watch?v=FoXk6OL8GfQ)
+    - Rotary potentiometer (pot)
+        - [4# How to Code Potentiometers (Complete Guide) - MIDI Programming for the Arduino (Nerd Musician/YouTube)](https://www.youtube.com/watch?v=hcm5H6f8MI8&t=1797s)
+    - Linear potentiometer (fader)
+        - [Arduino ribbon synth explanation (gr4yhound/YouTube)](https://www.youtube.com/watch?v=YpkzLo6yx_g)
+    - Keys
+        - [How To Make Arduino Piano With Buzzer | | Tinker Cad (Mr. Screw Driver/YouTube)](https://youtu.be/FoXk6OL8GfQ?si=bV51UJTCKdfoOd2O&t=22)
     - Pitch / Mod Wheels
     - Indicators / displays
         - LED
         - Numeric display
-        - [Text display](https://www.youtube.com/watch?v=4pqeavhW_is)
+        - Text Display
+            - [Arduino based Decibel Meter with Sound Sensor & LCD Display (IoT Project Ideas/YouTube)](https://www.youtube.com/watch?v=4pqeavhW_is)
         - Graphic display
     - Touch surface
         - Linear
-        - [XY pad](https://mitxela.com/projects/ribbon_controller)
-    - [Capacitive touch](https://youtu.be/DQ7lrEOZrwc?si=JUcSrtJURW6rNfP-&t=351)
-    - [Flex Sensor](https://www.youtube.com/watch?v=WHePx-BSZvs)
+        - XY Pad
+            - [Touch Screen as a MIDI Ribbon Controller (MITXela)](https://mitxela.com/projects/ribbon_controller)
+    - Capacitive Touch
+        - [Touch Sensing Midi Controller! | Capacitive Touch and Arduino (The Maker Monster/YouTube)](https://youtu.be/DQ7lrEOZrwc?si=JUcSrtJURW6rNfP-&t=351)
+    - Flex Sensor
+        - [DIY Music Glove - Rhythm in the Air (Jesse Yang/YouTube)](https://www.youtube.com/watch?v=WHePx-BSZvs)
         - [Project from NYU Shanghai Students](https://wp.nyu.edu/mattkerseydocumentationblog/2023/03/22/jazz-hands-matthew-kersey-gottfried-haider/)
     - Pressure sensitivity
-        - [Piezo Vibration Disks](https://www.youtube.com/watch?v=TiwmAPjXFcE) 
+        - Piezo Vibration Disks
+            - [Arduino MIDI Drums with Piezo Disc Triggers (with schematic and code)(Unrelated Activities/YouTube)](https://www.youtube.com/watch?v=TiwmAPjXFcE) 
         - Keyboard aftertouch
             - Monophonic / channel aftertouch
             - Polyphonic (MPE) aftertouch
     - Sensors (some examples)
-        - [Breath](https://www.youtube.com/watch?v=es92GqYBge0)
+        - Breath
+            - DIY Breath Sensors 
+                - [Simplest Breath Sensor for a MIDI Wind Instrument EVER - From a plastic water bottle (KontinuumLAB/YouTube)](https://www.youtube.com/watch?v=es92GqYBge0)
+                - [KontinuumLAB WORKSHOPS: 3 DIY Breath Sensors (KontinuumLAB/YouTube)](https://www.youtube.com/watch?v=qmlhkcaMYX0&t=49s)
+            - [The Harminator, original wind instrument. Worlds first prototype (KontinuumLAB/YouTube)](https://www.youtube.com/watch?v=y6OzpsGPxNU&t=127s)
         - Controller motion
             - [Gyroscope / accelerometer (attitude sensors)](https://www.youtube.com/watch?v=Wzjms3tgF6w)
         - Presence / human motion
-            - [Theremin](https://www.youtube.com/watch?v=CWPtxGrBlU8&t=499s)
-            - [Distance sensors](https://www.instructables.com/Musical-Instrument-Using-Arduino-Ultrasonic-Distan/)
+            - Theremin
+                - [I Built a MIDI THEREMIN! Theremidi - A DIY Arduino MIDI Controller (Nerd Musician/YouTube)](https://www.youtube.com/watch?v=CWPtxGrBlU8&t=499s)
+            - Distance sensors
+                - [Musical Instrument Using Arduino + Ultrasonic Distance Sensor (AutoDesk Instructables/Maker Saga)](https://www.instructables.com/Musical-Instrument-Using-Arduino-Ultrasonic-Distan/)
             - Camera tracking
         - Light
             - [Light Sensors](https://www.instructables.com/Illumaphone-Light-based-Electronic-Musical-Instrum/)
