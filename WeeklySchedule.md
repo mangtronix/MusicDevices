@@ -390,12 +390,18 @@ Musical sensors
             - Monophonic / channel aftertouch
             - Polyphonic (MPE) aftertouch
     - Sensors (some examples)
-        - [Breath](https://www.youtube.com/watch?v=es92GqYBge0)
+        - Breath
+            - DIY Breath Sensors 
+                - [Simplest Breath Sensor for a MIDI Wind Instrument EVER - From a plastic water bottle (KontinuumLAB/YouTube)](https://www.youtube.com/watch?v=es92GqYBge0)
+                - [KontinuumLAB WORKSHOPS: 3 DIY Breath Sensors (KontinuumLAB/YouTube)](https://www.youtube.com/watch?v=qmlhkcaMYX0&t=49s)
+            - [The Harminator, original wind instrument. Worlds first prototype (KontinuumLAB/YouTube)](https://www.youtube.com/watch?v=y6OzpsGPxNU&t=127s)
         - Controller motion
             - [Gyroscope / accelerometer (attitude sensors)](https://www.youtube.com/watch?v=Wzjms3tgF6w)
         - Presence / human motion
-            - [Theremin](https://www.youtube.com/watch?v=CWPtxGrBlU8&t=499s)
-            - [Distance sensors](https://www.instructables.com/Musical-Instrument-Using-Arduino-Ultrasonic-Distan/)
+            - Theremin
+                - [I Built a MIDI THEREMIN! Theremidi - A DIY Arduino MIDI Controller (Nerd Musician/YouTube)](https://www.youtube.com/watch?v=CWPtxGrBlU8&t=499s)
+            - Distance sensors
+                - [Musical Instrument Using Arduino + Ultrasonic Distance Sensor (AutoDesk Instructables/Maker Saga)](https://www.instructables.com/Musical-Instrument-Using-Arduino-Ultrasonic-Distan/)
             - Camera tracking
         - Light
             - [Light Sensors](https://www.instructables.com/Illumaphone-Light-based-Electronic-Musical-Instrum/)
