@@ -390,7 +390,7 @@ Musical sensors
     - [Rotary potentiometer (pot)](https://youtu.be/hcm5H6f8MI8?si=NXYf7GU4oFpOLFW9&t=1797)
     - [Linear potentiometer (fader)](https://www.youtube.com/watch?v=YpkzLo6yx_g)
     - [Keys](https://www.youtube.com/watch?v=FoXk6OL8GfQ)
-    - Wheel
+    - Pitch / Mod Wheels
     - Indicators / displays
         - LED
         - Numeric display
