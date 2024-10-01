@@ -27,7 +27,7 @@ Note: Exact due dates for assignments and readings are indicated in Brightspace
 Project concept development
 - What type of expression does your project enable? How does this relate to existing musical practices?
 - Who is the intended user / community for your device? Are they underserved by currently available devices? How does your design serve those users?
-- How does your project use the technology we've learned to enhance musical expression?
+- How does your project extend what's been done before? How does your project use the technology we've learned to enhance musical expression?
 - What is your creative vision for your device? What is your dream performance / installation / application?
 
 Project lifecycle
