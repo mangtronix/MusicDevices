@@ -223,6 +223,10 @@ Workshop: Arduino for NIME
 - Run sample code for sending our first note
     - [MIDIUSB_write.ino (GitHub)](https://github.com/arduino-libraries/MIDIUSB/blob/master/examples/MIDIUSB_write/MIDIUSB_write.ino)
     - Sends note on/off in simple loop with blocking delay
+    - Install [Protokol](https://hexler.net/protokol) and check that MIDI notes are being received by your laptop
+    - MacOS
+        - Install [Flynth](https://www.fingerlab.net/portfolio/flynth) and make some sound!
+            - Settings -> MIDI (enabled) -> Select MIDI device
 
 
 ### Homework - Week 3.2
