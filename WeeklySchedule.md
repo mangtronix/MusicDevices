@@ -227,7 +227,8 @@ Workshop: Arduino for NIME
     -->
     - TODO - ESP32 USBMIDI example
         - File -> Examples (ESP32 Reverse TFT) -> USB -> MidiController.ino
-    - Install [Protokol](https://hexler.net/protokol) and check that MIDI notes are being received by your laptop
+    - Install [MIDI Monitor](https://www.snoize.com/MIDIMonitor/) and check that MIDI notes are being received by your laptop
+        - Alternatively use [Protokol](https://hexler.net/protokol)
     - MacOS
         - Install [Flynth](https://www.fingerlab.net/portfolio/flynth) and make some sound!
             - Settings -> MIDI (enabled) -> Select MIDI device
