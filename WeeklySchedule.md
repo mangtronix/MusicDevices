@@ -221,8 +221,12 @@ Workshop: Arduino for NIME
 
 - Create our first MIDI controller using ESP32-S3 Feather
 - Run sample code for sending our first note
-    - [MIDIUSB_write.ino (GitHub)](https://github.com/arduino-libraries/MIDIUSB/blob/master/examples/MIDIUSB_write/MIDIUSB_write.ino)
+    <!-- Not for ESP32
+    - [MIDIUSB_write.ino (GitHub)](https://github.com/arduino-libraries/MIDIUSB/blob/master/examples/MIDIUSB_write/MIDIUSB_write.ino)    
     - Sends note on/off in simple loop with blocking delay
+    -->
+    - TODO - ESP32 USBMIDI example
+        - File -> Examples (ESP32 Reverse TFT) -> USB -> MidiController.ino
     - Install [Protokol](https://hexler.net/protokol) and check that MIDI notes are being received by your laptop
     - MacOS
         - Install [Flynth](https://www.fingerlab.net/portfolio/flynth) and make some sound!
