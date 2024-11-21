@@ -1,3 +1,8 @@
+// Original code 
+// LCD Screen - https://learn.adafruit.com/esp32-s3-reverse-tft-feather/built-in-tft
+// MIDI - Examples from Adafruit Feather ESP32-S3 Reverse TFT -> USB -> MIDI -> MIDIController
+// Modified by Daniel Woc
+
 #if ARDUINO_USB_MODE
 #warning This sketch should be used when USB is in OTG mode
 void setup() {}
