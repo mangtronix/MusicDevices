@@ -1,3 +1,7 @@
+// Original code 
+// LCD Screen - https://learn.adafruit.com/esp32-s3-reverse-tft-feather/built-in-tft
+// Touch Sensor - https://randomnerdtutorials.com/esp32-touch-pins-arduino-ide/
+// Modified by Daniel Woc
 //libraries
 #include <Adafruit_GFX.h>     // Core graphics library
 #include <Adafruit_ST7789.h>  // Hardware-specific library for ST7789
