@@ -1,5 +1,5 @@
 /*
-Original code
+Original Code from from Adafruit Feather ESP32-S3 Reverse TFT Examples -> USB -> MIDI -> MIDIController
 Modified by Daniel Woc
 */
 #if ARDUINO_USB_MODE
