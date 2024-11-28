@@ -75,7 +75,7 @@ Applied music theory, Western and beyond
 
 ## Week 2.2
 Workshop: Ableton, software synthesizers
-- Introduction to Ableton Live
+- Introduction to Ableton Live 12
 - Ableton Live editions
     - [Intro, Standard, Suite](https://www.ableton.com/en/live/compare-editions/)
     - Live 11 Suite is available in C3-116
@@ -98,7 +98,7 @@ Workshop: Ableton, software synthesizers
 
 Due before start of next class
 
-- **Create** a musical composition in Ableton Live using a non-standard scale
+- **Create** a musical composition in Ableton Live 12 using a non-standard scale
     - Make a short piece of music (max 2-3 minutes) with at least a main melody using Ableton's tuning feature
         - Use the bundled (tuning aware) instruments in Ableton or VST instruments that support Ableton's tuning system (see instructions above)
         - Feel free to add percussion and other elements as you wish
