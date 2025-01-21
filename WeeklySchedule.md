@@ -66,6 +66,7 @@ Music Devices, NIME and Sound Installations
     - 3D design / printing
         - [Autodesk Fusion](https://www.autodesk.com/education/edu-software/fusion) - professional 3D modeling for manufacturing
         - [Prusa MK4S](https://www.prusa3d.com/product/original-prusa-mk4s-3d-printer-5/) - "workhorse" basic 3D printer with open source roots, 4x in IM Lab
+    - [Laser cutting](https://www.instructables.com/Laser-Cutting-Basics/)
     - Other software / hardware depending on interests!
 
 
