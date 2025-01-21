@@ -34,6 +34,8 @@ Introduction
 - Textbook at bookstore
     - [Push, Turn, Move (Bjooks)](https://bjooks.com/products/push-turn-move-the-book)
 - Class kits will be distributed in class
+- Tool training
+    - Who has done tool training Fall 2023 or later? 
 
 ## Week 1.2
 
