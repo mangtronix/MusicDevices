@@ -39,7 +39,7 @@ Introduction
     - [Push, Turn, Move (Bjooks)](https://bjooks.com/products/push-turn-move-the-book)
 - Class kits will be distributed in class
 - Tool training
-    - Who has done tool training Fall 2023 or later? 
+    - Who has done tool training Fall 2023 or later?
 
 ## Week 1.2
 
@@ -54,6 +54,19 @@ Music Devices, NIME and Sound Installations
 - [10 Sound Installations that Inspire and Create Connection (Medium)](https://medium.com/@oskarlindskog/10-sound-installations-that-inspire-and-create-connection-73eabd5ce075)
 - [Cave of Sounds](https://caveofsounds.com/) 
     - Public installation of 8 bespoke interactive musical instruments
+ 
+- Technologies used in the course
+    - [Arduino](https://www.arduino.cc/) - open source electronic prototyping platform
+        - [Adafruit ESP32-S3 Reverse TFT Feather](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/overview) - Arduino-compatible microcontroller board with builtin screen, battery charger, WiFi, and Bluetooth
+        - various inputs and sensors
+        - motors and other physical outputs are possible
+    - [Ableton Live](https://www.ableton.com/en/live/) - music production DAW, Ableton 12 Suite available in music lab, Lite licenses can be found
+        - your final project can use other software
+    - 3D design / printing
+        - [Autodesk Fusion](https://www.autodesk.com/education/edu-software/fusion) - professional 3D modeling for manufacturing
+        - [Prusa MK4S](https://www.prusa3d.com/product/original-prusa-mk4s-3d-printer-5/) - "workhorse" basic 3D printer with open source roots, 4x in IM Lab
+    - Other software / hardware depending on interests!
+
 
 ### Homework - Week 1.2
 
