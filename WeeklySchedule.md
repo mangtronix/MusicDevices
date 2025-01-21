@@ -9,9 +9,10 @@
 - [Week 5](#week-5) – Musical sensors
 - [Week 6](#week-6) – Rapid prototyping
 - [Week 7](#week-7) – Idea Lab
-- SPRING BREAK
+- 7-Week Finals Break
 - [Week 8](WeeklySchedule2.md#week-8) – Project proposal development
 - [Week 9](WeeklySchedule2.md#week-9) – Project proposal presentation, implementation starts!
+- SPRING BREAK
 - [Week 10](WeeklySchedule2.md#week-10) – Telling your story / documenting your work
 - [Week 11](WeeklySchedule2.md#week-11) – Guest Speaker, project production
 - [Week 12](WeeklySchedule2.md#week-12) – Music performance, project feedback, user testing
