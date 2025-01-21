@@ -45,7 +45,7 @@ Music Devices, NIME and Sound Installations
  (Georgia Tech)](https://guthman.gatech.edu/feature/guthman-instruments-change-music)
 - [Push Turn Move (Bjooks)](https://bjooks.com/products/push-turn-move-the-book)
 - [10 Sound Installations that Inspire and Create Connection (Medium)](https://medium.com/@oskarlindskog/10-sound-installations-that-inspire-and-create-connection-73eabd5ce075)
-- [Cave of Sounds](https://caveofsounds.com/) - 
+- [Cave of Sounds](https://caveofsounds.com/) 
     - Public installation of 8 bespoke interactive musical instruments
 
 ### Homework - Week 1.2
