@@ -31,6 +31,7 @@ Introduction
 - Class introductions
 - Review syllabus
 - Textbook at bookstore
+    - [Push, Turn, Move](https://bjooks.com/products/push-turn-move-the-book)
 - Class kits will be distributed in class
 
 ## Week 1.2
