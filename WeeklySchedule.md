@@ -53,7 +53,7 @@ Music Devices, NIME and Sound Installations
 Due before start of next class
 
 - **Read** [Microtonality and the Struggle for Fretlessness in the Digital Age
- (CTM)](https://www.ctm-festival.de/magazine/microtonality-and-the-struggle-for-fretlessness-in-the-digital-age)]
+ (CTM)](https://www.ctm-festival.de/magazine/microtonality-and-the-struggle-for-fretlessness-in-the-digital-age)
     - What do you think of Allami's statement "Modern technology, as much as it seems neutral and empowering, is heavily laden with cultural and political asymmetries that often go unnoticed and unchallenged."?
     - Can you think of examples where technology is biased towards a certain culture? How could the technology be changed to allow a wider range of expression?
 - **Post** your response in the discussion forum
