@@ -30,6 +30,10 @@ Note: Exact due dates for assignments and readings are indicated in Brightspace
 
 Introduction
 - Class introductions
+    - What's your technical background?
+    - What's your experience with music?
+    - What are you hoping to achieve in the course? 
+    - [Sonoglider Duet](https://kildall.com/newest-artworks/sonogliderduet) by Michael Ang and Scott Kildall
 - Review syllabus
 - Textbook at bookstore
     - [Push, Turn, Move (Bjooks)](https://bjooks.com/products/push-turn-move-the-book)
@@ -551,5 +555,5 @@ Due before start of next class
 
 - **Continue developing** your idea for your final project
 ---
-# SPRING BREAK
+# 7-Week Finals Break
 
