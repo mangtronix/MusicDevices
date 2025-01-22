@@ -56,7 +56,9 @@ Music Devices, NIME and Sound Installations
 - [Makey Makey (YouTube)](https://www.youtube.com/watch?v=rfQqh7iCcOU)
     - Using capacitive touch sensing to trigger sounds
 - [Push Turn Move (Bjooks)](https://bjooks.com/products/push-turn-move-the-book)
+<!-- 404
 - [10 Sound Installations that Inspire and Create Connection (Medium)](https://medium.com/@oskarlindskog/10-sound-installations-that-inspire-and-create-connection-73eabd5ce075)
+-->
 - [Cave of Sounds](https://caveofsounds.com/) 
     - Public installation of 8 bespoke interactive musical instruments
  
