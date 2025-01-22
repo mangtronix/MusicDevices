@@ -1,6 +1,6 @@
-# Weekly Schedule - Weeks 8-14
+# Class Notes - Weeks 8-14
 
-[Weekly Schedule Spreadsheet](https://docs.google.com/spreadsheets/d/14s9f2PLqj50BRLKKCZjZiCTpdnHFVN-IBkaVPIkFLVE/edit?usp=sharing)
+[Weekly Overview / Dates (Spreadsheet)](https://docs.google.com/spreadsheets/d/14s9f2PLqj50BRLKKCZjZiCTpdnHFVN-IBkaVPIkFLVE/edit?usp=sharing)
 
 - [Week 1](WeeklySchedule.md#week-1) – Introduction / NIME, Music Devices, and Sound Installations
 - [Week 2](WeeklySchedule.md#week-2) – Applied music theory, Western and beyond
