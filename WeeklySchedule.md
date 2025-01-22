@@ -50,9 +50,11 @@ Music Devices, NIME and Sound Installations
 - [New Interfaces for Musical Expression (NIME)](https://www.nime.org/)
     - [NIME Music Proceedings (NIME)](https://nime.org/music/)
     - [NIME Installation Proceedings (NIME)](https://nime.org/installations/)
-    - [Guthman Musical Instrument Competition (Georgia Tech)](https://guthman.gatech.edu/)
+- [Guthman Musical Instrument Competition (Georgia Tech)](https://guthman.gatech.edu/)
         - [Ten Instruments That Will Change How You Think About Music
  (Georgia Tech)](https://guthman.gatech.edu/feature/guthman-instruments-change-music)
+- [Makey Makey (YouTube)](https://www.youtube.com/watch?v=rfQqh7iCcOU)
+    - Using capacitive touch sensing to trigger sounds
 - [Push Turn Move (Bjooks)](https://bjooks.com/products/push-turn-move-the-book)
 - [10 Sound Installations that Inspire and Create Connection (Medium)](https://medium.com/@oskarlindskog/10-sound-installations-that-inspire-and-create-connection-73eabd5ce075)
 - [Cave of Sounds](https://caveofsounds.com/) 
