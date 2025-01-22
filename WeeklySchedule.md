@@ -32,7 +32,8 @@ Introduction
 - Class introductions
     - What's your technical background?
     - What's your experience with music?
-    - What are you hoping to achieve in the course? 
+    - What are you hoping to achieve in the course?
+    - [Dunewind Resonator](https://kildall.com/newest-artworks/dunewindresonator) by Michael Ang and Scott Kildall
     - [Sonoglider Duet](https://kildall.com/newest-artworks/sonogliderduet) by Michael Ang and Scott Kildall
 - Review syllabus
 - Textbook at bookstore
