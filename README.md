@@ -8,7 +8,7 @@ Music Devices is taught by Michael Ang, Assistant Professor of Practice of Inter
 
 [Music Devices Syllabus](https://docs.google.com/document/d/1Oct5th4gAkiBOMHxgibU-bna5pmhQ8nVSyacmPzO46E/edit?usp=sharing)
 
-[Weekly Overview (Spreadsheet)](https://docs.google.com/spreadsheets/d/14s9f2PLqj50BRLKKCZjZiCTpdnHFVN-IBkaVPIkFLVE/edit?usp=sharing)
+[Weekly Overview / Dates (Spreadsheet)](https://docs.google.com/spreadsheets/d/14s9f2PLqj50BRLKKCZjZiCTpdnHFVN-IBkaVPIkFLVE/edit?usp=sharing)
 
 [Weekly Schedule / Notes - Weeks 1-7](WeeklySchedule.md)
 
