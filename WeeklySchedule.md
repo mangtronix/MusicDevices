@@ -74,10 +74,13 @@ Music Devices, NIME and Sound Installations
 
 Due before start of next class
 
-- **Read** [Microtonality and the Struggle for Fretlessness in the Digital Age
- (CTM)](https://www.ctm-festival.de/magazine/microtonality-and-the-struggle-for-fretlessness-in-the-digital-age)
-    - What do you think of Allami's statement "Modern technology, as much as it seems neutral and empowering, is heavily laden with cultural and political asymmetries that often go unnoticed and unchallenged."?
-    - Can you think of examples where technology is biased towards a certain culture? How could the technology be changed to allow a wider range of expression?
+- **Watch** [Moldover's Approach to Controllerism (1 of 2) (YouTube)](https://www.youtube.com/watch?v=L2McDeSKiOU)
+- **Watch** [Moldover's Approach to Controllerism (2 of 2)
+ (YouTube)](https://youtu.be/dznjQIarboY?si=oWTpcaw2dQ_p_V9q)
+- **Read** [Moldover-The Godfather of Controllerism
+(MIDI Association)](https://midi.org/moldover-the-godfather-of-controllerism)
+    - What makes Moldover's approach to controller design effective or not effective?
+    - How can combining controller design and sound design help you connect with an audience? What techniques are you planning to use?
 - **Post** your response in the discussion forum
     - See Brightspace->Discussions->Readings for details
 - **Be ready** to discuss the topic in class
@@ -120,6 +123,14 @@ Workshop: Ableton, software synthesizers
 ### Homework - Week 2.2
 
 Due before start of next class
+
+- **Read** [Microtonality and the Struggle for Fretlessness in the Digital Age
+ (CTM)](https://www.ctm-festival.de/magazine/microtonality-and-the-struggle-for-fretlessness-in-the-digital-age)
+    - What do you think of Allami's statement "Modern technology, as much as it seems neutral and empowering, is heavily laden with cultural and political asymmetries that often go unnoticed and unchallenged."?
+    - Can you think of examples where technology is biased towards a certain culture? How could the technology be changed to allow a wider range of expression?
+- **Post** your response in the discussion forum
+    - See Brightspace->Discussions->Readings for details
+- **Be ready** to discuss the topic in class
 
 - **Create** a musical composition in Ableton Live 12 using a non-standard scale
     - Make a short piece of music (max 2-3 minutes) with at least a main melody using Ableton's tuning feature
@@ -455,16 +466,7 @@ Musical sensors
 
 Due before start of next class
 
-- **Watch** [Moldover's Approach to Controllerism (1 of 2) (YouTube)](https://www.youtube.com/watch?v=L2McDeSKiOU)
-- **Watch** [Moldover's Approach to Controllerism (2 of 2)
- (YouTube)](https://youtu.be/dznjQIarboY?si=oWTpcaw2dQ_p_V9q)
-- **Read** [Moldover-The Godfather of Controllerism
-(MIDI Association)](https://midi.org/moldover-the-godfather-of-controllerism)
-    - What makes Moldover's approach to controller design effective or not effective?
-    - How can combining controller design and sound design help you connect with an audience? What techniques are you planning to use?
-- **Post** your response in the discussion forum
-    - See Brightspace->Discussions->Readings for details
-- **Be ready** to discuss the topic in class
+
 
 ## Week 5.2
 Workshop: Musical sensors
