@@ -58,6 +58,7 @@ Music Devices, NIME and Sound Installations
 - [Phobos, Dysfunctional Robotic Orchestra (Vimeo)](https://vimeo.com/235763130) composition by Carlos Guedes
 - [Laser Harp](https://www.youtube.com/watch?v=sLVXmsbVwUs#t=20)
 - [Ferrous (Landscape.fm)](https://www.landscape.fm/ferrous) - Handheld device for resonating metallic strings
+- [Eric Singer's Heavy-Metal Robots: Sound Builders (YouTube)](https://www.youtube.com/watch?v=MavM_WgZCjQ)
 <!-- 404
 - [10 Sound Installations that Inspire and Create Connection (Medium)](https://medium.com/@oskarlindskog/10-sound-installations-that-inspire-and-create-connection-73eabd5ce075)
 -->
@@ -68,7 +69,7 @@ Music Devices, NIME and Sound Installations
     - [Arduino](https://www.arduino.cc/) - open source electronic prototyping platform
         - [Adafruit ESP32-S3 Reverse TFT Feather](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/overview) - Arduino-compatible microcontroller board with builtin screen, battery charger, WiFi, and Bluetooth
         - various inputs and sensors
-        - motors and other physical outputs are possible
+        - motors, light, and other physical outputs are possible
     - [Ableton Live](https://www.ableton.com/en/live/) - music production DAW, Ableton 12 Suite available in music lab, Lite licenses can be found
         - your final project can use other software
     - 3D design / printing
