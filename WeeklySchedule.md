@@ -42,6 +42,7 @@ Introduction
 - Questions
     - Who has done tool training Fall 2023 or later?
     - Who has experience with Ableton Live or other music software?
+    - More interested in performance, practical devices, or installations?
 
 ## Week 1.2
 
