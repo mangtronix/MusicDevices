@@ -1,4 +1,4 @@
-# Weekly Schedule - Weeks 1-7
+# Class Notes - Weeks 1-7
 
 [Weekly Overview / Dates (Spreadsheet)](https://docs.google.com/spreadsheets/d/14s9f2PLqj50BRLKKCZjZiCTpdnHFVN-IBkaVPIkFLVE/edit?usp=sharing)
 
