@@ -51,7 +51,7 @@ Music Devices, NIME and Sound Installations
     - [NIME Music Proceedings (NIME)](https://nime.org/music/)
     - [NIME Installation Proceedings (NIME)](https://nime.org/installations/)
 - [Guthman Musical Instrument Competition (Georgia Tech)](https://guthman.gatech.edu/)
-        - [Ten Instruments That Will Change How You Think About Music
+- [Ten Instruments That Will Change How You Think About Music
  (Georgia Tech)](https://guthman.gatech.edu/feature/guthman-instruments-change-music)
 - [Makey Makey (YouTube)](https://www.youtube.com/watch?v=rfQqh7iCcOU)
     - Using capacitive touch sensing to trigger sounds
