@@ -74,7 +74,7 @@ Music Devices, NIME and Sound Installations
 
 Due before start of next class
 
-## Reading 1 - Controllerism ##
+#### Reading 1 - Controllerism ####
 - **Watch** [Moldover's Approach to Controllerism (1 of 2) (YouTube)](https://www.youtube.com/watch?v=L2McDeSKiOU)
 - **Watch** [Moldover's Approach to Controllerism (2 of 2)
  (YouTube)](https://youtu.be/dznjQIarboY?si=oWTpcaw2dQ_p_V9q)
