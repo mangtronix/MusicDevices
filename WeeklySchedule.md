@@ -1,6 +1,6 @@
 # Weekly Schedule - Weeks 1-7
 
-[Weekly Schedule Spreadsheet](https://docs.google.com/spreadsheets/d/14s9f2PLqj50BRLKKCZjZiCTpdnHFVN-IBkaVPIkFLVE/edit?usp=sharing)
+[Weekly Overview / Dates (Spreadsheet)](https://docs.google.com/spreadsheets/d/14s9f2PLqj50BRLKKCZjZiCTpdnHFVN-IBkaVPIkFLVE/edit?usp=sharing)
 
 - [Week 1](#week-1) – Introduction / NIME, Music Devices, and Sound Installations
 - [Week 2](#week-2) – Applied music theory, Western and beyond
