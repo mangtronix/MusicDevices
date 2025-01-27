@@ -171,6 +171,7 @@ Workshop: Ableton, software synthesizers
 - Ableton Live Tutorials
     - [Getting started with Live (Ableton)](https://www.ableton.com/en/live/learn-live/)
     - [Ableton Live for Beginners (Taetro / YouTube)](https://www.youtube.com/watch?v=RSnjD6xe5bM&list=PLoO2tOP2r-XsXH0lybWl9zMvYp3lpLF46)
+    - [How To Use MIDI Controllers With Ableton Live (YouTube)](https://www.youtube.com/watch?v=YE6QVzrLNz0&list=PLoO2tOP2r-XsXH0lybWl9zMvYp3lpLF46&index=6)
 - Default scale / tuning and using alternative tunings
     - [Using Tuning Systems (Ableton)](https://www.ableton.com/en/live-manual/12/using-tuning-systems/)
     - [tuning.ableton.com](https://tuning.ableton.com/)
@@ -181,6 +182,7 @@ Workshop: Ableton, software synthesizers
 
 Due before start of next class
 
+<!--
 - **Read** [Microtonality and the Struggle for Fretlessness in the Digital Age
  (CTM)](https://www.ctm-festival.de/magazine/microtonality-and-the-struggle-for-fretlessness-in-the-digital-age)
     - What do you think of Allami's statement "Modern technology, as much as it seems neutral and empowering, is heavily laden with cultural and political asymmetries that often go unnoticed and unchallenged."?
@@ -188,7 +190,9 @@ Due before start of next class
 - **Post** your response in the discussion forum
     - See Brightspace->Discussions->Readings for details
 - **Be ready** to discuss the topic in class
+-->
 
+<!-- Old with tuning
 - **Create** a musical composition in Ableton Live 12 using a non-standard scale
     - Make a short piece of music (max 2-3 minutes) with at least a main melody using Ableton's tuning feature
         - Use the bundled (tuning aware) instruments in Ableton or VST instruments that support Ableton's tuning system (see instructions above)
@@ -199,6 +203,10 @@ Due before start of next class
         - [Using Tuning Systems (Ableton)](https://www.ableton.com/en/live-manual/12/using-tuning-systems/)
         - [Ableton Tuning Guide](https://tuning.ableton.com/)
         - [Explore the tuning systems in Live 12 (tuning.ableton.com)](https://tuning.ableton.com/introduction/where-to-go-from-here/)
+-->
+- **Create** a musical composition in Ableton Live 12
+    - Make a short piece of music (max 2-3 minutes) with at least a main melody
+        - Feel free to add percussion and other elements as you wish
 - **Post** your work in the discussion forum
     - See Brightspace->Discussions->Exercises for details
 - **Be ready** to show / discuss the work in class
