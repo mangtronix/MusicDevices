@@ -149,13 +149,17 @@ Applied music theory, Western and beyond
     - "A tuning system is a way to organize musical pitch, by narrowing down from the infinite number of possible pitches to a usable subset."
     - [Listen (tuning.ableton.com)](https://tuning.ableton.com/introduction/listen/)
         - Different scales and corresponding Ableton files
+     
+### Homework
+- Watch [Learn music theory in half an hour (Andrew Huang / YouTube)](https://youtu.be/rgaTLrZGlk0?si=n52AtMMm5wVyZF4t)
+    - No response required
 
 ## Week 2.2
 Workshop: Ableton, software synthesizers
 - Introduction to Ableton Live 12
 - Ableton Live editions
     - [Intro, Standard, Suite](https://www.ableton.com/en/live/compare-editions/)
-    - Live 11 Suite is available in C3-116
+    - Live 12 Suite is available in C3-116
     - Live Lite (free license) comes with many hardware controllers and some apps
         - iOS apps with free Live Lite license
           - [Koala Sampler](https://www.koalasampler.com/)
