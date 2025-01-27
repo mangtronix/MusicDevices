@@ -153,6 +153,7 @@ Applied music theory, Western and beyond
 ### Homework
 - Watch [Learn music theory in half an hour (Andrew Huang / YouTube)](https://youtu.be/rgaTLrZGlk0?si=n52AtMMm5wVyZF4t)
     - No response required
+- Pick up class book from Bookstore
 
 ## Week 2.2
 Workshop: Ableton, software synthesizers
