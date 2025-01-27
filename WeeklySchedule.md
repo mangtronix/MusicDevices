@@ -103,7 +103,13 @@ Announcements
     - Who has experience with Ableton Live or other music software?
     - More interested in performance, practical devices, or installations?
 
-- Discussion Controllerism reading
+- Discuss Controllerism reading
+    - [The How To Show - Moldover (YouTube)](https://www.youtube.com/watch?v=IwjiUSnjrQk)
+        - Brief overview of (re)making a controller, setting up software, and creating a performance
+    - [How to Build a Controller (Making of The Mojo) (YouTube)](https://www.youtube.com/watch?v=uqs59UrA11c)
+        - Overview of choosing components and making a custom enclosure
+        - In our class we'll be using an Arduino as the brain and making our own enclosures using 3D printing and laser cutting
+
 - Look at NIME examples
 
 Applied music theory, Western and beyond
