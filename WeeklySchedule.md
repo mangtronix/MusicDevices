@@ -39,10 +39,6 @@ Introduction
 - Textbook at bookstore
     - [Push, Turn, Move (Bjooks)](https://bjooks.com/products/push-turn-move-the-book)
 - Class kits will be distributed in class
-- Questions
-    - Who has done tool training Fall 2023 or later?
-    - Who has experience with Ableton Live or other music software?
-    - More interested in performance, practical devices, or installations?
 
 ## Week 1.2
 
@@ -99,6 +95,17 @@ Due before start of next class
 # Week 2
 
 ## Week 2.1
+Announcements
+- Pick up book from Bookstore
+    - Push, Turn, Move 
+- Questions
+    - Who has done tool training Fall 2023 or later?
+    - Who has experience with Ableton Live or other music software?
+    - More interested in performance, practical devices, or installations?
+
+- Discussion Controllerism reading
+- Look at NIME examples
+
 Applied music theory, Western and beyond
 - [Learn music theory in half an hour (Andrew Huang / YouTube)](https://youtu.be/rgaTLrZGlk0?si=n52AtMMm5wVyZF4t)
 - [Music Theory For Beginners (Taetro / YouTube)](https://www.youtube.com/watch?v=CluuHrr7HG4&list=PLoO2tOP2r-XvoFc7cnfYcomf1X0XcQvDC)
@@ -121,6 +128,7 @@ Workshop: Ableton, software synthesizers
             - Settings -> Get Live Lite
           - [Ableton Note](https://www.ableton.com/en/note/)
             - Settings -> Get Ableton Live Lite
+        - If you want a Live Lite license, ask Mang
 - Ableton Live Tutorials
     - [Getting started with Live (Ableton)](https://www.ableton.com/en/live/learn-live/)
     - [Ableton Live for Beginners (Taetro / YouTube)](https://www.youtube.com/watch?v=RSnjD6xe5bM&list=PLoO2tOP2r-XsXH0lybWl9zMvYp3lpLF46)
