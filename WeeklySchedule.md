@@ -112,15 +112,33 @@ Announcements
 
 - Look at NIME examples
 
-Interactive music tutorials
+Interactive music tutorial
 - [learningmusic.ableton.com (Ableton)](https://learningmusic.ableton.com/index.html)
     - Interactive introduction to making music focused on the Ableton Live style workflow of sequencing drums and synthesizers
     - Possible to export from the [Playground](https://learningmusic.ableton.com/the-playground.html) into Ableton Live
     - [2/4: 
 Song structure (Ableton](https://learningmusic.ableton.com/song-structure/bury-it.html) - an example of a common song structure in pop music
+
+What is a synthesizer?
+- "A synthesizer (or synth) is an electronic musical instrument that generates audio signals." - [Synthesizer (Wikipedia)](https://en.wikipedia.org/wiki/Synthesizer)
+    - Includes photographs of early synthesizers including the highly influential Moog Minimoog synthesizer that helped popularize synthesizers to the public
+- An analog synthesizer uses primarily analog (non-digital) electronic circuits
+    - The electronic circuits create oscillations that can be controlled and shaped in various ways
+- [Wendy Carlos demonstrates her Moog Synthesizer in 1970 (YouTube)](https://youtu.be/4SBDH5uhs4Q?si=wMCGIsV-K7WG_cnj)
+- Digital synthesizers use software code to create the sounds
+    - They often recreate techniques used in analog circuits ("virtual analog" modeling)
+    - They can incorporate simulations of physical systems such as resonators (physical modeling)
+    - They can use stored or recorded waveforms
 - [Learning Synths (Ableton)](https://learningsynths.ableton.com/)
     - Interactive site for learning about sound synthesis
     - May give you some inspiration on ways to map a control to a change in sound (input to change in synthesis parameters)
+
+Sampling
+- Taking existing sounds and re-sequencing them
+- Became particularly popular through hiphop sampling in the 80s
+- [AKAI MPC LIVE II Retro - making a beat with vinyl Sampling
+  (YouTube)](https://www.youtube.com/watch?v=NUMBYbbG6tE)
+- [Live Finger Drumming - Gnarly (YouTube)](https://www.youtube.com/watch?v=W9s8aPM8kK0)
 
 Applied music theory, Western and beyond
 - [Learn music theory in half an hour (Andrew Huang / YouTube)](https://youtu.be/rgaTLrZGlk0?si=n52AtMMm5wVyZF4t)
