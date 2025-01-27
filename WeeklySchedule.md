@@ -173,6 +173,7 @@ Workshop: Ableton, software synthesizers
     - [Getting started with Live (Ableton)](https://www.ableton.com/en/live/learn-live/)
     - [Ableton Live for Beginners (Taetro / YouTube)](https://www.youtube.com/watch?v=RSnjD6xe5bM&list=PLoO2tOP2r-XsXH0lybWl9zMvYp3lpLF46)
     - [How To Use MIDI Controllers With Ableton Live (YouTube)](https://www.youtube.com/watch?v=YE6QVzrLNz0&list=PLoO2tOP2r-XsXH0lybWl9zMvYp3lpLF46&index=6)
+    - [The NEW Ableton 12 Beginner Guide (in 22 Minutes) (YouTube)](https://www.youtube.com/watch?v=WMg4Y4q6FQ0)
 - Default scale / tuning and using alternative tunings
     - [Using Tuning Systems (Ableton)](https://www.ableton.com/en/live-manual/12/using-tuning-systems/)
     - [tuning.ableton.com](https://tuning.ableton.com/)
