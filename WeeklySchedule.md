@@ -60,6 +60,8 @@ Music Devices, NIME and Sound Installations
 -->
 - [Cave of Sounds](https://caveofsounds.com/) 
     - Public installation of 8 bespoke interactive musical instruments
+- [Alternative MIDI Controllers: New Ways To Touch Music (Perfect Circuit)](https://www.perfectcircuit.com/signal/alternative-midi-controllers)
+    - Some historical and current examples of commercial alternative MIDI controllers
  
 - Technologies used in the course
     - [Arduino](https://www.arduino.cc/) - open source electronic prototyping platform
