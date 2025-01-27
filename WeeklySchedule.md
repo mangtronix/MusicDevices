@@ -116,8 +116,7 @@ Interactive music tutorial
 - [learningmusic.ableton.com (Ableton)](https://learningmusic.ableton.com/index.html)
     - Interactive introduction to making music focused on the Ableton Live style workflow of sequencing drums and synthesizers
     - Possible to export from the [Playground](https://learningmusic.ableton.com/the-playground.html) into Ableton Live
-    - [2/4: 
-Song structure (Ableton](https://learningmusic.ableton.com/song-structure/bury-it.html) - an example of a common song structure in pop music
+    - [Song structure (Ableton)](https://learningmusic.ableton.com/song-structure/bury-it.html) - an example of a common song structure in pop music
 
 What is a synthesizer?
 - "A synthesizer (or synth) is an electronic musical instrument that generates audio signals." - [Synthesizer (Wikipedia)](https://en.wikipedia.org/wiki/Synthesizer)
