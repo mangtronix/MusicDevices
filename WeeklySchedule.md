@@ -112,6 +112,16 @@ Announcements
 
 - Look at NIME examples
 
+Interactive music tutorials
+- [learningmusic.ableton.com (Ableton)](https://learningmusic.ableton.com/index.html)
+    - Interactive introduction to making music focused on the Ableton Live style workflow of sequencing drums and synthesizers
+    - Possible to export from the [Playground](https://learningmusic.ableton.com/the-playground.html) into Ableton Live
+    - [2/4: 
+Song structure (Ableton](https://learningmusic.ableton.com/song-structure/bury-it.html) - an example of a common song structure in pop music
+- [Learning Synths (Ableton)](https://learningsynths.ableton.com/)
+    - Interactive site for learning about sound synthesis
+    - May give you some inspiration on ways to map a control to a change in sound (input to change in synthesis parameters)
+
 Applied music theory, Western and beyond
 - [Learn music theory in half an hour (Andrew Huang / YouTube)](https://youtu.be/rgaTLrZGlk0?si=n52AtMMm5wVyZF4t)
 - [Music Theory For Beginners (Taetro / YouTube)](https://www.youtube.com/watch?v=CluuHrr7HG4&list=PLoO2tOP2r-XvoFc7cnfYcomf1X0XcQvDC)
