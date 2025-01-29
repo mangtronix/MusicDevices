@@ -170,6 +170,8 @@ Workshop: Ableton, software synthesizers
             - Settings -> Get Ableton Live Lite
         - If you want a Live Lite license, ask Mang
 - Ableton Live Tutorials
+    - [learningmusic.ableton.com](https://learningmusic.ableton.com/index.html)
+        - Simplified online learning of concepts used in Live as well as general overview of electronic music composition 
     - [Getting started with Live (Ableton)](https://www.ableton.com/en/live/learn-live/)
     - [Ableton Live for Beginners (Taetro / YouTube)](https://www.youtube.com/watch?v=RSnjD6xe5bM&list=PLoO2tOP2r-XsXH0lybWl9zMvYp3lpLF46)
     - [How To Use MIDI Controllers With Ableton Live (YouTube)](https://www.youtube.com/watch?v=YE6QVzrLNz0&list=PLoO2tOP2r-XsXH0lybWl9zMvYp3lpLF46&index=6)
@@ -179,6 +181,22 @@ Workshop: Ableton, software synthesizers
     - [tuning.ableton.com](https://tuning.ableton.com/)
     - [A Guide to the Maqam Tuning Presets for Ableton Live 12 (Ableton)](https://tuning.ableton.com/arabic-maqam/maqam-guide/)
     - Using Ableton tuning with VSTs
+ 
+In-class workshop - Part 1
+- Follow first two lessons from [Ableton Live for Beginners (Taetro / YouTube)](https://www.youtube.com/watch?v=RSnjD6xe5bM&list=PLoO2tOP2r-XsXH0lybWl9zMvYp3lpLF46)
+- Ask questions!
+- Start making some music
+
+In-class workshop - Part 2
+- How to map your MIDI controller to a software instrument
+    - [How To Use MIDI Controllers With Ableton Live (Taetro / YouTube)](https://www.youtube.com/watch?v=YE6QVzrLNz0&list=PLoO2tOP2r-XsXH0lybWl9zMvYp3lpLF46&index=7)
+- Adding effects to a track
+- Mapping a MIDI controller to effects
+- Recording a live performance into Ableton Live
+- Exporting your composition as a .wav + .mp3
+    - [How to Export an MP3 File from Ableton Live (Berklee)](https://online.berklee.edu/help/en_US/ableton-live/1656745-how-to-export-an-mp3-file-from-ableton-live)
+- Exporting your project as a zip file
+    - [Transferring Projects to another computer (Ableton)](https://help.ableton.com/hc/en-us/articles/209071909-Transferring-Projects-to-another-computer#h_2cbf945b-14e3-43c1-ad2c-362b177662e9)
  
 ### Homework - Week 2.2
 
@@ -206,13 +224,11 @@ Due before start of next class
         - [Ableton Tuning Guide](https://tuning.ableton.com/)
         - [Explore the tuning systems in Live 12 (tuning.ableton.com)](https://tuning.ableton.com/introduction/where-to-go-from-here/)
 -->
-- **Create** a musical composition in Ableton Live 12
-    - Make a short piece of music (max 2-3 minutes) with at least a main melody
-        - Feel free to add percussion and other elements as you wish
+- **Create** a short musical composition in Ableton Live 12
+- **See Brightspace -> Discussion -> Individual Exercises** for details
 - **Post** your work in the discussion forum
     - See Brightspace->Discussions->Exercises for details
 - **Be ready** to show / discuss the work in class
-
 
 ---
 
