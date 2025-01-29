@@ -259,7 +259,15 @@ In-class workshop - Part 2
     - Find project directory (e.g. 250127 Demo Project)
     - Right-click on directory -> Compress to create zip (e.g. 250127 Demo Project.zip)
 - Practice mapping, recording, and exporting
- 
+
+Upcoming events at Arts Center
+- [Artist Talk - Finding a Voice Between Tradition and Contemporary](https://publicprograms.nyuad.nyu.edu/en/the-arts-center/events/2025/february/finding-a-voice-between-tradition-and-contemporary.html) - Feb 11
+- [Music Workshop with KOKOKO!](https://publicprograms.nyuad.nyu.edu/en/the-arts-center/events/2025/february/kokoko-workshop.html) - Feb 12
+    - DIY instruments
+    - They're visiting our class that day
+- [Music Workshop with Cimafunk](https://publicprograms.nyuad.nyu.edu/en/the-arts-center/events/2025/february/afrocuban-music-workshop.html) - Feb 12
+    - Afrocuban rhythms
+
 ### Homework - Week 2.2
 
 Due before start of next class
