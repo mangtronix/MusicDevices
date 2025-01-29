@@ -215,13 +215,49 @@ In-class workshop - Part 1
 In-class workshop - Part 2
 - How to map your MIDI controller to a software instrument
     - [How To Use MIDI Controllers With Ableton Live (Taetro / YouTube)](https://www.youtube.com/watch?v=YE6QVzrLNz0&list=PLoO2tOP2r-XsXH0lybWl9zMvYp3lpLF46&index=7)
+    - Click "MIDI" button at top right to enter MIDI mapping mode
+    - Click on control you want to map
+    - Press / wiggle control on physical MIDI controller to map the controls together
+    - Click "MIDI" to exit MIDI mapping mode
+    - Move your physical control and check that on-screen control also moves
 - Adding effects to a track
+    - Make Browser visible using icon at top-left, or View->Browser
+    - Click Audio Effects
+    - Drag and drop desired effect on a track
+        - e.g. drag Delay onto an instrument track
+    - Effect appears in device view
 - Mapping a MIDI controller to effects
+    - Effect controls can be mapped like any other control
 - Recording a live performance into Ableton Live
+    - Switch to the Arrangement view by pressing Tab
+    - Press the big Record button
 - Exporting your composition as a .wav + .mp3
     - [How to Export an MP3 File from Ableton Live (Berklee)](https://online.berklee.edu/help/en_US/ableton-live/1656745-how-to-export-an-mp3-file-from-ableton-live)
+    - Switch to Arrangement view
+    - Drag to select the time range you want to export
+    - File -> Export Audio/Video
+    - Rendered Track -> Main
+    - Check the start time and length
+    - Normalize -> On
+        - Adjusts volume so maximum volume becomes maximum volume in recorded file
+    - Encode PCM -> On
+    - File Type -> WAV
+        - Basic uncompressed / lossless audio file
+        - Use this file to do further editing, for example in Audacity
+    - Encode MP3 -> On
+        - Smaller compressed file, suitable for sharing
+    - Click Export
+        - Save in SAVE HERE drive 
+    - Find file
+        - Right-click and Open With
+            - QuickTime Player -> quick check that everything was recorded
+            - Audacity -> further editing of wav file, e.g. trimming or exporting to specific formats
 - Exporting your project as a zip file
     - [Transferring Projects to another computer (Ableton)](https://help.ableton.com/hc/en-us/articles/209071909-Transferring-Projects-to-another-computer#h_2cbf945b-14e3-43c1-ad2c-362b177662e9)
+    - File -> Collect and Save All
+        - Saves all used samples, etc into project directory so everything is together
+    - Find project directory (e.g. 250127 Demo Project)
+    - Right-click on directory -> Compress to create zip (e.g. 250127 Demo Project.zip)
 - Practice mapping, recording, and exporting
  
 ### Homework - Week 2.2
