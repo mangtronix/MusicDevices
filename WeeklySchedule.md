@@ -203,8 +203,11 @@ In-class workshop - Part 1
  (Taetro / YouTube)](https://youtu.be/RSnjD6xe5bM?si=b2DxnyvIicIyD0Ab)
     - [Ableton Live For Beginners (pt. 2) (Taetro / YouTube)](https://www.youtube.com/watch?v=PIYRINw6Kog&list=PLoO2tOP2r-XsXH0lybWl9zMvYp3lpLF46&index=2)
     - Start making some basic music
-    - To hear audio on headphones
+    - To hear system audio (e.g. Chrome / YouTube) on headphones
+        - Apple -> System Settings -> Sound Output -> Scarlet
+    - To hear Ableton Live audio on headphones 
         - Live -> Settings -> Audio -> Audio Output Device -> Focusrite Scarlet
+    - Physical volume knob above headphone jack also controls headphone volume
     - Save project to "SAVE HERE" drive
 - Ask questions!
 - Start making some music
