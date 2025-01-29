@@ -157,6 +157,21 @@ Applied music theory, Western and beyond
 - Pick up class book from Bookstore
 
 ## Week 2.2
+What is a DAW?
+- A Digital Audio Workstation (DAW) is software that allows you to record, edit, and produce audio
+- [What is a DAW? Your guide to digital audio workstations (Avid)](https://www.avid.com/resource-center/what-is-a-daw)
+- Centerpiece of a music studio
+    - Recording audio from instruments or microphones through audio interface
+    - Sequencing notes on hardware or software instruments
+    - Mixing audio
+    - Adding effects
+    - Exporting audio
+- With a DAW like Ableton Live you have a complete music studio on your laptop!
+    - Can do everything "in the box" using software instruments and recorded samples
+    - Add an audio interface for recording from physical instruments and microphones
+    - Connect with physical synthesizers / devices using MIDI
+    - Add a MIDI controller to control the DAW including playback / record, mixing, software synthesizers, effects, etc
+
 Workshop: Ableton, software synthesizers
 - Introduction to Ableton Live 12
 - Ableton Live editions
