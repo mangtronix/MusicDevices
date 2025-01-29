@@ -184,6 +184,9 @@ Workshop: Ableton, software synthesizers
  
 In-class workshop - Part 1
 - Follow first two lessons from [Ableton Live for Beginners (Taetro / YouTube)](https://www.youtube.com/watch?v=RSnjD6xe5bM&list=PLoO2tOP2r-XsXH0lybWl9zMvYp3lpLF46)
+    - [Ableton Live For Beginners (pt. 1)
+ (Taetro / YouTube)](https://youtu.be/RSnjD6xe5bM?si=b2DxnyvIicIyD0Ab)
+    - [Ableton Live For Beginners (pt. 2) (Taetro / YouTube)](https://www.youtube.com/watch?v=PIYRINw6Kog&list=PLoO2tOP2r-XsXH0lybWl9zMvYp3lpLF46&index=2)
 - Ask questions!
 - Start making some music
 
@@ -197,6 +200,7 @@ In-class workshop - Part 2
     - [How to Export an MP3 File from Ableton Live (Berklee)](https://online.berklee.edu/help/en_US/ableton-live/1656745-how-to-export-an-mp3-file-from-ableton-live)
 - Exporting your project as a zip file
     - [Transferring Projects to another computer (Ableton)](https://help.ableton.com/hc/en-us/articles/209071909-Transferring-Projects-to-another-computer#h_2cbf945b-14e3-43c1-ad2c-362b177662e9)
+- Practice mapping, recording, and exporting
  
 ### Homework - Week 2.2
 
