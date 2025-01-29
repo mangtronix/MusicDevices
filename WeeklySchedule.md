@@ -202,6 +202,10 @@ In-class workshop - Part 1
     - [Ableton Live For Beginners (pt. 1)
  (Taetro / YouTube)](https://youtu.be/RSnjD6xe5bM?si=b2DxnyvIicIyD0Ab)
     - [Ableton Live For Beginners (pt. 2) (Taetro / YouTube)](https://www.youtube.com/watch?v=PIYRINw6Kog&list=PLoO2tOP2r-XsXH0lybWl9zMvYp3lpLF46&index=2)
+    - Start making some basic music
+    - To hear audio on headphones
+        - Live -> Settings -> Audio -> Audio Output Device -> Focusrite Scarlet
+    - Save project to "SAVE HERE" drive
 - Ask questions!
 - Start making some music
 
