@@ -386,6 +386,7 @@ Due before start of next class
     - No response required
 
 ## Week 3.2
+### Meet in IM Lab - C3-029
 Workshop: Arduino for NIME
 - [Arduino IDE Setup for ESP32-S3 Reverse TFT Feather(Adafruit)](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/arduino-ide-setup-2)
     - Install Arduino IDE
