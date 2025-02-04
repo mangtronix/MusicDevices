@@ -1,6 +1,6 @@
-# Weekly Schedule - Weeks 8-14
+# Class Notes - Weeks 8-14
 
-[Weekly Schedule Spreadsheet](https://docs.google.com/spreadsheets/d/14s9f2PLqj50BRLKKCZjZiCTpdnHFVN-IBkaVPIkFLVE/edit?usp=sharing)
+[Weekly Overview / Dates (Spreadsheet)](https://docs.google.com/spreadsheets/d/14s9f2PLqj50BRLKKCZjZiCTpdnHFVN-IBkaVPIkFLVE/edit?usp=sharing)
 
 - [Week 1](WeeklySchedule.md#week-1) – Introduction / NIME, Music Devices, and Sound Installations
 - [Week 2](WeeklySchedule.md#week-2) – Applied music theory, Western and beyond
@@ -9,9 +9,10 @@
 - [Week 5](WeeklySchedule.md#week-5) – Musical sensors
 - [Week 6](WeeklySchedule.md#week-6) – Rapid prototyping
 - [Week 7](WeeklySchedule.md#week-7) – Idea Lab
-- SPRING BREAK
+- 7-Week Finals Break
 - [Week 8](#week-8) – Project proposal development
 - [Week 9](#week-9) – Project proposal presentation, implementation starts!
+- SPRING BREAK
 - [Week 10](#week-10) – Telling your story / documenting your work
 - [Week 11](#week-11) – Guest Speaker, project production
 - [Week 12](#week-12) – Music performance, project feedback, user testing
@@ -70,6 +71,8 @@ Due before start of next class
 
 - **Work** on your implementation plan
     - Identify most difficult / uncertain parts of project
+---
+# SPRING BREAK / SPRING BREAK / SPRING BREAK #
 ---
 
 # Week 10

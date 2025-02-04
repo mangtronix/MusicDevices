@@ -1,6 +1,6 @@
-# Weekly Schedule - Weeks 1-7
+# Class Notes - Weeks 1-7
 
-[Weekly Schedule Spreadsheet](https://docs.google.com/spreadsheets/d/14s9f2PLqj50BRLKKCZjZiCTpdnHFVN-IBkaVPIkFLVE/edit?usp=sharing)
+[Weekly Overview / Dates (Spreadsheet)](https://docs.google.com/spreadsheets/d/14s9f2PLqj50BRLKKCZjZiCTpdnHFVN-IBkaVPIkFLVE/edit?usp=sharing)
 
 - [Week 1](#week-1) – Introduction / NIME, Music Devices, and Sound Installations
 - [Week 2](#week-2) – Applied music theory, Western and beyond
@@ -9,9 +9,10 @@
 - [Week 5](#week-5) – Musical sensors
 - [Week 6](#week-6) – Rapid prototyping
 - [Week 7](#week-7) – Idea Lab
-- SPRING BREAK
+- 7-Week Finals Break
 - [Week 8](WeeklySchedule2.md#week-8) – Project proposal development
 - [Week 9](WeeklySchedule2.md#week-9) – Project proposal presentation, implementation starts!
+- SPRING BREAK
 - [Week 10](WeeklySchedule2.md#week-10) – Telling your story / documenting your work
 - [Week 11](WeeklySchedule2.md#week-11) – Guest Speaker, project production
 - [Week 12](WeeklySchedule2.md#week-12) – Music performance, project feedback, user testing
@@ -29,8 +30,14 @@ Note: Exact due dates for assignments and readings are indicated in Brightspace
 
 Introduction
 - Class introductions
+    - What's your technical background?
+    - What's your experience with music?
+    - What are you hoping to achieve in the course?
+    - [Dunewind Resonator](https://kildall.com/newest-artworks/dunewindresonator) by Michael Ang and Scott Kildall
+    - [Sonoglider Duet](https://kildall.com/newest-artworks/sonogliderduet) by Michael Ang and Scott Kildall
 - Review syllabus
 - Textbook at bookstore
+    - [Push, Turn, Move (Bjooks)](https://bjooks.com/products/push-turn-move-the-book)
 - Class kits will be distributed in class
 
 ## Week 1.2
@@ -39,22 +46,49 @@ Music Devices, NIME and Sound Installations
 - [New Interfaces for Musical Expression (NIME)](https://www.nime.org/)
     - [NIME Music Proceedings (NIME)](https://nime.org/music/)
     - [NIME Installation Proceedings (NIME)](https://nime.org/installations/)
-    - [Guthman Musical Instrument Competition (Georgia Tech)](https://guthman.gatech.edu/)
-        - [Ten Instruments That Will Change How You Think About Music
+- [Guthman Musical Instrument Competition (Georgia Tech)](https://guthman.gatech.edu/)
+- [Ten Instruments That Will Change How You Think About Music
  (Georgia Tech)](https://guthman.gatech.edu/feature/guthman-instruments-change-music)
-- [Push Turn Move (Bjooks)](https://bjooks.com/products/push-turn-move-the-book)
+- [Makey Makey (YouTube)](https://www.youtube.com/watch?v=rfQqh7iCcOU)
+    - Using capacitive touch sensing to trigger sounds
+- [Phobos, Dysfunctional Robotic Orchestra (Vimeo)](https://vimeo.com/235763130) composition by Carlos Guedes
+- [Laser Harp](https://www.youtube.com/watch?v=sLVXmsbVwUs#t=20)
+- [Ferrous (Landscape.fm)](https://www.landscape.fm/ferrous) - Handheld device for resonating metallic strings
+- [Eric Singer's Heavy-Metal Robots: Sound Builders (YouTube)](https://www.youtube.com/watch?v=MavM_WgZCjQ)
+<!-- 404
 - [10 Sound Installations that Inspire and Create Connection (Medium)](https://medium.com/@oskarlindskog/10-sound-installations-that-inspire-and-create-connection-73eabd5ce075)
-- [Cave of Sounds](https://caveofsounds.com/) - 
+-->
+- [Cave of Sounds](https://caveofsounds.com/) 
     - Public installation of 8 bespoke interactive musical instruments
+- [Alternative MIDI Controllers: New Ways To Touch Music (Perfect Circuit)](https://www.perfectcircuit.com/signal/alternative-midi-controllers)
+    - Some historical and current examples of commercial alternative MIDI controllers
+ 
+- Technologies used in the course
+    - [Arduino](https://www.arduino.cc/) - open source electronic prototyping platform
+        - [Adafruit ESP32-S3 Reverse TFT Feather](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/overview) - Arduino-compatible microcontroller board with builtin screen, battery charger, WiFi, and Bluetooth
+        - various inputs and sensors
+        - motors, light, and other physical outputs are possible
+    - [Ableton Live](https://www.ableton.com/en/live/) - music production DAW, Ableton 12 Suite available in music lab, Lite licenses can be found
+        - your final project can use other software
+    - 3D design / printing
+        - [Autodesk Fusion](https://www.autodesk.com/education/edu-software/fusion) - professional 3D modeling for manufacturing
+        - [Prusa MK4S](https://www.prusa3d.com/product/original-prusa-mk4s-3d-printer-5/) - "workhorse" basic 3D printer with open source roots, 4x in IM Lab
+    - [Laser cutting](https://www.instructables.com/Laser-Cutting-Basics/)
+    - Other software / hardware depending on interests!
+
 
 ### Homework - Week 1.2
 
 Due before start of next class
 
-- **Read** [Microtonality and the Struggle for Fretlessness in the Digital Age
- (CTM)](https://www.ctm-festival.de/magazine/microtonality-and-the-struggle-for-fretlessness-in-the-digital-age)]
-    - What do you think of Allami's statement "Modern technology, as much as it seems neutral and empowering, is heavily laden with cultural and political asymmetries that often go unnoticed and unchallenged."?
-    - Can you think of examples where technology is biased towards a certain culture? How could the technology be changed to allow a wider range of expression?
+#### Reading 1 - Controllerism ####
+- **Watch** [Moldover's Approach to Controllerism (1 of 2) (YouTube)](https://www.youtube.com/watch?v=L2McDeSKiOU)
+- **Watch** [Moldover's Approach to Controllerism (2 of 2)
+ (YouTube)](https://youtu.be/dznjQIarboY?si=oWTpcaw2dQ_p_V9q)
+- **Read** [Moldover-The Godfather of Controllerism
+(MIDI Association)](https://midi.org/moldover-the-godfather-of-controllerism)
+    - What makes Moldover's approach to controller design effective or not effective?
+    - How can combining controller design and sound design help you connect with an audience? What techniques are you planning to use?
 - **Post** your response in the discussion forum
     - See Brightspace->Discussions->Readings for details
 - **Be ready** to discuss the topic in class
@@ -63,6 +97,50 @@ Due before start of next class
 # Week 2
 
 ## Week 2.1
+Announcements
+- Pick up book from Bookstore
+    - Push, Turn, Move 
+- Questions
+    - Who has done tool training Fall 2023 or later?
+    - Who has experience with Ableton Live or other music software?
+    - More interested in performance, practical devices, or installations?
+
+- Discuss Controllerism reading
+    - [The How To Show - Moldover (YouTube)](https://www.youtube.com/watch?v=IwjiUSnjrQk)
+        - Brief overview of (re)making a controller, setting up software, and creating a performance
+    - [How to Build a Controller (Making of The Mojo) (YouTube)](https://www.youtube.com/watch?v=uqs59UrA11c)
+        - Overview of choosing components and making a custom enclosure
+        - In our class we'll be using an Arduino as the brain and making our own enclosures using 3D printing and laser cutting
+
+- Look at NIME examples
+
+Interactive music tutorial
+- [learningmusic.ableton.com (Ableton)](https://learningmusic.ableton.com/index.html)
+    - Interactive introduction to making music focused on the Ableton Live style workflow of sequencing drums and synthesizers
+    - Possible to export from the [Playground](https://learningmusic.ableton.com/the-playground.html) into Ableton Live
+    - [Song structure (Ableton)](https://learningmusic.ableton.com/song-structure/bury-it.html) - an example of a common song structure in pop music
+
+What is a synthesizer?
+- "A synthesizer (or synth) is an electronic musical instrument that generates audio signals." - [Synthesizer (Wikipedia)](https://en.wikipedia.org/wiki/Synthesizer)
+    - Includes photographs of early synthesizers including the highly influential Moog Minimoog synthesizer that helped popularize synthesizers to the public
+- An analog synthesizer uses primarily analog (non-digital) electronic circuits
+    - The electronic circuits create oscillations that can be controlled and shaped in various ways
+- [Wendy Carlos demonstrates her Moog Synthesizer in 1970 (YouTube)](https://youtu.be/4SBDH5uhs4Q?si=wMCGIsV-K7WG_cnj)
+- Digital synthesizers use software code to create the sounds
+    - They often recreate techniques used in analog circuits ("virtual analog" modeling)
+    - They can incorporate simulations of physical systems such as resonators (physical modeling)
+    - They can use stored or recorded waveforms
+- [Learning Synths (Ableton)](https://learningsynths.ableton.com/)
+    - Interactive site for learning about sound synthesis
+    - May give you some inspiration on ways to map a control to a change in sound (input to change in synthesis parameters)
+
+Sampling
+- Taking existing sounds and re-sequencing them
+- Became particularly popular through hiphop sampling in the 80s
+- [AKAI MPC LIVE II Retro - making a beat with vinyl Sampling
+  (YouTube)](https://www.youtube.com/watch?v=NUMBYbbG6tE)
+- [Live Finger Drumming - Gnarly (YouTube)](https://www.youtube.com/watch?v=W9s8aPM8kK0)
+
 Applied music theory, Western and beyond
 - [Learn music theory in half an hour (Andrew Huang / YouTube)](https://youtu.be/rgaTLrZGlk0?si=n52AtMMm5wVyZF4t)
 - [Music Theory For Beginners (Taetro / YouTube)](https://www.youtube.com/watch?v=CluuHrr7HG4&list=PLoO2tOP2r-XvoFc7cnfYcomf1X0XcQvDC)
@@ -72,33 +150,140 @@ Applied music theory, Western and beyond
     - "A tuning system is a way to organize musical pitch, by narrowing down from the infinite number of possible pitches to a usable subset."
     - [Listen (tuning.ableton.com)](https://tuning.ableton.com/introduction/listen/)
         - Different scales and corresponding Ableton files
+     
+### Homework
+- Watch [Learn music theory in half an hour (Andrew Huang / YouTube)](https://youtu.be/rgaTLrZGlk0?si=n52AtMMm5wVyZF4t)
+    - No response required
+- Pick up class book from Bookstore
 
 ## Week 2.2
+What is a DAW?
+- A Digital Audio Workstation (DAW) is software that allows you to record, edit, and produce audio
+- [What is a DAW? Your guide to digital audio workstations (Avid)](https://www.avid.com/resource-center/what-is-a-daw)
+- Centerpiece of a music studio
+    - Recording audio from instruments or microphones through audio interface
+    - Sequencing notes on hardware or software instruments
+    - Mixing audio
+    - Adding effects
+    - Exporting audio
+- With a DAW like Ableton Live you have a complete music studio on your laptop!
+    - Can do everything "in the box" using software instruments and recorded samples
+    - Add an audio interface for recording from physical instruments and microphones
+    - Connect with physical synthesizers / devices using MIDI
+    - Add a MIDI controller to control the DAW including playback / record, mixing, software synthesizers, effects, etc
+
 Workshop: Ableton, software synthesizers
-- Introduction to Ableton Live
+- Introduction to Ableton Live 12
 - Ableton Live editions
     - [Intro, Standard, Suite](https://www.ableton.com/en/live/compare-editions/)
-    - Live 11 Suite is available in C3-116
+    - Live 12 Suite is available in C3-116
     - Live Lite (free license) comes with many hardware controllers and some apps
         - iOS apps with free Live Lite license
           - [Koala Sampler](https://www.koalasampler.com/)
             - Settings -> Get Live Lite
           - [Ableton Note](https://www.ableton.com/en/note/)
             - Settings -> Get Ableton Live Lite
+        - If you want a Live Lite license, ask Mang
 - Ableton Live Tutorials
+    - [learningmusic.ableton.com](https://learningmusic.ableton.com/index.html)
+        - Simplified online learning of concepts used in Live as well as general overview of electronic music composition 
     - [Getting started with Live (Ableton)](https://www.ableton.com/en/live/learn-live/)
     - [Ableton Live for Beginners (Taetro / YouTube)](https://www.youtube.com/watch?v=RSnjD6xe5bM&list=PLoO2tOP2r-XsXH0lybWl9zMvYp3lpLF46)
+    - [How To Use MIDI Controllers With Ableton Live (YouTube)](https://www.youtube.com/watch?v=YE6QVzrLNz0&list=PLoO2tOP2r-XsXH0lybWl9zMvYp3lpLF46&index=6)
+    - [The NEW Ableton 12 Beginner Guide (in 22 Minutes) (YouTube)](https://www.youtube.com/watch?v=WMg4Y4q6FQ0)
 - Default scale / tuning and using alternative tunings
     - [Using Tuning Systems (Ableton)](https://www.ableton.com/en/live-manual/12/using-tuning-systems/)
     - [tuning.ableton.com](https://tuning.ableton.com/)
     - [A Guide to the Maqam Tuning Presets for Ableton Live 12 (Ableton)](https://tuning.ableton.com/arabic-maqam/maqam-guide/)
     - Using Ableton tuning with VSTs
  
+In-class workshop - Part 1
+- Follow first two lessons from [Ableton Live for Beginners (Taetro / YouTube)](https://www.youtube.com/watch?v=RSnjD6xe5bM&list=PLoO2tOP2r-XsXH0lybWl9zMvYp3lpLF46)
+    - [Ableton Live For Beginners (pt. 1)
+ (Taetro / YouTube)](https://youtu.be/RSnjD6xe5bM?si=b2DxnyvIicIyD0Ab)
+    - [Ableton Live For Beginners (pt. 2) (Taetro / YouTube)](https://www.youtube.com/watch?v=PIYRINw6Kog&list=PLoO2tOP2r-XsXH0lybWl9zMvYp3lpLF46&index=2)
+    - Start making some basic music
+    - To hear system audio (e.g. Chrome / YouTube) on headphones
+        - Apple -> System Settings -> Sound Output -> Scarlet
+    - To hear Ableton Live audio on headphones 
+        - Live -> Settings -> Audio -> Audio Output Device -> Focusrite Scarlet
+    - Physical volume knob above headphone jack also controls headphone volume
+    - Save project to "SAVE HERE" drive
+- Ask questions!
+- Start making some music
+
+In-class workshop - Part 2
+- How to map your MIDI controller to a software instrument
+    - [How To Use MIDI Controllers With Ableton Live (Taetro / YouTube)](https://www.youtube.com/watch?v=YE6QVzrLNz0&list=PLoO2tOP2r-XsXH0lybWl9zMvYp3lpLF46&index=7)
+    - Click "MIDI" button at top right to enter MIDI mapping mode
+    - Click on control you want to map
+    - Press / wiggle control on physical MIDI controller to map the controls together
+    - Click "MIDI" to exit MIDI mapping mode
+    - Move your physical control and check that on-screen control also moves
+- Adding effects to a track
+    - Make Browser visible using icon at top-left, or View->Browser
+    - Click Audio Effects
+    - Drag and drop desired effect on a track
+        - e.g. drag Delay onto an instrument track
+    - Effect appears in device view
+- Mapping a MIDI controller to effects
+    - Effect controls can be mapped like any other control
+- Recording a live performance into Ableton Live
+    - Switch to the Arrangement view by pressing Tab
+    - Press the big Record button
+- Exporting your composition as a .wav + .mp3
+    - [How to Export an MP3 File from Ableton Live (Berklee)](https://online.berklee.edu/help/en_US/ableton-live/1656745-how-to-export-an-mp3-file-from-ableton-live)
+    - Switch to Arrangement view
+    - Drag to select the time range you want to export
+    - File -> Export Audio/Video
+    - Rendered Track -> Main
+    - Check the start time and length
+    - Normalize -> On
+        - Adjusts volume so maximum volume becomes maximum volume in recorded file
+    - Encode PCM -> On
+    - File Type -> WAV
+        - Basic uncompressed / lossless audio file
+        - Use this file to do further editing, for example in Audacity
+    - Encode MP3 -> On
+        - Smaller compressed file, suitable for sharing
+    - Click Export
+        - Save in SAVE HERE drive 
+    - Find file
+        - Right-click and Open With
+            - QuickTime Player -> quick check that everything was recorded
+            - Audacity -> further editing of wav file, e.g. trimming or exporting to specific formats
+- Exporting your project as a zip file
+    - [Transferring Projects to another computer (Ableton)](https://help.ableton.com/hc/en-us/articles/209071909-Transferring-Projects-to-another-computer#h_2cbf945b-14e3-43c1-ad2c-362b177662e9)
+    - File -> Collect and Save All
+        - Saves all used samples, etc into project directory so everything is together
+    - Find project directory (e.g. 250127 Demo Project)
+    - Right-click on directory -> Compress to create zip (e.g. 250127 Demo Project.zip)
+- Practice mapping, recording, and exporting
+
+Upcoming events at Arts Center
+- [Artist Talk - Finding a Voice Between Tradition and Contemporary](https://publicprograms.nyuad.nyu.edu/en/the-arts-center/events/2025/february/finding-a-voice-between-tradition-and-contemporary.html) - Feb 11
+- [Music Workshop with KOKOKO!](https://publicprograms.nyuad.nyu.edu/en/the-arts-center/events/2025/february/kokoko-workshop.html) - Feb 12
+    - DIY instruments
+    - They're visiting our class that day
+- [Music Workshop with Cimafunk](https://publicprograms.nyuad.nyu.edu/en/the-arts-center/events/2025/february/afrocuban-music-workshop.html) - Feb 12
+    - Afrocuban rhythms
+
 ### Homework - Week 2.2
 
 Due before start of next class
 
-- **Create** a musical composition in Ableton Live using a non-standard scale
+<!--
+- **Read** [Microtonality and the Struggle for Fretlessness in the Digital Age
+ (CTM)](https://www.ctm-festival.de/magazine/microtonality-and-the-struggle-for-fretlessness-in-the-digital-age)
+    - What do you think of Allami's statement "Modern technology, as much as it seems neutral and empowering, is heavily laden with cultural and political asymmetries that often go unnoticed and unchallenged."?
+    - Can you think of examples where technology is biased towards a certain culture? How could the technology be changed to allow a wider range of expression?
+- **Post** your response in the discussion forum
+    - See Brightspace->Discussions->Readings for details
+- **Be ready** to discuss the topic in class
+-->
+
+<!-- Old with tuning
+- **Create** a musical composition in Ableton Live 12 using a non-standard scale
     - Make a short piece of music (max 2-3 minutes) with at least a main melody using Ableton's tuning feature
         - Use the bundled (tuning aware) instruments in Ableton or VST instruments that support Ableton's tuning system (see instructions above)
         - Feel free to add percussion and other elements as you wish
@@ -108,10 +293,12 @@ Due before start of next class
         - [Using Tuning Systems (Ableton)](https://www.ableton.com/en/live-manual/12/using-tuning-systems/)
         - [Ableton Tuning Guide](https://tuning.ableton.com/)
         - [Explore the tuning systems in Live 12 (tuning.ableton.com)](https://tuning.ableton.com/introduction/where-to-go-from-here/)
+-->
+- **Create** a short musical composition in Ableton Live 12
+- **See Brightspace -> Discussion -> Individual Exercises** for details
 - **Post** your work in the discussion forum
     - See Brightspace->Discussions->Exercises for details
 - **Be ready** to show / discuss the work in class
-
 
 ---
 
@@ -199,6 +386,7 @@ Due before start of next class
     - No response required
 
 ## Week 3.2
+### Meet in IM Lab - C3-029
 Workshop: Arduino for NIME
 - [Arduino IDE Setup for ESP32-S3 Reverse TFT Feather(Adafruit)](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/arduino-ide-setup-2)
     - Install Arduino IDE
@@ -432,16 +620,7 @@ Musical sensors
 
 Due before start of next class
 
-- **Watch** [Moldover's Approach to Controllerism (1 of 2) (YouTube)](https://www.youtube.com/watch?v=L2McDeSKiOU)
-- **Watch** [Moldover's Approach to Controllerism (2 of 2)
- (YouTube)](https://youtu.be/dznjQIarboY?si=oWTpcaw2dQ_p_V9q)
-- **Read** [Moldover-The Godfather of Controllerism
-(MIDI Association)](https://midi.org/moldover-the-godfather-of-controllerism)
-    - What makes Moldover's approach to controller design effective or not effective?
-    - How can combining controller design and sound design help you connect with an audience? What techniques are you planning to use?
-- **Post** your response in the discussion forum
-    - See Brightspace->Discussions->Readings for details
-- **Be ready** to discuss the topic in class
+
 
 ## Week 5.2
 Workshop: Musical sensors
@@ -547,5 +726,5 @@ Due before start of next class
 
 - **Continue developing** your idea for your final project
 ---
-# SPRING BREAK
+# 7-Week Finals Break
 
