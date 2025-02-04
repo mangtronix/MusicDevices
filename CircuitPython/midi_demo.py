@@ -9,6 +9,8 @@
 # to enable USB MIDI
 # See https://learn.adafruit.com/customizing-usb-devices-in-circuitpython/circuitpy-midi-serial
 
+print("midi_demo")
+
 code_for_boot_py = """
 import usb_hid, usb_midi
 
