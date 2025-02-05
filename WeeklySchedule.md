@@ -470,16 +470,21 @@ Workshop: CircuitPython / ESP32-S3
 
 Due before start of next class
 
+- **Sign** [IM Program Policies](https://docs.google.com/forms/d/e/1FAIpQLSfCx-YtOJYsbzMRJEVwXrCxGyCoN2VpmJYbAhEhydcT_tIzmA/viewform) if you haven't already this academic year
 - **Sign up** for Autodesk Fusion personal / education license
     - [Autodesk Fusion](https://www.autodesk.com/products/fusion-360/personal)
     - Will be used later in the course
 - **Peruse** the Control section of *Push, Turn, Move* pp. 60-123 to see a catalogue of different physical UI elements
     - Can skip the interviews for now
     - No response required
+- **Create** a CircuitPython sketch
+    - Details TBD
+<!--
 - **Create** a basic MIDI controller
     - Write an Arduino sketch (.ino) that implements a basic MIDI controller on our ESP32-S3 Feather board
     - Your controller should send note on/off messages as well as continous controller messages
     - Use your MIDI controller to control sounds in Ableton Live
+-->
 - **Post** your work in the discussion forum
     - See Brightspace->Discussions->Exercises for details
 - **Be ready** to show / discuss your work in class
