@@ -439,7 +439,9 @@ Board ID:adafruit_feather_esp32s3_reverse_tft
 UID:468E3337EEC8
 boot.py output:
 Enabling USB MIDI
-``` 
+```
+
+- [Install Mu editor](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/installing-mu-editor)
 
 <!--
 - [Arduino IDE Setup for ESP32-S3 Reverse TFT Feather(Adafruit)](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/arduino-ide-setup-2)
