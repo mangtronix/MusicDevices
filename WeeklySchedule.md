@@ -442,6 +442,12 @@ Enabling USB MIDI
 ```
 
 - [Install Mu editor](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/installing-mu-editor)
+- [CircuitPython Essentials](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/circuitpython-essentials)
+    - [Blink example](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/blink)
+    - [Digital input example](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/digital-input)
+    - [Digital input multiple buttons example](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/digital-input-multiple-buttons)
+    - [Neopixel example](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/neopixel)
+        - Note we have to install the Neopixel library in to CIRCUITPY/lib
 
 <!--
 - [Arduino IDE Setup for ESP32-S3 Reverse TFT Feather(Adafruit)](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/arduino-ide-setup-2)
