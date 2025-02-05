@@ -305,10 +305,19 @@ Due before start of next class
 # Week 3
 
 ## Week 3.1
-Arduino for NIME
-- [Arduino in 100 Seconds (YouTube)](https://www.youtube.com/watch?v=1ENiVwk8idM)
+- Review homework
 
-- Distribute class kits
+Overview of music devices
+- [Korg Volca Keys](https://www.korg.com/us/products/dj/volca_keys/)
+    - Basic synthesizer
+- [Roland TR-808](https://en.wikipedia.org/wiki/Roland_TR-808)
+    - Incredibly popular drum machine
+    - Originally made in the 1980s and became popular with techno music producers
+    - Along with the [Roland TR-909](https://en.wikipedia.org/wiki/Roland_TR-909) these are the "classic" drum machine sounds popular in house, techno, and other genres
+ 
+Song Structures
+- ["Bury It" song structure (learningmusic.ableton.com)](https://learningmusic.ableton.com/song-structure/bury-it.html)
+ 
 
 Hardware kit
 - [Adafruit ESP32-S3 Reverse TFT Feather (Adafruit)](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/overview)
@@ -387,7 +396,34 @@ Due before start of next class
 
 ## Week 3.2
 ### Meet in IM Lab - C3-029
-Workshop: Arduino for NIME
+Workshop: CircuitPython / ESP32-S3
+- [ESP32-S3 Reverse TFT Feather](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/overview)
+    - Microcontroller board that supports Arduino and CircuitPython
+    - Builtin screen, battery charger, connector for QT / I2C peripheral boards
+    - Supports Bluetooth Low Energy (Arduino only) and wifi (but not Enterprise wifi)
+- [CircuitPython](https://circuitpython.org/)
+    - Alternative to Arduino software that uses dynamically interpreted scripts (Python) rather than compiled code (C/C++)
+    - Supported on many of the same hardware boards as Arduino
+    - Development cycle
+        - Plug CircuitPython board to computer
+        - CIRCUITPY drive appears
+        - Edit code directly on the CIRCUITPY drive
+        - Hit save to start running your code
+    - Advantages
+        - For larger projects, much faster to see changes in code (no need to recompile entire program)
+        - Can drag and drop small media files to the CIRCUITPY drive and access through code
+    - Disadvantages
+        - Newer with relatively fewer examples
+        - Less access to low-level chip features like interrupts
+        - Not all features supported by Arduino are supported on all boards
+- One time setup
+    - Update bootloader
+        - Lowest level of code running on the board, handles board startup
+    - Install CircuitPython 9.x
+        - CircuitPython interpreter will run our .py script files
+        - Includes code for making the CIRCUITPY drive appear
+
+<!--
 - [Arduino IDE Setup for ESP32-S3 Reverse TFT Feather(Adafruit)](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/arduino-ide-setup-2)
     - Install Arduino IDE
     - The board we are using is the Adafruit Feather ESP32-S3 Reverse TFT
@@ -406,7 +442,9 @@ Workshop: Arduino for NIME
     - [ESP32-S3 Reverse TFT Factory Shipped Demo (Adafruit)](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/factory-shipped-demo-2)
 
 - [Installing Libraries (Arduino)](https://docs.arduino.cc/software/ide-v1/tutorials/installing-libraries/)
+-->
 
+<!--
 - Create our first MIDI controller using ESP32-S3 Feather
 - Run sample code for sending our first note
     <!-- Not for ESP32
@@ -420,7 +458,7 @@ Workshop: Arduino for NIME
     - MacOS
         - Install [Flynth](https://www.fingerlab.net/portfolio/flynth) and make some sound!
             - Settings -> MIDI (enabled) -> Select MIDI device
-
+-->
 
 ### Homework - Week 3.2
 
