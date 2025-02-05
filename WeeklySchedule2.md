@@ -4,7 +4,7 @@
 
 - [Week 1](WeeklySchedule.md#week-1) – Introduction / NIME, Music Devices, and Sound Installations
 - [Week 2](WeeklySchedule.md#week-2) – Applied music theory, Western and beyond
-- [Week 3](WeeklySchedule.md#week-3) – Arduino for NIME
+- [Week 3](WeeklySchedule.md#week-3) – CircuitPython / Physical computing for NIME
 - [Week 4](WeeklySchedule.md#week-4) – Musical interface design, MIDI
 - [Week 5](WeeklySchedule.md#week-5) – Musical sensors
 - [Week 6](WeeklySchedule.md#week-6) – Rapid prototyping
