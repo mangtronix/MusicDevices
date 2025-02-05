@@ -494,9 +494,13 @@ Due before start of next class
 - **Sign up** for Autodesk Fusion personal / education license
     - [Autodesk Fusion](https://www.autodesk.com/products/fusion-360/personal)
     - Will be used later in the course
+- **Read** *Push, Turn, Move* pp. 14-27, 34
+    - No response required
+<!--
 - **Peruse** the Control section of *Push, Turn, Move* pp. 60-123 to see a catalogue of different physical UI elements
     - Can skip the interviews for now
     - No response required
+-->
 - **Create** a CircuitPython sketch
     - Read from the 3 buttons
     - Print different messages to the screen
