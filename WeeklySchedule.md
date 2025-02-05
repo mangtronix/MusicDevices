@@ -465,10 +465,10 @@ Enabling USB MIDI
 <!--
 - Create our first MIDI controller using ESP32-S3 Feather
 - Run sample code for sending our first note
-    <!-- Not for ESP32
+    
     - [MIDIUSB_write.ino (GitHub)](https://github.com/arduino-libraries/MIDIUSB/blob/master/examples/MIDIUSB_write/MIDIUSB_write.ino)    
     - Sends note on/off in simple loop with blocking delay
-    -->
+
     - TODO - ESP32 USBMIDI example
         - File -> Examples (ESP32 Reverse TFT) -> USB -> MidiController.ino
     - Install [MIDI Monitor](https://www.snoize.com/MIDIMonitor/) and check that MIDI notes are being received by your laptop
