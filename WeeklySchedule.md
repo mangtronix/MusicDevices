@@ -484,7 +484,7 @@ Enabling USB MIDI
 
 Due before start of next class
 
-- **Sign** [IM Program Policies](https://docs.google.com/forms/d/e/1FAIpQLSfCx-YtOJYsbzMRJEVwXrCxGyCoN2VpmJYbAhEhydcT_tIzmA/viewform) if you haven't already this academic year
+- **Sign** [IM Program Policies](https://docs.google.com/forms/d/e/1FAIpQLSfCx-YtOJYsbzMRJEVwXrCxGyCoN2VpmJYbAhEhydcT_tIzmA/viewform) at nyuadim.com
 - **Sign up** for Autodesk Fusion personal / education license
     - [Autodesk Fusion](https://www.autodesk.com/products/fusion-360/personal)
     - Will be used later in the course
