@@ -428,6 +428,18 @@ Workshop: CircuitPython / ESP32-S3
             - Download CircuitPython 9.x uf2
             - Double click Reset button
             - Drag and drop .uf2 file to FTHRS3BOOT
+            - Open CIRCUITPY drive
+            - Copy [boot.py](https://github.com/mangtronix/MusicDevices/blob/main/CircuitPython/boot.py) to the CIRCUITPY drive
+                - This file enable USB MIDI, which we'll use later
+            - Unplug and replug the board
+            - Check boot_out.txt on the CIRCUITPY drive, it should look like this
+```
+Adafruit CircuitPython 9.2.4 on 2025-01-29; Adafruit Feather ESP32-S3 Reverse TFT with ESP32S3
+Board ID:adafruit_feather_esp32s3_reverse_tft
+UID:468E3337EEC8
+boot.py output:
+Enabling USB MIDI
+``` 
 
 <!--
 - [Arduino IDE Setup for ESP32-S3 Reverse TFT Feather(Adafruit)](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/arduino-ide-setup-2)
