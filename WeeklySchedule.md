@@ -498,7 +498,10 @@ Due before start of next class
     - Can skip the interviews for now
     - No response required
 - **Create** a CircuitPython sketch
-    - Details TBD
+    - Read from the 3 buttons
+    - Print different messages to the screen
+    - Cycle through a series of colours
+    - Try to make a story using the messages and colours
 <!--
 - **Create** a basic MIDI controller
     - Write an Arduino sketch (.ino) that implements a basic MIDI controller on our ESP32-S3 Feather board
