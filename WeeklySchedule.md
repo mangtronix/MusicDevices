@@ -417,11 +417,17 @@ Workshop: CircuitPython / ESP32-S3
         - Less access to low-level chip features like interrupts
         - Not all features supported by Arduino are supported on all boards
 - One time setup
+    - [Install CircuitPython (Adafruit)](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/install-circuitpython)
     - Update bootloader
         - Lowest level of code running on the board, handles board startup
+        - Follow instructions at bottom right [Install, Repair, or Update UF2 Bootloader](https://circuitpython.org/board/adafruit_feather_esp32s3_reverse_tft/)
     - Install CircuitPython 9.x
         - CircuitPython interpreter will run our .py script files
         - Includes code for making the CIRCUITPY drive appear
+        - Follow instructions to [Install CircuitPython](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/install-circuitpython)
+            - Download CircuitPython 9.x uf2
+            - Double click Reset button
+            - Drag and drop .uf2 file to FTHRS3BOOT
 
 <!--
 - [Arduino IDE Setup for ESP32-S3 Reverse TFT Feather(Adafruit)](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/arduino-ide-setup-2)
