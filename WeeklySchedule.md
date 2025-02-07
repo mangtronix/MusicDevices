@@ -517,6 +517,20 @@ Due before start of next class
 # Week 4
 
 ## Week 4.1
+- Review homework
+
+CircuitPython
+- [How do I learn Python?](https://learn.adafruit.com/welcome-to-circuitpython/how-do-i-learn-python "How do I learn Python?")
+- [CircuitPython Essentials](https://learn.adafruit.com/circuitpython-essentials/circuitpython-essentials)
+    - [Pins and Modules](https://learn.adafruit.com/circuitpython-essentials/circuitpython-pins-and-modules)
+    - [Digital In and Out](https://learn.adafruit.com/circuitpython-essentials/circuitpython-digital-in-out)
+    - [Internal RGB LED](https://learn.adafruit.com/circuitpython-essentials/circuitpython-internal-rgb-led)
+    - [NeoPixel](https://learn.adafruit.com/circuitpython-essentials/circuitpython-neopixel)
+- [Arduino to CircuitPython](https://learn.adafruit.com/arduino-to-circuitpython/overview)
+    - Comparison of Arduino and CircuitPython with examples of how to do similar tasks 
+    - [Arduino to CircuitPython - time](https://learn.adafruit.com/arduino-to-circuitpython/time)
+- [RGB color codes](https://www.rapidtables.com/web/color/RGB_Color.html)
+
 Musical interface design, MIDI
 - [DIY USB Midi Controller With Arduino: a Beginner's Guide
 (Instructables)](https://www.instructables.com/DIY-USB-Midi-Controller-With-Arduino-a-Beginners-G/)
