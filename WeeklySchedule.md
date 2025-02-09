@@ -522,6 +522,7 @@ Due before start of next class
 Controller example
 - [Arcana Instruments Strum Accessible Instrument (CDM)](https://www.synthtopia.com/content/2025/02/04/arcana-instruments-strum-accessible-instrument/)
     - "The Arcana Strum is an example of adaptive technology, designed to be able to be used by people with a wide range of physical and cognitive abilities."
+    - [Arcana Strum (Arcana)](https://arcanainstruments.com/product/arcana-instrument/)
  
 
 CircuitPython
