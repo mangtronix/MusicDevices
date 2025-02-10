@@ -473,7 +473,10 @@ Due before start of next class
 ## Week 4.1
 - Review homework
 - New printer this semester: [Prusa XL](https://www.prusa3d.com/product/original-prusa-xl-assembled-5-toolhead-3d-printer/)
-- Start downloading [Visual Studio Code](https://code.visualstudio.com/)
+- Start downloading these tools:
+    - [Visual Studio Code](https://code.visualstudio.com/) - popular code editor
+    - [Protokol](https://hexler.net/protokol#get) - MIDI monitoring tool
+    - [Flynth](https://www.fingerlab.net/portfolio/flynth) - MacOS simple synthesizer
 
 Controller example
 - [Arcana Instruments Strum Accessible Instrument (CDM)](https://www.synthtopia.com/content/2025/02/04/arcana-instruments-strum-accessible-instrument/)
@@ -503,6 +506,7 @@ Visual Studio Code with CircuitPython
         - Click on the Serial Monitor tab
         - Select the Port (e.g. /dev/tty.usbmodem... - Adafruit)
         - Click Start Monitoring
+    - Note: you may have to reselect the port and click Start Monitoring if you manually reset the board
 
 MIDI - Musical Instrument Digital Interface
 - Standard for communication between digital instruments dating back to the 80s
