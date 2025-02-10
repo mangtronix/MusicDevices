@@ -33,6 +33,8 @@ print("Setting up NeoKey")
 # Create a NeoKey object using existing i2c bus
 neokey = NeoKey1x4(i2c, addr=0x30) # Default address
 
+# Set false to skip printing debug messages - faster performance
+serial_debug = False
 
 
 def potentiometer_to_color(value):
@@ -42,32 +44,37 @@ def potentiometer_to_color(value):
 
 while True:
     ### NeoSlider handling
-    print(potentiometer.value)
+    if serial_debug:
+        print(potentiometer.value)
     # Fill the pixels a color based on the position of the potentiometer.
     pixels.fill(colorwheel(potentiometer_to_color(potentiometer.value)))
 
     ### NeoKey handling
     # Check each button, if pressed, light up the matching neopixel!
     if neokey[0]:
-        print("Button A")
+        if serial_debug:
+            print("Button A")
         neokey.pixels[0] = 0xFF0000
     else:
         neokey.pixels[0] = 0x0
 
     if neokey[1]:
-        print("Button B")
+        if serial_debug:
+            print("Button B")
         neokey.pixels[1] = 0xFFFF00
     else:
         neokey.pixels[1] = 0x0
 
     if neokey[2]:
-        print("Button C")
+        if serial_debug:
+            print("Button C")
         neokey.pixels[2] = 0x00FF00
     else:
         neokey.pixels[2] = 0x0
 
     if neokey[3]:
-        print("Button D")
+        if serial_debug:
+            print("Button D")
         neokey.pixels[3] = 0x00FFFF
     else:
         neokey.pixels[3] = 0x0
