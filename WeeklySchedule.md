@@ -496,8 +496,8 @@ Visual Studio Code with CircuitPython
 - Download [Visual Studio Code](https://code.visualstudio.com/)
 - Disable PyLance (excessive error highlighting)
     - View->Extensions->Search->"PyLance" and clicking Disable
-- Install Serial Monitor
-    - View->Extensions->Search->"Serial Monitor" and click install
+- Install [Serial Monitor](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-serial-monitor)
+    - Install from [Serial Monitor webpage](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-serial-monitor) or View->Extensions->Search->"Serial Monitor" and click install
     - To open the Serial Monitor
         - Terminal->New Terminal
         - Click on the Serial Monitor tab
