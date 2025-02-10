@@ -497,6 +497,9 @@ CircuitPython
 
 Visual Studio Code with CircuitPython
 - Download [Visual Studio Code](https://code.visualstudio.com/)
+- Open the CIRCUITPY/code.py file
+    - Install Python when prompted
+- Make sure to Trust whenever prompted
 - Disable PyLance (excessive error highlighting)
     - View->Extensions->Search->"PyLance" and clicking Disable
 - Install [Serial Monitor](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-serial-monitor)
