@@ -778,8 +778,16 @@ Group project overview, work examples, rapid prototyping
 ## Week 6.2
 Workshop: 3D printing with IM Lab Instructor
 - IM Lab Print Farm
-    - 4x [Prusa MK4S](https://www.prusa3d.com/product/original-prusa-mk4s-3d-printer-5/)
-    - Ultimaker also available
+    - 4x [Prusa MK4](https://www.prusa3d.com/product/original-prusa-mk4s-3d-printer-5/)
+        - We have the MK4 version (not MK4S) but they are largely the same
+        - Build volume is 250 x 210 x 220 mm | 9.84 x 8.3 x 8.6 in
+        - Possible to manually change the filament colour at a specific height (e.g. to print label in different colour)
+    - [Prusa XL](https://www.prusa3d.com/product/original-prusa-xl-assembled-5-toolhead-3d-printer/) available for larger and multi-material prints
+        - Print volume is 360×360×360 mm (14.17’’×14.17’’×14.17’’)
+        - Automatic colour changing
+    - Other 3D printers available
+        - Ultimaker in IM Lab
+        - Print service at library (email them a file and go pick up the print)
 - [Fusion 360](https://www.autodesk.com/products/fusion-360/personal)
     - Professional 3D modeling tool for Computer Aided Design (CAD) and Manufacturing (CAM)
 - [PrusaSlicer](https://www.prusa3d.com/page/prusaslicer_424/)
