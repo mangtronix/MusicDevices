@@ -538,6 +538,7 @@ CircuitPython
 - [RGB color codes](https://www.rapidtables.com/web/color/RGB_Color.html)
 
 Musical interface design, MIDI
+- [MIDI for Makers (Adafruit)](https://learn.adafruit.com/midi-for-makers/overview)
 - [DIY USB Midi Controller With Arduino: a Beginner's Guide
 (Instructables)](https://www.instructables.com/DIY-USB-Midi-Controller-With-Arduino-a-Beginners-G/)
 - [Create a MIDI Device
