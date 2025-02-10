@@ -339,52 +339,6 @@ Hardware kit
         - Lab hours
         - [Connect2 Arts Booking (Intranet)](https://nyuad-artsbooking.nyu.edu/)
 
-MIDI - Musical Instrument Digital Interface
-- Standard for communication between digital instruments dating back to the 80s
-- Allows e.g. a controller keyboard to be hooked up to a synthesizer module, or computer to record notes from a controller and play them back on a software or hardware synthesizer
-- [Introduction to the MIDI Standard (Indiana University)](https://cecm.indiana.edu/361/midi.html)
-- [MIDI (Wikipedia)](https://en.wikipedia.org/wiki/MIDI) - comprehensive overview
-- MIDI 1.0 is a very basic protocol
-    - Uses 7-bit values (0-127)
-    - Common messages
-        - Note on/off
-            - Based on 12-tone piano keyboard (e.g. C, C#, D, D#, E, F)
-        - Continous controllers (CC) - e.g. knob value from 0-127
-            - Can suffer from "stair stepping" audible artifacts
-        - Pitch bend - 14-bit value from 0-16383
-            - Pitch bend of 8192 means "no bend" / wheel centered
-        - Modulation wheel - 14-bit value from 0-16383
-            - Used to add expression depending on specific synthesizer / patch, e.g. player moves the mod wheel to smoothly change the sound
-        - Clock, start, stop
-        - System Exclusive - non-standard messages, e.g. upload / download synthesizer patch from software editor
-    - Transmission speed / bandwidth is low (31250 bits per second, like an old modem)
-        - Have to limit the rate of control change messages
-        - [MIDI Advantages / Disadvantages (CCRMA)](https://ccrma.stanford.edu/~gary/controllers/midi.html)
-    - Designed as unidirectional protocol, sender to receiver
-        - e.g. keyboard -> sound module, MIDI keyboard -> computer -> synthesizer
-        - controller and receiver have to be in agreement on control mapping
-    - Not designed to represent fretless instruments or non-Western scales
-        - [Oud Taksim Bayātī (بياتي, Uşşâk, Bayat) by Hesham Hamra (YouTube)](https://www.youtube.com/watch?v=1DrzYlc8DAM)
-            - This performance would be very difficult to represent using MIDI as it uses notes outside the 12-tone Western scale and incorporates string articulations as an important aspect of the performance
-        - Playing quarter tone and "microtonal" scales can be accomplished using specialized software or hardware
-            - [47SOUL - Intro To Shamstep (YouTube)](https://www.youtube.com/watch?v=5N0phc4nK-0)
-                - The keyboardist makes use of a special device ([Kelfar AK tuning converter](https://kelfar.net/ak-5-pro-world-scale-tuning-converter/)) designed specifically to enable Arabic scales for live performance
-        - Demo of playing Maqam Bayati inside Ableton Live, using Western scale, Ableton tuning, and dedicated software instrument ([Taqsim SOLO](https://taqs.im/shop/solo/))
-        - What kind of music did you grow up with? What instruments do your favourite musicians play? How well do you feel these instruments are represented in electronic music?
-        - How do you think the instruments we have available affect the music we make and listen to?
-- [MIDI for Makers (Adafruit)](https://learn.adafruit.com/midi-for-makers)
-- MIDI 2.0
-    - Just released in 2020, starting to be used
-    - Allows bidirectional communication, "conversation" between devices
-        - e.g. controller can ask "are you a mixer?" and configure itself accordingly or ask the name of a parameter that is being controlled in order to show it on a display as it's being manipulated
-    - Higher resolution (e.g. 32-bit control values with 4 million steps)
-    - More controllers
-    - Better timing (e.g. play notes of chord together)
-    - [What Musicians & Artists need to know about MIDI 2.0 (MIDI Association)](https://midi.org/what-musicians-artists-need-to-know-about-midi-2-0)
-        - "Can MIDI 2.0 make it easier to have microtonal control and different non-western scales? Yes, MIDI 2.0 Voice Channel Messages allow Per Note precise control of the pitch of every note to better support non-western scales, arbitrary pitches, note retuning, dynamic pitch fluctuations or inflections, or to escape equal temperament when using the western 12 tone scale."
-    - A bit early for us to use MIDI 2.0 but something to keep an eye on
-        - [AM MIDI 2.0 Lib for Arduino (GitHub)](https://github.com/midi2-dev/AM_MIDI2.0Lib)
-
 
 ### Homework Week 3.1
 
@@ -519,13 +473,13 @@ Due before start of next class
 ## Week 4.1
 - Review homework
 - New printer this semester: [Prusa XL](https://www.prusa3d.com/product/original-prusa-xl-assembled-5-toolhead-3d-printer/)
+- Start downloading [Visual Studio Code](https://code.visualstudio.com/)
 
 Controller example
 - [Arcana Instruments Strum Accessible Instrument (CDM)](https://www.synthtopia.com/content/2025/02/04/arcana-instruments-strum-accessible-instrument/)
     - "The Arcana Strum is an example of adaptive technology, designed to be able to be used by people with a wide range of physical and cognitive abilities."
     - [Arcana Strum (Arcana)](https://arcanainstruments.com/product/arcana-instrument/)
  
-
 CircuitPython
 - [How do I learn Python?](https://learn.adafruit.com/welcome-to-circuitpython/how-do-i-learn-python "How do I learn Python?")
 - [CircuitPython Essentials](https://learn.adafruit.com/circuitpython-essentials/circuitpython-essentials)
@@ -538,7 +492,64 @@ CircuitPython
     - [Arduino to CircuitPython - time](https://learn.adafruit.com/arduino-to-circuitpython/time)
 - [RGB color codes](https://www.rapidtables.com/web/color/RGB_Color.html)
 
-Musical interface design, MIDI
+Visual Studio Code with CircuitPython
+- Download [Visual Studio Code](https://code.visualstudio.com/)
+- Disable PyLance (excessive error highlighting)
+    - View->Extensions->Search->"PyLance" and clicking Disable
+- Install Serial Monitor
+    - View->Extensions->Search->"Serial Monitor" and click install
+    - To open the Serial Monitor
+        - Terminal->New Terminal
+        - Click on the Serial Monitor tab
+        - Select the Port (e.g. /dev/tty.usbmodem... - Adafruit)
+        - Click Start Monitoring
+
+MIDI - Musical Instrument Digital Interface
+- Standard for communication between digital instruments dating back to the 80s
+- Allows e.g. a controller keyboard to be hooked up to a synthesizer module, or computer to record notes from a controller and play them back on a software or hardware synthesizer
+- [Introduction to the MIDI Standard (Indiana University)](https://cecm.indiana.edu/361/midi.html)
+- [MIDI (Wikipedia)](https://en.wikipedia.org/wiki/MIDI) - comprehensive overview
+- MIDI 1.0 is a very basic protocol
+    - Uses 7-bit values (0-127)
+    - Common messages
+        - Note on/off
+            - Based on 12-tone piano keyboard (e.g. C, C#, D, D#, E, F)
+        - Continous controllers (CC) - e.g. knob value from 0-127
+            - Can suffer from "stair stepping" audible artifacts
+        - Pitch bend - 14-bit value from 0-16383
+            - Pitch bend of 8192 means "no bend" / wheel centered
+        - Modulation wheel - 14-bit value from 0-16383
+            - Used to add expression depending on specific synthesizer / patch, e.g. player moves the mod wheel to smoothly change the sound
+        - Clock, start, stop
+        - System Exclusive - non-standard messages, e.g. upload / download synthesizer patch from software editor
+    - Transmission speed / bandwidth is low (31250 bits per second, like an old modem)
+        - Have to limit the rate of control change messages
+        - [MIDI Advantages / Disadvantages (CCRMA)](https://ccrma.stanford.edu/~gary/controllers/midi.html)
+    - Designed as unidirectional protocol, sender to receiver
+        - e.g. keyboard -> sound module, MIDI keyboard -> computer -> synthesizer
+        - controller and receiver have to be in agreement on control mapping
+    - Not designed to represent fretless instruments or non-Western scales
+        - [Oud Taksim Bayātī (بياتي, Uşşâk, Bayat) by Hesham Hamra (YouTube)](https://www.youtube.com/watch?v=1DrzYlc8DAM)
+            - This performance would be very difficult to represent using MIDI as it uses notes outside the 12-tone Western scale and incorporates string articulations as an important aspect of the performance
+        - Playing quarter tone and "microtonal" scales can be accomplished using specialized software or hardware
+            - [47SOUL - Intro To Shamstep (YouTube)](https://www.youtube.com/watch?v=5N0phc4nK-0)
+                - The keyboardist makes use of a special device ([Kelfar AK tuning converter](https://kelfar.net/ak-5-pro-world-scale-tuning-converter/)) designed specifically to enable Arabic scales for live performance
+        - Demo of playing Maqam Bayati inside Ableton Live, using Western scale, Ableton tuning, and dedicated software instrument ([Taqsim SOLO](https://taqs.im/shop/solo/))
+        - What kind of music did you grow up with? What instruments do your favourite musicians play? How well do you feel these instruments are represented in electronic music?
+        - How do you think the instruments we have available affect the music we make and listen to?
+- [MIDI for Makers (Adafruit)](https://learn.adafruit.com/midi-for-makers)
+- MIDI 2.0
+    - Just released in 2020, starting to be used
+    - Allows bidirectional communication, "conversation" between devices
+        - e.g. controller can ask "are you a mixer?" and configure itself accordingly or ask the name of a parameter that is being controlled in order to show it on a display as it's being manipulated
+    - Higher resolution (e.g. 32-bit control values with 4 million steps)
+    - More controllers
+    - Better timing (e.g. play notes of chord together)
+    - [What Musicians & Artists need to know about MIDI 2.0 (MIDI Association)](https://midi.org/what-musicians-artists-need-to-know-about-midi-2-0)
+        - "Can MIDI 2.0 make it easier to have microtonal control and different non-western scales? Yes, MIDI 2.0 Voice Channel Messages allow Per Note precise control of the pitch of every note to better support non-western scales, arbitrary pitches, note retuning, dynamic pitch fluctuations or inflections, or to escape equal temperament when using the western 12 tone scale."
+    - A bit early for us to use MIDI 2.0 but something to keep an eye on
+        - [AM MIDI 2.0 Lib for Arduino (GitHub)](https://github.com/midi2-dev/AM_MIDI2.0Lib)
+
 - [MIDI for Makers (Adafruit)](https://learn.adafruit.com/midi-for-makers/overview)
 - [DIY USB Midi Controller With Arduino: a Beginner's Guide
 (Instructables)](https://www.instructables.com/DIY-USB-Midi-Controller-With-Arduino-a-Beginners-G/)
@@ -548,6 +559,15 @@ Musical interface design, MIDI
 - [MIDIUSB Library for Arduino
  (GitHub)](https://github.com/arduino-libraries/MIDIUSB)
 
+- MIDI button example for ESP32-S3
+    - [CircuitPython examples directory (GitHub)](https://github.com/mangtronix/MusicDevices/tree/main/CircuitPython)
+        - Copy libraries in ```/lib``` to ```CIRCUITPY/lib```
+    - [midi_demo.py (GitHub)](https://github.com/mangtronix/MusicDevices/blob/main/CircuitPython/midi_demo.py)
+        - Sends NoteOn and NoteOff
+    - [midi_buttons.py (GitHub)](https://github.com/mangtronix/MusicDevices/blob/main/CircuitPython/midi_buttons.py)
+        - Sends NoteOn / NoteOff for each button
+
+<!--
 - Wireless MIDI
     - MIDI over classic / paired Bluetooth (older technique, not commonly used anymore)
     - MIDI over WiFi
@@ -574,7 +594,7 @@ Musical interface design, MIDI
             - Use [BLE-MIDI Connect](https://apps.microsoft.com/detail/9nvmlzttwwvl?hl=en-US&gl=US) to scan for BLE controller and connect to loopback MIDI port
             - Go into your app and select loopback MIDI port
             - Controller -> loopMIDI -> music app
-
+-->
 
 ### Homework - Week 4.1
 
