@@ -616,7 +616,13 @@ Workshop: MIDI controllers, wired and wireless
         - [Why is there so much latency on my android device?
  (Koala Sampler)](https://www.koalasampler.com/help/android/why-is-there-so-much-latency-on-my-android-device/)
 
-
+- Example projects in CircuitPython
+    - Portable MIDI Controller (with 4x4 buttons)
+        - Controller with 4x4 DIY button pad controlling DAW
+        - [YouTube demo](https://www.youtube.com/watch?v=kVHYq4UNdmo)
+        - [GitHub code](https://github.com/rounak-dutta/RPI-Pico-16-BTn-MIDI-Controller-using-CircuitPython)
+     
+  
 ### Homework - Week 4.2
 
 Due before start of next class
