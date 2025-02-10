@@ -4,7 +4,7 @@
 
 - [Week 1](#week-1) – Introduction / NIME, Music Devices, and Sound Installations
 - [Week 2](#week-2) – Applied music theory, Western and beyond
-- [Week 3](#week-3) – Arduino for NIME
+- [Week 3](#week-3) – CircuitPython / Physical computing for NIME
 - [Week 4](#week-4) – Musical interface design, MIDI
 - [Week 5](#week-5) – Musical sensors
 - [Week 6](#week-6) – Rapid prototyping
@@ -305,10 +305,19 @@ Due before start of next class
 # Week 3
 
 ## Week 3.1
-Arduino for NIME
-- [Arduino in 100 Seconds (YouTube)](https://www.youtube.com/watch?v=1ENiVwk8idM)
+- Review homework
 
-- Distribute class kits
+Overview of music devices
+- [Korg Volca Keys](https://www.korg.com/us/products/dj/volca_keys/)
+    - Basic synthesizer
+- [Roland TR-808](https://en.wikipedia.org/wiki/Roland_TR-808)
+    - Incredibly popular drum machine
+    - Originally made in the 1980s and became popular with techno music producers
+    - Along with the [Roland TR-909](https://en.wikipedia.org/wiki/Roland_TR-909) these are the "classic" drum machine sounds popular in house, techno, and other genres
+ 
+Song Structures
+- ["Bury It" song structure (learningmusic.ableton.com)](https://learningmusic.ableton.com/song-structure/bury-it.html)
+ 
 
 Hardware kit
 - [Adafruit ESP32-S3 Reverse TFT Feather (Adafruit)](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/overview)
@@ -329,6 +338,175 @@ Hardware kit
     - [NYUAD IM Resources (nyuadim)](https://www.nyuadim.com/resources/)
         - Lab hours
         - [Connect2 Arts Booking (Intranet)](https://nyuad-artsbooking.nyu.edu/)
+
+
+### Homework Week 3.1
+
+Due before start of next class
+
+- **Pick up** course textbook *Push, Turn, Move* from Bookstore
+- **Read** *Push, Turn, Move* pp. 14-27, 34
+    - No response required
+
+## Week 3.2
+### Meet in IM Lab - C3-029
+Workshop: CircuitPython / ESP32-S3
+- [ESP32-S3 Reverse TFT Feather](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/overview)
+    - Microcontroller board that supports Arduino and CircuitPython
+    - Builtin screen, battery charger, connector for QT / I2C peripheral boards
+    - Supports Bluetooth Low Energy (Arduino only) and wifi (but not Enterprise wifi)
+- [CircuitPython](https://circuitpython.org/)
+    - Alternative to Arduino software that uses dynamically interpreted scripts (Python) rather than compiled code (C/C++)
+    - Supported on many of the same hardware boards as Arduino
+    - Development cycle
+        - Plug CircuitPython board to computer
+        - CIRCUITPY drive appears
+        - Edit code directly on the CIRCUITPY drive
+        - Hit save to start running your code
+    - Advantages
+        - For larger projects, much faster to see changes in code (no need to recompile entire program)
+        - Can drag and drop small media files to the CIRCUITPY drive and access through code
+    - Disadvantages
+        - Newer with relatively fewer examples
+        - Less access to low-level chip features like interrupts
+        - Not all features supported by Arduino are supported on all boards
+- One time setup
+    - [Install CircuitPython (Adafruit)](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/install-circuitpython)
+    - Update bootloader
+        - Lowest level of code running on the board, handles board startup
+        - Follow instructions at bottom right [Install, Repair, or Update UF2 Bootloader](https://circuitpython.org/board/adafruit_feather_esp32s3_reverse_tft/)
+    - Install CircuitPython 9.x
+        - CircuitPython interpreter will run our .py script files
+        - Includes code for making the CIRCUITPY drive appear
+        - Follow instructions to [Install CircuitPython](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/install-circuitpython)
+            - Download CircuitPython 9.x uf2
+            - Double click Reset button
+            - Drag and drop .uf2 file to FTHRS3BOOT
+            - Open CIRCUITPY drive
+            - Copy [boot.py](https://github.com/mangtronix/MusicDevices/blob/main/CircuitPython/boot.py) to the CIRCUITPY drive
+                - This file enable USB MIDI, which we'll use later
+            - Unplug and replug the board
+            - Check boot_out.txt on the CIRCUITPY drive, it should look like this
+```
+Adafruit CircuitPython 9.2.4 on 2025-01-29; Adafruit Feather ESP32-S3 Reverse TFT with ESP32S3
+Board ID:adafruit_feather_esp32s3_reverse_tft
+UID:468E3337EEC8
+boot.py output:
+Enabling USB MIDI
+```
+
+- [Install Mu editor](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/installing-mu-editor)
+- [CircuitPython Essentials](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/circuitpython-essentials)
+    - [Blink example](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/blink)
+    - [Digital input example](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/digital-input)
+    - [Digital input multiple buttons example](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/digital-input-multiple-buttons)
+    - [Neopixel example](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/neopixel)
+        - Note we have to install the Neopixel library in to CIRCUITPY/lib
+
+<!--
+- [Arduino IDE Setup for ESP32-S3 Reverse TFT Feather(Adafruit)](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/arduino-ide-setup-2)
+    - Install Arduino IDE
+    - The board we are using is the Adafruit Feather ESP32-S3 Reverse TFT
+    - We need to get the latest board support for ESP32 provided by the manufacturer (Espressif)
+    - Add third-party board URL in Arduino IDE->Settings
+        - `https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json`
+    - Install Board Support Package via Tools->Board->Board Manager->Search for 'esp32 espressif'
+    - To verify look for Tools->Board->ESP32 Arduino->Adafruit Feather ESP32-S3 Reverse TFT
+    - We need to manually reset the board by pressing the reset button after uploading new code
+- Verify that your software / hardware is working
+    - [Load classic 'Blink' sketch (Adafruit)](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/using-with-arduino-ide)
+    - The first time we load the blink sketch can be a bit tricky because we need to overwrite the CircuitPython firmware that is pre-loaded on the board
+- Run the factory shipped demo
+    - Demonstrates using the TFT display, buttons, battery monitor, etc
+    - Requires us to install several Arduino libraries into the Arduino IDE
+    - [ESP32-S3 Reverse TFT Factory Shipped Demo (Adafruit)](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/factory-shipped-demo-2)
+
+- [Installing Libraries (Arduino)](https://docs.arduino.cc/software/ide-v1/tutorials/installing-libraries/)
+-->
+
+<!--
+- Create our first MIDI controller using ESP32-S3 Feather
+- Run sample code for sending our first note
+    
+    - [MIDIUSB_write.ino (GitHub)](https://github.com/arduino-libraries/MIDIUSB/blob/master/examples/MIDIUSB_write/MIDIUSB_write.ino)    
+    - Sends note on/off in simple loop with blocking delay
+
+    - TODO - ESP32 USBMIDI example
+        - File -> Examples (ESP32 Reverse TFT) -> USB -> MidiController.ino
+    - Install [MIDI Monitor](https://www.snoize.com/MIDIMonitor/) and check that MIDI notes are being received by your laptop
+        - Alternatively use [Protokol](https://hexler.net/protokol)
+    - MacOS
+        - Install [Flynth](https://www.fingerlab.net/portfolio/flynth) and make some sound!
+            - Settings -> MIDI (enabled) -> Select MIDI device
+-->
+
+### Homework - Week 3.2
+
+Due before start of next class
+
+- **Sign** [IM Program Policies](https://docs.google.com/forms/d/e/1FAIpQLSfCx-YtOJYsbzMRJEVwXrCxGyCoN2VpmJYbAhEhydcT_tIzmA/viewform) at nyuadim.com
+- **Sign up** for Autodesk Fusion personal / education license
+    - [Autodesk Fusion](https://www.autodesk.com/products/fusion-360/personal)
+    - Will be used later in the course
+- **Read** *Push, Turn, Move* pp. 14-27, 34
+    - No response required
+<!--
+- **Peruse** the Control section of *Push, Turn, Move* pp. 60-123 to see a catalogue of different physical UI elements
+    - Can skip the interviews for now
+    - No response required
+-->
+<!--
+- **Create** a basic MIDI controller
+    - Write an Arduino sketch (.ino) that implements a basic MIDI controller on our ESP32-S3 Feather board
+    - Your controller should send note on/off messages as well as continous controller messages
+    - Use your MIDI controller to control sounds in Ableton Live
+-->
+- **Create** a CircuitPython sketch that responds to the 3 buttons
+- **Post** your work in the discussion forum
+    - See [Brightspace->Discussions->Individual Exercises](https://brightspace.nyu.edu/d2l/le/435258/discussions/topics/532535/View) for details
+- **Be ready** to show / discuss your work in class
+
+---
+
+# Week 4
+
+## Week 4.1
+- Review homework
+- New printer this semester: [Prusa XL](https://www.prusa3d.com/product/original-prusa-xl-assembled-5-toolhead-3d-printer/)
+- Start downloading these tools:
+    - [Visual Studio Code](https://code.visualstudio.com/) - popular code editor
+    - [Protokol](https://hexler.net/protokol#get) - MIDI monitoring tool
+    - [Flynth](https://www.fingerlab.net/portfolio/flynth) - MacOS simple synthesizer
+
+Controller example
+- [Arcana Instruments Strum Accessible Instrument (CDM)](https://www.synthtopia.com/content/2025/02/04/arcana-instruments-strum-accessible-instrument/)
+    - "The Arcana Strum is an example of adaptive technology, designed to be able to be used by people with a wide range of physical and cognitive abilities."
+    - [Arcana Strum (Arcana)](https://arcanainstruments.com/product/arcana-instrument/)
+ 
+CircuitPython
+- [How do I learn Python?](https://learn.adafruit.com/welcome-to-circuitpython/how-do-i-learn-python "How do I learn Python?")
+- [CircuitPython Essentials](https://learn.adafruit.com/circuitpython-essentials/circuitpython-essentials)
+    - [Pins and Modules](https://learn.adafruit.com/circuitpython-essentials/circuitpython-pins-and-modules)
+    - [Digital In and Out](https://learn.adafruit.com/circuitpython-essentials/circuitpython-digital-in-out)
+    - [Internal RGB LED](https://learn.adafruit.com/circuitpython-essentials/circuitpython-internal-rgb-led)
+    - [NeoPixel](https://learn.adafruit.com/circuitpython-essentials/circuitpython-neopixel)
+- [Arduino to CircuitPython](https://learn.adafruit.com/arduino-to-circuitpython/overview)
+    - Comparison of Arduino and CircuitPython with examples of how to do similar tasks 
+    - [Arduino to CircuitPython - time](https://learn.adafruit.com/arduino-to-circuitpython/time)
+- [RGB color codes](https://www.rapidtables.com/web/color/RGB_Color.html)
+
+Visual Studio Code with CircuitPython
+- Download [Visual Studio Code](https://code.visualstudio.com/)
+- Disable PyLance (excessive error highlighting)
+    - View->Extensions->Search->"PyLance" and clicking Disable
+- Install [Serial Monitor](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-serial-monitor)
+    - Install from [Serial Monitor webpage](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-serial-monitor) or View->Extensions->Search->"Serial Monitor" and click install
+    - To open the Serial Monitor
+        - Terminal->New Terminal
+        - Click on the Serial Monitor tab
+        - Select the Port (e.g. /dev/tty.usbmodem... - Adafruit)
+        - Click Start Monitoring
+    - Note: you may have to reselect the port and click Start Monitoring if you manually reset the board
 
 MIDI - Musical Instrument Digital Interface
 - Standard for communication between digital instruments dating back to the 80s
@@ -376,76 +554,7 @@ MIDI - Musical Instrument Digital Interface
     - A bit early for us to use MIDI 2.0 but something to keep an eye on
         - [AM MIDI 2.0 Lib for Arduino (GitHub)](https://github.com/midi2-dev/AM_MIDI2.0Lib)
 
-
-### Homework Week 3.1
-
-Due before start of next class
-
-- **Pick up** course textbook *Push, Turn, Move* from Bookstore
-- **Read** *Push, Turn, Move* pp. 14-27, 34
-    - No response required
-
-## Week 3.2
-### Meet in IM Lab - C3-029
-Workshop: Arduino for NIME
-- [Arduino IDE Setup for ESP32-S3 Reverse TFT Feather(Adafruit)](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/arduino-ide-setup-2)
-    - Install Arduino IDE
-    - The board we are using is the Adafruit Feather ESP32-S3 Reverse TFT
-    - We need to get the latest board support for ESP32 provided by the manufacturer (Espressif)
-    - Add third-party board URL in Arduino IDE->Settings
-        - `https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json`
-    - Install Board Support Package via Tools->Board->Board Manager->Search for 'esp32 espressif'
-    - To verify look for Tools->Board->ESP32 Arduino->Adafruit Feather ESP32-S3 Reverse TFT
-    - We need to manually reset the board by pressing the reset button after uploading new code
-- Verify that your software / hardware is working
-    - [Load classic 'Blink' sketch (Adafruit)](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/using-with-arduino-ide)
-    - The first time we load the blink sketch can be a bit tricky because we need to overwrite the CircuitPython firmware that is pre-loaded on the board
-- Run the factory shipped demo
-    - Demonstrates using the TFT display, buttons, battery monitor, etc
-    - Requires us to install several Arduino libraries into the Arduino IDE
-    - [ESP32-S3 Reverse TFT Factory Shipped Demo (Adafruit)](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/factory-shipped-demo-2)
-
-- [Installing Libraries (Arduino)](https://docs.arduino.cc/software/ide-v1/tutorials/installing-libraries/)
-
-- Create our first MIDI controller using ESP32-S3 Feather
-- Run sample code for sending our first note
-    <!-- Not for ESP32
-    - [MIDIUSB_write.ino (GitHub)](https://github.com/arduino-libraries/MIDIUSB/blob/master/examples/MIDIUSB_write/MIDIUSB_write.ino)    
-    - Sends note on/off in simple loop with blocking delay
-    -->
-    - TODO - ESP32 USBMIDI example
-        - File -> Examples (ESP32 Reverse TFT) -> USB -> MidiController.ino
-    - Install [MIDI Monitor](https://www.snoize.com/MIDIMonitor/) and check that MIDI notes are being received by your laptop
-        - Alternatively use [Protokol](https://hexler.net/protokol)
-    - MacOS
-        - Install [Flynth](https://www.fingerlab.net/portfolio/flynth) and make some sound!
-            - Settings -> MIDI (enabled) -> Select MIDI device
-
-
-### Homework - Week 3.2
-
-Due before start of next class
-
-- **Sign up** for Autodesk Fusion personal / education license
-    - [Autodesk Fusion](https://www.autodesk.com/products/fusion-360/personal)
-    - Will be used later in the course
-- **Peruse** the Control section of *Push, Turn, Move* pp. 60-123 to see a catalogue of different physical UI elements
-    - Can skip the interviews for now
-    - No response required
-- **Create** a basic MIDI controller
-    - Write an Arduino sketch (.ino) that implements a basic MIDI controller on our ESP32-S3 Feather board
-    - Your controller should send note on/off messages as well as continous controller messages
-    - Use your MIDI controller to control sounds in Ableton Live
-- **Post** your work in the discussion forum
-    - See Brightspace->Discussions->Exercises for details
-- **Be ready** to show / discuss your work in class
-
----
-
-# Week 4
-
-## Week 4.1
-Musical interface design, MIDI
+- [MIDI for Makers (Adafruit)](https://learn.adafruit.com/midi-for-makers/overview)
 - [DIY USB Midi Controller With Arduino: a Beginner's Guide
 (Instructables)](https://www.instructables.com/DIY-USB-Midi-Controller-With-Arduino-a-Beginners-G/)
 - [Create a MIDI Device
@@ -454,6 +563,15 @@ Musical interface design, MIDI
 - [MIDIUSB Library for Arduino
  (GitHub)](https://github.com/arduino-libraries/MIDIUSB)
 
+- MIDI button example for ESP32-S3
+    - [CircuitPython examples directory (GitHub)](https://github.com/mangtronix/MusicDevices/tree/main/CircuitPython)
+        - Copy libraries in ```/lib``` to ```CIRCUITPY/lib```
+    - [midi_demo.py (GitHub)](https://github.com/mangtronix/MusicDevices/blob/main/CircuitPython/midi_demo.py)
+        - Sends NoteOn and NoteOff
+    - [midi_buttons.py (GitHub)](https://github.com/mangtronix/MusicDevices/blob/main/CircuitPython/midi_buttons.py)
+        - Sends NoteOn / NoteOff for each button
+
+<!--
 - Wireless MIDI
     - MIDI over classic / paired Bluetooth (older technique, not commonly used anymore)
     - MIDI over WiFi
@@ -480,7 +598,7 @@ Musical interface design, MIDI
             - Use [BLE-MIDI Connect](https://apps.microsoft.com/detail/9nvmlzttwwvl?hl=en-US&gl=US) to scan for BLE controller and connect to loopback MIDI port
             - Go into your app and select loopback MIDI port
             - Controller -> loopMIDI -> music app
-
+-->
 
 ### Homework - Week 4.1
 
@@ -523,7 +641,13 @@ Workshop: MIDI controllers, wired and wireless
         - [Why is there so much latency on my android device?
  (Koala Sampler)](https://www.koalasampler.com/help/android/why-is-there-so-much-latency-on-my-android-device/)
 
-
+- Example projects in CircuitPython
+    - Portable MIDI Controller (with 4x4 buttons)
+        - Controller with 4x4 DIY button pad controlling DAW
+        - [YouTube demo](https://www.youtube.com/watch?v=kVHYq4UNdmo)
+        - [GitHub code](https://github.com/rounak-dutta/RPI-Pico-16-BTn-MIDI-Controller-using-CircuitPython)
+     
+  
 ### Homework - Week 4.2
 
 Due before start of next class
@@ -679,8 +803,16 @@ Group project overview, work examples, rapid prototyping
 ## Week 6.2
 Workshop: 3D printing with IM Lab Instructor
 - IM Lab Print Farm
-    - 4x [Prusa MK4S](https://www.prusa3d.com/product/original-prusa-mk4s-3d-printer-5/)
-    - Ultimaker also available
+    - 4x [Prusa MK4](https://www.prusa3d.com/product/original-prusa-mk4s-3d-printer-5/)
+        - We have the MK4 version (not MK4S) but they are largely the same
+        - Build volume is 250 x 210 x 220 mm | 9.84 x 8.3 x 8.6 in
+        - Possible to manually change the filament colour at a specific height (e.g. to print label in different colour)
+    - [Prusa XL](https://www.prusa3d.com/product/original-prusa-xl-assembled-5-toolhead-3d-printer/) available for larger and multi-material prints
+        - Print volume is 360×360×360 mm (14.17’’×14.17’’×14.17’’)
+        - Automatic colour changing
+    - Other 3D printers available
+        - Ultimaker in IM Lab
+        - Print service at library (email them a file and go pick up the print)
 - [Fusion 360](https://www.autodesk.com/products/fusion-360/personal)
     - Professional 3D modeling tool for Computer Aided Design (CAD) and Manufacturing (CAM)
 - [PrusaSlicer](https://www.prusa3d.com/page/prusaslicer_424/)
