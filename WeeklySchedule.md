@@ -623,7 +623,7 @@ Class Visit - KOKOKO!
 - [Performance Thursday 7pm](https://publicprograms.nyuad.nyu.edu/en/the-arts-center/events/2025/february/tamaas-festival.html)
 
 Device example
-- [Circle Guitar (YouTube)](https://www.youtube.com/watch?v=NxvRjcuT-vs&t=35s)
+- [Circle Guitar (YouTube)](https://www.youtube.com/watch?v=gMPO4oCp_6I&t=41s)
     - Rotary wheel with plectrums strums guitar strings
     - Buttons and knobs control Ableton
 
