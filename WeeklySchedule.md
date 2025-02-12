@@ -622,12 +622,17 @@ Class Visit - KOKOKO!
 - [KOKOKO!: NPR Music Tiny Desk Concert](https://www.youtube.com/watch?v=wA7MgcgqaZA)
 - [Performance Thursday 7pm](https://publicprograms.nyuad.nyu.edu/en/the-arts-center/events/2025/february/tamaas-festival.html)
 
+
+Reading Discussion
+- Push, Turn, Move interviews
+
 Device example
 - [Circle Guitar (YouTube)](https://www.youtube.com/watch?v=gMPO4oCp_6I&t=41s)
     - Rotary wheel with plectrums strums guitar strings
     - Buttons and knobs control Ableton
 
 <!--
+
 Workshop: MIDI controllers, wired and wireless
 - Create a wireless MIDI controller
     - Install [ESP32-BLE-MIDI library (GitHub)](https://github.com/max22-/ESP32-BLE-MIDI)
@@ -662,13 +667,51 @@ Workshop: MIDI controllers, wired and wireless
         - Controller with 4x4 DIY button pad controlling DAW
         - [YouTube demo](https://www.youtube.com/watch?v=kVHYq4UNdmo)
         - [GitHub code](https://github.com/rounak-dutta/RPI-Pico-16-BTn-MIDI-Controller-using-CircuitPython)
-     
+
+- Demo of using code.py to load another file
+    - Keep your code in another file, e.g. ```midi_buttons.py```
+    - import (load/run) the module / file you want from ```code.py```
+    - Makes it easy to switch between different files
+
+[code.py (MD GitHub)](https://github.com/mangtronix/MusicDevices/blob/main/CircuitPython/code.py)
+```
+# Music Devices
+
+# Uncomment the name of the file you want to run
+
+# import multibutton
+# import midi_demo
+import midi_buttons # Send NoteOn/NoteOff from builtin buttons
+
+# import spritesheet # Demo of bitmap sprites
+```
+
+- Sending MIDI from CircuitPython
+    - Need to copy library files from [MusicDevices/CircuitPython/lib](https://github.com/mangtronix/MusicDevices/tree/main/CircuitPython/lib) to your ```CIRCUITPY/lib directory```
+        - [MusicDevices repository zip file download](https://github.com/mangtronix/MusicDevices/archive/refs/heads/main.zip)
+    - We are using the [adafruit_midi (Adafruit)](https://docs.circuitpython.org/projects/midi/en/latest/api.html) library with the [usb_midi (Adafruit)](https://docs.circuitpython.org/en/latest/shared-bindings/usb_midi/) library for transport of the MIDI messages over USB
+        - [Using Adafruit USB MIDI (Adafruit)](https://learn.adafruit.com/grand-central-usb-midi-controller-in-circuitpython/code-usb-midi-in-circuitpython#using-adafruit-usb-midi-3016197)
+    - [midi_demo.py (MD GitHub)](https://github.com/mangtronix/MusicDevices/blob/main/CircuitPython/midi_demo.py)
+        - Sends NoteOn / NoteOff and Control Change messages
+    - Checking MIDI messages using [Protokol](https://hexler.net/protokol)
+        - Protokol->Settings->MIDI
+            - Make sure your Feather is visible as an input
+        - MIDI tab->Enabled
+        - You should see MIDI messages sent from your Feather to your computer over USB
+    - [midi_buttons.py (MD GitHub)](https://github.com/mangtronix/MusicDevices/blob/main/CircuitPython/midi_buttons.py)
+        - Sends NoteOn / NoteOff from ESP32-S3 buttons
+    - [spritekeys.py (MD GitHub)(https://github.com/mangtronix/MusicDevices/blob/main/CircuitPython/spritekeys.py) - for next class
+        - Example using NeoKeys, NeoSlider, and display
   
 ### Homework - Week 4.2
 
 Due before start of next class
+- **Integrate** the [midi_buttons.py (MD GitHub)](https://github.com/mangtronix/MusicDevices/blob/main/CircuitPython/midi_buttons.py) code with your homework from last week
+    - In addition to showing the lyric and color, send NoteOn and NoteOff messages from your code
+- **Check** that your sketch is sending the NoteOn / NoteOff messages using [Protokol](https://hexler.net/protokol)
+- **No writeup required**
 
-<--
+<!--
 - **Create** a wireless MIDI controller
     - Write an Arduino sketch (.ino) that implements a wireless MIDI controller using Bluetooth LE
     - Make sure your device advertises a unique device name
