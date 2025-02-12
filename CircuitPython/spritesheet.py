@@ -16,6 +16,7 @@ import displayio
 import adafruit_imageload
 
 display = board.DISPLAY
+display.rotation = 180 # Flip display so buttons are on right
 
 # Dimensions in .bmp file
 tile_width = 16
