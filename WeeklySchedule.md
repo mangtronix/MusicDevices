@@ -689,7 +689,7 @@ import midi_buttons # Send NoteOn/NoteOff from builtin buttons
 - Sending MIDI from CircuitPython
     - Need to copy library files from [MusicDevices/CircuitPython/lib](https://github.com/mangtronix/MusicDevices/tree/main/CircuitPython/lib) to your ```CIRCUITPY/lib directory```
         - [MusicDevices repository zip file download](https://github.com/mangtronix/MusicDevices/archive/refs/heads/main.zip)
-    - We are using the [adafruit_midi (Adafruit)](https://docs.circuitpython.org/projects/midi/en/latest/api.html) library with the [usb_midi (Adafruit)](https://docs.circuitpython.org/en/latest/shared-bindings/usb_midi/) library for transport of the MIDI messages over USB
+    - We are using the [adafruit_midi](https://docs.circuitpython.org/projects/midi/en/latest/api.html) library with the [usb_midi](https://docs.circuitpython.org/en/latest/shared-bindings/usb_midi/) library for transport of the MIDI messages over USB
         - [Using Adafruit USB MIDI (Adafruit)](https://learn.adafruit.com/grand-central-usb-midi-controller-in-circuitpython/code-usb-midi-in-circuitpython#using-adafruit-usb-midi-3016197)
     - [midi_demo.py (MD GitHub)](https://github.com/mangtronix/MusicDevices/blob/main/CircuitPython/midi_demo.py)
         - Sends NoteOn / NoteOff and Control Change messages
