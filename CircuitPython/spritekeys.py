@@ -39,7 +39,12 @@ pixels = neopixel.NeoPixel(neoslider, 14, 4, pixel_order=neopixel.GRB)
 print("Setting up NeoKey")
 # Create a NeoKey object using existing i2c bus
 neokey = NeoKey1x4(i2c, addr=0x30) # Default address
-
+neokey_was_pressed = [False, False, False, False] # Keep track of previous state so we can act at transitions
+neokey_on_colors = [0xFF0000, 0xFFFF00, 0x00FF00, 0x00FFFF] # Color when pressed
+neokey_off_colors = [0, 0, 0, 0]
+# Start with off colors
+for i in range(0,4):
+    neokey.pixels[i] = neokey_off_colors[i]
 
 def potentiometer_to_color(value):
     """Scale the potentiometer values (0-1023) to the colorwheel values (0-255)."""
@@ -97,52 +102,49 @@ old_source_index = 0
 source_index = old_source_index
 sprite[0] = source_index
 
-while True:
 
-    # Set sprite to "off" state - this will get overwritten if a key is being pressed
-    source_index = 0
+while True:
 
     ### NeoSlider handling
     if serial_debug:
-        print(potentiometer.value)
+        print("Slider %d" % potentiometer.value)
     # Fill the pixels a color based on the position of the potentiometer.
     pixels.fill(colorwheel(potentiometer_to_color(potentiometer.value)))
 
     ### NeoKey handling
     # Check each button, if pressed, light up the matching neopixel!
-    if neokey[0]:
-        if serial_debug:
-            print("Button A")
-        neokey.pixels[0] = 0xFF0000
-        source_index = 1
-    else:
-        neokey.pixels[0] = 0x0
+    for i in range(0, 4): # 4 buttons
+        if neokey[i] and not neokey_was_pressed[i]:
+            # Just pressed
+            if serial_debug:
+                print("Button %d pressed" % i)
 
-    if neokey[1]:
-        if serial_debug:
-            print("Button B")
-        neokey.pixels[1] = 0xFFFF00
-        source_index = 2
-    else:
-        neokey.pixels[1] = 0x0
+            # Send note on
 
-    if neokey[2]:
-        if serial_debug:
-            print("Button C")
-        neokey.pixels[2] = 0x00FF00
-        source_index = 3
-    else:
-        neokey.pixels[2] = 0x0
+            # Set on color
+            neokey.pixels[i] = neokey_on_colors[i]
 
-    if neokey[3]:
-        if serial_debug:
-            print("Button D")
-        neokey.pixels[3] = 0x00FFFF
-        source_index = 4
-    else:
-        neokey.pixels[3] = 0x0
+            # Update screen
+            source_index = i + 1
 
-    # Update screen if necessary
+            neokey_was_pressed[i] = True
+
+        elif neokey_was_pressed[i] and not neokey[i]:
+            # Just released
+            if serial_debug:
+                print ("Button %d released" % i)
+            
+            # Set off color
+            neokey.pixels[i] = neokey_off_colors[i]
+
+            # Send note off
+
+            # Update sprite
+            source_index = 0
+
+            neokey_was_pressed[i] = False
+
+    # Update screen pixels if necessary
     if source_index != old_source_index:        
         sprite[0] = source_index
         old_source_index = source_index
