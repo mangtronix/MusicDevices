@@ -616,6 +616,18 @@ Due before start of next class
 - **Be ready** to discuss the topic in class
 
 ## Week 4.2
+### Meet in C3-116
+Class Visit - KOKOKO!
+- [KOKOKO!](https://www.kokokomusic.com/)
+- [KOKOKO!: NPR Music Tiny Desk Concert](https://www.youtube.com/watch?v=wA7MgcgqaZA)
+- [Performance Thursday 7pm](https://publicprograms.nyuad.nyu.edu/en/the-arts-center/events/2025/february/tamaas-festival.html)
+
+Device example
+- [Circle Guitar (YouTube)](https://www.youtube.com/watch?v=gMPO4oCp_6I&t=41s)
+    - Rotary wheel with plectrums strums guitar strings
+    - Buttons and knobs control Ableton
+
+<!--
 Workshop: MIDI controllers, wired and wireless
 - Create a wireless MIDI controller
     - Install [ESP32-BLE-MIDI library (GitHub)](https://github.com/max22-/ESP32-BLE-MIDI)
@@ -643,6 +655,7 @@ Workshop: MIDI controllers, wired and wireless
     - The operating system and input/output system also adds latency
         - [Why is there so much latency on my android device?
  (Koala Sampler)](https://www.koalasampler.com/help/android/why-is-there-so-much-latency-on-my-android-device/)
+-->
 
 - Example projects in CircuitPython
     - Portable MIDI Controller (with 4x4 buttons)
@@ -655,6 +668,7 @@ Workshop: MIDI controllers, wired and wireless
 
 Due before start of next class
 
+<--
 - **Create** a wireless MIDI controller
     - Write an Arduino sketch (.ino) that implements a wireless MIDI controller using Bluetooth LE
     - Make sure your device advertises a unique device name
@@ -662,7 +676,8 @@ Due before start of next class
 - **Post** your work in the discussion forum
     - See Brightspace->Discussions->Exercises for details
 - **Be ready** to show / discuss your work in class
- 
+-->
+   
 ---
 
 # Week 5
