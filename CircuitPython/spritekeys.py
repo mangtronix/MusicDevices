@@ -11,7 +11,7 @@
 print("spritekeys")
 
 # Whether to print serial debug messages (slows down loop)
-serial_debug = False
+serial_debug = True
 if serial_debug:
     print("Serial debug ON")
 
