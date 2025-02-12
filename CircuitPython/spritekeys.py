@@ -45,7 +45,7 @@ neoslider_address = 0x38 # Address with A3 cut, to avoid conflicts with Neokey a
 print("Connecting to Neoslider at %x" % neoslider_address)
 neoslider = Seesaw(i2c, neoslider_address)
 slider = AnalogInput(neoslider, 18)
-old_slider_value = slider.value # So we can act only on changes
+old_cc_value = slider.value # So we can act only on changes
 pixels = neopixel.NeoPixel(neoslider, 14, 4, pixel_order=neopixel.GRB)
 
 ## Set up Neokey
@@ -62,6 +62,10 @@ for i in range(0,4):
 def slider_to_color(value):
     """Scale the potentiometer values (0-1023) to the colorwheel values (0-255)."""
     return value / 1023 * 255
+
+"""Return 0-127 value for CC message from slider value"""
+def slider_to_cc_value(value):
+    return int((value / 1023) * 127)
 
 display = board.DISPLAY
 display.rotation = 180 # Flip display so buttons are on right
@@ -154,6 +158,10 @@ def notesOff():
     for note in notes:
         midi.send(NoteOff(note, 0))
 
+# Which Control Change the slider will send
+cc_number = 1 # Modulation CC
+    
+
 # Give MIDI a chance to reconnect
 time.sleep(0.5)
 # Turn all the notes off in case we left any hanging (e.g. unplugged or reset board)
@@ -162,13 +170,21 @@ notesOff()
 while True:
 
     ### NeoSlider handling
-    new_slider_value = slider.value
-    if new_slider_value != old_slider_value:
+    new_cc_value = slider_to_cc_value(slider.value)
+    if new_cc_value != old_cc_value:
         if serial_debug:
             print("Slider %d" % slider.value)
+
+        # Send the Control Change (CC) message
+        midi.send(ControlChange(cc_number, new_cc_value))
+        if serial_debug:
+            print("CC %d - %d" % (cc_number, new_cc_value))
+
         # Fill the pixels a color based on the position of the potentiometer.
-        pixels.fill(colorwheel(slider_to_color(new_slider_value)))
-        old_slider_value = new_slider_value
+        pixels.fill(colorwheel(slider_to_color(slider.value)))
+
+        # Store old value - we'll run again only when the slider has changed
+        old_cc_value = new_cc_value
 
     ### NeoKey handling
     # Check each button, if pressed, light up the matching neopixel!
