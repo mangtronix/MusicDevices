@@ -10,19 +10,32 @@
 
 print("spritekeys")
 
+# Whether to print serial debug messages (slows down loop)
+serial_debug = True
+if serial_debug:
+    print("Serial debug ON")
+
 import time
 import board
+
+# Display / graphics
 import displayio
 import adafruit_imageload
 
+# NeoKey / NeoSlider
 from rainbowio import colorwheel
 from adafruit_seesaw.seesaw import Seesaw
 from adafruit_seesaw.analoginput import AnalogInput
 from adafruit_seesaw import neopixel
 from adafruit_neokey.neokey1x4 import NeoKey1x4
 
-# Whether to print serial debug messages (slows down loop)
-serial_debug = False
+# MIDI
+import adafruit_midi
+import usb_midi
+from adafruit_midi.control_change import ControlChange
+from adafruit_midi.note_off import NoteOff
+from adafruit_midi.note_on import NoteOn
+
 
 # NeoSlider Setup
 i2c = board.I2C()  # uses board.SCL and board.SDA
@@ -31,8 +44,8 @@ i2c = board.I2C()  # uses board.SCL and board.SDA
 neoslider_address = 0x38 # Address with A3 cut, to avoid conflicts with Neokey at 0x30
 print("Connecting to Neoslider at %x" % neoslider_address)
 neoslider = Seesaw(i2c, neoslider_address)
-
-potentiometer = AnalogInput(neoslider, 18)
+slider = AnalogInput(neoslider, 18)
+old_slider_value = slider.value # So we can act only on changes
 pixels = neopixel.NeoPixel(neoslider, 14, 4, pixel_order=neopixel.GRB)
 
 ## Set up Neokey
@@ -46,7 +59,7 @@ neokey_off_colors = [0, 0, 0, 0]
 for i in range(0,4):
     neokey.pixels[i] = neokey_off_colors[i]
 
-def potentiometer_to_color(value):
+def slider_to_color(value):
     """Scale the potentiometer values (0-1023) to the colorwheel values (0-255)."""
     return value / 1023 * 255
 
@@ -103,13 +116,59 @@ source_index = old_source_index
 sprite[0] = source_index
 
 
+# USB MIDI setup
+print("USB MIDI ports:")
+print(usb_midi.ports)
+if len(usb_midi.ports) == 0:
+    print("No MIDI ports found, check that MIDI is enabled in boot.py")
+    print("https://learn.adafruit.com/customizing-usb-devices-in-circuitpython/circuitpy-midi-serial#midi-3096586")
+    raise(Exception("No MIDI port found"))
+
+midi_in_channel = 2
+midi_out_channel = 1
+midi = adafruit_midi.MIDI(
+    # Hardware MIDI port
+    # midi_in=uart,
+    # midi_out=uart,
+
+    # USB MIDI
+    midi_in=usb_midi.ports[0],
+    midi_out=usb_midi.ports[1],
+
+    in_channel=(midi_in_channel - 1),
+    out_channel=(midi_out_channel - 1),
+    debug=False,
+)
+print("MIDI output channel:", midi.out_channel + 1)
+
+# Which notes to play
+# See examples at
+# https://learn.adafruit.com/midi-melody-maker/circuitpython-code-walkthrough#create-the-midi-note-arrays-3073059
+c_scale = [60, 62, 64, 65, 67, 69, 71, 72]
+e_minor_scale = [64, 66, 67, 69, 71, 72, 74]
+notes = e_minor_scale
+velocity = 100
+
+"""Turn all of our notes off"""
+def notesOff():
+    for note in notes:
+        midi.send(NoteOff(note, 0))
+
+# Give MIDI a chance to reconnect
+time.sleep(0.5)
+# Turn all the notes off in case we left any hanging (e.g. unplugged or reset board)
+notesOff()
+
 while True:
 
     ### NeoSlider handling
-    if serial_debug:
-        print("Slider %d" % potentiometer.value)
-    # Fill the pixels a color based on the position of the potentiometer.
-    pixels.fill(colorwheel(potentiometer_to_color(potentiometer.value)))
+    new_slider_value = slider.value
+    if new_slider_value != old_slider_value:
+        if serial_debug:
+            print("Slider %d" % slider.value)
+        # Fill the pixels a color based on the position of the potentiometer.
+        pixels.fill(colorwheel(slider_to_color(new_slider_value)))
+        old_slider_value = new_slider_value
 
     ### NeoKey handling
     # Check each button, if pressed, light up the matching neopixel!
@@ -120,6 +179,9 @@ while True:
                 print("Button %d pressed" % i)
 
             # Send note on
+            midi.send(NoteOn(notes[i], velocity))
+            if serial_debug:
+                print("NoteOn %d" % notes[i])
 
             # Set on color
             neokey.pixels[i] = neokey_on_colors[i]
@@ -138,6 +200,9 @@ while True:
             neokey.pixels[i] = neokey_off_colors[i]
 
             # Send note off
+            midi.send(NoteOff(notes[i], 0))
+            if serial_debug:
+                print("NoteOff %d" % notes[i])
 
             # Update sprite
             source_index = 0
