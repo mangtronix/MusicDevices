@@ -4,4 +4,6 @@
 
 # import multibutton
 # import midi_demo
-import midi_buttons
+import midi_buttons # Send NoteOn/NoteOff from builtin buttons
+
+# import spritesheet # Demo of bitmap sprites
