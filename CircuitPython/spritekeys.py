@@ -11,7 +11,7 @@
 print("spritekeys")
 
 # Whether to print serial debug messages (slows down loop)
-serial_debug = True
+serial_debug = False
 if serial_debug:
     print("Serial debug ON")
 
@@ -148,9 +148,11 @@ print("MIDI output channel:", midi.out_channel + 1)
 # Which notes to play
 # See examples at
 # https://learn.adafruit.com/midi-melody-maker/circuitpython-code-walkthrough#create-the-midi-note-arrays-3073059
-c_scale = [60, 62, 64, 65, 67, 69, 71, 72]
+c_major_scale = [60, 62, 64, 65, 67, 69, 71, 72]
+c_major_pentatonic_scale = [60, 62, 64, 67, 69] # C, D, E, G, A
 e_minor_scale = [64, 66, 67, 69, 71, 72, 74]
-notes = e_minor_scale
+e_minor_pentatonic_scale = [64, 67, 69, 71, 74] # E, G, A, B, D
+notes = e_minor_pentatonic_scale
 velocity = 100
 
 """Turn all of our notes off"""
