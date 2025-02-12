@@ -706,7 +706,7 @@ import midi_buttons # Send NoteOn/NoteOff from builtin buttons
 ### Homework - Week 4.2
 
 Due before start of next class
-- **Sign up** for Autodesk - you should have received an invitation email
+- **Sign up** for an Autodesk account - you should have received an invitation email
 - **Integrate** the [midi_buttons.py (MD GitHub)](https://github.com/mangtronix/MusicDevices/blob/main/CircuitPython/midi_buttons.py) code with your homework from last week
     - In addition to showing the lyric and color, send NoteOn and NoteOff messages from your code
 - **Check** that your sketch is sending the NoteOn / NoteOff messages using [Protokol](https://hexler.net/protokol)
