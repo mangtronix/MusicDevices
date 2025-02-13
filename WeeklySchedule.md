@@ -783,7 +783,10 @@ Musical sensors
         - Can measure voltage, for example from a potentiometer, fader, or other resistive sensor
         - [Analog In example for ESP32-S3](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/analog-in) using builtin ADC converters
         - [ADS7830 8-Channel 8-Bit ADC with I2C](https://www.adafruit.com/product/5836) gives an additional 8 channels of analog sensing over the QT / I2C bus
-            - [CircuitPython example code (Adafruit)](https://learn.adafruit.com/adafruit-ads7830-8-channel-8-bit-adc/circuitpython-and-python#circuitpython-usage-3159061) 
+            - [CircuitPython example code (Adafruit)](https://learn.adafruit.com/adafruit-ads7830-8-channel-8-bit-adc/circuitpython-and-python#circuitpython-usage-3159061)
+    - Rotary encoder
+        - [I2C Rotary Encoder (Adafruit)](https://learn.adafruit.com/adafruit-i2c-qt-rotary-encoder/overview) - rotary encoder with button and NeoPixel
+            - [CircuitPython example code](https://learn.adafruit.com/adafruit-i2c-qt-rotary-encoder/python-circuitpython#circuitpython-and-python-usage-3096111)    
     - Distance
         - [Adafruit VL53L4CD Time of Flight Distance Sensor
 ](https://learn.adafruit.com/adafruit-vl53l4cd-time-of-flight-distance-sensor)
