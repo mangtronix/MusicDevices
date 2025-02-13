@@ -791,8 +791,17 @@ Musical sensors
         - [Adafruit VL53L4CD Time of Flight Distance Sensor
 ](https://learn.adafruit.com/adafruit-vl53l4cd-time-of-flight-distance-sensor)
             - [CircuitPython example code (Adafruit)](https://learn.adafruit.com/adafruit-vl53l4cd-time-of-flight-distance-sensor/python-circuitpython#circuitpython-usage-3112891)
+         
+
+
+I2C / QT addresses
+    - Each QT board has its own address and each board must have a unique address
+    - We read and write to each board over the same I2C / QT bus (4 wire connector) by specifying the board's address
+    - [Music Devices I2C Addresses](https://docs.google.com/spreadsheets/d/1xVRkgUelCfqRvcu3c_-A4PI7lurgY0dIFDRF3tWYtEo/edit?usp=sharing)
+    - **Note:** the NeoKey and NeoSlider each have the same default address (0x30). Cut the A3 jumper on the back of the NeoSlider to change its address to 0x38 (see [NeoSlider address](https://learn.adafruit.com/adafruit-neoslider?view=all#address-jumpers-3107357))
+
         
-- Common controller interface elements
+Common controller interface elements
     - Button
         - [I built an Arcade DIY MIDI controller with an Arduino Pro Micro: The Fliper (Nerd Musician/YouTube)](https://www.youtube.com/watch?v=nv42rTRwKIg)
     - Rotary potentiometer (pot)
