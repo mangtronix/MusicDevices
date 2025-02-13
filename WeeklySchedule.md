@@ -622,12 +622,17 @@ Class Visit - KOKOKO!
 - [KOKOKO!: NPR Music Tiny Desk Concert](https://www.youtube.com/watch?v=wA7MgcgqaZA)
 - [Performance Thursday 7pm](https://publicprograms.nyuad.nyu.edu/en/the-arts-center/events/2025/february/tamaas-festival.html)
 
+
+Reading Discussion
+- Push, Turn, Move interviews
+
 Device example
 - [Circle Guitar (YouTube)](https://www.youtube.com/watch?v=gMPO4oCp_6I&t=41s)
     - Rotary wheel with plectrums strums guitar strings
     - Buttons and knobs control Ableton
 
 <!--
+
 Workshop: MIDI controllers, wired and wireless
 - Create a wireless MIDI controller
     - Install [ESP32-BLE-MIDI library (GitHub)](https://github.com/max22-/ESP32-BLE-MIDI)
@@ -656,19 +661,90 @@ Workshop: MIDI controllers, wired and wireless
         - [Why is there so much latency on my android device?
  (Koala Sampler)](https://www.koalasampler.com/help/android/why-is-there-so-much-latency-on-my-android-device/)
 -->
-
+     
 - Example projects in CircuitPython
     - Portable MIDI Controller (with 4x4 buttons)
-        - Controller with 4x4 DIY button pad controlling DAW
-        - [YouTube demo](https://www.youtube.com/watch?v=kVHYq4UNdmo)
-        - [GitHub code](https://github.com/rounak-dutta/RPI-Pico-16-BTn-MIDI-Controller-using-CircuitPython)
-     
+          - Controller with 4x4 DIY button pad controlling DAW
+          - [YouTube demo](https://www.youtube.com/watch?v=kVHYq4UNdmo)
+          - [GitHub code](https://github.com/rounak-dutta/RPI-Pico-16-BTn-MIDI-Controller-using-CircuitPython)
+    - Build a Traffic Light Project with Pico W and CircuitPython
+          - Create a functional traffic light with three LEDs and two buttons
+          - [Youtube demo](https://youtu.be/cWePx-Bhepg?si=ivknhK_roJqRvfXw)
+          - [Website tutorial with code](https://www.cytron.io/tutorial/build-a-traffic-light-project-with-pico-w-and-circuit-python)
+    - Soundboard Speaker for Bikes & Scooters
+          - CircuitPython portable soundboard speaker for any bike or scooter
+          - [Youtube demo](https://youtu.be/K5RtX5pPXEo?si=aK-l8V-C1oc4mYlC)
+          - [Website tutorial with code](https://learn.adafruit.com/soundboard-speaker-for-bikes-scooters)
+    - IoT Bird Feeder Camera
+          -  Captures images of birds with Adafruit IO and CircuitPython (seperate designed and 3D printed bird feeder to house the Adafruit MEMENTO, a large battery, and a PIR sensor)
+          - [Youtube demo](https://youtu.be/LhUypbEh9XU?si=-ylcg0S37f_Es-zS)
+          - [Website tutorial with code](https://learn.adafruit.com/iot-window-bird-feeder-with-camera)
+    - CircuitPython Light Meter OLED
+          - Create a simple Light Meter programmed in CircuitPython using a Seeeduino Xiao board, a photoresistor, and an OLED display
+          - [Youtube demo](https://youtu.be/zjhoc0t7I_0?si=wFkQEEOTDLtd_5Ab)
+          - [GitHub code](https://github.com/educ8s/CircuitPython-Light-Meter-OLED.git)
+    - Raspberry Pi Pico Clock & Thermometer
+          - Build this low-cost real-time clock and thermometer with a color TFT display using CircuitPython on a Raspberry Pi Pico board.
+          - [Youtube demo](https://youtu.be/gBofy7MMdIY?si=L0fCDNewATBOSTFH)
+          - [Website tutorial with code](https://educ8s.tv/raspberry-pi-pico-thermometer-clock/)
+    - Animations on OLED displays
+          - Load and display an animation on an OLED screen with CircuitPython
+          - [Youtube demo](https://youtu.be/WqyBWcjs_oY?si=cx8jjEUhm263ez9p)
+          - [Website tutorial and code](https://educ8s.tv/oled-animation/)
+
+- Demo of using code.py to load another file
+    - Keep your code in another file, e.g. ```midi_buttons.py```
+    - import (load/run) the module / file you want from ```code.py```
+    - Makes it easy to switch between different files
+
+[code.py (MD GitHub)](https://github.com/mangtronix/MusicDevices/blob/main/CircuitPython/code.py)
+```
+# Music Devices
+
+# Uncomment the name of the file you want to run
+
+# import multibutton
+# import midi_demo
+import midi_buttons # Send NoteOn/NoteOff from builtin buttons
+
+# import spritesheet # Demo of bitmap sprites
+```
+
+- Sending MIDI from CircuitPython
+    - Need to copy library files from [MusicDevices/CircuitPython/lib](https://github.com/mangtronix/MusicDevices/tree/main/CircuitPython/lib) to your ```CIRCUITPY/lib directory```
+        - [MusicDevices repository zip file download](https://github.com/mangtronix/MusicDevices/archive/refs/heads/main.zip)
+    - We are using the [adafruit_midi](https://docs.circuitpython.org/projects/midi/en/latest/api.html) library with the [usb_midi](https://docs.circuitpython.org/en/latest/shared-bindings/usb_midi/) library for transport of the MIDI messages over USB
+        - [Using Adafruit USB MIDI (Adafruit)](https://learn.adafruit.com/grand-central-usb-midi-controller-in-circuitpython/code-usb-midi-in-circuitpython#using-adafruit-usb-midi-3016197)
+    - [midi_demo.py (MD GitHub)](https://github.com/mangtronix/MusicDevices/blob/main/CircuitPython/midi_demo.py)
+        - Sends NoteOn / NoteOff and Control Change messages
+    - Checking MIDI messages using [Protokol](https://hexler.net/protokol)
+        - Protokol->Settings->MIDI
+            - Make sure your Feather is visible as an input
+        - MIDI tab->Enabled
+        - You should see MIDI messages sent from your Feather to your computer over USB
+    - [midi_buttons.py (MD GitHub)](https://github.com/mangtronix/MusicDevices/blob/main/CircuitPython/midi_buttons.py)
+        - Sends NoteOn / NoteOff from ESP32-S3 buttons
+    - [spritekeys.py (MD GitHub)](https://github.com/mangtronix/MusicDevices/blob/main/CircuitPython/spritekeys.py) - for next class
+        - Example using NeoKeys, NeoSlider, and display
   
 ### Homework - Week 4.2
 
 Due before start of next class
+- **Sign up** for an Autodesk account - you should have received an invitation email
 
-<--
+<!--
+- **Integrate** the [midi_buttons.py (MD GitHub)](https://github.com/mangtronix/MusicDevices/blob/main/CircuitPython/midi_buttons.py) code with your homework from last week
+    - In addition to showing the lyric and color, send NoteOn and NoteOff messages from your code
+    
+- **Check** that your sketch is sending the NoteOn / NoteOff messages using [Protokol](https://hexler.net/protokol)
+-->
+- **Play** with changing the note values in midi_buttons.py to see what happens
+  - Find some combination that sounds nice to you
+  - You could try cycling through notes instead of always playing the same note
+- **No writeup required**
+
+
+<!--
 - **Create** a wireless MIDI controller
     - Write an Arduino sketch (.ino) that implements a wireless MIDI controller using Bluetooth LE
     - Make sure your device advertises a unique device name
@@ -697,6 +773,25 @@ Musical sensors
             - Simple interface satisfies initial curiosity, but leads to boredom for advanced users
             - Difficult interface is initially frustrating and puts off novice users, but can be rewarding for advanced users
         - See also *Push, Turn, Move* pp. 24-27
+         
+- Sensors we have available
+    - Buttons
+        - [Builtin buttons on ESP32-S3 Reverse TFT Feather](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/digital-input-multiple-buttons)
+        - Additional buttons can be connected directly to the ESP32 by using an available GPIO logic pin, see [ESP32-S3 logic pins](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/pinouts#logic-pins-3138952)
+        -  [Capacitive touch](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/capacitive-touch) can be used to create touch sensitive areas using metallic pads
+    - Analog to digital
+        - Can measure voltage, for example from a potentiometer, fader, or other resistive sensor
+        - [Analog In example for ESP32-S3](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/analog-in) using builtin ADC converters
+        - [ADS7830 8-Channel 8-Bit ADC with I2C](https://www.adafruit.com/product/5836) gives an additional 8 channels of analog sensing over the QT / I2C bus
+            - [CircuitPython example code (Adafruit)](https://learn.adafruit.com/adafruit-ads7830-8-channel-8-bit-adc/circuitpython-and-python#circuitpython-usage-3159061)
+    - Rotary encoder
+        - [I2C Rotary Encoder (Adafruit)](https://learn.adafruit.com/adafruit-i2c-qt-rotary-encoder/overview) - rotary encoder with button and NeoPixel
+            - [CircuitPython example code](https://learn.adafruit.com/adafruit-i2c-qt-rotary-encoder/python-circuitpython#circuitpython-and-python-usage-3096111)    
+    - Distance
+        - [Adafruit VL53L4CD Time of Flight Distance Sensor
+](https://learn.adafruit.com/adafruit-vl53l4cd-time-of-flight-distance-sensor)
+            - [CircuitPython example code (Adafruit)](https://learn.adafruit.com/adafruit-vl53l4cd-time-of-flight-distance-sensor/python-circuitpython#circuitpython-usage-3112891)
+        
 - Common controller interface elements
     - Button
         - [I built an Arcade DIY MIDI controller with an Arduino Pro Micro: The Fliper (Nerd Musician/YouTube)](https://www.youtube.com/watch?v=nv42rTRwKIg)
