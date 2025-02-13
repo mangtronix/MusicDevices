@@ -773,6 +773,22 @@ Musical sensors
             - Simple interface satisfies initial curiosity, but leads to boredom for advanced users
             - Difficult interface is initially frustrating and puts off novice users, but can be rewarding for advanced users
         - See also *Push, Turn, Move* pp. 24-27
+         
+- Sensors we have available
+    - Buttons
+        - [Builtin buttons on ESP32-S3 Reverse TFT Feather](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/digital-input-multiple-buttons)
+        - Additional buttons can be connected directly to the ESP32 by using an available GPIO logic pin, see [ESP32-S3 logic pins](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/pinouts#logic-pins-3138952)
+        -  [Capacitive touch](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/capacitive-touch) can be used to create touch sensitive areas using metallic pads
+    - Analog to digital
+        - Can measure voltage, for example from a potentiometer, fader, or other resistive sensor
+        - [Analog In example for ESP32-S3](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/analog-in) using builtin ADC converters
+        - [ADS7830 8-Channel 8-Bit ADC with I2C](https://www.adafruit.com/product/5836) gives an additional 8 channels of analog sensing over the QT / I2C bus
+            - [CircuitPython example code (Adafruit)](https://learn.adafruit.com/adafruit-ads7830-8-channel-8-bit-adc/circuitpython-and-python#circuitpython-usage-3159061) 
+    - Distance
+        - [Adafruit VL53L4CD Time of Flight Distance Sensor
+](https://learn.adafruit.com/adafruit-vl53l4cd-time-of-flight-distance-sensor)
+            - [CircuitPython example code (Adafruit)](https://learn.adafruit.com/adafruit-vl53l4cd-time-of-flight-distance-sensor/python-circuitpython#circuitpython-usage-3112891)
+        
 - Common controller interface elements
     - Button
         - [I built an Arcade DIY MIDI controller with an Arduino Pro Micro: The Fliper (Nerd Musician/YouTube)](https://www.youtube.com/watch?v=nv42rTRwKIg)
