@@ -859,7 +859,27 @@ Common controller interface elements
       - [The Sounds of a New Planetary System (NASA / YouTube)
 ](https://www.youtube.com/watch?v=2BCiOTJjcQQ)
     - Etc, etc
-
+- Learning digitalio for graphical displays:
+    - How it works:
+        - [displayio Library Overview](https://learn.adafruit.com/circuitpython-display-support-using-displayio/library-overview)
+        - [Using bitmaps and palettes](https://learn.adafruit.com/circuitpython-display-support-using-displayio/bitmap-and-palette)
+    - Examples:
+        - [Displaying text](https://learn.adafruit.com/circuitpython-display-support-using-displayio/text)
+            - Download this library to use for the tutorial/code: [adafruit_display_text](https://github.com/adafruit/Adafruit_CircuitPython_Display_Text)
+            - <img src="Media/Digitalio_Text_Example.jpg" width="350">
+        - [Displaying a bitmap/image](https://learn.adafruit.com/circuitpython-display-support-using-displayio/display-a-bitmap)
+            - Download the bitmap they provide to follow along: [purple flowers](https://cdn-learn.adafruit.com/assets/assets/000/074/681/original/purple.bmp?1555717198)
+            - <img src="Media/Digitalio_Bitmap_Example.jpg" width="350">
+        - [Drawing pixels on screen](https://learn.adafruit.com/circuitpython-display-support-using-displayio/draw-pixels)
+            - <img src="Media/Digitalio_Pixels_Example.jpg" width="350">
+            - The tutorial uses black and white, but you can change the colors to play around with it:
+            - <img src="Media/Digitalio_Pixels_Example_2.jpg" width="350">
+        - [Manipulating tiles and bitmaps to form groups](https://learn.adafruit.com/circuitpython-display-support-using-displayio/sprite-sheet)
+            - Download this image loader library and bitmap file to use for the tutorial/code: [adafruit_imageload](https://github.com/adafruit/Adafruit_CircuitPython_ImageLoad) + [bitmap](https://cdn-learn.adafruit.com/assets/assets/000/075/025/original/castle_sprite_sheet.bmp?1556343110)
+            - <img src="Media/Digitalio_Groups_Example.jpg" width="350">
+    - Useful helper libraries (fonts, shapes, buttons, etc.):
+[Helper Libraries](https://learn.adafruit.com/circuitpython-display-support-using-displayio/helper-libraries)
+  
 ### Homework
 
 Due before start of next class
