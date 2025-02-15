@@ -938,7 +938,10 @@ Group project overview, work examples, rapid prototyping
     - [Autodesk Fusion](https://www.autodesk.com/products/fusion-360/personal)
         - Personal and educational licenses available
     - [Fusion 360 for Absolute Beginners (Lars Christensen / YouTube)](https://www.youtube.com/playlist?list=PL40d7srwyc_Ow4aaOGXlP2idPGwD7ruKg)
-
+- Example files
+    -[Simple Cherry MX Keycap (Printables)](https://www.printables.com/model/118708-simple-cherry-mx-keycap)
+      - Printable keycap for our NeoKey board
+      - Can be customized and printed in multi-colour
 
 ## Week 6.2
 Workshop: 3D printing with IM Lab Instructor
