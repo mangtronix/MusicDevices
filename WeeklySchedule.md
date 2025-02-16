@@ -760,7 +760,7 @@ Due before start of next class
 
 ## Week 5.1
 ### Music Devices Tutorial Videos
-![MD NeoKey Code 250216_1 1 1](https://github.com/user-attachments/assets/e40368f5-4963-4202-8ec7-90fd50161495)
+[![MD NeoKey Code 250216_1 1 1](https://github.com/user-attachments/assets/e40368f5-4963-4202-8ec7-90fd50161495)](https://youtube.com/playlist?list=PLu4XhOBNpasRh4gECFa_265TXL6ad-JZS&si=HkdT5z8YmPgwWKKj)
 - [Music Devices YouTube Playlist](https://youtube.com/playlist?list=PLu4XhOBNpasRh4gECFa_265TXL6ad-JZS&si=HkdT5z8YmPgwWKKj)
   - [Kit Assembly](https://youtu.be/vAgwV33kiOU?si=QKxKICChgR6l4rMc)
   - [Code Loading](https://youtu.be/gwZex-az2hU?si=E-3hAvah1zIFgp7R)
