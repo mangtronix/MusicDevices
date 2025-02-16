@@ -759,6 +759,13 @@ Due before start of next class
 # Week 5
 
 ## Week 5.1
+Music Devices Tutorial Videos
+- [Music Devices YouTube Playlist](https://youtube.com/playlist?list=PLu4XhOBNpasRh4gECFa_265TXL6ad-JZS&si=HkdT5z8YmPgwWKKj)
+- [Kit Assembly](https://youtu.be/vAgwV33kiOU?si=QKxKICChgR6l4rMc)
+- [Code Loading](https://youtu.be/gwZex-az2hU?si=E-3hAvah1zIFgp7R)
+- [NeoKey Code](https://youtu.be/80llQv0Q1WA?si=rYfYmgNDvY5Ikkgp)
+- [NeoKey with NeoSlider](https://youtu.be/xHsPLdk2F3g?si=xtr8p8tNdD0yENxc)
+
 Musical sensors
 - What types of input do we want to sense?
 - How expressive are our inputs and outputs?
