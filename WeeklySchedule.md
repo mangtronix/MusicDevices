@@ -767,6 +767,14 @@ Due before start of next class
   - [NeoKey Code](https://youtu.be/80llQv0Q1WA?si=rYfYmgNDvY5Ikkgp)
   - [NeoKey with NeoSlider](https://youtu.be/xHsPLdk2F3g?si=xtr8p8tNdD0yENxc)
 
+Example Devices
+- [Afternoon Generative Ambient (Vimeo)](https://vimeo.com/914151652?share=copy#t=0) by Mangtronix
+    - Modular synthesizer generative composition
+    - The different modules of the synthesizers are connected together then the whole system runs by itself to "generate" the music
+- [HiChord Pocket Synthesizer](https://hichord.shop/)
+    - Pocketable musical devices that lets you play chords modulated by a joystick
+    - [HiChord demos on TikTok](https://www.tiktok.com/@hichord)
+
 Musical sensors
 - What types of input do we want to sense?
 - How expressive are our inputs and outputs?
