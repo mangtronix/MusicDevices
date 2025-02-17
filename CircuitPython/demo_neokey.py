@@ -8,6 +8,12 @@ from adafruit_neokey.neokey1x4 import NeoKey1x4
 display = board.DISPLAY
 display.rotation = 180
 
+print("demo_neokey")
+
+# Give I2C devices a chance to turn on
+import time
+time.sleep(0.5)
+
 # use default I2C bus
 i2c_bus = board.I2C()
 
