@@ -23,6 +23,7 @@ if serial_debug:
     print("Serial debug ON")
 
 import time
+time.sleep(0.5) # Might help I2C devices to power on
 
 # Display / graphics
 import displayio
