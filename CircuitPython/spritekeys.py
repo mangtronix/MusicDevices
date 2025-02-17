@@ -3,6 +3,8 @@
 # SPDX-License-Identifier: MIT
 #
 # Original code at https://learn.adafruit.com/circuitpython-display-support-using-displayio/sprite-sheet
+# - You need to install the adafruit_imageload library from the project bundle
+# - You need to copy over the cp_sprite_sheet.bmp file from that page to CIRCUITPY/
 #
 # Modifications by Michael Ang for NYUADIM Music Devices
 # - sprite_scale for controlling size of sprite
