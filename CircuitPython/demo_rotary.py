@@ -3,10 +3,17 @@
 
 """I2C rotary encoder simple test example."""
 
+import board
+# Flip display so buttons are on right
+display = board.DISPLAY
+display.rotation = 180
+
 print("demo_rotary")
 
 import board
 from adafruit_seesaw import seesaw, rotaryio, digitalio
+
+ # Flip display so buttons are on right
 
 # For use with the STEMMA connector on QT Py RP2040
 # import busio
