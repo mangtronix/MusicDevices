@@ -4,6 +4,10 @@
 import board
 from adafruit_neokey.neokey1x4 import NeoKey1x4
 
+# Flip display so buttons are on right
+display = board.DISPLAY
+display.rotation = 180
+
 # use default I2C bus
 i2c_bus = board.I2C()
 
