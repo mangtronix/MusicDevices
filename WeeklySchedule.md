@@ -767,6 +767,26 @@ Due before start of next class
   - [NeoKey Code](https://youtu.be/80llQv0Q1WA?si=rYfYmgNDvY5Ikkgp)
   - [NeoKey with NeoSlider](https://youtu.be/xHsPLdk2F3g?si=xtr8p8tNdD0yENxc)
 
+Example Devices
+- [Afternoon Generative Ambient (Vimeo)](https://vimeo.com/914151652?share=copy#t=0) by Mangtronix
+    - Modular synthesizer generative composition
+    - The different modules of the synthesizers are connected together then the whole system runs by itself to "generate" the music
+- [HiChord Pocket Synthesizer](https://hichord.shop/)
+    - Pocketable musical devices that lets you play chords modulated by a joystick
+    - [HiChord demos on TikTok](https://www.tiktok.com/@hichord)
+
+
+### Homework
+
+Due before start of next class
+- **Complete** these tutorials
+  - [Kit Assembly](https://youtu.be/vAgwV33kiOU?si=QKxKICChgR6l4rMc)
+  - [Code Loading](https://youtu.be/gwZex-az2hU?si=E-3hAvah1zIFgp7R)
+  - [NeoKey Code](https://youtu.be/80llQv0Q1WA?si=rYfYmgNDvY5Ikkgp)
+  - [NeoKey with NeoSlider](https://youtu.be/xHsPLdk2F3g?si=xtr8p8tNdD0yENxc)
+
+
+## Week 5.2
 Musical sensors
 - What types of input do we want to sense?
 - How expressive are our inputs and outputs?
@@ -887,20 +907,13 @@ Common controller interface elements
             - <img src="Media/Digitalio_Groups_Example.jpg" width="350">
     - Useful helper libraries (fonts, shapes, buttons, etc.):
 [Helper Libraries](https://learn.adafruit.com/circuitpython-display-support-using-displayio/helper-libraries)
-  
-### Homework
 
-Due before start of next class
-
-
-
-## Week 5.2
 Workshop: Musical sensors
 - Connect buttons to trigger notes
 - Connect potentiometers / faders to send CCs
 - Connect a different sensor, e.g. LDR light sensor
     - Trigger note or CC
-
+ 
 ### Homework - Week 5.2
 
 Due before start of next class
