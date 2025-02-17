@@ -10,6 +10,11 @@
 # - sprite_scale for controlling size of sprite
 # - center sprite on display
 
+import board
+# Flip display so buttons are on right
+display = board.DISPLAY
+display.rotation = 180
+
 print("spritekeys")
 
 # Whether to print serial debug messages (slows down loop)
@@ -18,7 +23,6 @@ if serial_debug:
     print("Serial debug ON")
 
 import time
-import board
 
 # Display / graphics
 import displayio
