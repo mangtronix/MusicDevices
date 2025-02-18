@@ -898,6 +898,12 @@ Common controller interface elements
         - [Displaying a bitmap/image](https://learn.adafruit.com/circuitpython-display-support-using-displayio/display-a-bitmap)
             - Download the bitmap they provide to follow along: [purple flowers](https://cdn-learn.adafruit.com/assets/assets/000/074/681/original/purple.bmp?1555717198)
             - <img src="Media/Digitalio_Bitmap_Example.jpg" width="350">
+        - [Using sprites](https://learn.adafruit.com/circuitpython-display-support-using-displayio/sprite-sheet)
+            - This example takes a sprite sheet of different sprites and displays each one over time every 2 seconds. Some of the sprites pictured below:
+            - Download this image loader library and bitmap file to use for the tutorial/code: [adafruit_imageload](https://github.com/adafruit/Adafruit_CircuitPython_ImageLoad) + [sprite bitmap](https://cdn-learn.adafruit.com/assets/assets/000/074/925/original/cp_sprite_sheet.bmp?1556152347) 
+             <img src="Media/Digitalio_Sprite_Example_1.jpg" width="200">
+             <img src="Media/Digitalio_Sprite_Example_2.jpg" width="200">
+             <img src="Media/Digitalio_Sprite_Example_3.jpg" width="200">
         - [Drawing pixels on screen](https://learn.adafruit.com/circuitpython-display-support-using-displayio/draw-pixels)
             - <img src="Media/Digitalio_Pixels_Example.jpg" width="350">
             - The tutorial uses black and white, but you can change the colors to play around with it:
@@ -906,6 +912,7 @@ Common controller interface elements
             - Download this image loader library and bitmap file to use for the tutorial/code: [adafruit_imageload](https://github.com/adafruit/Adafruit_CircuitPython_ImageLoad) + [bitmap](https://cdn-learn.adafruit.com/assets/assets/000/075/025/original/castle_sprite_sheet.bmp?1556343110)
             - <img src="Media/Digitalio_Groups_Example.jpg" width="350">
     - Useful helper libraries (fonts, shapes, buttons, etc.):
+        - You can also directly download from our CircuitPython --> lib folder. All the digitalio libraries are in there. 
 [Helper Libraries](https://learn.adafruit.com/circuitpython-display-support-using-displayio/helper-libraries)
 
 Workshop: Musical sensors
