@@ -330,6 +330,8 @@ Hardware kit
     - STEMMA / QT is a standard connector for the I2C bus
         - Convenient connection without soldering
     - [Working with I2C Devices (Adafruit)](https://learn.adafruit.com/working-with-i2c-devices/overview)
+    - [I2C addresses of Music Devices kit components (Sheet)](https://docs.google.com/spreadsheets/d/1xVRkgUelCfqRvcu3c_-A4PI7lurgY0dIFDRF3tWYtEo/edit?usp=drive_link)
+        - List of all the addresses our parts use
     - Reading/writing over I2C is slower than connecting directly to hardware like buttons and knobs
         - Can cause issues with e.g. missing incoming MIDI messages
 - [Adafruit NeoKey 1x4 QT I2C Breakout (Adafruit)](https://learn.adafruit.com/neokey-1x4-qt-i2c)
