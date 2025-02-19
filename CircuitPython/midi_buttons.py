@@ -9,8 +9,6 @@
 # to enable USB MIDI
 # See https://learn.adafruit.com/customizing-usb-devices-in-circuitpython/circuitpy-midi-serial
 
-print("midi_buttons")
-
 code_for_boot_py = """
 import usb_hid, usb_midi
 
@@ -19,6 +17,8 @@ print("Enabling MIDI")
 usb_hid.disable()
 usb_midi.enable()
 """
+
+print("midi_buttons")
 
 import time
 import board
@@ -93,7 +93,6 @@ def notesOff():
         midi.send(NoteOff(note, 0))
 
 # Start by turning everything off, in case we left them on (e.g. hardware reset)
-time.sleep(0.5) # Give MIDI a chance to reconnect
 notesOff()
 
 while True:
@@ -125,7 +124,7 @@ while True:
         if button_was_pressed[1]:
             print("Note 1 off")
             midi.send(NoteOff(notes[1], 0))
-            button_was_pressed[1] = False      
+            button_was_pressed[1] = False
 
     # Button D2 goes false when it's pressed
     if button2.value == True:
@@ -142,4 +141,4 @@ while True:
             button_was_pressed[2] = False
 
 
-      
+      # Write your code here :-)
