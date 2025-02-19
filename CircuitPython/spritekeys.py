@@ -83,7 +83,6 @@ if not i2c_success:
 #neoslider = Seesaw(i2c, 0x30) # Default address
 neoslider_address = 0x38 # Address with A3 cut, to avoid conflicts with Neokey at 0x30
 print("Connecting to Neoslider at %x" % neoslider_address)
-time.sleep(1)
 
 # Try connecting with NeoSlider - for some reason the initial connection often
 # doesn't work, so we retry several times
