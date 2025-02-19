@@ -928,7 +928,27 @@ Workshop: Musical sensors
 ### Homework - Week 5.2
 
 Due before start of next class
+- **Choose** a song you like and modify our MIDI controller so you can play along with the song
+- **Modify** the [spritekeys.py](https://github.com/mangtronix/MusicDevices/blob/main/CircuitPython/spritekeys.py) example
+- **Choose** the MIDI notes to match some song you like
+    - Search for "name of song key" to find out what key (set of notes) the song uses
+    - Change the ```notes``` array to have note numbers from that key
+    - e.g. use Perplexity.ai "give me the midi notes for c minor as a python array with the note names as a comment"
+- **Change** the on and off colours of the keys to match the vibe of the song or the sounds of the notes
+- **Modify** the ```cp_sprite_sheet.bmp``` to use your own graphics
+    - Edit the .bmp file using Photoshop, GIMP, or similar and replace the 16x16 tiles with different graphics inspired by the song
+- **Choose** a MIDI synthesizer sound that goes along with the song
+    - e.g. using Flynth (simple standalone synthesizer on Mac), an instrument in Ableton Live, or an online synth like [midi.city](https://midi.city/)
+    - Make to choose your CircuitPython MIDI controller as an input to your synth
+- **Play along** with your song
+    - You should hear that your chosen notes match with the song. If not, you might be in the wrong key!
+- **Writeup**
+    - 1 paragraph about which song you choose, how you feel about the song, and your concept for the controller (how you chose the colours and graphics)
+    - Link to a short (15s minimum) recording of you playing the controller along with your song
+    - 1 paragraph of reflection on how the controller helps you play along and connect with the song
 
+
+<!--
 - **Perform** using your MIDI controller
     - Add more controls to your MIDI controller that allow you to perform a short piece of music in the style of Controllerism
     - Use at least one non-traditional UI element (something other than key, pot, fader)
@@ -944,6 +964,7 @@ Due before start of next class
     - See Brightspace->Discussions->Exercises for details
     - Host your video on a site like YouTube or Vimeo and embed it in your post
 - **Be ready** to show / discuss your work in class
+-->
 
 ---
 
