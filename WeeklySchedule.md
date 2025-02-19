@@ -827,6 +827,7 @@ I2C / QT addresses
 - [Working with I2C Devices (Adafruit)](https://learn.adafruit.com/working-with-i2c-devices/overview])
 - Each QT board has its own address and each board must have a unique address
 - We read and write to each board over the same I2C / QT bus (4 wire connector) by specifying the board's address
+- [Stemma QT / I2C connector on ESP32-S3 Feather board (Adafruit Pinouts)](https://learn.adafruit.com/adafruit-esp32-s3-feather/pinouts#stemma-qt-3115995)
 - [Music Devices I2C Addresses](https://docs.google.com/spreadsheets/d/1xVRkgUelCfqRvcu3c_-A4PI7lurgY0dIFDRF3tWYtEo/edit?usp=sharing)
 - **Note:** the NeoKey and NeoSlider each have the same default address (0x30). Cut the A3 jumper on the back of the NeoSlider to change its address to 0x38 (see [NeoSlider address](https://learn.adafruit.com/adafruit-neoslider?view=all#address-jumpers-3107357))
 
