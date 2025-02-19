@@ -6,9 +6,15 @@
 # - You need to install the adafruit_imageload library from the project bundle
 # - You need to copy over the cp_sprite_sheet.bmp file from that page to CIRCUITPY/
 #
-# Modifications by Michael Ang for NYUADIM Music Devices
+# Modifications by Michael Anl g for NYUADIM Music Devices
 # - sprite_scale for controlling size of sprite
 # - center sprite on display
+
+import adafruit_simplemath
+
+input_value = 0
+output_value = int(adafruit_simplemath.map_range(input_value, 0, 1023, 127, 0))
+print(output_value)
 
 import board
 # Flip display so buttons are on right
@@ -60,8 +66,12 @@ print("Setting up NeoKey")
 # Create a NeoKey object using existing i2c bus
 neokey = NeoKey1x4(i2c, addr=0x30) # Default address
 neokey_was_pressed = [False, False, False, False] # Keep track of previous state so we can act at transitions
-neokey_on_colors = [0xFF0000, 0xFFFF00, 0x00FF00, 0x00FFFF] # Color when pressed
-neokey_off_colors = [0, 0, 0, 0]
+neokey_on_colors = [0xCCFF00, # Chartreuse
+    0xFFFF00,
+    0x00FF00,
+    0x00FFFF] # Color when pressed
+
+neokey_off_colors = [0xFF0000, 0x00FF00, 0, 0]
 # Start with off colors
 for i in range(0,4):
     neokey.pixels[i] = neokey_off_colors[i]
@@ -72,22 +82,24 @@ def slider_to_color(value):
 
 """Return 0-127 value for CC message from slider value"""
 def slider_to_cc_value(value):
-    return int((value / 1023) * 127)
+    # Map 0-1023 to 127-0
+    return int(adafruit_simplemath.map_range(value, 0, 1023, 127, 0))
+#    return 127 - int((value / 1023) * 127)
 
 display = board.DISPLAY
 display.rotation = 180 # Flip display so buttons are on right
 
 # Dimensions in .bmp file
-tile_width = 16
-tile_height = 16
+tile_width = 32
+tile_height = 32
 
 # Dimensions on screen
-sprite_scale = 6
+sprite_scale = 4
 sprite_width = tile_width * sprite_scale
 sprite_height = tile_height * sprite_scale
 
 # Load the sprite sheet (bitmap)
-spritesheet_filename = "cp_sprite_sheet.bmp"
+spritesheet_filename = "spritesheet.gif"
 try:
     sprite_sheet, palette = adafruit_imageload.load(spritesheet_filename,
                                                     bitmap=displayio.Bitmap,
@@ -159,7 +171,23 @@ c_major_scale = [60, 62, 64, 65, 67, 69, 71, 72]
 c_major_pentatonic_scale = [60, 62, 64, 67, 69] # C, D, E, G, A
 e_minor_scale = [64, 66, 67, 69, 71, 72, 74]
 e_minor_pentatonic_scale = [64, 67, 69, 71, 74] # E, G, A, B, D
-notes = e_minor_pentatonic_scale
+
+# Notes of b flat minor from Perplexity.ai
+bb_minor_midi_array = [58, 60, 61, 63, 65, 66, 68]
+
+bb_minor_midi_array_octave_up = [
+    70,  # Bb
+    72,  # C
+    73,  # Db
+    75,  # Eb
+    77,  # F
+    78,  # Gb
+    80   # Ab
+]
+
+
+notes = bb_minor_midi_array_octave_up
+#notes = c_major_scale
 velocity = 100
 
 """Turn all of our notes off"""

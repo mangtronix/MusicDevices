@@ -8,7 +8,7 @@
 # - sprite_scale for controlling size of sprite
 # - center sprite on display
 
-print("spritesheet")
+print("demo_spritesheet")
 
 import time
 import board
@@ -19,16 +19,16 @@ display = board.DISPLAY
 display.rotation = 180 # Flip display so buttons are on right
 
 # Dimensions in .bmp file
-tile_width = 16
-tile_height = 16
+tile_width = 32
+tile_height = 32
 
 # Dimensions on screen
-sprite_scale = 6
+sprite_scale = 4
 sprite_width = tile_width * sprite_scale
 sprite_height = tile_height * sprite_scale
 
 # Load the sprite sheet (bitmap)
-spritesheet_filename = "cp_sprite_sheet.bmp"
+spritesheet_filename = "spritesheet.gif"
 try:
     sprite_sheet, palette = adafruit_imageload.load(spritesheet_filename,
                                                     bitmap=displayio.Bitmap,
