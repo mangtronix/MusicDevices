@@ -17,6 +17,7 @@ output_value = int(adafruit_simplemath.map_range(input_value, 0, 1023, 127, 0))
 print(output_value)
 
 import board
+import digitalio
 # Flip display so buttons are on right
 display = board.DISPLAY
 display.rotation = 180
@@ -50,13 +51,57 @@ from adafruit_midi.note_off import NoteOff
 from adafruit_midi.note_on import NoteOn
 
 
-# NeoSlider Setup
-i2c = board.I2C()  # uses board.SCL and board.SDA
+
+# Start i2c connection
+i2c_success = False
+i2c_chances = 5
+i2c_power = digitalio.DigitalInOut(board.TFT_I2C_POWER)
+i2c_power.direction = digitalio.Direction.OUTPUT
+
+print("Initializing I2C")
+while (not i2c_success) and i2c_chances > 0:
+    try:
+        i2c = board.I2C()
+        i2c_success = True
+    except Exception as e:
+        print(e)
+        print("  I2C init failed, %d chances left" % i2c_chances)
+        print("  Resetting I2C power")
+        i2c_power.value = False
+        time.sleep(0.1)
+        i2c_power.value = True
+        time.sleep(0.1)
+        i2c_chances -= 1
+
+if not i2c_success:
+    raise RuntimeError("Failed to initialize i2c")
+
 #i2c = board.STEMMA_I2C()  # For using the built-in STEMMA QT connector on a microcontroller
+
+
+## NeoSlider Setup
 #neoslider = Seesaw(i2c, 0x30) # Default address
 neoslider_address = 0x38 # Address with A3 cut, to avoid conflicts with Neokey at 0x30
 print("Connecting to Neoslider at %x" % neoslider_address)
-neoslider = Seesaw(i2c, neoslider_address)
+time.sleep(1)
+
+# Try connecting with NeoSlider - for some reason the initial connection often
+# doesn't work, so we retry several times
+neoslider_success = False
+neoslider_chances = 10
+while (not neoslider_success) and neoslider_chances > 0:
+    try:
+        neoslider = Seesaw(i2c, neoslider_address)
+        neoslider_success = True
+    except Exception as e:
+        print(e)
+        print("  Retrying NeoSlider connect, %d chances left" % neoslider_chances)
+        time.sleep(0.2)
+        neoslider_chances -= 1
+
+if not neoslider_success:
+    raise RuntimeError("  Could not connect to NeoSlider")
+
 slider = AnalogInput(neoslider, 18)
 old_cc_value = slider.value # So we can act only on changes
 pixels = neopixel.NeoPixel(neoslider, 14, 4, pixel_order=neopixel.GRB)
