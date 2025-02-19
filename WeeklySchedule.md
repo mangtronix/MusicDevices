@@ -824,6 +824,7 @@ Musical sensors
 
 
 I2C / QT addresses
+- [Working with I2C Devices (Adafruit)](https://learn.adafruit.com/working-with-i2c-devices/overview])
 - Each QT board has its own address and each board must have a unique address
 - We read and write to each board over the same I2C / QT bus (4 wire connector) by specifying the board's address
 - [Music Devices I2C Addresses](https://docs.google.com/spreadsheets/d/1xVRkgUelCfqRvcu3c_-A4PI7lurgY0dIFDRF3tWYtEo/edit?usp=sharing)
