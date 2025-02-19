@@ -728,6 +728,7 @@ import midi_buttons # Send NoteOn/NoteOff from builtin buttons
         - Sends NoteOn / NoteOff from ESP32-S3 buttons
     - [spritekeys.py (MD GitHub)](https://github.com/mangtronix/MusicDevices/blob/main/CircuitPython/spritekeys.py) - for next class
         - Example using NeoKeys, NeoSlider, and display
+        - You also need to copy CircuitPython/lib/spritesheet.png to CIRCUITPY/spritesheet.png
   
 ### Homework - Week 4.2
 
