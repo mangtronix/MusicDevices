@@ -955,7 +955,7 @@ Due before start of next class
 # Week 6
 
 ## Week 6.1
-- Review homework
+Review homework
 
 Autodesk Fusion Workshop
 - You have been granted access to Fusion through your @nyu.edu email address
@@ -964,8 +964,8 @@ Autodesk Fusion Workshop
 - [Sign in](https://www.autodesk.com/education/edu-software/fusion) and go to Products to download
 - Video tutorial: [Music Devices Fusion 1 - Basic modeling](https://www.youtube.com/watch?v=-jZU_3DBTc4)
     - Follow tutorial to create the knob
-    - Expand the knob by adding more shapes, text, etc to turn it into something unique 
-
+    - Expand the knob by adding more shapes, text, etc to turn it into something unique
+        - [Rotary arm example (Fusion)](https://a360.co/3EPXycB)
 
 Group project overview, work examples, rapid prototyping
 - Final project overview
