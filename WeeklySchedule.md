@@ -955,6 +955,18 @@ Due before start of next class
 # Week 6
 
 ## Week 6.1
+- Review homework
+
+Autodesk Fusion Workshop
+- You have been granted access to Fusion through your @nyu.edu email address
+    - Your access is tied to my teacher access - also possible to apply for your own educational license
+- Fusion is available in C3-116, C3-019 Film Edit Lab, or download to your own machine
+- [Sign in](https://www.autodesk.com/education/edu-software/fusion) and go to Products to download
+- Video tutorial: [Music Devices Fusion 1 - Basic modeling](https://www.youtube.com/watch?v=-jZU_3DBTc4)
+    - Follow tutorial to create the knob
+    - Expand the knob by adding more shapes, text, etc to turn it into something unique 
+
+
 Group project overview, work examples, rapid prototyping
 - Final project overview
 - Work examples
