@@ -981,7 +981,7 @@ Autodesk Fusion Workshop
  
   
 ### Homework for next class
-Follow this video tutorials
+Follow this video tutorial
 - [Music Devices Fusion 1 - Basic modeling](https://www.youtube.com/watch?v=-jZU_3DBTc4)
     - Create a folder with your name in the Music Devices folder on Autodesk
     - Create a project with your knob within your folder
