@@ -694,6 +694,7 @@ Workshop: MIDI controllers, wired and wireless
           - Build this low-cost real-time clock and thermometer with a color TFT display using CircuitPython on a Raspberry Pi Pico board.<br/>
               - [Youtube demo](https://youtu.be/gBofy7MMdIY?si=L0fCDNewATBOSTFH)<br/>
               - [Website tutorial with code](https://educ8s.tv/raspberry-pi-pico-thermometer-clock/)<br/>
+              - <img src="Media/ThermometerClock.png" width="350"><br/>
     - Animations on OLED displays<br/>
           - Load and display an animation on an OLED screen with CircuitPython<br/>
               - [Youtube demo](https://youtu.be/WqyBWcjs_oY?si=cx8jjEUhm263ez9p)<br/>
