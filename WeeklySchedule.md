@@ -978,7 +978,8 @@ Autodesk Fusion Workshop
 
 Video tutorials:
 - [Music Devices Fusion 0 - Installation](https://youtu.be/5us5B8Kd23A?si=is5FpoX7s-aixaB-)
-    - Downloading / accessing Fusion app 
+    - Downloading / accessing Fusion app
+    - Note: you might not have access to the Music Devices project - I'm working on it
 - [Music Devices Fusion 1 - Basic modeling](https://www.youtube.com/watch?v=-jZU_3DBTc4)
     - Follow tutorial to create the knob
     - Expand the knob by adding more shapes, text, etc to turn it into something unique
@@ -1005,7 +1006,7 @@ Video tutorials:
 
 **Modify** your basic knob by adding text and / or changing the shape of the knob - be creative!
 
-**Save** your work inside Fusion in your folder in the Music Devices project
+**Save** your work inside Fusion in your folder
 
 
 ## Week 6.2
