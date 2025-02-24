@@ -979,7 +979,10 @@ Autodesk Fusion Workshop
 Video tutorials:
 - [Music Devices Fusion 0 - Installation](https://youtu.be/5us5B8Kd23A?si=is5FpoX7s-aixaB-)
     - Downloading / accessing Fusion app
-    - Note: you might not have access to the Music Devices project - I'm working on it
+    - **Note:** to access the MangLab/Music Devices folder you need to respond to your email invitation to join the MangLab hub and then click the Team Account button in top left in Fusion and select MangLab
+<img width="473" alt="Screenshot 2025-02-24 at 5 44 52 PM" src="https://github.com/user-attachments/assets/cfa2d792-0c7e-44ca-bdaf-c97fcb65ab09" />
+
+
 - [Music Devices Fusion 1 - Basic modeling](https://www.youtube.com/watch?v=-jZU_3DBTc4)
     - Follow tutorial to create the knob
     - Expand the knob by adding more shapes, text, etc to turn it into something unique
