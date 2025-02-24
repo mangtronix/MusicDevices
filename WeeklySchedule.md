@@ -967,6 +967,24 @@ Autodesk Fusion Workshop
     - Expand the knob by adding more shapes, text, etc to turn it into something unique
         - [Rotary arm example (Fusion)](https://a360.co/3EPXycB)
 
+- Design for rapid prototyping
+    - [Autodesk Fusion](https://www.autodesk.com/products/fusion-360/personal)
+        - Personal and educational licenses available
+    - [Fusion 360 for Absolute Beginners (Lars Christensen / YouTube)](https://www.youtube.com/playlist?list=PL40d7srwyc_Ow4aaOGXlP2idPGwD7ruKg)
+- Example files
+    -[Simple Cherry MX Keycap (Printables)](https://www.printables.com/model/118708-simple-cherry-mx-keycap)
+      - Printable keycap for our NeoKey board
+      - Can be customized and printed in multi-colour
+
+### Homework for next class
+Follow these video tutorials
+- [Music Devices Fusion 1 - Basic modeling](https://www.youtube.com/watch?v=-jZU_3DBTc4)
+- [Music Devices Fusion 2 - More modeling (to be completed)]()
+
+Create a knob in Fusion from scratch that includes some extra element such as a non-traditional shape or embossed text
+- No submission necessary
+
+## Week 6.2
 Group project overview, work examples, rapid prototyping
 - Final project overview
 - Work examples
@@ -983,16 +1001,7 @@ Group project overview, work examples, rapid prototyping
         - [Printables](https://www.printables.com/)
         - [Thingiverse](https://www.thingiverse.com/)
         - [Cults 3D](https://cults3d.com/)
-- Design for rapid prototyping
-    - [Autodesk Fusion](https://www.autodesk.com/products/fusion-360/personal)
-        - Personal and educational licenses available
-    - [Fusion 360 for Absolute Beginners (Lars Christensen / YouTube)](https://www.youtube.com/playlist?list=PL40d7srwyc_Ow4aaOGXlP2idPGwD7ruKg)
-- Example files
-    -[Simple Cherry MX Keycap (Printables)](https://www.printables.com/model/118708-simple-cherry-mx-keycap)
-      - Printable keycap for our NeoKey board
-      - Can be customized and printed in multi-colour
 
-## Week 6.2
 Workshop: 3D printing with IM Lab Instructor
 - IM Lab Print Farm
     - 4x [Prusa MK4](https://www.prusa3d.com/product/original-prusa-mk4s-3d-printer-5/)
