@@ -666,12 +666,12 @@ Workshop: MIDI controllers, wired and wireless
      
 - Example projects in CircuitPython
     - Portable MIDI Controller (with 4x4 buttons)
-          - Controller with 4x4 DIY button pad controlling DAW
+          - Controller with 4x4 DIY button pad controlling DAW<br/>
               - [YouTube demo](https://www.youtube.com/watch?v=kVHYq4UNdmo)
               - [GitHub code](https://github.com/rounak-dutta/RPI-Pico-16-BTn-MIDI-Controller-using-CircuitPython)
               - <img src="Media/Portable MIDI Controller.png" width="350">
     - Build a Traffic Light Project with Pico W and CircuitPython
-          - Create a functional traffic light with three LEDs and two buttons
+          - Create a functional traffic light with three LEDs and two buttons\
               - [Youtube demo](https://youtu.be/cWePx-Bhepg?si=ivknhK_roJqRvfXw)
               - [Website tutorial with code](https://www.cytron.io/tutorial/build-a-traffic-light-project-with-pico-w-and-circuit-python)
     - Soundboard Speaker for Bikes & Scooters
