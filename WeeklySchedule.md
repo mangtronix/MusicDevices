@@ -1019,12 +1019,14 @@ Video tutorials:
 
 
 ## Week 6.2
+### Meet in C3-116
+
 Review homework from Week 5
 
-Group project overview, work examples, rapid prototyping
-- Final project overview
-- Work examples
-- Rapid prototyping
+Review Fusion 360
+
+
+Introduction to rapid prototyping
 - Laser cutting
     - [Laser Cutting Basics](https://www.instructables.com/Laser-Cutting-Basics/)
     - [IM Lab Laser Cutting presentation (Google Slides)](https://docs.google.com/presentation/d/1l6x9M0nAiH3uMHQKQtethxi2cAhx7vBo1srYkkMT4bA/edit?usp=sharing)
@@ -1042,7 +1044,14 @@ Group project overview, work examples, rapid prototyping
           - Printable keycap for our NeoKey board
           - Can be customized and printed in multi-colour
 
-Workshop: 3D printing with IM Lab Instructor
+## Workshop: 3D printing with IM Lab Instructor ##
+Agenda:
+- Show students laser cutter and materials available (no demo required since laser cutter inoperable)
+- Show students MK4 printers
+- Show students available 3D printing materials
+- Guide students through slicing model with "lab assistant" and start 3D print
+- Show students Prusa XL printer
+
 - IM Lab Print Farm
     - 4x [Prusa MK4](https://www.prusa3d.com/product/original-prusa-mk4s-3d-printer-5/)
         - We have the MK4 version (not MK4S) but they are largely the same
