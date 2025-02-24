@@ -962,8 +962,6 @@ Due before start of next class
 # Week 6
 
 ## Week 6.1
-Review homework
-
 Autodesk Fusion Workshop
 - You have been granted access to Fusion through your @nyu.edu email address
     - Check your email for "Welcome to Autodesk" if you haven't already signed up
@@ -993,6 +991,8 @@ Follow these video tutorials to learn about sketching and constraints
 
 
 ## Week 6.2
+Review homework from Week 5
+
 Group project overview, work examples, rapid prototyping
 - Final project overview
 - Work examples
