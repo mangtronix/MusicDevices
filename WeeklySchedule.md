@@ -665,35 +665,41 @@ Workshop: MIDI controllers, wired and wireless
 -->
      
 - Example projects in CircuitPython
-    - Portable MIDI Controller (with 4x4 buttons)
+    - Portable MIDI Controller (with 4x4 buttons)<br/>
           - Controller with 4x4 DIY button pad controlling DAW<br/>
-              - [YouTube demo](https://www.youtube.com/watch?v=kVHYq4UNdmo)
-              - [GitHub code](https://github.com/rounak-dutta/RPI-Pico-16-BTn-MIDI-Controller-using-CircuitPython)
-              - <img src="Media/Portable MIDI Controller.png" width="350">
-    - Build a Traffic Light Project with Pico W and CircuitPython
-          - Create a functional traffic light with three LEDs and two buttons\
-              - [Youtube demo](https://youtu.be/cWePx-Bhepg?si=ivknhK_roJqRvfXw)
-              - [Website tutorial with code](https://www.cytron.io/tutorial/build-a-traffic-light-project-with-pico-w-and-circuit-python)
-    - Soundboard Speaker for Bikes & Scooters
-          - CircuitPython portable soundboard speaker for any bike or scooter
-              - [Youtube demo](https://youtu.be/K5RtX5pPXEo?si=aK-l8V-C1oc4mYlC)
-              - [Website tutorial with code](https://learn.adafruit.com/soundboard-speaker-for-bikes-scooters)
-    - IoT Bird Feeder Camera
-          -  Captures images of birds with Adafruit IO and CircuitPython (seperate designed and 3D printed bird feeder to house the Adafruit MEMENTO, a large battery, and a PIR sensor)
-              - [Youtube demo](https://youtu.be/LhUypbEh9XU?si=-ylcg0S37f_Es-zS)
-              - [Website tutorial with code](https://learn.adafruit.com/iot-window-bird-feeder-with-camera)
-    - CircuitPython Light Meter OLED
-          - Create a simple Light Meter programmed in CircuitPython using a Seeeduino Xiao board, a photoresistor, and an OLED display
-              - [Youtube demo](https://youtu.be/zjhoc0t7I_0?si=wFkQEEOTDLtd_5Ab)
-              - [GitHub code](https://github.com/educ8s/CircuitPython-Light-Meter-OLED.git)
-    - Raspberry Pi Pico Clock & Thermometer
-          - Build this low-cost real-time clock and thermometer with a color TFT display using CircuitPython on a Raspberry Pi Pico board.
-              - [Youtube demo](https://youtu.be/gBofy7MMdIY?si=L0fCDNewATBOSTFH)
-              - [Website tutorial with code](https://educ8s.tv/raspberry-pi-pico-thermometer-clock/)
-    - Animations on OLED displays
-          - Load and display an animation on an OLED screen with CircuitPython
-              - [Youtube demo](https://youtu.be/WqyBWcjs_oY?si=cx8jjEUhm263ez9p)
-              - [Website tutorial and code](https://educ8s.tv/oled-animation/)
+              - [YouTube demo](https://www.youtube.com/watch?v=kVHYq4UNdmo)<br/>
+              - [GitHub code](https://github.com/rounak-dutta/RPI-Pico-16-BTn-MIDI-Controller-using-CircuitPython)<br/>
+              - <img src="Media/Portable MIDI Controller.png" width="350"><br/>
+    - Build a Traffic Light Project with Pico W and CircuitPython<br/>
+          - Create a functional traffic light with three LEDs and two buttons<br/>
+              - [Youtube demo](https://youtu.be/cWePx-Bhepg?si=ivknhK_roJqRvfXw)<br/>
+              - [Website tutorial with code](https://www.cytron.io/tutorial/build-a-traffic-light-project-with-pico-w-and-circuit-python)<br/>
+              - <img src="Media/Traffic Light .png" width="350"><br/>
+    - Soundboard Speaker for Bikes & Scooters<br/>
+          - CircuitPython portable soundboard speaker for any bike or scooter<br/>
+              - [Youtube demo](https://youtu.be/K5RtX5pPXEo?si=aK-l8V-C1oc4mYlC)<br/>
+              - [Website tutorial with code](https://learn.adafruit.com/soundboard-speaker-for-bikes-scooters)<br/>
+              - <img src="Media/Scooter Speaker.png" width="350"><br/>
+    - IoT Bird Feeder Camera<br/>
+          -  Captures images of birds with Adafruit IO and CircuitPython (seperate designed and 3D printed bird feeder to house the Adafruit MEMENTO, a large battery, and a PIR sensor)<br/>
+              - [Youtube demo](https://youtu.be/LhUypbEh9XU?si=-ylcg0S37f_Es-zS)<br/>
+              - [Website tutorial with code](https://learn.adafruit.com/iot-window-bird-feeder-with-camera)<br/>
+              - <img src="Media/Bird Feeder .png" width="350"><br/>
+    - CircuitPython Light Meter OLED<br/>
+          - Create a simple Light Meter programmed in CircuitPython using a Seeeduino Xiao board, a photoresistor, and an OLED display<br/>
+              - [Youtube demo](https://youtu.be/zjhoc0t7I_0?si=wFkQEEOTDLtd_5Ab)<br/>
+              - [GitHub code](https://github.com/educ8s/CircuitPython-Light-Meter-OLED.git)<br/>
+              - <img src="Media/Light Meter.png" width="350"><br/>
+    - Raspberry Pi Pico Clock & Thermometer<br/>
+          - Build this low-cost real-time clock and thermometer with a color TFT display using CircuitPython on a Raspberry Pi Pico board.<br/>
+              - [Youtube demo](https://youtu.be/gBofy7MMdIY?si=L0fCDNewATBOSTFH)<br/>
+              - [Website tutorial with code](https://educ8s.tv/raspberry-pi-pico-thermometer-clock/)<br/>
+              - <img src="Media/Thermometer & Clook.png" width="350"><br/>
+    - Animations on OLED displays<br/>
+          - Load and display an animation on an OLED screen with CircuitPython<br/>
+              - [Youtube demo](https://youtu.be/WqyBWcjs_oY?si=cx8jjEUhm263ez9p)<br/>
+              - [Website tutorial and code](https://educ8s.tv/oled-animation/)<br/>
+              - <img src="Media/Animations.png" width="350"><br/>
 
 - Demo of using code.py to load another file
     - Keep your code in another file, e.g. ```midi_buttons.py```
