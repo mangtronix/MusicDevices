@@ -959,6 +959,7 @@ Review homework
 
 Autodesk Fusion Workshop
 - You have been granted access to Fusion through your @nyu.edu email address
+    - [Autodesk Fusion](https://www.autodesk.com/education/edu-software/fusion)
     - Your access is tied to my teacher access - also possible to apply for your own educational license
 - Fusion is available in C3-116, C3-019 Film Edit Lab, or download to your own machine
 - [Sign in](https://www.autodesk.com/education/edu-software/fusion) and go to Products to download
@@ -968,14 +969,9 @@ Autodesk Fusion Workshop
         - [Rotary arm example (Fusion)](https://a360.co/3EPXycB)
 
 - Design for rapid prototyping
-    - [Autodesk Fusion](https://www.autodesk.com/products/fusion-360/personal)
-        - Personal and educational licenses available
     - [Fusion 360 for Absolute Beginners (Lars Christensen / YouTube)](https://www.youtube.com/playlist?list=PL40d7srwyc_Ow4aaOGXlP2idPGwD7ruKg)
-- Example files
-    -[Simple Cherry MX Keycap (Printables)](https://www.printables.com/model/118708-simple-cherry-mx-keycap)
-      - Printable keycap for our NeoKey board
-      - Can be customized and printed in multi-colour
-
+ 
+  
 ### Homework for next class
 Follow these video tutorials
 - [Music Devices Fusion 1 - Basic modeling](https://www.youtube.com/watch?v=-jZU_3DBTc4)
@@ -1001,6 +997,10 @@ Group project overview, work examples, rapid prototyping
         - [Printables](https://www.printables.com/)
         - [Thingiverse](https://www.thingiverse.com/)
         - [Cults 3D](https://cults3d.com/)
+    - Example files
+        -[Simple Cherry MX Keycap (Printables)](https://www.printables.com/model/118708-simple-cherry-mx-keycap)
+          - Printable keycap for our NeoKey board
+          - Can be customized and printed in multi-colour
 
 Workshop: 3D printing with IM Lab Instructor
 - IM Lab Print Farm
