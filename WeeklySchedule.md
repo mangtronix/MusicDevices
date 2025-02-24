@@ -994,18 +994,18 @@ Video tutorials:
  
   
 ### Homework for next class
-*Follow these video tutorials*
+**Follow these video tutorials**
 - [Music Devices Fusion 1 - Basic modeling](https://www.youtube.com/watch?v=-jZU_3DBTc4)
 - [Music Devices Fusion 2 - More modeling](https://youtu.be/iwORyv7a8Dg?si=hDeALyrmNELBr7YT)
     - Create a folder with your name in the Music Devices folder on Autodesk
     - Create a project with your knob within your folder
 
-*Watch* this video tutorial to learn about different ways of modifying shapes and creating shapes using sketches
+**Watch** this video tutorial to learn about different ways of modifying shapes and creating shapes using sketches
 - [Fusion 360 Complete Guide - MADE EASY 2024 (YouTube)](https://youtu.be/JyFbIpzzxFE?si=t3gltvMcdjBBVMcy)
 
-*Modify* your basic knob by adding text and / or changing the shape of the knob - be creative!
+**Modify** your basic knob by adding text and / or changing the shape of the knob - be creative!
 
-*Save* your work inside Fusion in your folder in the Music Devices project
+**Save** your work inside Fusion in your folder in the Music Devices project
 
 
 ## Week 6.2
