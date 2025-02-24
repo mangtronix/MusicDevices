@@ -986,22 +986,26 @@ Video tutorials:
 - [Music Devices Fusion 2 - More modeling](https://youtu.be/iwORyv7a8Dg?si=hDeALyrmNELBr7YT)
     - Smoothing out the edges, adding text, idea for using the encoder as a rotary arm 
 
-- Fusion 360 tutorials
+- More Fusion 360 tutorials
+    - [Fusion 360 Complete Guide - MADE EASY 2024 (YouTube)](https://youtu.be/JyFbIpzzxFE?si=t3gltvMcdjBBVMcy)
+        - Nice basic overview geared towards 3D printing  
     - [Fusion 360 for Absolute Beginners (Lars Christensen / YouTube)](https://www.youtube.com/playlist?list=PL40d7srwyc_Ow4aaOGXlP2idPGwD7ruKg)
+        - Goes through modeling a complete part from scratch in a smart way using sketches and constraints
  
   
 ### Homework for next class
-Follow these video tutorials
+*Follow these video tutorials*
 - [Music Devices Fusion 1 - Basic modeling](https://www.youtube.com/watch?v=-jZU_3DBTc4)
 - [Music Devices Fusion 2 - More modeling](https://youtu.be/iwORyv7a8Dg?si=hDeALyrmNELBr7YT)
     - Create a folder with your name in the Music Devices folder on Autodesk
     - Create a project with your knob within your folder
-    - Extend the basic knob by adding text and / or changing the shape of the knob - be creative!
 
-Follow these video tutorials to learn about sketching and constraints
-- [Fusion 360 For Beginners - Part 1](https://youtu.be/A5bc9c3S12g?si=d0YhGfl_RtDrvO-k)
-- [Fusion 360 For Beginners - Part 2](https://youtu.be/HXRMzJWo0-Q?si=69EGrNT2booF2k_N)
-- No submission necessary
+*Watch* this video tutorial to learn about different ways of modifying shapes and creating shapes using sketches
+- [Fusion 360 Complete Guide - MADE EASY 2024 (YouTube)](https://youtu.be/JyFbIpzzxFE?si=t3gltvMcdjBBVMcy)
+
+*Modify* your basic knob by adding text and / or changing the shape of the knob - be creative!
+
+*Save* your work inside Fusion in your folder in the Music Devices project
 
 
 ## Week 6.2
