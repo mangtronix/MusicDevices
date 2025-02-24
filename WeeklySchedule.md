@@ -983,16 +983,20 @@ Video tutorials:
     - Follow tutorial to create the knob
     - Expand the knob by adding more shapes, text, etc to turn it into something unique
         - [Rotary arm example (Fusion)](https://a360.co/3EPXycB)
+- [Music Devices Fusion 2 - More modeling](https://youtu.be/iwORyv7a8Dg?si=hDeALyrmNELBr7YT)
+    - Smoothing out the edges, adding text, idea for using the encoder as a rotary arm 
 
 - Fusion 360 tutorials
     - [Fusion 360 for Absolute Beginners (Lars Christensen / YouTube)](https://www.youtube.com/playlist?list=PL40d7srwyc_Ow4aaOGXlP2idPGwD7ruKg)
  
   
 ### Homework for next class
-Follow this video tutorial
+Follow these video tutorials
 - [Music Devices Fusion 1 - Basic modeling](https://www.youtube.com/watch?v=-jZU_3DBTc4)
+- [Music Devices Fusion 2 - More modeling](https://youtu.be/iwORyv7a8Dg?si=hDeALyrmNELBr7YT)
     - Create a folder with your name in the Music Devices folder on Autodesk
     - Create a project with your knob within your folder
+    - Extend the basic knob by adding text and / or changing the shape of the knob - be creative!
 
 Follow these video tutorials to learn about sketching and constraints
 - [Fusion 360 For Beginners - Part 1](https://youtu.be/A5bc9c3S12g?si=d0YhGfl_RtDrvO-k)
