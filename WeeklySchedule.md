@@ -665,34 +665,41 @@ Workshop: MIDI controllers, wired and wireless
 -->
      
 - Example projects in CircuitPython
-    - Portable MIDI Controller (with 4x4 buttons)
-          - Controller with 4x4 DIY button pad controlling DAW
-          - [YouTube demo](https://www.youtube.com/watch?v=kVHYq4UNdmo)
-          - [GitHub code](https://github.com/rounak-dutta/RPI-Pico-16-BTn-MIDI-Controller-using-CircuitPython)
-    - Build a Traffic Light Project with Pico W and CircuitPython
-          - Create a functional traffic light with three LEDs and two buttons
-          - [Youtube demo](https://youtu.be/cWePx-Bhepg?si=ivknhK_roJqRvfXw)
-          - [Website tutorial with code](https://www.cytron.io/tutorial/build-a-traffic-light-project-with-pico-w-and-circuit-python)
-    - Soundboard Speaker for Bikes & Scooters
-          - CircuitPython portable soundboard speaker for any bike or scooter
-          - [Youtube demo](https://youtu.be/K5RtX5pPXEo?si=aK-l8V-C1oc4mYlC)
-          - [Website tutorial with code](https://learn.adafruit.com/soundboard-speaker-for-bikes-scooters)
-    - IoT Bird Feeder Camera
-          -  Captures images of birds with Adafruit IO and CircuitPython (seperate designed and 3D printed bird feeder to house the Adafruit MEMENTO, a large battery, and a PIR sensor)
-          - [Youtube demo](https://youtu.be/LhUypbEh9XU?si=-ylcg0S37f_Es-zS)
-          - [Website tutorial with code](https://learn.adafruit.com/iot-window-bird-feeder-with-camera)
-    - CircuitPython Light Meter OLED
-          - Create a simple Light Meter programmed in CircuitPython using a Seeeduino Xiao board, a photoresistor, and an OLED display
-          - [Youtube demo](https://youtu.be/zjhoc0t7I_0?si=wFkQEEOTDLtd_5Ab)
-          - [GitHub code](https://github.com/educ8s/CircuitPython-Light-Meter-OLED.git)
-    - Raspberry Pi Pico Clock & Thermometer
-          - Build this low-cost real-time clock and thermometer with a color TFT display using CircuitPython on a Raspberry Pi Pico board.
-          - [Youtube demo](https://youtu.be/gBofy7MMdIY?si=L0fCDNewATBOSTFH)
-          - [Website tutorial with code](https://educ8s.tv/raspberry-pi-pico-thermometer-clock/)
-    - Animations on OLED displays
-          - Load and display an animation on an OLED screen with CircuitPython
-          - [Youtube demo](https://youtu.be/WqyBWcjs_oY?si=cx8jjEUhm263ez9p)
-          - [Website tutorial and code](https://educ8s.tv/oled-animation/)
+    - Portable MIDI Controller (with 4x4 buttons)<br/>
+          - Controller with 4x4 DIY button pad controlling DAW<br/>
+              - [YouTube demo](https://www.youtube.com/watch?v=kVHYq4UNdmo)<br/>
+              - [GitHub code](https://github.com/rounak-dutta/RPI-Pico-16-BTn-MIDI-Controller-using-CircuitPython)<br/>
+              - <img src="Media/Portable MIDI Controller.png" width="350"><br/>
+    - Build a Traffic Light Project with Pico W and CircuitPython<br/>
+          - Create a functional traffic light with three LEDs and two buttons<br/>
+              - [Youtube demo](https://youtu.be/cWePx-Bhepg?si=ivknhK_roJqRvfXw)<br/>
+              - [Website tutorial with code](https://www.cytron.io/tutorial/build-a-traffic-light-project-with-pico-w-and-circuit-python)<br/>
+              - <img src="Media/Traffic Light .png" width="350"><br/>
+    - Soundboard Speaker for Bikes & Scooters<br/>
+          - CircuitPython portable soundboard speaker for any bike or scooter<br/>
+              - [Youtube demo](https://youtu.be/K5RtX5pPXEo?si=aK-l8V-C1oc4mYlC)<br/>
+              - [Website tutorial with code](https://learn.adafruit.com/soundboard-speaker-for-bikes-scooters)<br/>
+              - <img src="Media/Scooter Speaker.png" width="350"><br/>
+    - IoT Bird Feeder Camera<br/>
+          -  Captures images of birds with Adafruit IO and CircuitPython (seperate designed and 3D printed bird feeder to house the Adafruit MEMENTO, a large battery, and a PIR sensor)<br/>
+              - [Youtube demo](https://youtu.be/LhUypbEh9XU?si=-ylcg0S37f_Es-zS)<br/>
+              - [Website tutorial with code](https://learn.adafruit.com/iot-window-bird-feeder-with-camera)<br/>
+              - <img src="Media/Bird Feeder .png" width="350"><br/>
+    - CircuitPython Light Meter OLED<br/>
+          - Create a simple Light Meter programmed in CircuitPython using a Seeeduino Xiao board, a photoresistor, and an OLED display<br/>
+              - [Youtube demo](https://youtu.be/zjhoc0t7I_0?si=wFkQEEOTDLtd_5Ab)<br/>
+              - [GitHub code](https://github.com/educ8s/CircuitPython-Light-Meter-OLED.git)<br/>
+              - <img src="Media/Light Meter.png" width="350"><br/>
+    - Raspberry Pi Pico Clock & Thermometer<br/>
+          - Build this low-cost real-time clock and thermometer with a color TFT display using CircuitPython on a Raspberry Pi Pico board.<br/>
+              - [Youtube demo](https://youtu.be/gBofy7MMdIY?si=L0fCDNewATBOSTFH)<br/>
+              - [Website tutorial with code](https://educ8s.tv/raspberry-pi-pico-thermometer-clock/)<br/>
+              - <img src="Media/ThermometerClock.png" width="350"><br/>
+    - Animations on OLED displays<br/>
+          - Load and display an animation on an OLED screen with CircuitPython<br/>
+              - [Youtube demo](https://youtu.be/WqyBWcjs_oY?si=cx8jjEUhm263ez9p)<br/>
+              - [Website tutorial and code](https://educ8s.tv/oled-animation/)<br/>
+              - <img src="Media/Animations.png" width="350"><br/>
 
 - Demo of using code.py to load another file
     - Keep your code in another file, e.g. ```midi_buttons.py```
@@ -955,6 +962,55 @@ Due before start of next class
 # Week 6
 
 ## Week 6.1
+### Meet in C3-116
+
+Zoom link for questions:
+[https://nyu.zoom.us/j/91573933713](https://nyu.zoom.us/j/91573933713)
+
+Autodesk Fusion Workshop
+- You have been granted access to Fusion through your @nyu.edu email address
+    - If you don't have an Autodesk account check your email for the "Welcome to Autodesk" invitation link
+    - If you *already* have an Autodesk account Fusion will show up under "My Products" (no welcome email will be sent)
+    - [Autodesk Fusion for education](https://www.autodesk.com/education/edu-software/fusion)
+    - Your access is tied to my teacher access - it's also possible to apply for your own educational license
+- Fusion is available in C3-116, C3-019 Film Edit Lab, or download to your own machine
+- [Sign in](https://www.autodesk.com/education/edu-software/fusion) and go to Products to download
+
+Video tutorials:
+- [Music Devices Fusion 0 - Installation](https://youtu.be/5us5B8Kd23A?si=is5FpoX7s-aixaB-)
+    - Downloading / accessing Fusion app 
+- [Music Devices Fusion 1 - Basic modeling](https://www.youtube.com/watch?v=-jZU_3DBTc4)
+    - Follow tutorial to create the knob
+    - Expand the knob by adding more shapes, text, etc to turn it into something unique
+        - [Rotary arm example (Fusion)](https://a360.co/3EPXycB)
+- [Music Devices Fusion 2 - More modeling](https://youtu.be/iwORyv7a8Dg?si=hDeALyrmNELBr7YT)
+    - Smoothing out the edges, adding text, idea for using the encoder as a rotary arm 
+
+- More Fusion 360 tutorials
+    - [Fusion 360 Complete Guide - MADE EASY 2024 (YouTube)](https://youtu.be/JyFbIpzzxFE?si=t3gltvMcdjBBVMcy)
+        - Nice basic overview geared towards 3D printing  
+    - [Fusion 360 for Absolute Beginners (Lars Christensen / YouTube)](https://www.youtube.com/playlist?list=PL40d7srwyc_Ow4aaOGXlP2idPGwD7ruKg)
+        - Goes through modeling a complete part from scratch in a smart way using sketches and constraints
+ 
+  
+### Homework for next class
+**Follow these video tutorials**
+- [Music Devices Fusion 1 - Basic modeling](https://www.youtube.com/watch?v=-jZU_3DBTc4)
+- [Music Devices Fusion 2 - More modeling](https://youtu.be/iwORyv7a8Dg?si=hDeALyrmNELBr7YT)
+    - Create a folder with your name in the Music Devices folder on Autodesk
+    - Create a project with your knob within your folder
+
+**Watch** this video tutorial to learn about different ways of modifying shapes and creating shapes using sketches
+- [Fusion 360 Complete Guide - MADE EASY 2024 (YouTube)](https://youtu.be/JyFbIpzzxFE?si=t3gltvMcdjBBVMcy)
+
+**Modify** your basic knob by adding text and / or changing the shape of the knob - be creative!
+
+**Save** your work inside Fusion in your folder in the Music Devices project
+
+
+## Week 6.2
+Review homework from Week 5
+
 Group project overview, work examples, rapid prototyping
 - Final project overview
 - Work examples
@@ -971,16 +1027,11 @@ Group project overview, work examples, rapid prototyping
         - [Printables](https://www.printables.com/)
         - [Thingiverse](https://www.thingiverse.com/)
         - [Cults 3D](https://cults3d.com/)
-- Design for rapid prototyping
-    - [Autodesk Fusion](https://www.autodesk.com/products/fusion-360/personal)
-        - Personal and educational licenses available
-    - [Fusion 360 for Absolute Beginners (Lars Christensen / YouTube)](https://www.youtube.com/playlist?list=PL40d7srwyc_Ow4aaOGXlP2idPGwD7ruKg)
-- Example files
-    -[Simple Cherry MX Keycap (Printables)](https://www.printables.com/model/118708-simple-cherry-mx-keycap)
-      - Printable keycap for our NeoKey board
-      - Can be customized and printed in multi-colour
+    - Example files
+        -[Simple Cherry MX Keycap (Printables)](https://www.printables.com/model/118708-simple-cherry-mx-keycap)
+          - Printable keycap for our NeoKey board
+          - Can be customized and printed in multi-colour
 
-## Week 6.2
 Workshop: 3D printing with IM Lab Instructor
 - IM Lab Print Farm
     - 4x [Prusa MK4](https://www.prusa3d.com/product/original-prusa-mk4s-3d-printer-5/)
@@ -1004,16 +1055,7 @@ Workshop: 3D printing with IM Lab Instructor
 Due before start of next class
 
 - **Create** a 3D design for a custom component for a musical device
-    - For example, create a custom knob cap, enclosure, key design, sensor holder
-    - Use Autodesk Fusion and create a shareable link to your design
-    - Your design should take less than 1 hour to print
-- **Print** your design
-- **Post** your work in the discussion forum
-    - See Brightspace->Discussions->Exercises for details
-- **Be ready** to show / discuss your work in class
-
-- **Prepare** an idea for a musical device / final project
-    - Be ready to share your idea in the Idea Lab next week
+- **See** [Brightspace->Discussions Exercise 4](https://brightspace.nyu.edu/d2l/le/435258/discussions/topics/535232/View) for details and to post your work
 ---
 
 # Week 7
