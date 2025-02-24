@@ -979,9 +979,11 @@ Autodesk Fusion Workshop
 Video tutorials:
 - [Music Devices Fusion 0 - Installation](https://youtu.be/5us5B8Kd23A?si=is5FpoX7s-aixaB-)
     - Downloading / accessing Fusion app
-    - **Note:** to access the MangLab hub and Music Devices project you need to respond to your email invitation to join the MangLab hub and then click the Team Account button in top left in Fusion and select MangLab and then click on the Music Devices project
+    - **Note:** to access the MangLab hub and Music Devices project you need to click the Team Account button in top left in Fusion and select MangLab and then click on the Music Devices project
+    - [Switch between hubs (Autodesk)](https://help.autodesk.com/view/fusion360/ENU/?guid=FT-SWITCH-BETWEEN-TEAMS) for how to switch to the MangLab hub
+    - You should also get an email invitation to join the hub
 <img width="473" alt="Screenshot 2025-02-24 at 5 44 52 PM" src="https://github.com/user-attachments/assets/cfa2d792-0c7e-44ca-bdaf-c97fcb65ab09" />
-    - See [Switch between hubs (Autodeks)](https://help.autodesk.com/view/fusion360/ENU/?guid=FT-SWITCH-BETWEEN-TEAMS) for how to switch to the MangLab hub
+
 
 - [Music Devices Fusion 1 - Basic modeling](https://www.youtube.com/watch?v=-jZU_3DBTc4)
     - Follow tutorial to create the knob
@@ -1001,7 +1003,8 @@ Video tutorials:
 **Follow these video tutorials**
 - [Music Devices Fusion 1 - Basic modeling](https://www.youtube.com/watch?v=-jZU_3DBTc4)
 - [Music Devices Fusion 2 - More modeling](https://youtu.be/iwORyv7a8Dg?si=hDeALyrmNELBr7YT)
-    - Create a folder with your name in the Music Devices folder on Autodesk
+    - Create a folder with your name in the MangLab / Music Devices project
+    - See [Switch between hubs (Autodesk)](https://help.autodesk.com/view/fusion360/ENU/?guid=FT-SWITCH-BETWEEN-TEAMS) for how to switch to the MangLab hub
     - Create a project with your knob within your folder
 
 **Watch** this video tutorial to learn about different ways of modifying shapes and creating shapes using sketches
@@ -1009,7 +1012,10 @@ Video tutorials:
 
 **Modify** your basic knob by adding text and / or changing the shape of the knob - be creative!
 
-**Save** your work inside Fusion in your folder
+**Save** your work inside your folder in MangLab / Music Devices
+    - e.g. MangLab hub, Music Devices project, Mang folder
+    <img width="393" alt="Screenshot 2025-02-24 at 5 57 08 PM" src="https://github.com/user-attachments/assets/5f0e1c26-7dc8-4b94-8e93-dcc97de42797" />
+
 
 
 ## Week 6.2
