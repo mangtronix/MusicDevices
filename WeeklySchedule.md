@@ -1025,16 +1025,7 @@ Workshop: 3D printing with IM Lab Instructor
 Due before start of next class
 
 - **Create** a 3D design for a custom component for a musical device
-    - For example, create a custom knob cap, enclosure, key design, sensor holder
-    - Use Autodesk Fusion and create a shareable link to your design
-    - Your design should take less than 1 hour to print
-- **Print** your design
-- **Post** your work in the discussion forum
-    - See Brightspace->Discussions->Exercises for details
-- **Be ready** to show / discuss your work in class
-
-- **Prepare** an idea for a musical device / final project
-    - Be ready to share your idea in the Idea Lab next week
+- **See** [Brightspace->Discussions Exercise 4](https://brightspace.nyu.edu/d2l/le/435258/discussions/topics/535232/View) for details and to post your work
 ---
 
 # Week 7
