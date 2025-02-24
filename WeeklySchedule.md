@@ -969,9 +969,10 @@ Zoom link for questions:
 
 Autodesk Fusion Workshop
 - You have been granted access to Fusion through your @nyu.edu email address
-    - Check your email for "Welcome to Autodesk" if you haven't already signed up
+    - If you don't have an Autodesk account check your email for the "Welcome to Autodesk" invitation link
+    - If you *already* have an Autodesk account Fusion will show up under "My Products" (no welcome email will be sent)
     - [Autodesk Fusion for education](https://www.autodesk.com/education/edu-software/fusion)
-    - Your access is tied to my teacher access - also possible to apply for your own educational license
+    - Your access is tied to my teacher access - it's also possible to apply for your own educational license
 - Fusion is available in C3-116, C3-019 Film Edit Lab, or download to your own machine
 - [Sign in](https://www.autodesk.com/education/edu-software/fusion) and go to Products to download
 
