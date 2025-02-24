@@ -976,17 +976,21 @@ Autodesk Fusion Workshop
     - Expand the knob by adding more shapes, text, etc to turn it into something unique
         - [Rotary arm example (Fusion)](https://a360.co/3EPXycB)
 
-- Design for rapid prototyping
+- Fusion 360 tutorials
     - [Fusion 360 for Absolute Beginners (Lars Christensen / YouTube)](https://www.youtube.com/playlist?list=PL40d7srwyc_Ow4aaOGXlP2idPGwD7ruKg)
  
   
 ### Homework for next class
-Follow these video tutorials
+Follow this video tutorials
 - [Music Devices Fusion 1 - Basic modeling](https://www.youtube.com/watch?v=-jZU_3DBTc4)
-- [Music Devices Fusion 2 - More modeling (to be completed)]()
+    - Create a folder with your name in the Music Devices folder on Autodesk
+    - Create a project with your knob within your folder
 
-Create a knob in Fusion from scratch that includes some extra element such as a non-traditional shape or embossed text
+Follow these video tutorials to learn about sketching and constraints
+- [Fusion 360 For Beginners - Part 1](https://youtu.be/A5bc9c3S12g?si=d0YhGfl_RtDrvO-k)
+- [Fusion 360 For Beginners - Part 2](https://youtu.be/HXRMzJWo0-Q?si=69EGrNT2booF2k_N)
 - No submission necessary
+
 
 ## Week 6.2
 Group project overview, work examples, rapid prototyping
