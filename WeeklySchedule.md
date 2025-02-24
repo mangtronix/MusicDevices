@@ -974,7 +974,11 @@ Autodesk Fusion Workshop
     - Your access is tied to my teacher access - also possible to apply for your own educational license
 - Fusion is available in C3-116, C3-019 Film Edit Lab, or download to your own machine
 - [Sign in](https://www.autodesk.com/education/edu-software/fusion) and go to Products to download
-- Video tutorial: [Music Devices Fusion 1 - Basic modeling](https://www.youtube.com/watch?v=-jZU_3DBTc4)
+
+Video tutorials:
+- [Music Devices Fusion 0 - Installation](https://youtu.be/5us5B8Kd23A?si=is5FpoX7s-aixaB-)
+    - Downloading / accessing Fusion app 
+- [Music Devices Fusion 1 - Basic modeling](https://www.youtube.com/watch?v=-jZU_3DBTc4)
     - Follow tutorial to create the knob
     - Expand the knob by adding more shapes, text, etc to turn it into something unique
         - [Rotary arm example (Fusion)](https://a360.co/3EPXycB)
