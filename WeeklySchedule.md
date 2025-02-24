@@ -962,6 +962,11 @@ Due before start of next class
 # Week 6
 
 ## Week 6.1
+### Meet in C3-116
+
+Zoom link for questions:
+[https://nyu.zoom.us/j/91573933713](https://nyu.zoom.us/j/91573933713)
+
 Autodesk Fusion Workshop
 - You have been granted access to Fusion through your @nyu.edu email address
     - Check your email for "Welcome to Autodesk" if you haven't already signed up
