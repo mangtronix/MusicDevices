@@ -1066,11 +1066,17 @@ Due before start of next class
 # Week 7
 
 ## Week 7.1
+Inspiration day
+- Look at examples of creative music controller / instrument projects
+- Start ideating on our projects
+
+<!--
 Idea Lab
 - Opening remarks
 - Share project ideas (come to front of class and share idea)
 - Form groups
 - Refine project ideas
+-->
 
 ## Week 7.2
 ## Workshop: 3D printing with IM Lab Instructor ##
