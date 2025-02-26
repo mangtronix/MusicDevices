@@ -964,9 +964,6 @@ Due before start of next class
 ## Week 6.1
 ### Meet in C3-116
 
-Zoom link for questions:
-[https://nyu.zoom.us/j/91573933713](https://nyu.zoom.us/j/91573933713)
-
 Autodesk Fusion Workshop
 - You have been granted access to Fusion through your @nyu.edu email address
     - If you don't have an Autodesk account check your email for the "Welcome to Autodesk" invitation link
@@ -1019,12 +1016,12 @@ Video tutorials:
 
 
 ## Week 6.2
-### Meet in C3-116
+### Meet on Zoom
+[https://nyu.zoom.us/j/98623154843](https://nyu.zoom.us/j/98623154843)
 
 Review homework from Week 5
 
 Review Fusion 360
-
 
 Introduction to rapid prototyping
 - Laser cutting
@@ -1043,7 +1040,35 @@ Introduction to rapid prototyping
         -[Simple Cherry MX Keycap (Printables)](https://www.printables.com/model/118708-simple-cherry-mx-keycap)
           - Printable keycap for our NeoKey board
           - Can be customized and printed in multi-colour
+    - IM Lab Print Farm
+        - 4x [Prusa MK4S with Input Shaper](https://www.prusa3d.com/product/original-prusa-mk4s-3d-printer-5/)
+        - Ultimaker also available
+    - [PrusaSlicer](https://www.prusa3d.com/page/prusaslicer_424/)
+        - Converts solid 3D model to code for Prusa MK4 3D printers
+        - Useful for estimating print time
+        - Choose Prusa MK4S IS (Input Shaper) as the printer
+        - Make sure to enable supports if model has overhangs
+        - Can enable brim if model is very tall or has a small adhesion surface to bed
 
+
+### Homework - Week 6.2
+
+Due before start of next class
+
+- **Create** a 3D design for a custom component for a musical device
+- **See** [Brightspace->Discussions Exercise 4](https://brightspace.nyu.edu/d2l/le/435258/discussions/topics/535232/View) for details and to post your work
+---
+
+# Week 7
+
+## Week 7.1
+Idea Lab
+- Opening remarks
+- Share project ideas (come to front of class and share idea)
+- Form groups
+- Refine project ideas
+
+## Week 7.2
 ## Workshop: 3D printing with IM Lab Instructor ##
 Agenda:
 - Show students laser cutter and materials available (no demo required since laser cutter inoperable)
@@ -1069,25 +1094,6 @@ Agenda:
     - Converts solid 3D model to code for 3D printer
     - Useful for estimating print time
 
-### Homework - Week 6.2
-
-Due before start of next class
-
-- **Create** a 3D design for a custom component for a musical device
-- **See** [Brightspace->Discussions Exercise 4](https://brightspace.nyu.edu/d2l/le/435258/discussions/topics/535232/View) for details and to post your work
----
-
-# Week 7
-
-## Week 7.1
-Idea Lab
-- Opening remarks
-- Share project ideas (come to front of class and share idea)
-- Form groups
-- Refine project ideas
-
-
-## Week 7.2
 Project proposal preparation
 - Finalize project groups
 - Start project proposal
