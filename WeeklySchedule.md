@@ -1037,9 +1037,11 @@ Introduction to rapid prototyping
         - [Thingiverse](https://www.thingiverse.com/)
         - [Cults 3D](https://cults3d.com/)
     - Example files
-        -[Simple Cherry MX Keycap (Printables)](https://www.printables.com/model/118708-simple-cherry-mx-keycap)
+        - [Simple Cherry MX Keycap (Printables)](https://www.printables.com/model/118708-simple-cherry-mx-keycap)
           - Printable keycap for our NeoKey board
           - Can be customized and printed in multi-colour
+        - [Adafruit Example Projects (Adafruit)](https://learn.adafruit.com/category/3d-printing)
+        - [Guitar Synth with CircuitPython SynthIO (Adafruit)](https://learn.adafruit.com/guitar-synth-with-circuitpython-synthio)
     - IM Lab Print Farm
         - 4x [Prusa MK4S with Input Shaper](https://www.prusa3d.com/product/original-prusa-mk4s-3d-printer-5/)
         - Ultimaker also available
