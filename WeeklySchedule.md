@@ -8,7 +8,7 @@
 - [Week 4](#week-4) – Musical interface design, MIDI
 - [Week 5](#week-5) – Musical sensors
 - [Week 6](#week-6) – Rapid prototyping
-- [Week 7](#week-7) – Idea Lab
+- [Week 7](#week-7) – Inspiration day
 - 7-Week Finals Break
 - [Week 8](WeeklySchedule2.md#week-8) – Project proposal development
 - [Week 9](WeeklySchedule2.md#week-9) – Project proposal presentation, implementation starts!
