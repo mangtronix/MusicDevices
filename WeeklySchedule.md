@@ -840,92 +840,6 @@ I2C / QT addresses
 - **Note:** the NeoKey and NeoSlider each have the same default address (0x30). Cut the A3 jumper on the back of the NeoSlider to change its address to 0x38 (see [NeoSlider address](https://learn.adafruit.com/adafruit-neoslider?view=all#address-jumpers-3107357))
 
         
-Common controller interface elements
-- Button
-  - [I built an Arcade DIY MIDI controller with an Arduino Pro Micro: The Fliper (Nerd Musician/YouTube)](https://www.youtube.com/watch?v=nv42rTRwKIg)
-- Rotary potentiometer (pot)
-  - [4# How to Code Potentiometers (Complete Guide) - MIDI Programming for the Arduino (Nerd Musician/YouTube)](https://www.youtube.com/watch?v=hcm5H6f8MI8&t=1797s)
-- Linear potentiometer (fader)
-  - [Arduino ribbon synth explanation (gr4yhound/YouTube)](https://www.youtube.com/watch?v=YpkzLo6yx_g)
-- Keys
-  - [How To Make Arduino Piano With Buzzer | | Tinker Cad (Mr. Screw Driver/YouTube)](https://youtu.be/FoXk6OL8GfQ?si=bV51UJTCKdfoOd2O&t=22)
-- Pitch / Mod Wheels
-- Indicators / displays
-  - LED
-    - Numeric display
-    - Text Display
-      - [Arduino based Decibel Meter with Sound Sensor & LCD Display (IoT Project Ideas/YouTube)](https://www.youtube.com/watch?v=4pqeavhW_is)
-    - Graphic display
-- Touch surface
-  - Linear
-  - XY Pad
-    - [Touch Screen as a MIDI Ribbon Controller (MITXela)](https://mitxela.com/projects/ribbon_controller)
-  - Capacitive Touch
-    - [Touch Sensing Midi Controller! | Capacitive Touch and Arduino (The Maker Monster/YouTube)](https://youtu.be/DQ7lrEOZrwc?si=JUcSrtJURW6rNfP-&t=351)
-- Flex Sensor
-  - [DIY Music Glove - Rhythm in the Air (Jesse Yang/YouTube)](https://www.youtube.com/watch?v=WHePx-BSZvs)
-  - [Project from NYU Shanghai Students](https://wp.nyu.edu/mattkerseydocumentationblog/2023/03/22/jazz-hands-matthew-kersey-gottfried-haider/)
-- Pressure sensitivity
-  - Piezo Vibration Disks
-    - [Arduino MIDI Drums with Piezo Disc Triggers (with schematic and code)(Unrelated Activities/YouTube)](https://www.youtube.com/watch?v=TiwmAPjXFcE) 
-  - Keyboard aftertouch
-    - Monophonic / channel aftertouch
-    - Polyphonic (MPE) aftertouch
-  - Breath
-    - DIY Breath Sensors 
-      - [Simplest Breath Sensor for a MIDI Wind Instrument EVER - From a plastic water bottle (KontinuumLAB/YouTube)](https://www.youtube.com/watch?v=es92GqYBge0)
-      - [KontinuumLAB WORKSHOPS: 3 DIY Breath Sensors (KontinuumLAB/YouTube)](https://www.youtube.com/watch?v=qmlhkcaMYX0&t=49s)
-      - [The Harminator, original wind instrument. Worlds first prototype (KontinuumLAB/YouTube)](https://www.youtube.com/watch?v=y6OzpsGPxNU&t=127s)
-- Controller motion
-  - [Gyroscope / accelerometer (attitude sensors)](https://www.youtube.com/watch?v=Wzjms3tgF6w)
-- Presence / human motion
-  - Theremin
-      - [I Built a MIDI THEREMIN! Theremidi - A DIY Arduino MIDI Controller (Nerd Musician/YouTube)](https://www.youtube.com/watch?v=CWPtxGrBlU8&t=499s)
-  - Distance sensors
-    - [Musical Instrument Using Arduino + Ultrasonic Distance Sensor (AutoDesk Instructables/Maker Saga)](https://www.instructables.com/Musical-Instrument-Using-Arduino-Ultrasonic-Distan/)
-    - Camera tracking
-- Light
-  - Light Sensors
-    - [Illumaphone: Light-based Musical Instrument With Arduino (AutoDesk Instructables/bonniee)](https://www.instructables.com/Illumaphone-Light-based-Electronic-Musical-Instrum/)
-  - Laser distance
-    - [Building LASER Harp with an Arduino (Science Shack/YouTube)](https://www.youtube.com/watch?v=pddGR5Eyc0Q)
-- External data (data sonification)
-  - Note: for our class we would build a real-time sensor interface
-    - Wind
-    - Plants
-      - [/Biodata Sonification - Arduino Shield Breadboard Kit v02.pdf(Github)](https://github.com/electricityforprogress/BiodataSonificationBreadboardKit/blob/ac8b28a86406faa1d3ad3d88cac917c3296f4fc5/Biodata%20Sonification%20-%20Arduino%20Shield%20Breadboard%20Kit%20v02.pdf)
-    - DNA sequence
-    - Planetary motion
-      - [The Sounds of a New Planetary System (NASA / YouTube)
-](https://www.youtube.com/watch?v=2BCiOTJjcQQ)
-    - Etc, etc
-- Learning digitalio for graphical displays:
-    - How it works:
-        - [displayio Library Overview](https://learn.adafruit.com/circuitpython-display-support-using-displayio/library-overview)
-        - [Using bitmaps and palettes](https://learn.adafruit.com/circuitpython-display-support-using-displayio/bitmap-and-palette)
-    - Examples:
-        - [Displaying text](https://learn.adafruit.com/circuitpython-display-support-using-displayio/text)
-            - Download this library to use for the tutorial/code: [adafruit_display_text](https://github.com/adafruit/Adafruit_CircuitPython_Display_Text)
-            - <img src="Media/Digitalio_Text_Example.jpg" width="350">
-        - [Displaying a bitmap/image](https://learn.adafruit.com/circuitpython-display-support-using-displayio/display-a-bitmap)
-            - Download the bitmap they provide to follow along: [purple flowers](https://cdn-learn.adafruit.com/assets/assets/000/074/681/original/purple.bmp?1555717198)
-            - <img src="Media/Digitalio_Bitmap_Example.jpg" width="350">
-        - [Using sprites](https://learn.adafruit.com/circuitpython-display-support-using-displayio/sprite-sheet)
-            - This example takes a sprite sheet of different sprites and displays each one over time every 2 seconds. Some of the sprites pictured below:
-            - Download this image loader library and bitmap file to use for the tutorial/code: [adafruit_imageload](https://github.com/adafruit/Adafruit_CircuitPython_ImageLoad) + [sprite bitmap](https://cdn-learn.adafruit.com/assets/assets/000/074/925/original/cp_sprite_sheet.bmp?1556152347) 
-             <img src="Media/Digitalio_Sprite_Example_1.jpg" width="200">
-             <img src="Media/Digitalio_Sprite_Example_2.jpg" width="200">
-             <img src="Media/Digitalio_Sprite_Example_3.jpg" width="200">
-        - [Drawing pixels on screen](https://learn.adafruit.com/circuitpython-display-support-using-displayio/draw-pixels)
-            - <img src="Media/Digitalio_Pixels_Example.jpg" width="350">
-            - The tutorial uses black and white, but you can change the colors to play around with it:
-            - <img src="Media/Digitalio_Pixels_Example_2.jpg" width="350">
-        - [Manipulating tiles and bitmaps to form groups](https://learn.adafruit.com/circuitpython-display-support-using-displayio/sprite-sheet)
-            - Download this image loader library and bitmap file to use for the tutorial/code: [adafruit_imageload](https://github.com/adafruit/Adafruit_CircuitPython_ImageLoad) + [bitmap](https://cdn-learn.adafruit.com/assets/assets/000/075/025/original/castle_sprite_sheet.bmp?1556343110)
-            - <img src="Media/Digitalio_Groups_Example.jpg" width="350">
-    - Useful helper libraries (fonts, shapes, buttons, etc.):
-        - You can also directly download from our CircuitPython --> lib folder. All the digitalio libraries are in there. 
-[Helper Libraries](https://learn.adafruit.com/circuitpython-display-support-using-displayio/helper-libraries)
 
 Workshop: Musical sensors
 - Connect buttons to trigger notes
@@ -1095,7 +1009,99 @@ Week 4 Fusion design
 
 Inspiration day
 - Look at examples of creative music controller / instrument projects
+    - [Guthman Musical Instrument Competition - Finalists 2025](https://guthman.gatech.edu/2025-finalists)
+    - [Guthman Musical Instrument Competition - Finalists 2024](https://guthman.gatech.edu/2024-finalists)
+    - [Maker Music Festival](https://www.makermusicfestival.com/building/Moog/)
+        - [Extended Psalter](https://makermusicfestival.com/projectdirectory/extended-psalter/)
 - Start ideating on our projects
+
+Common controller interface elements
+- Button
+  - [I built an Arcade DIY MIDI controller with an Arduino Pro Micro: The Fliper (Nerd Musician/YouTube)](https://www.youtube.com/watch?v=nv42rTRwKIg)
+- Rotary potentiometer (pot)
+  - [4# How to Code Potentiometers (Complete Guide) - MIDI Programming for the Arduino (Nerd Musician/YouTube)](https://www.youtube.com/watch?v=hcm5H6f8MI8&t=1797s)
+- Linear potentiometer (fader)
+  - [Arduino ribbon synth explanation (gr4yhound/YouTube)](https://www.youtube.com/watch?v=YpkzLo6yx_g)
+- Keys
+  - [How To Make Arduino Piano With Buzzer | | Tinker Cad (Mr. Screw Driver/YouTube)](https://youtu.be/FoXk6OL8GfQ?si=bV51UJTCKdfoOd2O&t=22)
+- Pitch / Mod Wheels
+- Indicators / displays
+  - LED
+    - Numeric display
+    - Text Display
+      - [Arduino based Decibel Meter with Sound Sensor & LCD Display (IoT Project Ideas/YouTube)](https://www.youtube.com/watch?v=4pqeavhW_is)
+    - Graphic display
+- Touch surface
+  - Linear
+  - XY Pad
+    - [Touch Screen as a MIDI Ribbon Controller (MITXela)](https://mitxela.com/projects/ribbon_controller)
+  - Capacitive Touch
+    - [Touch Sensing Midi Controller! | Capacitive Touch and Arduino (The Maker Monster/YouTube)](https://youtu.be/DQ7lrEOZrwc?si=JUcSrtJURW6rNfP-&t=351)
+- Flex Sensor
+  - [DIY Music Glove - Rhythm in the Air (Jesse Yang/YouTube)](https://www.youtube.com/watch?v=WHePx-BSZvs)
+  - [Project from NYU Shanghai Students](https://wp.nyu.edu/mattkerseydocumentationblog/2023/03/22/jazz-hands-matthew-kersey-gottfried-haider/)
+- Pressure sensitivity
+  - Piezo Vibration Disks
+    - [Arduino MIDI Drums with Piezo Disc Triggers (with schematic and code)(Unrelated Activities/YouTube)](https://www.youtube.com/watch?v=TiwmAPjXFcE) 
+  - Keyboard aftertouch
+    - Monophonic / channel aftertouch
+    - Polyphonic (MPE) aftertouch
+  - Breath
+    - DIY Breath Sensors 
+      - [Simplest Breath Sensor for a MIDI Wind Instrument EVER - From a plastic water bottle (KontinuumLAB/YouTube)](https://www.youtube.com/watch?v=es92GqYBge0)
+      - [KontinuumLAB WORKSHOPS: 3 DIY Breath Sensors (KontinuumLAB/YouTube)](https://www.youtube.com/watch?v=qmlhkcaMYX0&t=49s)
+      - [The Harminator, original wind instrument. Worlds first prototype (KontinuumLAB/YouTube)](https://www.youtube.com/watch?v=y6OzpsGPxNU&t=127s)
+- Controller motion
+  - [Gyroscope / accelerometer (attitude sensors)](https://www.youtube.com/watch?v=Wzjms3tgF6w)
+- Presence / human motion
+  - Theremin
+      - [I Built a MIDI THEREMIN! Theremidi - A DIY Arduino MIDI Controller (Nerd Musician/YouTube)](https://www.youtube.com/watch?v=CWPtxGrBlU8&t=499s)
+  - Distance sensors
+    - [Musical Instrument Using Arduino + Ultrasonic Distance Sensor (AutoDesk Instructables/Maker Saga)](https://www.instructables.com/Musical-Instrument-Using-Arduino-Ultrasonic-Distan/)
+    - Camera tracking
+- Light
+  - Light Sensors
+    - [Illumaphone: Light-based Musical Instrument With Arduino (AutoDesk Instructables/bonniee)](https://www.instructables.com/Illumaphone-Light-based-Electronic-Musical-Instrum/)
+  - Laser distance
+    - [Building LASER Harp with an Arduino (Science Shack/YouTube)](https://www.youtube.com/watch?v=pddGR5Eyc0Q)
+- External data (data sonification)
+  - Note: for our class we would build a real-time sensor interface
+    - Wind
+    - Plants
+      - [/Biodata Sonification - Arduino Shield Breadboard Kit v02.pdf(Github)](https://github.com/electricityforprogress/BiodataSonificationBreadboardKit/blob/ac8b28a86406faa1d3ad3d88cac917c3296f4fc5/Biodata%20Sonification%20-%20Arduino%20Shield%20Breadboard%20Kit%20v02.pdf)
+    - DNA sequence
+    - Planetary motion
+      - [The Sounds of a New Planetary System (NASA / YouTube)
+](https://www.youtube.com/watch?v=2BCiOTJjcQQ)
+    - Etc, etc
+- Learning digitalio for graphical displays:
+    - How it works:
+        - [displayio Library Overview](https://learn.adafruit.com/circuitpython-display-support-using-displayio/library-overview)
+        - [Using bitmaps and palettes](https://learn.adafruit.com/circuitpython-display-support-using-displayio/bitmap-and-palette)
+    - Examples:
+        - [Displaying text](https://learn.adafruit.com/circuitpython-display-support-using-displayio/text)
+            - Download this library to use for the tutorial/code: [adafruit_display_text](https://github.com/adafruit/Adafruit_CircuitPython_Display_Text)
+            - <img src="Media/Digitalio_Text_Example.jpg" width="350">
+        - [Displaying a bitmap/image](https://learn.adafruit.com/circuitpython-display-support-using-displayio/display-a-bitmap)
+            - Download the bitmap they provide to follow along: [purple flowers](https://cdn-learn.adafruit.com/assets/assets/000/074/681/original/purple.bmp?1555717198)
+            - <img src="Media/Digitalio_Bitmap_Example.jpg" width="350">
+        - [Using sprites](https://learn.adafruit.com/circuitpython-display-support-using-displayio/sprite-sheet)
+            - This example takes a sprite sheet of different sprites and displays each one over time every 2 seconds. Some of the sprites pictured below:
+            - Download this image loader library and bitmap file to use for the tutorial/code: [adafruit_imageload](https://github.com/adafruit/Adafruit_CircuitPython_ImageLoad) + [sprite bitmap](https://cdn-learn.adafruit.com/assets/assets/000/074/925/original/cp_sprite_sheet.bmp?1556152347) 
+             <img src="Media/Digitalio_Sprite_Example_1.jpg" width="200">
+             <img src="Media/Digitalio_Sprite_Example_2.jpg" width="200">
+             <img src="Media/Digitalio_Sprite_Example_3.jpg" width="200">
+        - [Drawing pixels on screen](https://learn.adafruit.com/circuitpython-display-support-using-displayio/draw-pixels)
+            - <img src="Media/Digitalio_Pixels_Example.jpg" width="350">
+            - The tutorial uses black and white, but you can change the colors to play around with it:
+            - <img src="Media/Digitalio_Pixels_Example_2.jpg" width="350">
+        - [Manipulating tiles and bitmaps to form groups](https://learn.adafruit.com/circuitpython-display-support-using-displayio/sprite-sheet)
+            - Download this image loader library and bitmap file to use for the tutorial/code: [adafruit_imageload](https://github.com/adafruit/Adafruit_CircuitPython_ImageLoad) + [bitmap](https://cdn-learn.adafruit.com/assets/assets/000/075/025/original/castle_sprite_sheet.bmp?1556343110)
+            - <img src="Media/Digitalio_Groups_Example.jpg" width="350">
+    - Useful helper libraries (fonts, shapes, buttons, etc.):
+        - You can also directly download from our CircuitPython --> lib folder. All the digitalio libraries are in there. 
+[Helper Libraries](https://learn.adafruit.com/circuitpython-display-support-using-displayio/helper-libraries)
+
 
 ## Homework
 - **Check** that all submitted links in Discussion posts are accessible / set to "Everyone"
