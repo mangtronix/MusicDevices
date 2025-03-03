@@ -1009,6 +1009,9 @@ Week 4 Fusion design
 
 Inspiration day
 - Look at examples of creative music controller / instrument projects
+    - [Adafruit MIDI projects](https://learn.adafruit.com/search?q=midi)
+        - Have source code and often Fusion files available 
+        - Hacking an existing controller / device - [MIDI Cyber Cat Keyboard (Adafruit)](https://learn.adafruit.com/midi-cyber-cat-keyboard/overview)
     - [Guthman Musical Instrument Competition - Finalists 2025](https://guthman.gatech.edu/2025-finalists)
     - [Guthman Musical Instrument Competition - Finalists 2024](https://guthman.gatech.edu/2024-finalists)
     - [Maker Music Festival](https://www.makermusicfestival.com/building/Moog/)
