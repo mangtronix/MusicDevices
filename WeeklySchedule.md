@@ -1016,6 +1016,8 @@ Inspiration day
     - [Guthman Musical Instrument Competition - Finalists 2024](https://guthman.gatech.edu/2024-finalists)
     - [Maker Music Festival](https://www.makermusicfestival.com/building/Moog/)
         - [Extended Psalter](https://makermusicfestival.com/projectdirectory/extended-psalter/)
+    - [Megachordotron](https://embedded-lab.com/blog/megachordotron-diy-midi-controller-using-teensy/)
+        - Handheld controller with automatic chords
 - Start ideating on our projects
 
 Common controller interface elements
