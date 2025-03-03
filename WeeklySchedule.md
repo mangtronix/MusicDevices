@@ -1066,6 +1066,10 @@ Due before start of next class
 # Week 7
 
 ## Week 7.1
+Review homework
+- You can upload file directly into your Brightspace post (preferred)
+- Please go back check that your links have the correct permissions / are still accessible. **Inaccessible files / broken links** are not considered submitted.
+
 Inspiration day
 - Look at examples of creative music controller / instrument projects
 - Start ideating on our projects
