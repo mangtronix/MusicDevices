@@ -1070,6 +1070,13 @@ Review homework
 - You can upload file directly into your Brightspace post (preferred)
 - Please go back check that your links have the correct permissions / are still accessible. **Inaccessible files / broken links** are not considered submitted.
 
+Exercise 3 - MIDI play-along
+- Did you start to get a feeling for the "shape" of the song?
+
+> The project helped me understand the song better. I was surprised to realize that identical notes felt different depending on their placement in the melody. Playing the song myself helped me notice how each note contributes to the overall musical progression.
+
+— Joonha
+
 Inspiration day
 - Look at examples of creative music controller / instrument projects
 - Start ideating on our projects
