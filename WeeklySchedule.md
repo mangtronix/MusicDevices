@@ -1077,7 +1077,8 @@ Exercise 3 - MIDI play-along
 
 — Joonha
 
-- [Jason's controller](https://brightspace.nyu.edu/d2l/le/435258/discussions/threads/1971597/View) played triads of notes (chords)
+- [Jason's controller](https://brightspace.nyu.edu/d2l/le/435258/discussions/threads/1971597/View) played triads of notes (chords) selected by the slider
+- How could you use the slider to help you progress through the song?
 
 Inspiration day
 - Look at examples of creative music controller / instrument projects
