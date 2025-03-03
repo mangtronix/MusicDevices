@@ -1077,6 +1077,8 @@ Exercise 3 - MIDI play-along
 
 — Joonha
 
+- [Jason's controller](https://brightspace.nyu.edu/d2l/le/435258/discussions/threads/1971597/View) played triads of notes (chords)
+
 Inspiration day
 - Look at examples of creative music controller / instrument projects
 - Start ideating on our projects
