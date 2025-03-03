@@ -1068,7 +1068,9 @@ Due before start of next class
 ## Week 7.1
 Review homework
 - You can upload file directly into your Brightspace post but please keep videos <50MB (otherwise it takes a long time to download)
-- **Inaccessible files / broken links** are not considered submitted.  Please go back check that your links have the correct permissions ("Everyone") / are still accessible. 
+- **Inaccessible files / broken links** are not considered submitted.  Please go back check that your links have the correct permissions ("Everyone") / are still accessible.
+- Some images are showing as broken links
+- Some great work so far!
 
 Exercise 3 - MIDI play-along
 - Did you start to get a feeling for the "shape" of the song?
@@ -1080,9 +1082,25 @@ Exercise 3 - MIDI play-along
 - [Jason's controller](https://brightspace.nyu.edu/d2l/le/435258/discussions/threads/1971597/View) played triads of notes (chords) selected by the slider
 - How could you use the slider to help you progress through the song?
 
+
+Week 4 Fusion design
+- [Zhaniy's constellation keycaps](https://brightspace.nyu.edu/d2l/le/435258/discussions/threads/1991136/View)
+    - [Gustav Holst - The Planets (YouTube)](https://www.youtube.com/watch?v=Isic2Z2e2xs)
+    - [Gustav Holst - The Planets (Wikipedia)](https://en.wikipedia.org/wiki/The_Planets)
+- [Example of joined bodies](https://brightspace.nyu.edu/d2l/le/435258/discussions/threads/1988728/View)
+    - Demo of [Section Analysis](https://help.autodesk.com/view/fusion360/ENU/?guid=SLD-SECTION-ANALYSIS)
+    - Demo of combining bodies by selecting the bodies in the Browser
+    - Demo of saving a mesh that combines all bodies automatically by right-clicking on highest level in Browser
+- Demo of using [PrusaSlicer](https://prusaslicer.net/) to check how your model will be look after 3D printing
+
 Inspiration day
 - Look at examples of creative music controller / instrument projects
 - Start ideating on our projects
+
+## Homework
+- **Check** that all submitted links in Discussion posts are accessible / set to "Everyone"
+- **Check** your 3D part design for printing issues and adjust as necessary
+    - Avoid small horizontal details - the printing nozzle is 0.4mm wide
 
 <!--
 Idea Lab
