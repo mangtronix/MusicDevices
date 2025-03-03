@@ -1112,6 +1112,7 @@ Common controller interface elements
 - **Check** that all submitted links in Discussion posts are accessible / set to "Everyone"
 - **Check** your 3D part design for printing issues and adjust as necessary
     - Avoid small horizontal details - the printing nozzle is 0.4mm wide
+- **Start** thinking about project ideas
 
 <!--
 Idea Lab
