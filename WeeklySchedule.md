@@ -1067,8 +1067,8 @@ Due before start of next class
 
 ## Week 7.1
 Review homework
-- You can upload file directly into your Brightspace post (preferred)
-- Please go back check that your links have the correct permissions / are still accessible. **Inaccessible files / broken links** are not considered submitted.
+- You can upload file directly into your Brightspace post but please keep videos <50MB (otherwise it takes a long time to download)
+- **Inaccessible files / broken links** are not considered submitted.  Please go back check that your links have the correct permissions ("Everyone") / are still accessible. 
 
 Exercise 3 - MIDI play-along
 - Did you start to get a feeling for the "shape" of the song?
