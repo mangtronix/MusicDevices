@@ -1142,9 +1142,9 @@ Agenda:
         - Print service at library (email them a file and go pick up the print)
 - [Fusion 360](https://www.autodesk.com/products/fusion-360/personal)
     - Professional 3D modeling tool for Computer Aided Design (CAD) and Manufacturing (CAM)
+    - [Music Devices Fusion Video Tutorials (YouTube)](https://youtube.com/playlist?list=PLu4XhOBNpasRh4gECFa_265TXL6ad-JZS&si=Lwl-kiN2NaZoyDOT)
 - [PrusaSlicer](https://www.prusa3d.com/page/prusaslicer_424/)
     - Converts solid 3D model to code for 3D printer
-    - Useful for estimating print time
 
 - Design for 3D printing
     - We need a solid object in STL or .3mf file format
