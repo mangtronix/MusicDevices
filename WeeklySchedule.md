@@ -1125,11 +1125,9 @@ Idea Lab
 ## Week 7.2
 ## Workshop: 3D printing with IM Lab Instructor ##
 Agenda:
-- Show students laser cutter and materials available (no demo required since laser cutter inoperable)
-- Show students MK4 printers
-- Show students available 3D printing materials
-- Guide students through slicing model with "lab assistant" and start 3D print
-- Show students Prusa XL printer
+- See laser cutter and materials available (no demo since laser cutter inoperable)
+- See MK4 printers
+- See available 3D printing materials
 
 - IM Lab Print Farm
     - 4x [Prusa MK4](https://www.prusa3d.com/product/original-prusa-mk4s-3d-printer-5/)
@@ -1148,6 +1146,35 @@ Agenda:
     - Converts solid 3D model to code for 3D printer
     - Useful for estimating print time
 
+- Slicing a model and starting a 3D print
+    - [Download PrusaSlicer](https://prusaslicer.net/)
+    - Choose **Original Prusa MK4 Input Shaper 0.4mm nozzle** printer
+    - Choose **Generic PLA** filament
+    - Recommend **0.2mm SPEED** printing preset. Can change to lower layer height if more vertical detail needed
+    - Load STL or .3mf file using + button or File -> Import
+    - Enable supports if needed due to overhangs. Sometimes rotating the part will make it easier to print (fewer overhangs)
+    - Enable Brim if needed to keep object from breaking off the print bed, for example with tall objects
+    - Export G-code to USB stick
+    - Place USB stick in printer
+    - Make sure correct filament is loaded, build plate is properly aligned, and build plate is clear of debris (use plastic scraper to clean)
+- Changing filament on the MK4
+    - Use menu on printer to unload and load filament
+    - Make sure to select correct material type - usually PLA but could also be PETG
+- Different filaments available
+    - PLA
+        - default material, easy to print with, strong but relatively brittle
+        - print PLA on the smooth build plate
+    - PETG
+        - same material as clear water bottles
+        - can be better for mechanical parts due to slight flex
+        - print PETG on the **textured** build plate
+        - **unload PETG** and change back to the **smooth** build plate after printing, so machine is ready for default PLA
+- See Prusa XL printer
+    - available for larger format prints
+    - multi-material printing in progress
+
+
+
 Project proposal preparation
 - Finalize project groups
 - Start project proposal
@@ -1157,7 +1184,9 @@ Project proposal preparation
 
 Due before start of next class
 
-- **Continue developing** your idea for your final project
+- **Start brainstorming** ideas for your final project
+- **Print** an object you designed yourself (could be your previous design or a new one)
+- **Update** your Fusion Brightspace post with a picture of your printed object and a short reflection on how the print turned out compared to what you expected
 ---
 # 7-Week Finals Break
 
