@@ -1123,7 +1123,7 @@ Idea Lab
 -->
 
 ## Week 7.2
-## Workshop: 3D printing with IM Lab Instructor ##
+## Workshop: 3D printing workshop with IM Lab Instructor ##
 Agenda:
 - See laser cutter and materials available (no demo since laser cutter inoperable)
 - See MK4 printers
@@ -1146,6 +1146,18 @@ Agenda:
     - Converts solid 3D model to code for 3D printer
     - Useful for estimating print time
 
+- Design for 3D printing
+    - We need a solid object in STL or .3mf file format
+    - The object needs to be supported underneath while being printed
+    - The object needs to stick to the print bed the entire time it's being printed
+    - The nozzle size and layer height define the smallest details we can print
+    - [Ultimate Design Guide for 3D Printing (Medium)](https://medium.com/@wikifactory/ultimate-design-guide-for-3d-printing-2e1ae463a0ff) 
+    - [Design Rules for FFF 3D Printing (Hydra Research)](https://www.hydraresearch3d.com/design-rules)
+        - Chart with advice on specific scenarios, e.g. overhangs, holes
+    - Different part orientation compared to the layers will give more or less strength
+    - The part strength is primarily determined by the thickness of the solid outer shell (number of perimeters)
+    - The infill also has an effect on the strength and aesthetics
+
 - Slicing a model and starting a 3D print
     - [Download PrusaSlicer](https://prusaslicer.net/)
     - Choose **Original Prusa MK4 Input Shaper 0.4mm nozzle** printer
@@ -1153,6 +1165,7 @@ Agenda:
     - Recommend **0.2mm SPEED** printing preset. Can change to lower layer height if more vertical detail needed
     - Load STL or .3mf file using + button or File -> Import
     - Enable supports if needed due to overhangs. Sometimes rotating the part will make it easier to print (fewer overhangs)
+        - Consider how hard it will be to remove the supports. For example supports inside a hole may be impossible to fully remove
     - Enable Brim if needed to keep object from breaking off the print bed, for example with tall objects
     - Export G-code to USB stick
     - Place USB stick in printer
