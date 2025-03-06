@@ -25,6 +25,12 @@ Note: Exact due dates for assignments and readings are indicated in Brightspace
 # Week 8
 
 ## Week 8.1
+Example project
+- [Bricktunes Lego Glove (Adafruit)](https://learn.adafruit.com/bricktunes-lego-glove-synthesizer/overview)
+    - Colour sensor on glove triggers different musical notes
+    - [CircuitPython synthio library](https://learn.adafruit.com/audio-synthesis-with-circuitpython-synthio/overview)
+    - [Chime library for generating chime sounds (GitHub)](https://github.com/CedarGroveStudios/CircuitPython_Chime?tab=readme-ov-file)
+
 Project concept development
 - What type of expression does your project enable? How does this relate to existing musical practices?
 - Who is the intended user / community for your device? Are they underserved by currently available devices? How does your design serve those users?
