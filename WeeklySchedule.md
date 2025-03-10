@@ -1239,6 +1239,10 @@ Some project ideas
 - A wearable MIDI controller
 - A custom controller for combining pre-selected loops and sounds together, e.g. mix and match different Arabic drum rhythms and melodies
 - A portable lighting kit for live performance, triggered by MIDI
+- Eurorack ideas
+    - Motor outputs from Eurorack control signals
+    - A generative sequencer
+    - Control signals to lights
 
 ### Homework
 - **Start** thinking about project ideas
