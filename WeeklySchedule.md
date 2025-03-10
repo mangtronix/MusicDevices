@@ -1201,5 +1201,35 @@ Due before start of next class
 - **Print** an object you designed yourself (could be your previous design or a new one)
 - **Update** your Fusion Brightspace post with a picture of your printed object and a short reflection on how the print turned out compared to what you expected
 ---
+
+## Week 7+
+Announcements
+- TouchDesigner workshop tonight 7:30-9:00pm
+![Workshop Poster](https://github.com/user-attachments/assets/76b5696c-ab16-4829-9ee4-3ea810af6be2)
+
+Review 3D prints
+
+MIDI for Makers
+- [MIDI for Makers](https://learn.adafruit.com/midi-for-makers/overview)
+- Most important messages
+    - Note On / Note Off
+    - CC (Continuous Controller)
+    - Pitch Bend 
+
+Example projects
+- [Control motors with MIDI](https://learn.adafruit.com/midi-for-makers/control-motors-with-midi)
+- [Bricktunes Lego Glove (Adafruit)](https://learn.adafruit.com/bricktunes-lego-glove-synthesizer/overview)
+    - Colour sensor on glove triggers different musical notes
+    - [CircuitPython synthio library](https://learn.adafruit.com/audio-synthesis-with-circuitpython-synthio/overview)
+    - [Chime library for generating chime sounds (GitHub)](https://github.com/CedarGroveStudios/CircuitPython_Chime?tab=readme-ov-file)
+- [Tyrell Desktop Synthesizer](https://learn.adafruit.com/tyrell-desktop-synthesizer/overview)
+    - Touch sensitive pyramid synthesizer
+- [Circle of Fifths Euclidean Synth](https://learn.adafruit.com/circle-of-fifths-euclidean-synth-with-synthio-and-circuitpython)
+- [Faderwave synthesizer](https://learn.adafruit.com/faderwave-synthesizer)
+- [MIDI Stomping Pads](https://learn.adafruit.com/midi-stomping-pads)
+
+### Homework
+- **Start** thinking about project ideas
+
 # 7-Week Finals Break
 
