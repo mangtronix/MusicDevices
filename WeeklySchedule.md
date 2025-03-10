@@ -1232,6 +1232,7 @@ Some project ideas
 - A custom controller for [Koala Sampler](https://www.koalasampler.com/) or software synthesizer
 - An interactive sound sculpture where sensors trigger and change the sound
 - A motorized instrument that plucks physical strings
+- An addon controller that attaches to an existing musical instrument to give it new capabilities
 - A "Jam Conductor" display that helps people to music jam together
 - A mechanical percussion ensemble, e.g. [MIDI solenoid drum kit](https://learn.adafruit.com/midi-solenoid-drum-kit/overview)
 - A synthesizer or drum machine designed for multiple people to play together, e.g. [Dato DUO and DatoDRUM](https://dato.mu/)
