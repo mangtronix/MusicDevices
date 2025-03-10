@@ -1228,6 +1228,16 @@ Example projects
 - [Faderwave synthesizer](https://learn.adafruit.com/faderwave-synthesizer)
 - [MIDI Stomping Pads](https://learn.adafruit.com/midi-stomping-pads)
 
+Some project ideas
+- A custom controller for [Koala Sampler](https://www.koalasampler.com/) or software synthesizer
+- An interactive sound sculpture where sensors trigger and change the sound
+- A motorized instrument that plucks physical strings
+- A "Jam Conductor" display that helps people to music jam together
+- A mechanical percussion ensemble, e.g. [MIDI solenoid drum kit](https://learn.adafruit.com/midi-solenoid-drum-kit/overview)
+- A synthesizer or drum machine designed for multiple people to play together, e.g. [Dato DUO and DatoDRUM](https://dato.mu/)
+- A wearable MIDI controller
+- A custom controller for combining pre-selected loops and sounds together, e.g. mix and match different Arabic drum rhythms and melodies
+
 ### Homework
 - **Start** thinking about project ideas
 
