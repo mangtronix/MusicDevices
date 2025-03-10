@@ -1237,6 +1237,7 @@ Some project ideas
 - A synthesizer or drum machine designed for multiple people to play together, e.g. [Dato DUO and DatoDRUM](https://dato.mu/)
 - A wearable MIDI controller
 - A custom controller for combining pre-selected loops and sounds together, e.g. mix and match different Arabic drum rhythms and melodies
+- A portable lighting kit for live performance, triggered by MIDI
 
 ### Homework
 - **Start** thinking about project ideas
