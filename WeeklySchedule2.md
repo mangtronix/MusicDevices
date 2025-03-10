@@ -25,6 +25,10 @@ Note: Exact due dates for assignments and readings are indicated in Brightspace
 # Week 8
 
 ## Week 8.1
+Announcements
+- TouchDesigner workshop tonight 7:30-9:00pm
+![Workshop Poster](https://github.com/user-attachments/assets/76b5696c-ab16-4829-9ee4-3ea810af6be2)
+
 Example project
 - [Bricktunes Lego Glove (Adafruit)](https://learn.adafruit.com/bricktunes-lego-glove-synthesizer/overview)
     - Colour sensor on glove triggers different musical notes
