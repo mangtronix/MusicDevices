@@ -25,11 +25,15 @@ Note: Exact due dates for assignments and readings are indicated in Brightspace
 # Week 8
 
 ## Week 8.1
+String Thing Demo
+
 Project concept development
 - What type of expression does your project enable? How does this relate to existing musical practices?
 - Who is the intended user / community for your device? Are they underserved by currently available devices? How does your design serve those users?
 - How does your project extend what's been done before? How does your project use the technology we've learned to enhance musical expression?
 - What is your creative vision for your device? What is your dream performance / installation / application?
+
+Round Table of Project Ideas
 
 Project lifecycle
 - How to create a project proposal
@@ -38,6 +42,12 @@ Project lifecycle
 - User testing
 - Presentations
 - Documentation
+
+## Homework - Week 8.1
+**Think** of a project idea
+**Post** your idea to the [Brightspace Discussions -> Individual Exercises -> Initial Project Idea](https://brightspace.nyu.edu/d2l/le/435258/discussions/topics/538217/View)
+**Be ready** to discuss your idea in the next class
+
 
 ## Week 8.2
 Project proposal work session and feedback
