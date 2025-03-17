@@ -25,6 +25,10 @@ Note: Exact due dates for assignments and readings are indicated in Brightspace
 # Week 8
 
 ## Week 8.1
+Announcements
+- Working on tutorials for generating sound directly on the CircuitPython board
+    - [Basic tone demo on CircuitPython (MusicDevices GitHub)](https://github.com/mangtronix/MusicDevices/blob/main/Tutorials/Speaker_Hardware_Software.md)
+
 String Thing Demo
 
 Project concept development
