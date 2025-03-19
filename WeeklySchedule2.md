@@ -8,9 +8,9 @@
 - [Week 4](WeeklySchedule.md#week-4) – Musical interface design, MIDI
 - [Week 5](WeeklySchedule.md#week-5) – Musical sensors
 - [Week 6](WeeklySchedule.md#week-6) – Rapid prototyping
-- [Week 7](WeeklySchedule.md#week-7) – Idea Lab
+- [Week 7](WeeklySchedule.md#week-7) – Inspiration day / 3D Printing Workshop
 - 7-Week Finals Break
-- [Week 8](#week-8) – Project proposal development
+- [Week 8](#week-8) – Idea Lab / Project proposal development
 - [Week 9](#week-9) – Project proposal presentation, implementation starts!
 - SPRING BREAK
 - [Week 10](#week-10) – Telling your story / documenting your work
@@ -31,22 +31,6 @@ Announcements
 
 String Thing Demo
 
-Project concept development
-- What type of expression does your project enable? How does this relate to existing musical practices?
-- Who is the intended user / community for your device? Are they underserved by currently available devices? How does your design serve those users?
-- How does your project extend what's been done before? How does your project use the technology we've learned to enhance musical expression?
-- What is your creative vision for your device? What is your dream performance / installation / application?
-
-Round Table of Project Ideas
-
-Project lifecycle
-- How to create a project proposal
-- Creating a production plan
-- Project production
-- User testing
-- Presentations
-- Documentation
-
 ## Homework - Week 8.1
 **Think** of a project idea
 
@@ -56,14 +40,29 @@ Project lifecycle
 
 
 ## Week 8.2
-Project proposal work session and feedback
-- Individual group consultations on project proposal and implementation plan
-- Group work session for project proposal
+### Idea Lab
+Round Table of Project Ideas
+
+Project concept development
+- What type of expression does your project enable? How does this relate to existing musical practices?
+- Who is the intended user / community for your device? Are they underserved by currently available devices? How does your design serve those users?
+- How does your project extend what's been done before? How does your project use the technology we've learned to enhance musical expression?
+- What is your creative vision for your device? What is your dream performance / installation / application?
+
+Project lifecycle
+- How to create a project proposal
+- Creating a production plan
+- Project production
+- User testing
+- Presentations
+- Documentation
+
 
 ### Homework - Week 8.2
 
 Due before start of next class
 
+- **Form** groups of 2-4 students
 - **Finish** your Project Proposal
     - See [Syllabus->Project Proposal](https://docs.google.com/document/d/1NaQrfuxLaoMKMixZ_BOIEzCix7Gx2jokPu_qFPAmvVw/edit#heading=h.disn06hi3v03) for details
 - **Prepare** to present your Project Proposal in class
@@ -72,15 +71,16 @@ Due before start of next class
 # Week 9
 
 ## Week 9.1
+Project proposal work session and feedback
+- Individual group consultations on project proposal and implementation plan
+- Group work session for project proposal
+
+## Week 9.2
 Project proposal presentations
 - Each group get 7 minutes to present
 - Feedback from class and professor
 - Collect technical topics from proposed projects
-
-## Week 9.2
-Topics from proposed projects
-- Topics from proposed projects will be covered in class
-
+  
 ### Homework - Week 9.2
 
 Due before start of next class
