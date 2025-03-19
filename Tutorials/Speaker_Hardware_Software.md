@@ -24,5 +24,8 @@ Full tutorial here: [Adafruit Metro ESP32-S3](https://learn.adafruit.com/adafrui
 # Software
 1. Tone playback example
    - Copy this code into your code.py file to get a tone/frequency to play from the speaker: 
-   - [Tone Playback python file](../CircuitPython/MoreExamples/lib/I2S_Tone_Playback.py)
+   - [Tone playback python file](../CircuitPython/MoreExamples/lib/I2S_Tone_Playback.py)
+2. Synth sound example
+   - Copy this code into your code.py file to get a synth sound to play from the speaker: 
+   - [Synth sound python file](../CircuitPython/MoreExamples/lib/Filters_Synth.py)
 
