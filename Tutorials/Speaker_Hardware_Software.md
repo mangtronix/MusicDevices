@@ -34,6 +34,7 @@ Full tutorial here: [Adafruit Metro ESP32-S3](https://learn.adafruit.com/adafrui
    - Copy this code into your code.py file AND download this WAV file to play the file from the speaker:
    - [StreetChicken WAV file](../CircuitPython/MoreExamples/lib/StreetChicken.wav)
    - [Playback python file](../CircuitPython/MoreExamples/lib/wavPlayback.py)
+     - This video explains the code pretty well: [WAV playback tutorial](https://www.youtube.com/watch?v=qfp6QRK8gMg)   
 2. Synth sound example
    - Copy this code into your code.py file to get a synth sound to play from the speaker: 
    - [Synth sound python file](../CircuitPython/MoreExamples/lib/Filters_Synth.py)
