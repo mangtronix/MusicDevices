@@ -80,6 +80,12 @@ Project proposal presentations
 - Each group get 7 minutes to present
 - Feedback from class and professor
 - Collect technical topics from proposed projects
+
+- Debouncing buttons
+    - Often want to react to **changes** in button state rather than whether button is currently pressed
+    - Can keep previous state of button and compare to current state to react to transitions 
+    - [CircuitPython debouncer library](https://learn.adafruit.com/debouncer-library-python-circuitpython-buttons-sensors/basic-debouncing)
+
   
 ### Homework - Week 9.2
 
