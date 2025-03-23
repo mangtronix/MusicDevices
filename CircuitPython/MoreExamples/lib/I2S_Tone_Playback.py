@@ -5,7 +5,7 @@ import audiocore
 import board
 import audiobusio
 
-audio = audiobusio.I2SOut(board.A0, board.A1, board.A2)
+audio = audiobusio.I2SOut(board.D5, board.D6, board.D9)
 
 tone_volume = 0.58  # Increase this to increase the volume of the tone. ~.58 and above gets really loud
 frequency = 440  # Set this to the Hz of the tone you want to generate.
