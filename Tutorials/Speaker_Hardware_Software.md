@@ -9,15 +9,20 @@ Full tutorial here: [Adafruit Metro ESP32-S3](https://learn.adafruit.com/adafrui
   - Solder green terminal block to the breakout board
     - <img src="../Media/Speaker_Tutorial_6.png" width="400">
 2. Pin Connections
-  -  The board in this example image is a little different than ours, but you can still find the same pins:
-    - <img src="../Media/Speaker_Tutorial_7.png" width="850">
-  - As pictured: GND to GND in black, 3V to VIN in red, A0 to BCLK in blue, A1 to LRC in yellow, A2 to DIN in purple
+  -  The board in this example image is a little different than ours and we're gonna use the digital (D) pins instead of the analog (A) pins:
+  - <img src="../Media/Speaker_Tutorial_7.png" width="850">
+  - As pictured:
+    - GND to GND in black
+    - 3V to VIN in red
+    - D5 (instead of A0) to BCLK in blue
+    - D6 (instead of A1) to LRC in yellow
+    - D9 (instead of A2) to DIN in purple
   - Connect the (+) on the speaker via red wire to the (+) on the green terminal block. Screw in the screw on top of the green terminal block to secure wires.
-    - <img src="../Media/Speaker_Tutorial_1.jpeg" width="400">
+    - <img src="../Media/Speaker_Tutorial_9.jpg" width="400">
     - <img src="../Media/Speaker_Tutorial_3.jpeg" width="400">
 3. Final outcome
   - You'll need to use screw extensions to put our feather board back onto the portable 3D printed backing.
-    - <img src="../Media/Speaker_Tutorial_8.JPG" width="400">
+    - <img src="../Media/Speaker_Tutorial_10.JPG" width="400">
   - You can also screw in the amplifier board like so:
     - <img src="../Media/Speaker_Tutorial_4.jpeg" width="400">
 
