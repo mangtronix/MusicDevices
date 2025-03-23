@@ -17,7 +17,7 @@ import audiobusio
 
 # I2S on Audio BFF or Amp BFF on QT Py:
 # audio = audiobusio.I2SOut(bit_clock=board.A3, word_select=board.A2, data=board.A1)
-audio = audiobusio.I2SOut(board.A0, board.A1, board.A2)
+audio = audiobusio.I2SOut(board.D5, board.D6, board.D9)
 
 mixer = audiomixer.Mixer(channel_count=1, sample_rate=22050, buffer_size=2048)
 
