@@ -93,6 +93,9 @@ Due before start of next class
 
 - **Work** on your implementation plan
     - Identify most difficult / uncertain parts of project
+    - What technologies you will use
+- **Find** example music that matches what you are trying to create
+- **Post** a link to your implementation plan and music examples on Brightspace
 ---
 # SPRING BREAK / SPRING BREAK / SPRING BREAK #
 ---
