@@ -104,6 +104,9 @@ Due before start of next class
 
 ## Week 10.1
 - Review implementation plans
+- Update week-by-week plans
+- What is the most challenging part of your project?
+- What can you do next class to resolve your greatest challenge?
   
 Telling your story / Documenting your work / Performance / Exhibition installation
 - What's the story of your project?
@@ -125,6 +128,7 @@ Telling your story / Documenting your work / Performance / Exhibition installati
     - Installation
     - IM End of Semester Show
         - Everyone must participate
+     
 - Productizing
     - Many boutique MIDI controllers exist for sale
     - [Etsy](https://www.etsy.com/)
@@ -148,15 +152,42 @@ Telling your story / Documenting your work / Performance / Exhibition installati
 
 Due before start of next class
 
-- **Create** a storyboard for your project video
-- **Post** your storyboard to Brightspace->Discussions
+- **Update** your project implementation plan
+- **Make** a plan for your in-class production next class
 
 ## Week 10.2
-Storyboard presentations
-- Present your storyboard
-- Audience feedback
-    - What are the main aspects of the device?
-    - Are there areas you did not understand?
+## Meet in IM Lab
+Project production
+- Work towards resolving your largest challenge
+
+
+### Homework - Week 10.2
+
+- **Post** a progress report to Brightspace->Discussions
+    - Current project status
+    - Trouble areas
+    - Next steps
+ 
+- **Read** [Live Performance in the Age of Supercomputing
+ (Robert Henke)](https://roberthenke.com/interviews/supercomputing.html)
+    - What, to you, makes for a good live performance of electronic music?
+    - How will you connect with your music and your audience?
+- **Post** your response to Brightspace->Discussions->Readings
+
+---
+
+# Week 11
+
+## Week 11.1
+- Discuss reading
+- Review project progress
+
+User experience design
+- What types of users are you designing for? What are their "personas"?
+    - [Persona (Wikipedia)](https://en.wikipedia.org/wiki/Persona_(user_experience))
+    - [Types of Personas in User Experience Design (Medium)](https://medium.com/@hazlazuardi/types-of-personas-in-user-experience-design-81bedc4aa261)
+    - Are you designing for a musician? A rapper? The general public?
+    - How does your design meet the needs / desires of your users?
 
 User testing
 - [The complete guide to usability testing (UserTesting)](https://www.usertesting.com/resources/guides/usability-testing)
@@ -171,30 +202,13 @@ User testing
 - Analyze results and write summary
 - Make plan for resolving pain points and improving user experience
 
-### Homework - Week 10.2
-
-- **Post** a progress report to Brightspace->Discussions
-    - Current project status
-    - Trouble areas
-    - Next steps
-
----
-
-# Week 11
-
-## Week 11.1
-Guest speaker: Industry professional (e.g. Mutek Dubai, Electronic Musician)
-- TBD
-
 ### Homework
 
 Due before start of next class
+- **Plan** your user testing
+    - What aspects of your project do you need to test?
+    - What type of users are you designing for?  What are their "personas"?
 
-- **Read** [Live Performancein the Age of Supercomputing
- (Robert Henke)](https://roberthenke.com/interviews/supercomputing.html)
-    - What, to you, makes for a good live performance of electronic music?
-    - How will you connect with your music and your audience?
-- **Post** your response to Brightspace->Discussions->Readings
 
 ## Week 11.2
 Workshop: Project production
