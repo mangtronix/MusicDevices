@@ -103,6 +103,8 @@ Due before start of next class
 # Week 10
 
 ## Week 10.1
+- Review implementation plans
+  
 Telling your story / Documenting your work / Performance / Exhibition installation
 - What's the story of your project?
 - Refining your concept / story in advance helps to focus your project
