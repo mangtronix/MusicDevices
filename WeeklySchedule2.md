@@ -157,9 +157,11 @@ Due before start of next class
 
 ## Week 10.2
 ## Meet in IM Lab
+Announcements
+- Prusa XL - need prior permission for prints that go into next day, can email Mang with .3mf export file from PrusaSlicer showing time and slicer options
+
 Project production
 - Work towards resolving your largest challenge
-
 
 ### Homework - Week 10.2
 #### Due Monday April 14 - 12pm
