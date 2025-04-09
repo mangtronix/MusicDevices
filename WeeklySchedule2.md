@@ -162,17 +162,15 @@ Project production
 
 
 ### Homework - Week 10.2
+#### Due Monday April 14 - 12pm
 
-- **Post** a progress report to Brightspace->Discussions
-    - Current project status
-    - Trouble areas
-    - Next steps
+- **Post** your group progress report to [Brightspace->Discussions->Group Projects->Project Progress](https://brightspace.nyu.edu/d2l/le/435258/discussions/topics/540524/View)
  
 - **Read** [Live Performance in the Age of Supercomputing
  (Robert Henke)](https://roberthenke.com/interviews/supercomputing.html)
     - What, to you, makes for a good live performance of electronic music?
     - How will you connect with your music and your audience?
-- **Post** your response to Brightspace->Discussions->Readings
+- **Post** your individual response to [Brightspace->Discussions->Readings->Reading 3](https://brightspace.nyu.edu/d2l/le/435258/discussions/topics/540526/View)
 
 ---
 
