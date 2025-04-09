@@ -168,6 +168,8 @@ Project-related resources
 - [Stepper + DC Motor Featherwing](https://learn.adafruit.com/adafruit-stepper-dc-motor-featherwing/overview)
 - [Capacitive Touch on ESP32-S3 Reverse TFT](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/capacitive-touch)
 - [12-Key Cap Touch Sensor QT board](https://learn.adafruit.com/adafruit-mpr121-12-key-capacitive-touch-sensor-breakout-tutorial)
+- [Tutorial for built-in touch inputs on M4 CircuitPython board](https://desert.nyuadim.com/2022/04/07/tutorial-for-touch-on-m4-express/)
+    - Note use of 1 megaohm pulldown resistor 
 
 ### Homework - Week 10.2
 #### Due Monday April 14 - 12pm
