@@ -163,6 +163,12 @@ Announcements
 Project production
 - Work towards resolving your largest challenge
 
+Project-related resources
+- [Photocells (Adafruit)](https://learn.adafruit.com/photocells/circuitpython)
+- [Stepper + DC Motor Featherwing](https://learn.adafruit.com/adafruit-stepper-dc-motor-featherwing/overview)
+- [Capacitive Touch on ESP32-S3 Reverse TFT](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/capacitive-touch)
+- [12-Key Cap Touch Sensor QT board](https://learn.adafruit.com/adafruit-mpr121-12-key-capacitive-touch-sensor-breakout-tutorial)
+
 ### Homework - Week 10.2
 #### Due Monday April 14 - 12pm
 
