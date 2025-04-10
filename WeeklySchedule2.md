@@ -167,6 +167,7 @@ Project-related resources
 - [Photocells (Adafruit)](https://learn.adafruit.com/photocells/circuitpython)
 - [Stepper + DC Motor Featherwing](https://learn.adafruit.com/adafruit-stepper-dc-motor-featherwing/overview)
 - Search for 12V in the IM equipment checkout for 12V power supplies suitable for using with the 12V stepper motors
+    - e.g. [12V 2A power supply](https://nyuad-artsbooking.nyu.edu/wizard/resourcedetail.aspx?id=14163), [12V 3.5A power supply](https://nyuad-artsbooking.nyu.edu/wizard/resourcedetail.aspx?id=17032)
 
 Capacitive touch
 - [Capacitive Touch on ESP32-S3 Reverse TFT](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/capacitive-touch)
@@ -174,7 +175,7 @@ Capacitive touch
 - [Tutorial for built-in touch inputs on M4 CircuitPython board](https://desert.nyuadim.com/2022/04/07/tutorial-for-touch-on-m4-express/)
     - Note use of 1 megaohm pulldown resistor
 - Try printing the [raw_value](https://docs.circuitpython.org/en/latest/shared-bindings/touchio/#touchio.TouchIn.raw_value) to see how the value changes in different conditions
-    - e.g. [12V 2A power supply](https://nyuad-artsbooking.nyu.edu/wizard/resourcedetail.aspx?id=14163), [12V 3.5A power supply](https://nyuad-artsbooking.nyu.edu/wizard/resourcedetail.aspx?id=17032)
+
 
 ### Homework - Week 10.2
 #### Due Monday April 14 - 12pm
