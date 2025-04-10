@@ -193,6 +193,8 @@ Capacitive touch
 # Week 11
 
 ## Week 11.1
+## Meet in IM Lab from now on
+
 - Discuss reading
 - Review project progress
 
