@@ -198,6 +198,10 @@ Capacitive touch
 - Discuss reading
 - Review project progress
 
+Musical inspiration
+- [FKJ: Tiny Desk (Home) Concert (YouTube)](https://www.youtube.com/watch?v=PwV1-wZzT1Y)
+    - Live looping using Ableton Live and Akai APC40 controller
+
 User experience design
 - What types of users are you designing for? What are their "personas"?
     - [Persona (Wikipedia)](https://en.wikipedia.org/wiki/Persona_(user_experience))
