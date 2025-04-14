@@ -254,9 +254,12 @@ User testing
 ### Homework
 
 Due before start of next class
+- **Revise** your project concept
+- <!--
 - **Plan** your user testing
     - What aspects of your project do you need to test?
     - What type of users are you designing for?  What are their "personas"?
+-->
 
 
 ## Week 11.2
