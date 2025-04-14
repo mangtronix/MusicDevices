@@ -194,13 +194,39 @@ Capacitive touch
 
 ## Week 11.1
 ## Meet in IM Lab from now on
+Musical inspiration
+- [FKJ: Tiny Desk (Home) Concert (YouTube)](https://www.youtube.com/watch?v=PwV1-wZzT1Y)
+    - Live looping using Ableton Live and Akai APC40 controller
 
 - Discuss reading
 - Review project progress
 
-Musical inspiration
-- [FKJ: Tiny Desk (Home) Concert (YouTube)](https://www.youtube.com/watch?v=PwV1-wZzT1Y)
-    - Live looping using Ableton Live and Akai APC40 controller
+- IM End of Semester show
+    - Collect project requirements
+    - Table or pedestal? What size?
+    - Performance, installation, or demo?
+    - TV / monitor display?
+        - A few large TVs are available (ask now)
+    - Equipment available from IM Lab should be booked in Connect2
+        - Small speakers
+        - Laptops
+        - Sensor boards
+        - Monitors
+    - Make floor plan
+
+Music performance and documentation
+- [Hands-On: Foundations of Live Electronic Music Performance (Roland)](https://articles.roland.com/hands-on-foundations-of-live-electronic-music-performance/)
+- [Jeff Mills Exhibitionist Mix 3 with Roland TR-909
+ (YouTube)](https://www.youtube.com/watch?v=sLtnbR9H48I)
+- Demonstrating your device
+    - What's your story?
+    - How does the audience understand what your device does?
+    - What gestures do you need to show?
+    - [Guthman Musical Instrument Competition](https://guthman.gatech.edu/) has many good demo videos
+        - [Ten Instruments That Will Change How You Think About Music
+ (Georgia Tech)](https://guthman.gatech.edu/feature/guthman-instruments-change-music)
+
+
 
 User experience design
 - What types of users are you designing for? What are their "personas"?
@@ -250,19 +276,7 @@ Due before start of next class
 # Week 12
 
 ## Week 12.1
-Music performance and documentation
-- [Hands-On: Foundations of Live Electronic Music Performance (Roland)](https://articles.roland.com/hands-on-foundations-of-live-electronic-music-performance/)
-- [Jeff Mills Exhibitionist Mix 3 with Roland TR-909
- (YouTube)](https://www.youtube.com/watch?v=sLtnbR9H48I)
-- Demonstrating your device
-    - What's your story?
-    - How does the audience understand what your device does?
-    - What gestures do you need to show?
-    - [Guthman Musical Instrument Competition](https://guthman.gatech.edu/) has many good demo videos
-        - [Ten Instruments That Will Change How You Think About Music
- (Georgia Tech)](https://guthman.gatech.edu/feature/guthman-instruments-change-music)
-
-
+Project Production
 
 ## Week 12.2
 Project progress presentations and feedback
