@@ -198,8 +198,11 @@ Musical inspiration
 - [FKJ: Tiny Desk (Home) Concert (YouTube)](https://www.youtube.com/watch?v=PwV1-wZzT1Y)
     - Live looping using Ableton Live and Akai APC40 controller
 
+Plan for today
 - Discuss reading
 - Review project progress
+- Plan for IM End of Semester show
+- Discuss User Testing / Progress Demo
 
 - IM End of Semester show
     - Collect project requirements
