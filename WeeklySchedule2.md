@@ -263,6 +263,15 @@ Due before start of next class
 
 
 ## Week 11.2
+Musical Inspiration
+- [Laurie Spiegel interview offers a way of thinking about community, imagination (CDM)](https://cdm.link/laurie-spiegel-interview-offers-a-way-of-thinking-about-community-imagination/)
+- [Laurie Spiegel (Wikipedia)[(https://en.wikipedia.org/wiki/Laurie_Spiegel)
+- Voyager Golden Record
+    - [Golden Record (Wikipedia)](https://en.wikipedia.org/wiki/Voyager_Golden_Record)
+    - [Carl Sagan on the Voyager Golden record (YouTube)](https://www.youtube.com/watch?v=iVysAQVPCAY)
+    - [goldenrecord.org](https://goldenrecord.org/)
+
+
 Workshop: Project production
 - Share your project progress
 - Get feedback from other groups
