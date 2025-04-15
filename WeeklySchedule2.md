@@ -270,6 +270,7 @@ Musical Inspiration
     - [Golden Record (Wikipedia)](https://en.wikipedia.org/wiki/Voyager_Golden_Record)
     - [Carl Sagan on the Voyager Golden record (YouTube)](https://www.youtube.com/watch?v=iVysAQVPCAY)
     - [goldenrecord.org](https://goldenrecord.org/)
+    - [Where are Voyager 1 and Voyager 2 Now? (NASA)](https://science.nasa.gov/mission/voyager/where-are-voyager-1-and-voyager-2-now/)
     - [The Voyager Golden Record: A reminder that we are all connected (United Nations)](https://www.youtube.com/watch?v=l5BG5nGmGFQ)
 
 
