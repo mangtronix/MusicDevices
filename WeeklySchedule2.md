@@ -277,10 +277,12 @@ Workshop: Project production
 
 Due before start of next class
 
+<!--
 - **Conduct user testing** of your project
     - Test your project with multiple users
 - **Post** the results of your user testing
     - See [Syllabus->Project User Test](https://docs.google.com/document/d/1NaQrfuxLaoMKMixZ_BOIEzCix7Gx2jokPu_qFPAmvVw/edit#heading=h.nptms79n6zl8) for details
+-->
 
 # Week 12
 
