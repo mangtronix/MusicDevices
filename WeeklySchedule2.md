@@ -280,6 +280,11 @@ Project topics
 - Soldering
     - [Adafruit Guide to Soldering](https://learn.adafruit.com/adafruit-guide-excellent-soldering)  
     - [Picture of good / bad solder joints](https://learn.adafruit.com/adafruit-guide-excellent-soldering/common-problems)
+- NeoPixels
+    - [NeoPixel Uberguide](https://learn.adafruit.com/adafruit-neopixel-uberguide/the-magic-of-neopixels)
+    - [Powering NeoPixels](https://learn.adafruit.com/adafruit-neopixel-uberguide/powering-neopixels)
+- Battery power
+    - [ESP32 Reverse TFT Power Management](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/power-management)     
 
 ### Homework - Week 11.2
 
