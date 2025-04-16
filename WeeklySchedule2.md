@@ -254,13 +254,7 @@ User testing
 ### Homework
 
 Due before start of next class
-- **Revise** your project concept
-- <!--
-- **Plan** your user testing
-    - What aspects of your project do you need to test?
-    - What type of users are you designing for?  What are their "personas"?
--->
-
+- **Revise** your project concept and implementation plan
 
 ## Week 11.2
 Musical Inspiration
@@ -287,8 +281,6 @@ Due before start of next class
     - Test your project with multiple users
 - **Post** the results of your user testing
     - See [Syllabus->Project User Test](https://docs.google.com/document/d/1NaQrfuxLaoMKMixZ_BOIEzCix7Gx2jokPu_qFPAmvVw/edit#heading=h.nptms79n6zl8) for details
-
----
 
 # Week 12
 
