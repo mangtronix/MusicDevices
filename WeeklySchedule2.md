@@ -272,6 +272,14 @@ Workshop: Project production
 - Share your project progress
 - Get feedback from other groups
 - Individual consultations with each group
+- 
+
+Project topics
+- Fusion
+    - [Making tapped holes](https://help.autodesk.com/view/fusion360/ENU/?guid=SLD-HOLE-THREAD) 
+- Soldering
+    - [Adafruit Guide to Soldering](https://learn.adafruit.com/adafruit-guide-excellent-soldering)  
+    - [Picture of good / bad solder joints](https://learn.adafruit.com/adafruit-guide-excellent-soldering/common-problems)
 
 ### Homework - Week 11.2
 
