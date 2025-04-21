@@ -300,6 +300,10 @@ Due before start of next class
 # Week 12
 
 ## Week 12.1
+Project check-in
+- What did you get working?
+- What do you still need to do?
+
 Project Production
 
 ## Week 12.2
