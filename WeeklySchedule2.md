@@ -307,19 +307,29 @@ Project check-in
 Project Production
 
 ## Week 12.2
-Project progress presentations and feedback
-- Present your project to the class for feedback
+Announcements
+- [Magnesynth debut in Dubai Saturday](https://www.instagram.com/p/DIxnV0NJDhV/?img_index=1)
+
+
+### Production Mode - GO!
+
 
 IM End of Semester Show preparation
 - Space allocations
 - Technical needs
 
+### Homework
+Conduct your user testing
+- Post your results to [Brightspace->Discussions->Project User Test](https://brightspace.nyu.edu/d2l/le/435258/discussions/topics/541989/View)
+
+Prepare to share your results and show your working project in class on Monday
 
 ---
 
 # Week 13
 
 ## Week 13.1
+Share user testing results
 Final project dress rehearsal
 - Present your project at 95% completion
 - Does your project feel right?
