@@ -340,8 +340,10 @@ Final project dress rehearsal
 Announcements
 - **Book** any equipment needed, e.g. speakers, now [Arts Booking](https://nyuad-artsbooking.nyu.edu/)
 - You're responsible for getting the equipment from the IM Lab and returning it immediately after the show
-  
+- 
 Workshop: Final project production
+- Set up project directories in MusicDevices GitHub
+    - e.g. [https://github.com/mangtronix/MusicDevices/tree/main/Projects/TickTune](https://github.com/mangtronix/MusicDevices/tree/main/Projects/TickTune)
 - Final push to bring projects to being not just "done" but having an excellent user experience
 
 ### Homework - Week 13.2
