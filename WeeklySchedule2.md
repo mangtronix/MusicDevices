@@ -337,6 +337,10 @@ Final project dress rehearsal
 - We will identify areas for "final polish" / tweaking that will make the most impact on the user experience
 
 ## Week 13.2
+Announcements
+- **Book** any equipment needed, e.g. speakers, now [Arts Booking](https://nyuad-artsbooking.nyu.edu/)
+- You're responsible for getting the equipment from the IM Lab and returning it immediately after the show
+  
 Workshop: Final project production
 - Final push to bring projects to being not just "done" but having an excellent user experience
 
