@@ -346,6 +346,20 @@ Workshop: Final project production
     - e.g. [https://github.com/mangtronix/MusicDevices/tree/main/Projects/TickTune](https://github.com/mangtronix/MusicDevices/tree/main/Projects/TickTune)
 - Final push to bring projects to being not just "done" but having an excellent user experience
 
+Class references
+- Changing bpm in Ableton Live
+    - By changing scenes - [Learn Live: Automating Tempo Changes (YouTube)](https://www.youtube.com/watch?v=iI06kTUtNDg)
+- [ESP32-S3 Reverse TFT Feather Power Management](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/power-management)
+    - How to use a battery with the Feather
+    - Wire a switch between EN and GND to turn off power but still allow charging
+- Exporting a Fusion sketch to DXF for lasercutting
+    - Create a sketch with just the shapes you want to cut
+    - [Export your sketch as DXF](https://www.autodesk.com/support/technical/article/caas/sfdcarticles/sfdcarticles/How-to-Save-Sketch-as-DXF-in-Fusion-360.html)
+    - Book lasercutter on Connect2
+    - Bring DXF file to appointment with lab assistant
+    - Lab assistant will load DXF file into Adobe Illustrator and cut your material
+    - Recommend to do a test cut in cardboard to verify dimensions etc are correct (it's very fast to cut cardboard) before cutting in the final material
+
 ### Homework - Week 13.2
 
 Due before start of next class
