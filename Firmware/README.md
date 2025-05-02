@@ -14,5 +14,17 @@ Press reset button or plug / unplug to do a hard reset. You should now see ```CI
 Adafruit CircuitPython 9.2.4-247-g6e7baead68-dirty on 2025-03-04; Adafruit Feather ESP32-S3 Reverse TFT with ESP32S3
 ```
 
+Copy [boot.py](https://github.com/mangtronix/MusicDevices/blob/main/CircuitPython/boot.py) to ```CIRCUITPY/```
+
+Hard reset with button or plug/unplug
+```boot_out.txt``` should end with "Enabling MIDI":
+```
+Adafruit CircuitPython 9.2.4-247-g6e7baead68-dirty on 2025-03-04; Adafruit Feather ESP32-S3 Reverse TFT with ESP32S3
+Board ID:adafruit_feather_esp32s3_reverse_tft
+UID:468E3347E588
+boot.py output:
+Enabling MIDI
+```
+
 To get esptool.py
 * With Homebrew on Mac ```brew install esptool```
