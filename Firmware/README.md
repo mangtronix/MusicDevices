@@ -28,3 +28,8 @@ Enabling MIDI
 
 To get esptool.py
 * With Homebrew on Mac ```brew install esptool```
+
+Copy [necessary libraries](https://github.com/mangtronix/MusicDevices/tree/main/CircuitPython/lib) to ```CIRCUITPY/lib```:
+* adafruit_ble
+* adafruit_ble_midi.mpy
+* adafruit_midi
