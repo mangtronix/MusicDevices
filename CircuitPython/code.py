@@ -1,9 +1,17 @@
-# Music Devices
 
-# Uncomment the name of the file you want to run
+print("Hello Music Devices")
 
-# import multibutton
-# import midi_demo
-import midi_buttons # Send NoteOn/NoteOff from builtin buttons
+import demo_neoslider
+#import spritekeys
+#import demo_neokey # load python file and run it
 
-# import spritesheet # Demo of bitmap sprites
+#import i2c_scan
+
+#import demo_distance
+#import demo_rotary
+
+# import demo_slider_key # load python file and run it
+
+# BLE MIDI example
+# Requires custom CircuitPython firmware - see file for details
+# import midi_buttons_ble
