@@ -378,29 +378,37 @@ Due before start of next class
 
 ## Week 14.1
 - Project check-in
-- Review project web pages
 - Course review
+- Review final timeline / deliverables
+    - Project documentation
+    - Project web page / video
+    - Show setup
+    - Show
+- Resolve final project issues
 
 ### Homework
 
 Due before start of next class
 
 - **Finish** your project
-- **Post** your "behind the scenes" project documentation to the class website
+- **Post** your project documentation to the class website in your project directory in [MusicDevices/Projects](https://github.com/mangtronix/MusicDevices/tree/main/Projects)
     - See [Syllabus->Final Project](https://docs.google.com/document/d/1NaQrfuxLaoMKMixZ_BOIEzCix7Gx2jokPu_qFPAmvVw/edit#heading=h.2noy7dxf6pp6) for details
 
 ## Week 14.2
-In-class project presentations
+Show setup - **come directly to the Black Box at 3:35pm for setup**
+- Bring everything you need, including speakers, etc
+- **You have 30 minutes to set up** then everyone must stop for the presentations
+- Can start setting up at 3:00pm
 
-IM End of Semester Show setup
-- Space allocations
-- Technical needs
+In-class project presentations
+- Presentations start at 4:15pm
+- Each group get 15 minutes to show their work and take questions
 
 ---
 # IM End of Semester Show
 - Each group must show their project
-- Setup time TBD
-- Show time TBD
+- Come to Black Box and have project running at 4:45pm
+- Show time is 5-7pm in Black Box
 
 ### Homework
 
