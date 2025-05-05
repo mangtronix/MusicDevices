@@ -394,8 +394,7 @@ Due before start of next class
 Due before start of next class
 
 - **Finish** your project
-- **Post** your project documentation to the class website in your project directory in [MusicDevices/Projects](https://github.com/mangtronix/MusicDevices/tree/main/Projects)
-    - See [Syllabus->Final Project](https://docs.google.com/document/d/1NaQrfuxLaoMKMixZ_BOIEzCix7Gx2jokPu_qFPAmvVw/edit#heading=h.2noy7dxf6pp6) for details
+- **Be ready** to set up your project in class on Wednesday including having all the equipment ready that you need
 
 ## Week 14.2
 Show setup - **come directly to the Black Box at 3:35pm for setup**
@@ -414,9 +413,8 @@ In-class project presentations
 - Show time is 5-7pm in Black Box
 
 ### Homework
-
-- **Update** your project web page with the final video and photos
-    - See [Syllabus->Project Web Page](https://docs.google.com/document/d/1NaQrfuxLaoMKMixZ_BOIEzCix7Gx2jokPu_qFPAmvVw/edit#heading=h.vksuuzysxkk4) for details
+- **Post** your project documentation to the class website in your project directory in [MusicDevices/Projects](https://github.com/mangtronix/MusicDevices/tree/main/Projects)
+    - See [Syllabus->Final Project](https://docs.google.com/document/d/1NaQrfuxLaoMKMixZ_BOIEzCix7Gx2jokPu_qFPAmvVw/edit#heading=h.2noy7dxf6pp6) and [Syllabus->Project Web Page / Video](https://docs.google.com/document/d/1NaQrfuxLaoMKMixZ_BOIEzCix7Gx2jokPu_qFPAmvVw/edit#heading=h.vksuuzysxkk4) for details
 
 # Congratulations, you've made a musical device!
 - Now go play it!
