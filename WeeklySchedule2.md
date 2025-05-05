@@ -386,6 +386,9 @@ Due before start of next class
     - Show
 - Resolve final project issues
 
+- Class resources
+    - [How to Transfer Ableton Projects Between Computers](https://www.soundalgorithm.io/ableton-guides/how-to-transfer-ableton-projects-between-computers/)
+
 ### Homework
 
 Due before start of next class
