@@ -412,9 +412,10 @@ In-class project presentations
 - Come to Black Box and have project running at 4:45pm
 - Show time is 5-7pm in Black Box
 
-### Homework
+### Homework - Final Documentation submission due Friday May 9
 - **Post** your project documentation to the class website in your project directory in [MusicDevices/Projects](https://github.com/mangtronix/MusicDevices/tree/main/Projects)
     - See [Syllabus->Final Project](https://docs.google.com/document/d/1NaQrfuxLaoMKMixZ_BOIEzCix7Gx2jokPu_qFPAmvVw/edit#heading=h.2noy7dxf6pp6) and [Syllabus->Project Web Page / Video](https://docs.google.com/document/d/1NaQrfuxLaoMKMixZ_BOIEzCix7Gx2jokPu_qFPAmvVw/edit#heading=h.vksuuzysxkk4) for details
+
 
 # Congratulations, you've made a musical device!
 - Now go play it!
