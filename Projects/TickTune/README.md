@@ -38,7 +38,9 @@ We are also developing an autonomous playback mode where the clocks generate mus
 Eventually we want to create a system that allows users to save and share their compositions. Each session would become a personal version of time that can be archived and revisited. This would extend the project from an installation to a global platform for musical timekeeping.
 
 TickTune began with a simple question. What does time sound like. The answers have turned into a collaborative exploration filled with rhythm motion and possibility.
+
 **Video**
-[![Watch the video](https://img.youtube.com/vi/ktMJiXBjbZ0/maxresdefault.jpg)](https://youtu.be/ktMJiXBjbZ0?si=CMn4vdmY-eFbGlGG)
+[![Watch the video](https://i.imgur.com/JPkWgUu.png)](https://youtu.be/ktMJiXBjbZ0?si=CMn4vdmY-eFbGlGG)
+
 
 
