@@ -39,8 +39,9 @@ Eventually we want to create a system that allows users to save and share their 
 
 TickTune began with a simple question. What does time sound like. The answers have turned into a collaborative exploration filled with rhythm motion and possibility.
 
-**Video**
-[![Watch the video](https://i.imgur.com/JPkWgUu.png)](https://youtu.be/ktMJiXBjbZ0?si=CMn4vdmY-eFbGlGG)
+**Video**** : CLICK ON THE PICTURE AND IT WILL TAKE YOU TO THE VIDEO**
+[![Watch the video](https://img.youtube.com/vi/ktMJiXBjbZ0/maxresdefault.jpg)](https://youtu.be/ktMJiXBjbZ0?si=CMn4vdmY-eFbGlGG)
+
 
 
 
