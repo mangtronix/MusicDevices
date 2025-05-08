@@ -14,6 +14,7 @@ Design and Fabrication Process
 The physical form of TickTune began as a series of hand sketches. We started by imagining how each musical clock might look and move, thinking carefully about gear sizes, button placement, and how users would physically engage with the system. These sketches were then translated into digital 3D models using Fusion 360. Once the forms were finalized, we used PLA filament to print the components using the Prusa XL, a reliable large-format 3D printer. The use of PLA allowed us to achieve lightweight but durable parts that could handle the stress of repeated mechanical movement. The result is a tactile, sculptural object that invites users to touch, listen, and observe.
 
 Explanation of the User Interaction
+![Uploading Screenshot 2025-05-08 at 5.08.21 PM.png…]()
 
 Users are invited to engage with the concept of time in a playful and hands-on way. The interface includes three buttons and a single slider. Pressing a button activates a specific clock sound and sets its gears in motion. The slider controls the overall tempo of the installation which affects both the music and the speed of gear movement.
 
