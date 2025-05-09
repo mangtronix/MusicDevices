@@ -1,4 +1,5 @@
 # Bling Rings
+![HERO IMAGE](https://github.com/user-attachments/assets/da000c84-6a02-40bd-bede-6b5361a7c383)
 
 # Project concept and its relationship to musical practices
 Bling Rings is an interactive wearable MIDI controller system that draws on and explores the fusion of hip-hop sound culture and jewelry aesthetics, and fuses it with music production technology. The project consists of two knuckle-duster-style bases worn on the hands, each embedded with MIDI controls, allowing the user to remix and trigger components of hip-hop songs through buttons and a rotary knob.
