@@ -1,5 +1,7 @@
 # Pop-Up Pirate Sampler
 
+<img src="https://github.com/d7uzm/md-proj-repo/blob/main/00.jpg?raw=true" width="600"/>  
+
 ## Overview
 
 The **Pop-Up Pirate Sampler** is a modified USB MIDI controller inspired by the classic *Pop-Up Pirate* toy. The project repurposes the toy’s sword-insertion mechanics to trigger audio samples through a digital audio workstation (DAW). Users interact by inserting swords into designated slots to activate sounds; however, inserting a sword into a "booby-trapped" slot triggers the pirate to pop up, triggering a "game over" state.
@@ -8,14 +10,16 @@ This project explores intersections of experimental instrument design and digita
 
 ---
 
-## Files
+## Files (Non-media)
 
+```
 .
 ├── README.md
 └── resources
     ├── support v2.f3d
     ├── project.py
     └── project.als
+```
 
 ---
 
@@ -64,6 +68,9 @@ This design approach combines intuitive physical interaction with audio control.
   * Detects light change indicating the pirate’s release.
   * Sends a designated MIDI signal indicating "game over".
 
+<img src="https://github.com/d7uzm/md-proj-repo/blob/main/design.png?raw=true" width="600"/>  
+<img src="https://github.com/d7uzm/md-proj-repo/blob/main/02.jpg?raw=true" width="600"/>  
+
 ### Software Stack
 
 * **Firmware**: CircuitPython running on the Feather board.
@@ -73,7 +80,7 @@ This design approach combines intuitive physical interaction with audio control.
 
 (Used `SINEE - ABLETON LIVE RACKS + TEMPLATES` for the working template)
 
-<img src="./assets/design.png" width="600"/>  
+<img src="https://github.com/d7uzm/md-proj-repo/blob/main/ableton.png?raw=true" width="600"/>  
 
 
 ---
@@ -95,25 +102,14 @@ Feedback highlighted that the core mechanic may feel overly simple. This is a fa
 
 ---
 
-## Images
-
-Lead with a single photo that captures the essence of the entire project (aka the “hero” image)
-$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$4 Add 3-5 of your best photos of the project to your README.md
-
-
 ## Video
-Create a 2-5 minute promotion / documentation video (host on YouTube, Vimeo, etc and include a link in your README.md)
+<a href="https://drive.google.com/file/d/1Mq3DcEKVP2tnj3s6g0Kzz7IYL-1Sl8cR/view?usp=drive_link">
+  <img src="https://github.com/d7uzm/md-proj-repo/blob/main/video-preview.png?raw=true" width="600"/>
+</a>
 
+* **Video List**:
 
+  * [Interaction](https://drive.google.com/file/d/1Mq3DcEKVP2tnj3s6g0Kzz7IYL-1Sl8cR/view?usp=drive_link)
+  * [Full Play](https://drive.google.com/file/d/1aA__ZOl866Iy8DeEIS-lafFVclON6xh8/view?usp=drive_link)
+  * [Pop Up](https://drive.google.com/file/d/16vZod2d-lNpjqyxCRXXbTY3Cx8Fr2LW9/view?usp=drive_link)
 
-
-
-
-
-
-
-cd /d/Projects/MusicDevices/Projects/PopUpSampler
-git submodule add https://github.com/odvixn/md-proj.git resources
-
-
-Add files via upload
