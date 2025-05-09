@@ -51,6 +51,7 @@ Each keycap is visually distinct and inspired by hip-hop iconography: (add image
 - Ice cube symbol
 - Dollar sign ($) motif
 - Dome shape
+
 These transparent designs allow dynamic LED colors to shine through, allowing for color customizability via the color-changing NeoPixel LEDs.
 
 2 knuckle dusters (add images) with different hole diameters to fit the average female hand:
