@@ -7,7 +7,7 @@ Bling Rings is an interactive wearable MIDI controller system that draws on and 
 We worked on three primary songs:
 * “Not Like Us” – Kendrick Lamar
 * “Check the Rhime” – A Tribe Called Quest
-* “The Way I Are” – Timbaland
+* “Rockstar” – Post Malone ft. 21 Savage
   
 These songs were chosen for their distinct sonic identities and remix potential.
 
@@ -29,13 +29,13 @@ Knuckle duster base #2:
 We first had to isolate all the components of the songs into:
 1. Vocals
 2. Bass/ drums (together)
-3. Keys
+3. Keys/ synth (together)
 For each of the 3 buttons
 
 Then we had to sync all of these song components to the beats by cutting the clips into the exact time frame we needed, and then putting those edited tracks into Ableton Live. Warp mode was turned off to preserve timing integrity, and each song was assigned a fixed tempo/ BPM:
 * “Not Like Us” – Kendrick Lamar (101 BPM)
 * “Check the Rhime” – A Tribe Called Quest (96 BPM)
-* “The Way I Are” – Timbaland (115 BPM)
+* “Rockstar” – Post Malone (80 BPM)
 
  The system automatically adjusts tempo when switching between songs.
 
@@ -47,7 +47,9 @@ This way, users can more intuitively tell whether a track is on or off.
 
 The knuckle duster base and button keycaps were all modeled on Fusion and 3D-printed with clear PETG. 
 
-Each keycap is visually distinct and inspired by hip-hop iconography: (add images)
+![IMG_0492](https://github.com/user-attachments/assets/9052f962-c03b-4d49-8d5d-0fcfd865186e)
+
+Each keycap is visually distinct and inspired by hip-hop iconography:
 - “DRIP” lettering
 - Ice cube symbol
 - Dollar sign ($) motif
@@ -55,9 +57,13 @@ Each keycap is visually distinct and inspired by hip-hop iconography: (add image
 
 These transparent designs allow dynamic LED colors to shine through, allowing for color customizability via the color-changing NeoPixel LEDs.
 
-2 knuckle dusters (add images) with different hole diameters to fit the average female hand:
+![IMG_0597](https://github.com/user-attachments/assets/269282d9-df81-4f04-9e1e-a43d2afb754f)
 
-The single rotary knob cap was similarly modeled on Fusion but instead 3D printed with White PLA and painted to look like a stack of records—a visual nod to DJ culture and analog roots within hip-hop. (add images)
+2 knuckle dusters with different hole diameters to fit the average female hand:
+
+![IMG_0546](https://github.com/user-attachments/assets/5e2272b4-eaab-4312-863c-0e1180f7601b)
+
+The single rotary knob cap was similarly modeled on Fusion but instead 3D printed with White PLA and painted to look like a stack of records—a visual nod to DJ culture and analog roots within hip-hop.
 
 # Explanation of the user interaction and instructions to user
 1. The user wears both rings, one on each hand.
