@@ -92,3 +92,11 @@ This concept has potential applications in:
 - **Public interactive art**
 
 ---
+
+## Gallery
+
+![Memory Orbs-MYA_1607](https://github.com/user-attachments/assets/fbe543ba-690e-4a7c-bef1-3d944a4d453c)
+
+![Memory Orbs-MYA_1616](https://github.com/user-attachments/assets/7e52289a-7c94-4efc-b8ca-c853eaab82bf)
+
+
