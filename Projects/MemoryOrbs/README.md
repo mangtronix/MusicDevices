@@ -64,7 +64,7 @@ The project combines physical computing, fabrication, sound design, and synchron
 
 ### Fabrication
 
-- **Orbs:** 3D printed on a *Prusa i3 MK3S* with clear filament for light diffusion.
+- **Orbs:** 3D printed on a *Prusa MK4* with clear PETG filament for light diffusion.
 - **Bases:** 3D printed on an *Ultimaker 2+* for structure and durability.
 - **Acrylic & Wood Mount:** Acrylic plate laser-cut; wooden base hand-sawn and designed to hide circuitry for a polished look.
 
