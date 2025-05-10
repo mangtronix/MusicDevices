@@ -96,4 +96,5 @@ We think that this opens possibilities for therapeutic applications in emotional
 
 ![Memory Orbs-MYA_1616](https://github.com/user-attachments/assets/7e52289a-7c94-4efc-b8ca-c853eaab82bf)
 
+![Memory Orbs-MYA_1595](https://github.com/user-attachments/assets/76e9c06e-b7d9-4134-a227-96ba3c1789a0)
 
