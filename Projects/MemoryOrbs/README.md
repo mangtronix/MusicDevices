@@ -87,6 +87,7 @@ For us, **Memory Orbs** successfully bridged emotional expression with interacti
 - More buttons or functionalities such as recording the mix they made, controlling the volume, rotary knobs, and sliders to add effects etc.
 
 We think that this opens possibilities for therapeutic applications in emotional processing, live musical performance, and public interactive installations.
+
 ---
 
 ## Gallery
