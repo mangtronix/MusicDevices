@@ -58,39 +58,35 @@ The project combines physical computing, fabrication, sound design, and synchron
 
 ### Components
 
-- **Capacitive Touch Sensors (MPR121):** Detect user touch per orb.
-- **Neopixel RGB LEDs (WS2812B):** Provide color illumination.
-- **ESP32 Adafruit Feather:** Handles touch input, lighting, and MIDI output.
+- **Capacitive Touch Sensors (MPR121):** Each orb is touch-sensitive, responding instantly to human touch.
+- **Neopixel RGB LEDs (WS2812B):** Provide smooth, color-specific illumination for each emotion.
+- **ESP32 Adafruit Feather:** Manages sensor input, LED control, and music synchronization.
+
 
 ### Fabrication
 
-- **Orbs:** 3D printed on a *Prusa MK4* with clear PETG filament for light diffusion.
-- **Bases:** 3D printed on an *Ultimaker 2+* for structure and durability.
-- **Acrylic & Wood Mount:** Acrylic plate laser-cut; wooden base hand-sawn and designed to hide circuitry for a polished look.
+- **Orbs:** 3D printed on a *Prusa MK4* with clear PETG filament for optimal light diffusion.
+- **Bases:** 3D printed on an *Ultimaker 2+* for precise structure and durability.
+- **Acrylic & Wood Mount:** The orbs are mounted on a laser-cut acrylic plate that fits perfectly over a hand-sawn wooden base. This design sandwiches the wiring and breadboard underneath, providing a clean and immersive experience.
+
 
 ### Sound Integration
 
-- **Ableton Live** handles audio playback and sound layering.
-- MIDI signals from the Feather trigger sounds.
-- Some effects and samples are from *freesound.org* and *YouTube*.
+- **Ableton Liv:e** All musical elements are produced (except for a few that we downloaded from *freesound.org* and *Youtube*) and mapped in Ableton Live.  
+MIDI signals from the Adafruit Feather trigger Ableton samples, allowing each orb to function as a live MIDI instrument.
 
 ---
 
 ## Reflection and Future Directions
 
-**Memory Orbs** successfully merged emotional storytelling with interactive sound. Future improvements could include:
+For us, **Memory Orbs** successfully bridged emotional expression with interactive sound, allowing users to perform music through touch. In future iterations, we could:
 
-- Wireless MIDI integration  
-- Haptic feedback for tactile response  
-- Multi-user support for collaborative performance  
-- Extra features: recording, volume control, knobs/sliders for effects  
+- Integrate wireless MIDI capabilities to expand the setup and allow for broader, more immersive interactions.
+- Experiment with haptic feedback to provide touch-based vibrations when an orb is activated.
+- Explore multi-user capabilities, enabling collaborative performances that represent collective emotional states.
+- More buttons or functionalities such as recording the mix they made, controlling the volume, rotary knobs, and sliders to add effects etc.
 
-This concept has potential applications in:
-
-- **Therapy**
-- **Live performance**
-- **Public interactive art**
-
+We think that this opens possibilities for therapeutic applications in emotional processing, live musical performance, and public interactive installations.
 ---
 
 ## Gallery
