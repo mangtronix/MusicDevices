@@ -1,4 +1,7 @@
 # Memory Orbs
+A project by Gunjan, Jheel Thanki and Nourhane Sekkat
+
+![Memory Orbs-MYA_1616](https://github.com/user-attachments/assets/7e52289a-7c94-4efc-b8ca-c853eaab82bf)
 
 ## Summary
 
