@@ -1,9 +1,14 @@
 # Music Devices Final Project - EchoTerrarium
 ### Meera AlKhazraji, Akif Rattu, Ahmed Bilal, Khalifa
 
+![Echo Terrarium-MYA_1644](https://github.com/user-attachments/assets/7eb32b8f-2ddb-4eed-9d71-1ac9b8ff0c66)
+
+
 ## Concept:
 
 EchoTerrarium is a musical device that represents humans’ connection to nature, their interactions, and the consequences of these interactions. By allowing users to touch and feel around the flowerbed part of the device, there is a tangible connection built between the presence of a person and the audio as it changes with each movement. This project is intended to give plants the ability to communicate using sounds and express their dissent or satisfaction. The project employs sound and lights to show the plants’ supposed feelings; loud, grainy sounds for intrusions with flashing lights, and calm pulsating greens for when it is being watered. 
+
+
 
 ## User interaction
 
@@ -11,9 +16,13 @@ Users are invited to observe the EchoTerrarium in its idle state. It seems peace
 
 Then the users are prompted to the watering can resting on its platform next to the terrarium. They are asked to pick it up and observe the effects as they water the plants. They are able to see the lights switch to a calm, soothing green to show that their action of watering the plant has made it healthier. 
 
+
+
 ## Technical Implementation
 
 The project can be broken down into 3 main interactions.
+
+
 
 #### The Hands:
 
@@ -31,6 +40,8 @@ Using 54 Neopixels on a strip, we managed to light up the whole project on the i
 
 For the construction, we used the Prusa XL to create a hollow plastic cylinder that had a ledge on the inside to hold the base upon which the plants rested. The base was made from wood so that we could add holes easily for the wires and plants. The bottom half of the base was made with bendable plywood that was cut to size and rolled into a cylinder. It was glued to the plastic to hide the electronics. We also added an arch that rose over the top and connected both sides like a basket handle. The Neopixel strip was attached to the inside of this arch.
 
+
+
 ## Reflection and Future Considerations:
 
 In the future, we hope to have several changes:
@@ -41,6 +52,15 @@ In the future, we hope to have several changes:
 
 3. Make the watering can interact with the music: due to limited time, we could not enable communication between the Adafruit microcontroller and the watering can circuit. It would help our concept of “watering the plant to give it birth” if there was a peaceful change in music in addition to the lights
 
+
+
 ## Video documentation:
 
-[Video]([url](https://youtu.be/uhQBqstSYw0?si=OlXjtFgWrZcZWgMi))
+[Video](https://youtu.be/uhQBqstSYw0?si=OlXjtFgWrZcZWgMi)
+
+## Picture Documentation
+
+![IMG_8025](https://github.com/user-attachments/assets/ce9e2ead-aa2d-4c29-879c-2226b389bd94)
+![EchoTerrarium_5594](https://github.com/user-attachments/assets/8ecd0915-52e2-4ee0-a007-fc37061c29ae)
+![IMG_8037](https://github.com/user-attachments/assets/0c052aae-0e90-4b20-99d5-784b6c88218c)
+
