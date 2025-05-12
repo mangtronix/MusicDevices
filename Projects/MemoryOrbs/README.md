@@ -95,6 +95,12 @@ We think that this opens possibilities for therapeutic applications in emotional
 
 ---
 
+## Demonstration Video
+
+Watch the video [here!](https://www.youtube.com/watch?v=r8S9NQdE8No)
+
+---
+
 ## Gallery
 
 Check out some [behind the scenes footage!](https://drive.google.com/drive/folders/1jXTS-sdPLhZexhaXIYc-yuxmdXGI0j51)
