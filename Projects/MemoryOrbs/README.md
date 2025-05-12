@@ -75,8 +75,10 @@ The project combines physical computing, fabrication, sound design, and synchron
 
 ### Sound Integration
 
-- **Ableton Liv:e** All musical elements are produced (except for a few that we downloaded from *freesound.org* and *Youtube*) and mapped in Ableton Live.  
+- **Ableton Live** All musical elements are produced (except for a few that we downloaded from *freesound.org* and *Youtube*) and mapped in Ableton Live.  
 MIDI signals from the Adafruit Feather trigger Ableton samples, allowing each orb to function as a live MIDI instrument.
+
+[Ableton kit linked here](https://drive.google.com/file/d/1MooMNMA3w-bOV3jc4e5V7J0QFlqLJR1t/view?usp=sharing)
 
 ---
 
