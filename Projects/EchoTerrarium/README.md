@@ -44,7 +44,9 @@ For the construction, we used the Prusa XL to create a hollow plastic cylinder t
 
 ## Reflection and Future Considerations:
 
-In the future, we hope to have several changes:
+Creating EchoTerrarium was a meaningful exploration of how humans interact with nature through sound and touch. We aimed to design a responsive, living interface where user actions could visibly and audibly affect the environment, encouraging awareness and care. The integration of MIDI hand-tracking and reactive lighting brought the plants to life as expressive agents. Through iteration, we learned the importance of seamless interaction and sensor accuracy. While time limited some features, like audio response from the watering can, we’re excited to refine and expand the system further. Overall, EchoTerrarium helped us bridge the gap between technology, art, and ecological empathy.
+
+#### In the future, we hope to have several changes:
 
 1. A camera with a wider FoV: We felt that the camera we used was not able to detect hands instantly because it couldn't see the hands unless they were positioned just right. A wider FoV camera would have more room to ‘see’ the hands
 
