@@ -97,9 +97,11 @@ We think that this opens possibilities for therapeutic applications in emotional
 
 ## Gallery
 
+Check out some [behind the scenes footage!] (https://drive.google.com/drive/folders/1jXTS-sdPLhZexhaXIYc-yuxmdXGI0j51)
+
 ![Memory Orbs-MYA_1607](https://github.com/user-attachments/assets/fbe543ba-690e-4a7c-bef1-3d944a4d453c)
 
-![MemoryOrbs_5592](https://github.com/user-attachments/assets/80e8992c-5277-48bb-9cab-e34532afbec6)
+![MemoryOrbs_5592](https://github.com/user-attachments/assets/cd90fa9f-6985-4206-8b67-4fea62b363e3)
 
 ![Memory Orbs-MYA_1595](https://github.com/user-attachments/assets/76e9c06e-b7d9-4134-a227-96ba3c1789a0)
 
