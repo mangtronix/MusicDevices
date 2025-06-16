@@ -72,6 +72,9 @@ The single rotary knob cap was similarly modeled on Fusion but instead 3D printe
 4. Use the rotary knob to adjust the delay FX in real-time as desired
 
 # 2-3 minute video demonstrating the project
+*Hyperlinked image below*
+
+[![BLING RINGS PROMO VID](https://iili.io/3809DJ9.th.jpg)](https://player.vimeo.com/video/1083501949?h=05c6164faf&badge=0&autopause=0&player_id=0&app_id=58479)
 
 # Reflection on the project and directions for future work
 For future iterations, we hope to:

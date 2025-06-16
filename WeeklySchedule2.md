@@ -418,4 +418,3 @@ In-class project presentations
 
 
 # Congratulations, you've made a musical device!
-- Now go play it!
