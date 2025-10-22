@@ -18,4 +18,4 @@ Music Devices is taught by Michael Ang, Assistant Professor of Practice of Inter
 Music Devices class kit
 
 ![IMG_0546](https://github.com/user-attachments/assets/5e2272b4-eaab-4312-863c-0e1180f7601b)
-[Bling Rings](Projects/BlingRings) by Sara Almulla, Diana Donatella, and Hind Younus
+[Bling Rings](Projects/BlingRings) Hip-Hop controller by Sara Almulla, Diana Donatella, and Hind Younus
