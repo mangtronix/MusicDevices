@@ -305,6 +305,9 @@ Due before start of next class
 # Week 3
 
 ## Week 3.1
+
+### Guest Visit: Huang Yi (TBC)
+
 - Review homework
 
 Overview of music devices
@@ -349,9 +352,17 @@ Due before start of next class
 - **Pick up** course textbook *Push, Turn, Move* from Bookstore
 - **Read** *Push, Turn, Move* pp. 14-27, 34
     - No response required
+- **Review** Sxip Shiry bio and videos below. Think of some questions to ask him when he visits our class!
 
 ## Week 3.2
 ### Meet in IM Lab - C3-029
+
+### Guest Artist: Sxip Shiry
+[Sxip Shiry](https://www.sxipshireymusic.com/) is an American electric-acoustic composer, performer, and story-teller. He is going to stay a month on campus for research on creating a live version of his performance The Gauntlet. Sxip is known for working with found objects, traditional and rare modified instruments, as well as computers and other electronic instruments, like in these videos: 
+- [Sxip Shirey: Pandora (YouTube)](https://www.youtube.com/watch?v=oxhYhFkhYoE)
+- [RuckUS2020 -- Sxip Shirey and Coco Karol](https://www.youtube.com/watch?v=evzLgj4iHbA)
+Bio: [https://www.sxipshireymusic.com/about](https://www.sxipshireymusic.com/about)
+
 Workshop: CircuitPython / ESP32-S3
 - [ESP32-S3 Reverse TFT Feather](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/overview)
     - Microcontroller board that supports Arduino and CircuitPython
