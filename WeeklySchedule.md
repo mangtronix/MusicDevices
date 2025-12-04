@@ -64,8 +64,8 @@ Music Devices, NIME and Sound Installations
     - Some historical and current examples of commercial alternative MIDI controllers
  
 - Technologies used in the course
-    - [Arduino](https://www.arduino.cc/) - open source electronic prototyping platform
-        - [Adafruit ESP32-S3 Reverse TFT Feather](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/overview) - Arduino-compatible microcontroller board with builtin screen, battery charger, WiFi, and Bluetooth
+    - [CircuitPython](https://circuitpython.org/) - open source electronic prototyping platform
+        - [Adafruit ESP32-S3 Reverse TFT Feather](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/overview) - CircuitPython and Arduino-compatible microcontroller board with builtin screen, battery charger, WiFi, and Bluetooth
         - various inputs and sensors
         - motors, light, and other physical outputs are possible
     - [Ableton Live](https://www.ableton.com/en/live/) - music production DAW, Ableton 12 Suite available in music lab, Lite licenses can be found
