@@ -14,8 +14,11 @@ Music Devices is taught by Michael Ang, Assistant Professor of Practice of Inter
 
 [Weekly Schedule / Notes - Weeks 8-14](WeeklySchedule2.md)
 
-![Mangtronix MIDI controller](Media/Mangtronix_controller.jpg?raw=true "Mangtronix MIDI controller")
-Music Devices class kit
-
 ![IMG_0546](https://github.com/user-attachments/assets/5e2272b4-eaab-4312-863c-0e1180f7601b)
 [Bling Rings](Projects/BlingRings) Hip-Hop controller by Sara Almulla, Diana Donatella, and Hind Younus
+
+<img width="100%" alt="TickTune" src="https://github.com/user-attachments/assets/5b681165-4f57-48f8-9a40-070b707b3b11" /> Tick Tune by Jason Xia, Batool Al Tameemi, Marija Tomevska, Zhaniya Korpebayeva
+
+![Mangtronix MIDI controller](Media/Mangtronix_controller.jpg?raw=true "Mangtronix MIDI controller")
+Music Devices class kit by Michael Ang
+
