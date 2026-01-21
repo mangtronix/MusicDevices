@@ -367,7 +367,7 @@ Due before start of next class
 [Sxip Shiry](https://www.sxipshireymusic.com/) is an American electric-acoustic composer, performer, and story-teller. He is going to stay a month on campus for research on creating a live version of his performance The Gauntlet. Sxip is known for working with found objects, traditional and rare modified instruments, as well as computers and other electronic instruments, like in these videos: 
 - [Sxip Shirey: Pandora (YouTube)](https://www.youtube.com/watch?v=oxhYhFkhYoE)
 - [RuckUS2020 -- Sxip Shirey and Coco Karol](https://www.youtube.com/watch?v=evzLgj4iHbA)
-Bio: [https://www.sxipshireymusic.com/about](https://www.sxipshireymusic.com/about)
+- Bio: [https://www.sxipshireymusic.com/about](https://www.sxipshireymusic.com/about)
 
 Workshop: CircuitPython / ESP32-S3
 - [ESP32-S3 Reverse TFT Feather](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/overview)
