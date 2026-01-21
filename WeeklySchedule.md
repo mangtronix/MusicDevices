@@ -17,7 +17,7 @@
 - [Week 12](WeeklySchedule2.md#week-12) – Music performance, project feedback, user testing
 - [Week 13](WeeklySchedule2.md#week-13) – Final project production / polish
 - [Week 14](WeeklySchedule2.md#week-14) – Final project presentations
-- [IM SHOW](WeeklySchedule2.md#im-show) – Show final project / Update final documentation
+- [IM SHOW](WeeklySchedule2.md#im-show) Friday May 8 – Show final project / Update final documentation
 
 Note: Exact due dates for assignments and readings are indicated in Brightspace
 
