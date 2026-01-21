@@ -33,12 +33,20 @@ Introduction
     - What's your technical background?
     - What's your experience with music?
     - What are you hoping to achieve in the course?
-    - [Dunewind Resonator](https://kildall.com/newest-artworks/dunewindresonator) by Michael Ang and Scott Kildall
-    - [Sonoglider Duet](https://kildall.com/newest-artworks/sonogliderduet) by Michael Ang and Scott Kildall
+    - About Mang
+        - [Dunewind Resonator](https://michaelang.com/dunewindresonator) by Michael Ang and Scott Kildall
+        - [Sonoglider Duet](https://kildall.com/newest-artworks/sonogliderduet) by Michael Ang and Scott Kildall
+        - [Magnesynth](https://michaelang.com/magnesynth) by Michael Ang
 - Review syllabus
 - Textbook at bookstore
     - [Push, Turn, Move (Bjooks)](https://bjooks.com/products/push-turn-move-the-book)
 - Class kits will be distributed in class
+
+- Questions
+    - Who has done tool training Fall 2024 or later?
+    - Who has experience with Ableton Live or other music software?
+    - More interested in performance, practical devices, or installations?
+
 
 ## Week 1.2
 
@@ -76,6 +84,9 @@ Music Devices, NIME and Sound Installations
     - [Laser cutting](https://www.instructables.com/Laser-Cutting-Basics/)
     - Other software / hardware depending on interests!
 
+- Class visits
+    - [Huang Yi - Ink](https://publicprograms.nyuad.nyu.edu/en/the-arts-center/events/2026/february/ink-huang-yi.html)
+    - [Sxip Shirey](https://www.sxipshireymusic.com/)
 
 ### Homework - Week 1.2
 
@@ -88,7 +99,7 @@ Due before start of next class
 - **Read** [Moldover-The Godfather of Controllerism
 (MIDI Association)](https://midi.org/moldover-the-godfather-of-controllerism)
     - What makes Moldover's approach to controller design effective or not effective?
-    - How can combining controller design and sound design help you connect with an audience? What techniques are you planning to use?
+    - How can combining controller design and sound design help you connect with an audience?
 - **Post** your response in the discussion forum
     - See Brightspace->Discussions->Readings for details
 - **Be ready** to discuss the topic in class
@@ -100,10 +111,6 @@ Due before start of next class
 Announcements
 - Pick up book from Bookstore
     - Push, Turn, Move 
-- Questions
-    - Who has done tool training Fall 2023 or later?
-    - Who has experience with Ableton Live or other music software?
-    - More interested in performance, practical devices, or installations?
 
 - Discuss Controllerism reading
     - [The How To Show - Moldover (YouTube)](https://www.youtube.com/watch?v=IwjiUSnjrQk)
@@ -179,7 +186,7 @@ Workshop: Ableton, software synthesizers
     - Live 12 Suite is available in C3-116
     - Live Lite (free license) comes with many hardware controllers and some apps
         - iOS apps with free Live Lite license
-          - [Koala Sampler](https://www.koalasampler.com/)
+          - [Koala Sampler (Ableton license available on iOS only)](https://www.koalasampler.com/)
             - Settings -> Get Live Lite
           - [Ableton Note](https://www.ableton.com/en/note/)
             - Settings -> Get Ableton Live Lite
