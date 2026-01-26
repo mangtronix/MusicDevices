@@ -109,7 +109,8 @@ Due before start of next class
 ## Week 2.1
 Announcements
 - Pick up book from Bookstore
-    - Push, Turn, Move 
+    - Push, Turn, Move
+- Brightspace discussions vs assignments
 
 - Discuss Controllerism reading
     - [The How To Show - Moldover (YouTube)](https://www.youtube.com/watch?v=IwjiUSnjrQk)
