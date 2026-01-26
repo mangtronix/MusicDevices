@@ -153,6 +153,15 @@ Sampling
   (YouTube)](https://www.youtube.com/watch?v=NUMBYbbG6tE)
 - [Live Finger Drumming - Gnarly (YouTube)](https://www.youtube.com/watch?v=W9s8aPM8kK0)
 
+What is a MIDI controller?
+- Digital controller designed for music
+- Communicates using the Musical Instrument Digital Interface (MIDI) standard
+    - Originally designed in the 1980s
+    - [MIDI Basics (Pro Audio)](https://theproaudiofiles.com/midi-basics/)
+- A MIDI controller by itself doesn't usually create sound
+- The controller sends / receives notes and controller information to the computer or other device (like a sound module, musical robot)
+- MIDI controller demo
+
 Applied music theory, Western and beyond
 - [Learn music theory in half an hour (Andrew Huang / YouTube)](https://youtu.be/rgaTLrZGlk0?si=n52AtMMm5wVyZF4t)
 - [Music Theory For Beginners (Taetro / YouTube)](https://www.youtube.com/watch?v=CluuHrr7HG4&list=PLoO2tOP2r-XvoFc7cnfYcomf1X0XcQvDC)
