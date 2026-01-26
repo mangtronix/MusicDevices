@@ -4,7 +4,7 @@
 
 - [Week 1](#week-1) – Introduction / NIME, Music Devices, and Sound Installations
 - [Week 2](#week-2) – Applied music theory, Western and beyond
-- [Week 3](#week-3) – CircuitPython / Physical computing for NIME
+- [Week 3](#week-3) – Huang Yi class visit / CircuitPython and Physical computing for NIME
 - [Week 4](#week-4) – Musical interface design, MIDI
 - [Week 5](#week-5) – Musical sensors
 - [Week 6](#week-6) – Rapid prototyping
@@ -114,6 +114,8 @@ Announcements
 - Software availability
     - Ableton Live
     - Autodesk Fusion
+- Guest visit
+    - Huang Yi - Taiwanese Choreographer Huang Yi , presenting his performance "Ink" dancing along with an industrial robot he programmed, more info on the performance Thu, Feb 5 @ 7:30pm and his bio [here](https://publicprograms.nyuad.nyu.edu/en/the-arts-center/events/2026/february/ink-huang-yi.html)
 
 - Discuss Controllerism reading
     - [The How To Show - Moldover (YouTube)](https://www.youtube.com/watch?v=IwjiUSnjrQk)
@@ -349,6 +351,8 @@ Hardware kit
 
 
 ### Homework Week 3.1
+#### Guest Artist: Huang Yi
+Taiwanese Choreographer Huang Yi , presenting his performance "Ink" dancing along with an industrial robot he programmed, more info on the performance and his bio here: https://publicprograms.nyuad.nyu.edu/en/the-arts-center/events/2026/february/ink-huang-yi.html
 
 Due before start of next class
 
