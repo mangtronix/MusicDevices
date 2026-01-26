@@ -111,6 +111,9 @@ Announcements
 - Pick up book from Bookstore
     - Push, Turn, Move
 - Brightspace discussions vs assignments
+- Software availability
+    - Ableton Live
+    - Autodesk Fusion
 
 - Discuss Controllerism reading
     - [The How To Show - Moldover (YouTube)](https://www.youtube.com/watch?v=IwjiUSnjrQk)
