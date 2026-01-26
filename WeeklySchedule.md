@@ -167,6 +167,13 @@ Applied music theory, Western and beyond
 - Watch [Learn music theory in half an hour (Andrew Huang / YouTube)](https://youtu.be/rgaTLrZGlk0?si=n52AtMMm5wVyZF4t)
     - No response required
 - Pick up class book from Bookstore
+- Who wants an Ableton Lite license?
+    - Live Lite (free license) comes with many hardware controllers and some apps
+        - iOS apps with free Live Lite license
+          - [Koala Sampler (Ableton license available on iOS only)](https://www.koalasampler.com/)
+            - Settings -> Get Live Lite
+          - [Ableton Note](https://www.ableton.com/en/note/)
+            - Settings -> Get Ableton Live Lite
 
 ## Week 2.2
 What is a DAW?
