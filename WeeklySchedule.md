@@ -188,7 +188,24 @@ Applied music theory, Western and beyond
 **Announcements**
 - [Tamass Festival](https://publicprograms.nyuad.nyu.edu/en/the-arts-center/events/2026/january/tamaas-festival.html) - Thursday in front of the Arts Center
     - Featuring [Al Qasr](https://www.youtube.com/watch?v=jtD_AjWVAYc&list=RDjtD_AjWVAYc&start_radio=1)
-- Huang Yi guest visit next class, see details below
+- Huang Yi guest visit next class
+
+### Huang Yi - INK
+
+Book your ticket to [INK - Huang Yi Studio +](https://publicprograms.nyuad.nyu.edu/en/the-arts-center/events/2026/february/ink-huang-yi.html)
+
+*Upcoming workshop and talk:*
+
+Dance Workshop: Whispers of the Body - A Workshop on Awareness and Movement Dialogue with Huang Yi from Ink on 2 February at 6:30pm. [Register here](https://publicprograms.nyuad.nyu.edu/en/the-arts-center/events/2026/february/whispers-of-the-body.html)
+
+Artist Talk: Art, Movement, and Gratitude with Huang Yi on 3 February at 6:30pm. [Register here](https://publicprograms.nyuad.nyu.edu/en/the-arts-center/events/2026/february/art-movement-and-gratitude.html)
+
+Taiwanese dancer, choreographer, inventor, and videographer Huang Yi’s pioneering work is steeped in his fascination with the partnership between humans and robots. He interweaves continuous movement with mechanical and multimedia elements to create a form of dance which corresponds with the flow of data, effectively making the performer a dancing instrument. Named by Dance Magazine as one of the “25 to Watch,” Huang was immersed in the arts at a young age, spending much of his childhood in his parents’ studio watching them teach tango and learning to paint alongside his father. Huang has been Artist-in-Residence of the National Theater & Concert Hall, the National Performing Arts Center, Taiwan, and is widely considered one of Asia’s most prolific choreographers. 
+
+Huang’s groundbreaking and award-winning work, HUANG YI & KUKA, in which he and his dancers perform alongside an industrial robot he programmed, has opened the Ars Electronica Festival (Austria), TED Conference (Vancouver), and toured globally since 2015 including in Australia, the Americas, Europe, Asia, and the UAE, including The Arts Center at NYU Abu Dhabi. 
+
+Huang Yi premiered Under the Horizon, a hybrid opera, in collaboration with Berlin-based Ryoichi Kurokawa and the Netherlands Chamber Choir, in Holland and Taiwan in 2018. In February 2019 he premiered A Million Miles Away at Taiwan's celebrated National Theater. His latest work, Ink, premiered at the National Taichung Theater and the National Theater in Taipei in June 2023.
+
 
 
 What is a DAW?
@@ -293,24 +310,6 @@ In-class workshop - Part 2
     - Find project directory (e.g. 250127 Demo Project)
     - Right-click on directory -> Compress to create zip (e.g. 250127 Demo Project.zip)
 - Practice mapping, recording, and exporting
-
-
-### Huang Yi - INK
-
-Book your ticket to [INK - Huang Yi Studio +](https://publicprograms.nyuad.nyu.edu/en/the-arts-center/events/2026/february/ink-huang-yi.html)
-
-*Upcoming workshop and talk:*
-
-Dance Workshop: Whispers of the Body - A Workshop on Awareness and Movement Dialogue with Huang Yi from Ink on 2 February at 6:30pm. [Register here](https://publicprograms.nyuad.nyu.edu/en/the-arts-center/events/2026/february/whispers-of-the-body.html)
-
-Artist Talk: Art, Movement, and Gratitude with Huang Yi on 3 February at 6:30pm. [Register here](https://publicprograms.nyuad.nyu.edu/en/the-arts-center/events/2026/february/art-movement-and-gratitude.html)
-
-Taiwanese dancer, choreographer, inventor, and videographer Huang Yi’s pioneering work is steeped in his fascination with the partnership between humans and robots. He interweaves continuous movement with mechanical and multimedia elements to create a form of dance which corresponds with the flow of data, effectively making the performer a dancing instrument. Named by Dance Magazine as one of the “25 to Watch,” Huang was immersed in the arts at a young age, spending much of his childhood in his parents’ studio watching them teach tango and learning to paint alongside his father. Huang has been Artist-in-Residence of the National Theater & Concert Hall, the National Performing Arts Center, Taiwan, and is widely considered one of Asia’s most prolific choreographers. 
-
-Huang’s groundbreaking and award-winning work, HUANG YI & KUKA, in which he and his dancers perform alongside an industrial robot he programmed, has opened the Ars Electronica Festival (Austria), TED Conference (Vancouver), and toured globally since 2015 including in Australia, the Americas, Europe, Asia, and the UAE, including The Arts Center at NYU Abu Dhabi. 
-
-Huang Yi premiered Under the Horizon, a hybrid opera, in collaboration with Berlin-based Ryoichi Kurokawa and the Netherlands Chamber Choir, in Holland and Taiwan in 2018. In February 2019 he premiered A Million Miles Away at Taiwan's celebrated National Theater. His latest work, Ink, premiered at the National Taichung Theater and the National Theater in Taipei in June 2023.
-
 
 ### Homework - Week 2.2
 
