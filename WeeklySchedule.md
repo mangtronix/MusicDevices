@@ -256,11 +256,33 @@ In-class workshop - Part 1
         - Live -> Settings -> Audio -> Audio Output Device -> Focusrite Scarlett
     - Physical volume knob above headphone jack also controls headphone volume
     - Save project to "SAVE HERE" drive
-    - Checking MIDI settings
+    - Ableton Live settings
         - Settings -> Link, Tempo & MIDI
             - Input Ports -> MPK Mini -> Track X, Remote X
             - Record, Warp & Launch -> Exclusive Arm: Enabled
-            - Audio -> Audio Output Device: Focusrite Scarlett    
+            - Audio -> Audio Output Device: Focusrite Scarlett
+        - View -> Info: Enabled
+    - Create a new set
+    - Create a new drums track
+        - Drag Browser -> 808 Core Kit into the session view to a create drum track
+        - Record enable the track by clicking the small note icon on the track
+        - Play the controller pads to hear drums
+    - Create a new MIDI instrument track
+        - Drag Browser -> Synth Piano into the session view to create a MIDI track
+        - Record enable the track by clicking the small note icon on the track
+        - Play the controller keys to hear the notes
+    - Adjust Piano Synth sound parameters
+        - Click on the Synth Piano track
+        - Make sure View -> Device View is set to see the instrument parameters
+        - Adjust parameters like Envelope -> Release and Filter -> Freq to change the sound
+    - Map Piano Synth parameters to MIDI controller
+        - Click MIDI icon in upper right
+        - Mappable parameters turn blue
+        - Click on Filter -> Freq
+        - Turn a knob on the MIDI controller
+        - Click on MIDI to disable mapping
+        - Turn physical knob - the onscreen knob should also update
+        - Repeat for the Release parameter
       
 - Follow first two lessons from [Ableton Live for Beginners (Taetro / YouTube)](https://www.youtube.com/watch?v=RSnjD6xe5bM&list=PLoO2tOP2r-XsXH0lybWl9zMvYp3lpLF46)
     - [Ableton Live For Beginners (pt. 1)
