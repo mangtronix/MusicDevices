@@ -289,7 +289,7 @@ In-class workshop - Part 2
 - Practice mapping, recording, and exporting
 
 
-### Huang Yi - 
+### Huang Yi - INK
 
 Book your ticket to [INK - Huang Yi Studio +](https://publicprograms.nyuad.nyu.edu/en/the-arts-center/events/2026/february/ink-huang-yi.html)
 
