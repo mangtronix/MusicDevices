@@ -345,13 +345,6 @@ In-class workshop - Part 2
 
 Due before start of next class
 
-- **Pick up** course textbook *Push, Turn, Move* from Bookstore
-- **Read** *Push, Turn, Move* pp. 14-27, 34
-    - No response required
-
-- Think of some questions to ask Huang Yi during his artist visit next class
-
-
 <!--
 - **Read** [Microtonality and the Struggle for Fretlessness in the Digital Age
  (CTM)](https://www.ctm-festival.de/magazine/microtonality-and-the-struggle-for-fretlessness-in-the-digital-age)
@@ -375,13 +368,15 @@ Due before start of next class
         - [Explore the tuning systems in Live 12 (tuning.ableton.com)](https://tuning.ableton.com/introduction/where-to-go-from-here/)
 -->
 
-Due Wednesday February 4
 - **Create** a short musical composition in Ableton Live 12
 - **See Brightspace -> Discussion -> Individual Exercises** for details
 - **Post** your work in the discussion forum
     - See Brightspace->Discussions->Exercises for details
 - **Be ready** to show / discuss the work in class
 
+- **Pick up** course textbook *Push, Turn, Move* from Bookstore
+
+- **Think** of some questions to ask Huang Yi during his artist visit next class
 
 ---
 
@@ -405,6 +400,22 @@ Song Structures
 - ["Bury It" song structure (learningmusic.ableton.com)](https://learningmusic.ableton.com/song-structure/bury-it.html)
  
 
+### Homework Week 3.1
+Due before start of next class
+- **Read** *Push, Turn, Move* pp. 14-27, 34
+    - No response required
+
+- **Review** Sxip Shiry bio and videos below. Think of some questions to ask him when he visits our class!
+
+## Week 3.2
+### Meet in IM Lab - C3-029
+
+### Guest Artist: Sxip Shiry
+[Sxip Shiry](https://www.sxipshireymusic.com/) is an American electric-acoustic composer, performer, and story-teller. He is going to stay a month on campus for research on creating a live version of his performance The Gauntlet. Sxip is known for working with found objects, traditional and rare modified instruments, as well as computers and other electronic instruments, like in these videos: 
+- [Sxip Shirey: Pandora (YouTube)](https://www.youtube.com/watch?v=oxhYhFkhYoE)
+- [RuckUS2020 -- Sxip Shirey and Coco Karol](https://www.youtube.com/watch?v=evzLgj4iHbA)
+- Bio: [https://www.sxipshireymusic.com/about](https://www.sxipshireymusic.com/about)
+
 Hardware kit
 - [Adafruit ESP32-S3 Reverse TFT Feather (Adafruit)](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/overview)
     - Uses Adafruit [Feather](https://learn.adafruit.com/adafruit-feather/overview) form factor
@@ -426,24 +437,6 @@ Hardware kit
     - [NYUAD IM Resources (nyuadim)](https://www.nyuadim.com/resources/)
         - Lab hours
         - [Connect2 Arts Booking (Intranet)](https://nyuad-artsbooking.nyu.edu/)
-
-
-### Homework Week 3.1
-#### Guest Artist: Huang Yi
-Taiwanese Choreographer Huang Yi , presenting his performance "Ink" dancing along with an industrial robot he programmed, more info on the performance and his bio here: https://publicprograms.nyuad.nyu.edu/en/the-arts-center/events/2026/february/ink-huang-yi.html
-
-Due before start of next class
-
-- **Review** Sxip Shiry bio and videos below. Think of some questions to ask him when he visits our class!
-
-## Week 3.2
-### Meet in IM Lab - C3-029
-
-### Guest Artist: Sxip Shiry
-[Sxip Shiry](https://www.sxipshireymusic.com/) is an American electric-acoustic composer, performer, and story-teller. He is going to stay a month on campus for research on creating a live version of his performance The Gauntlet. Sxip is known for working with found objects, traditional and rare modified instruments, as well as computers and other electronic instruments, like in these videos: 
-- [Sxip Shirey: Pandora (YouTube)](https://www.youtube.com/watch?v=oxhYhFkhYoE)
-- [RuckUS2020 -- Sxip Shirey and Coco Karol](https://www.youtube.com/watch?v=evzLgj4iHbA)
-- Bio: [https://www.sxipshireymusic.com/about](https://www.sxipshireymusic.com/about)
 
 Workshop: CircuitPython / ESP32-S3
 - [ESP32-S3 Reverse TFT Feather](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/overview)
