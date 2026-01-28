@@ -258,7 +258,7 @@ In-class workshop - Part 1
     - Save project to "SAVE HERE" drive
     - Ableton Live settings
         - Settings -> Link, Tempo & MIDI
-            - Input Ports -> MPK Mini -> Track X, Remote X
+            - Input Ports -> MiniLab MKII -> Track X, Remote X
             - Record, Warp & Launch -> Exclusive Arm: Enabled
             - Audio -> Audio Output Device: Focusrite Scarlett
         - View -> Info: Enabled
