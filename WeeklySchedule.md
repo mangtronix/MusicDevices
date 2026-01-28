@@ -187,7 +187,7 @@ Applied music theory, Western and beyond
 ## Week 2.2
 **Announcements**
 - [Tamass Festival](https://publicprograms.nyuad.nyu.edu/en/the-arts-center/events/2026/january/tamaas-festival.html) - Thursday in front of the Arts Center
-    - Featuring [Al Qasr](https://www.youtube.com/watch?v=jtD_AjWVAYc&list=RDjtD_AjWVAYc&start_radio=1)
+    - Featuring [Al-Qasar القصر](https://www.youtube.com/watch?v=jtD_AjWVAYc&list=RDjtD_AjWVAYc&start_radio=1)
 - Huang Yi guest visit next class
 
 ### Huang Yi - INK
