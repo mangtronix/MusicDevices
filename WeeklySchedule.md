@@ -185,6 +185,12 @@ Applied music theory, Western and beyond
             - Settings -> Get Ableton Live Lite
 
 ## Week 2.2
+**Announcements**
+- [Tamass Festival](https://publicprograms.nyuad.nyu.edu/en/the-arts-center/events/2026/january/tamaas-festival.html) - Thursday in front of the Arts Center
+    - Featuring [Al Qasr](https://www.youtube.com/watch?v=jtD_AjWVAYc&list=RDjtD_AjWVAYc&start_radio=1)
+- Huang Yi guest visit next class, see details below
+
+
 What is a DAW?
 - A Digital Audio Workstation (DAW) is software that allows you to record, edit, and produce audio
 - [What is a DAW? Your guide to digital audio workstations (Avid)](https://www.avid.com/resource-center/what-is-a-daw)
