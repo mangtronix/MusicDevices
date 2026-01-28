@@ -373,6 +373,10 @@ Due before start of next class
     - See Brightspace->Discussions->Exercises for details
 - **Be ready** to show / discuss the work in class
 
+- **Pick up** course textbook *Push, Turn, Move* from Bookstore
+- **Read** *Push, Turn, Move* pp. 14-27, 34
+    - No response required
+
 - Think of some questions to ask Huang Yi during his artist visit next class
 
 ---
@@ -385,7 +389,7 @@ Due before start of next class
 
 - Review homework
 
-Overview of music devices
+Some example music devices
 - [Korg Volca Keys](https://www.korg.com/us/products/dj/volca_keys/)
     - Basic synthesizer
 - [Roland TR-808](https://en.wikipedia.org/wiki/Roland_TR-808)
@@ -426,9 +430,6 @@ Taiwanese Choreographer Huang Yi , presenting his performance "Ink" dancing alon
 
 Due before start of next class
 
-- **Pick up** course textbook *Push, Turn, Move* from Bookstore
-- **Read** *Push, Turn, Move* pp. 14-27, 34
-    - No response required
 - **Review** Sxip Shiry bio and videos below. Think of some questions to ask him when he visits our class!
 
 ## Week 3.2
