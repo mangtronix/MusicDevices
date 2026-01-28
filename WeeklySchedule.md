@@ -345,6 +345,13 @@ In-class workshop - Part 2
 
 Due before start of next class
 
+- **Pick up** course textbook *Push, Turn, Move* from Bookstore
+- **Read** *Push, Turn, Move* pp. 14-27, 34
+    - No response required
+
+- Think of some questions to ask Huang Yi during his artist visit next class
+
+
 <!--
 - **Read** [Microtonality and the Struggle for Fretlessness in the Digital Age
  (CTM)](https://www.ctm-festival.de/magazine/microtonality-and-the-struggle-for-fretlessness-in-the-digital-age)
@@ -367,17 +374,14 @@ Due before start of next class
         - [Ableton Tuning Guide](https://tuning.ableton.com/)
         - [Explore the tuning systems in Live 12 (tuning.ableton.com)](https://tuning.ableton.com/introduction/where-to-go-from-here/)
 -->
+
+Due Wednesday February 4
 - **Create** a short musical composition in Ableton Live 12
 - **See Brightspace -> Discussion -> Individual Exercises** for details
 - **Post** your work in the discussion forum
     - See Brightspace->Discussions->Exercises for details
 - **Be ready** to show / discuss the work in class
 
-- **Pick up** course textbook *Push, Turn, Move* from Bookstore
-- **Read** *Push, Turn, Move* pp. 14-27, 34
-    - No response required
-
-- Think of some questions to ask Huang Yi during his artist visit next class
 
 ---
 
