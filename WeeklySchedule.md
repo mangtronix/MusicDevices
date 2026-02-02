@@ -705,11 +705,7 @@ Due before start of next class
 
 ## Week 4.2
 ### Meet in C3-116
-Class Visit - KOKOKO!
-- [KOKOKO!](https://www.kokokomusic.com/)
-- [KOKOKO!: NPR Music Tiny Desk Concert](https://www.youtube.com/watch?v=wA7MgcgqaZA)
-- [Performance Thursday 7pm](https://publicprograms.nyuad.nyu.edu/en/the-arts-center/events/2025/february/tamaas-festival.html)
-
+- Dustin Foster IM Lab Manager introduction
 
 Reading Discussion
 - Push, Turn, Move interviews
