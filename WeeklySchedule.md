@@ -408,7 +408,7 @@ Due before start of next class
 - **Review** Sxip Shiry bio and videos below. Think of some questions to ask him when he visits our class!
 
 ## Week 3.2
-### Meet in IM Lab - C3-029
+### Meet in Music Lab - C3-116 as usual
 
 ### Guest Artist: Sxip Shiry
 [Sxip Shiry](https://www.sxipshireymusic.com/) is an American electric-acoustic composer, performer, and story-teller. He is going to stay a month on campus for research on creating a live version of his performance The Gauntlet. Sxip is known for working with found objects, traditional and rare modified instruments, as well as computers and other electronic instruments, like in these videos: 
