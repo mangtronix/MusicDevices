@@ -532,12 +532,14 @@ Enabling USB MIDI
 
 Due before start of next class
 
+<!--
 - **Sign** [IM Program Policies](https://docs.google.com/forms/d/e/1FAIpQLSfCx-YtOJYsbzMRJEVwXrCxGyCoN2VpmJYbAhEhydcT_tIzmA/viewform) at nyuadim.com
 - **Sign up** for Autodesk Fusion personal / education license
     - [Autodesk Fusion](https://www.autodesk.com/products/fusion-360/personal)
     - Will be used later in the course
 - **Read** *Push, Turn, Move* pp. 14-27, 34
     - No response required
+-->
 <!--
 - **Peruse** the Control section of *Push, Turn, Move* pp. 60-123 to see a catalogue of different physical UI elements
     - Can skip the interviews for now
@@ -549,10 +551,18 @@ Due before start of next class
     - Your controller should send note on/off messages as well as continous controller messages
     - Use your MIDI controller to control sounds in Ableton Live
 -->
+
+<!-- Move to later
 - **Create** a CircuitPython sketch that responds to the 3 buttons
 - **Post** your work in the discussion forum
     - See [Brightspace->Discussions->Individual Exercises](https://brightspace.nyu.edu/d2l/le/435258/discussions/topics/532535/View) for details
 - **Be ready** to show / discuss your work in class
+-->
+
+Reading 2 - Musical Interface design
+  - See [Brightspace -> Discussions -> Reading 2](https://brightspace.nyu.edu/d2l/le/538990/discussions/topics/597774/View) for details
+
+** Bring a USB-C cable to the next class** for connecting to your CircuitPython board
 
 ---
 
