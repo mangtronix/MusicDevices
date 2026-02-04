@@ -562,8 +562,6 @@ Due before start of next class
 Reading 2 - Musical Interface design
   - See [Brightspace -> Discussions -> Reading 2](https://brightspace.nyu.edu/d2l/le/538990/discussions/topics/597774/View) for details
 
-** Bring a USB-C cable to the next class** for connecting to your CircuitPython board
-
 ---
 
 # Week 4
