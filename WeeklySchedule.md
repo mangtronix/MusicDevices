@@ -517,6 +517,9 @@ Reading 2 - Musical Interface design
 ## Week 4.1
 ### Meet in IM Lab this week
 - Review homework
+- Sound recording from Sxip Shirey workshop
+    - [Music_Devices_Sound_Stories.wav](https://drive.google.com/file/d/10uObyhR_rm90bhvbIESx3SbcLB_vDcXa/view?usp=sharing)
+    - loading a snippet into Simpler!
 - Start downloading these tools:
     - [Visual Studio Code](https://code.visualstudio.com/) - popular code editor
     - [Protokol](https://hexler.net/protokol#get) - MIDI monitoring tool
