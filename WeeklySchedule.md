@@ -547,7 +547,8 @@ Workshop: CircuitPython / ESP32-S3
         - Not all features supported by Arduino are supported on all boards
 - One time setup
     - [Install CircuitPython (Adafruit)](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/install-circuitpython)
-    - Update bootloader
+    - Do a complete factory reset to update to latest bootloader and CircuitPython 10.2
+        - Update bootloader
         - Lowest level of code running on the board, handles board startup
         - Follow instructions at bottom right [Install, Repair, or Update UF2 Bootloader](https://circuitpython.org/board/adafruit_feather_esp32s3_reverse_tft/)
     - Install CircuitPython 10.x
