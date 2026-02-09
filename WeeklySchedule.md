@@ -438,58 +438,6 @@ Hardware kit
         - Lab hours
         - [Connect2 Arts Booking (Intranet)](https://nyuad-artsbooking.nyu.edu/)
 
-Workshop: CircuitPython / ESP32-S3
-- [ESP32-S3 Reverse TFT Feather](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/overview)
-    - Microcontroller board that supports Arduino and CircuitPython
-    - Builtin screen, battery charger, connector for QT / I2C peripheral boards
-    - Supports Bluetooth Low Energy (Arduino only) and wifi (but not Enterprise wifi)
-- [CircuitPython](https://circuitpython.org/)
-    - Alternative to Arduino software that uses dynamically interpreted scripts (Python) rather than compiled code (C/C++)
-    - Supported on many of the same hardware boards as Arduino
-    - Development cycle
-        - Plug CircuitPython board to computer
-        - CIRCUITPY drive appears
-        - Edit code directly on the CIRCUITPY drive
-        - Hit save to start running your code
-    - Advantages
-        - For larger projects, much faster to see changes in code (no need to recompile entire program)
-        - Can drag and drop small media files to the CIRCUITPY drive and access through code
-    - Disadvantages
-        - Newer with relatively fewer examples
-        - Less access to low-level chip features like interrupts
-        - Not all features supported by Arduino are supported on all boards
-- One time setup
-    - [Install CircuitPython (Adafruit)](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/install-circuitpython)
-    - Update bootloader
-        - Lowest level of code running on the board, handles board startup
-        - Follow instructions at bottom right [Install, Repair, or Update UF2 Bootloader](https://circuitpython.org/board/adafruit_feather_esp32s3_reverse_tft/)
-    - Install CircuitPython 9.x
-        - CircuitPython interpreter will run our .py script files
-        - Includes code for making the CIRCUITPY drive appear
-        - Follow instructions to [Install CircuitPython](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/install-circuitpython)
-            - Download CircuitPython 9.x uf2
-            - Double click Reset button
-            - Drag and drop .uf2 file to FTHRS3BOOT
-            - Open CIRCUITPY drive
-            - Copy [boot.py](https://github.com/mangtronix/MusicDevices/blob/main/CircuitPython/boot.py) to the CIRCUITPY drive
-                - This file enable USB MIDI, which we'll use later
-            - Unplug and replug the board
-            - Check boot_out.txt on the CIRCUITPY drive, it should look like this
-```
-Adafruit CircuitPython 9.2.4 on 2025-01-29; Adafruit Feather ESP32-S3 Reverse TFT with ESP32S3
-Board ID:adafruit_feather_esp32s3_reverse_tft
-UID:468E3337EEC8
-boot.py output:
-Enabling USB MIDI
-```
-
-- [Install Mu editor](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/installing-mu-editor)
-- [CircuitPython Essentials](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/circuitpython-essentials)
-    - [Blink example](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/blink)
-    - [Digital input example](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/digital-input)
-    - [Digital input multiple buttons example](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/digital-input-multiple-buttons)
-    - [Neopixel example](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/neopixel)
-        - Note we have to install the Neopixel library in to CIRCUITPY/lib
 
 <!--
 - [Arduino IDE Setup for ESP32-S3 Reverse TFT Feather(Adafruit)](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/arduino-ide-setup-2)
@@ -567,17 +515,65 @@ Reading 2 - Musical Interface design
 # Week 4
 
 ## Week 4.1
+### Meet in IM Lab this week
 - Review homework
-- New printer this semester: [Prusa XL](https://www.prusa3d.com/product/original-prusa-xl-assembled-5-toolhead-3d-printer/)
 - Start downloading these tools:
     - [Visual Studio Code](https://code.visualstudio.com/) - popular code editor
     - [Protokol](https://hexler.net/protokol#get) - MIDI monitoring tool
     - [Flynth](https://www.fingerlab.net/portfolio/flynth) - MacOS simple synthesizer
 
-Controller example
-- [Arcana Instruments Strum Accessible Instrument (CDM)](https://www.synthtopia.com/content/2025/02/04/arcana-instruments-strum-accessible-instrument/)
-    - "The Arcana Strum is an example of adaptive technology, designed to be able to be used by people with a wide range of physical and cognitive abilities."
-    - [Arcana Strum (Arcana)](https://arcanainstruments.com/product/arcana-instrument/)
+Workshop: CircuitPython / ESP32-S3
+- [ESP32-S3 Reverse TFT Feather](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/overview)
+    - Microcontroller board that supports Arduino and CircuitPython
+    - Builtin screen, battery charger, connector for QT / I2C peripheral boards
+    - Supports Bluetooth Low Energy (Arduino only) and wifi (but not Enterprise wifi)
+- [CircuitPython](https://circuitpython.org/)
+    - Alternative to Arduino software that uses dynamically interpreted scripts (Python) rather than compiled code (C/C++)
+    - Supported on many of the same hardware boards as Arduino
+    - Development cycle
+        - Plug CircuitPython board to computer
+        - CIRCUITPY drive appears
+        - Edit code directly on the CIRCUITPY drive
+        - Hit save to start running your code
+    - Advantages
+        - For larger projects, much faster to see changes in code (no need to recompile entire program)
+        - Can drag and drop small media files to the CIRCUITPY drive and access through code
+    - Disadvantages
+        - Newer with relatively fewer examples
+        - Less access to low-level chip features like interrupts
+        - Not all features supported by Arduino are supported on all boards
+- One time setup
+    - [Install CircuitPython (Adafruit)](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/install-circuitpython)
+    - Update bootloader
+        - Lowest level of code running on the board, handles board startup
+        - Follow instructions at bottom right [Install, Repair, or Update UF2 Bootloader](https://circuitpython.org/board/adafruit_feather_esp32s3_reverse_tft/)
+    - Install CircuitPython 10.x
+        - CircuitPython interpreter will run our .py script files
+        - Includes code for making the CIRCUITPY drive appear
+        - Follow instructions to [Install CircuitPython](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/install-circuitpython)
+            - Download CircuitPython 10.x uf2
+            - Double click Reset button
+            - Drag and drop .uf2 file to FTHRS3BOOT
+            - Open CIRCUITPY drive
+            - Copy [boot.py](https://github.com/mangtronix/MusicDevices/blob/main/CircuitPython/boot.py) to the CIRCUITPY drive
+                - This file enable USB MIDI, which we'll use later
+            - Unplug and replug the board
+            - Check boot_out.txt on the CIRCUITPY drive, it should look like this
+```
+Adafruit CircuitPython 9.2.4 on 2025-01-29; Adafruit Feather ESP32-S3 Reverse TFT with ESP32S3
+Board ID:adafruit_feather_esp32s3_reverse_tft
+UID:468E3337EEC8
+boot.py output:
+Enabling USB MIDI
+```
+
+- [Install Mu editor](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/installing-mu-editor)
+- [CircuitPython Essentials](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/circuitpython-essentials)
+    - [Blink example](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/blink)
+    - [Digital input example](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/digital-input)
+    - [Digital input multiple buttons example](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/digital-input-multiple-buttons)
+    - [Neopixel example](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/neopixel)
+        - Note we have to install the Neopixel library in to CIRCUITPY/lib
  
 CircuitPython
 - [How do I learn Python?](https://learn.adafruit.com/welcome-to-circuitpython/how-do-i-learn-python "How do I learn Python?")
@@ -699,26 +695,19 @@ MIDI - Musical Instrument Digital Interface
             - Controller -> loopMIDI -> music app
 -->
 
-### Homework - Week 4.1
-
-Due before start of next class
-
-- **Read** an interview that interests you in *Push, Turn, Move*
-    - Summarize the points from the interview that most interest you in one paragraph
-    - What do you think is the most important contribution that the interviewee has made to electronic instrument interface design?
-    - What principles did you learn that you can apply to creating your own musical device?
-- **Post** your response in the discussion forum
-    - See Brightspace->Discussions->Readings for details
-- **Be ready** to discuss the topic in class
+### Homework
+- Make sure your board is running CircuitPython 10.x
 
 ## Week 4.2
-### Meet in C3-116
 - Dustin Foster IM Lab Manager introduction
 
 Reading Discussion
 - Push, Turn, Move interviews
 
-Device example
+Device examples
+- [Arcana Instruments Strum Accessible Instrument (CDM)](https://www.synthtopia.com/content/2025/02/04/arcana-instruments-strum-accessible-instrument/)
+    - "The Arcana Strum is an example of adaptive technology, designed to be able to be used by people with a wide range of physical and cognitive abilities."
+    - [Arcana Strum (Arcana)](https://arcanainstruments.com/product/arcana-instrument/)
 - [Circle Guitar (YouTube)](https://www.youtube.com/watch?v=gMPO4oCp_6I&t=41s)
     - Rotary wheel with plectrums strums guitar strings
     - Buttons and knobs control Ableton
