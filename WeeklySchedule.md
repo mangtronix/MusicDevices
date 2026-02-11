@@ -725,7 +725,10 @@ In Class Workshop
 - Run demo NeoKey code [demo_neokey.py](https://github.com/mangtronix/MusicDevices/blob/main/CircuitPython/demo_neokey.py)
     - [NeoKey 1x4 QT I2C](https://learn.adafruit.com/neokey-1x4-qt-i2c) - breakout board with keys, NeoPixels, and I2C controller
 - [Working with I2C devices](https://learn.adafruit.com/working-with-i2c-devices/overview)
-
+    - Digital serial bus using 4 wires (VCC, GND, SDA, SCL)
+    - Multiple devices can be on the same bus
+    - Each device on the bus must have a unique address (usually set by jumpers on the board)
+ 
 <!--
 Device examples
 - [Arcana Instruments Strum Accessible Instrument (CDM)](https://www.synthtopia.com/content/2025/02/04/arcana-instruments-strum-accessible-instrument/)
