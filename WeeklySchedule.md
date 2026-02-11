@@ -707,8 +707,18 @@ MIDI - Musical Instrument Digital Interface
 ## Week 4.2
 - Dustin Foster IM Lab Manager introduction
 
-Reading Discussion
-- Push, Turn, Move interviews
+### Music Devices Tutorial Videos
+[![MD NeoKey Code 250216_1 1 1](https://github.com/user-attachments/assets/e40368f5-4963-4202-8ec7-90fd50161495)](https://youtube.com/playlist?list=PLu4XhOBNpasRh4gECFa_265TXL6ad-JZS&si=HkdT5z8YmPgwWKKj)
+- [Music Devices YouTube Playlist](https://youtube.com/playlist?list=PLu4XhOBNpasRh4gECFa_265TXL6ad-JZS&si=HkdT5z8YmPgwWKKj)
+  - [Kit Assembly](https://youtu.be/vAgwV33kiOU?si=QKxKICChgR6l4rMc)
+  - [Code Loading](https://youtu.be/gwZex-az2hU?si=E-3hAvah1zIFgp7R)
+  - [NeoKey Code](https://youtu.be/80llQv0Q1WA?si=rYfYmgNDvY5Ikkgp)
+  - [NeoKey with NeoSlider](https://youtu.be/xHsPLdk2F3g?si=xtr8p8tNdD0yENxc)
+ 
+In Class Workshop
+- Make sure you board is on CircuitPython 10.x
+- Secure your screen with super glue
+- Assemble class kit
 
 Device examples
 - [Arcana Instruments Strum Accessible Instrument (CDM)](https://www.synthtopia.com/content/2025/02/04/arcana-instruments-strum-accessible-instrument/)
@@ -748,7 +758,8 @@ Workshop: MIDI controllers, wired and wireless
         - [Why is there so much latency on my android device?
  (Koala Sampler)](https://www.koalasampler.com/help/android/why-is-there-so-much-latency-on-my-android-device/)
 -->
-     
+
+<!--
 - Example projects in CircuitPython
     - Portable MIDI Controller (with 4x4 buttons)<br/>
           - Controller with 4x4 DIY button pad controlling DAW<br/>
@@ -785,6 +796,7 @@ Workshop: MIDI controllers, wired and wireless
               - [Youtube demo](https://youtu.be/WqyBWcjs_oY?si=cx8jjEUhm263ez9p)<br/>
               - [Website tutorial and code](https://educ8s.tv/oled-animation/)<br/>
               - <img src="Media/Animations.png" width="350"><br/>
+-->
 
 - Demo of using code.py to load another file
     - Keep your code in another file, e.g. ```midi_buttons.py```
@@ -854,13 +866,7 @@ Due before start of next class
 # Week 5
 
 ## Week 5.1
-### Music Devices Tutorial Videos
-[![MD NeoKey Code 250216_1 1 1](https://github.com/user-attachments/assets/e40368f5-4963-4202-8ec7-90fd50161495)](https://youtube.com/playlist?list=PLu4XhOBNpasRh4gECFa_265TXL6ad-JZS&si=HkdT5z8YmPgwWKKj)
-- [Music Devices YouTube Playlist](https://youtube.com/playlist?list=PLu4XhOBNpasRh4gECFa_265TXL6ad-JZS&si=HkdT5z8YmPgwWKKj)
-  - [Kit Assembly](https://youtu.be/vAgwV33kiOU?si=QKxKICChgR6l4rMc)
-  - [Code Loading](https://youtu.be/gwZex-az2hU?si=E-3hAvah1zIFgp7R)
-  - [NeoKey Code](https://youtu.be/80llQv0Q1WA?si=rYfYmgNDvY5Ikkgp)
-  - [NeoKey with NeoSlider](https://youtu.be/xHsPLdk2F3g?si=xtr8p8tNdD0yENxc)
+
 
 Example Devices
 - [Afternoon Generative Ambient (Vimeo)](https://vimeo.com/914151652?share=copy#t=0) by Mangtronix
