@@ -724,6 +724,7 @@ In Class Workshop
 - Assemble class kit
 - Run demo NeoKey code [demo_neokey.py](https://github.com/mangtronix/MusicDevices/blob/main/CircuitPython/demo_neokey.py)
     - [NeoKey 1x4 QT I2C](https://learn.adafruit.com/neokey-1x4-qt-i2c) - breakout board with keys, NeoPixels, and I2C controller
+    - Copy library files from [lib into CIRCUITPY/lib](https://github.com/mangtronix/MusicDevices/tree/main/CircuitPython/lib)
 - [Working with I2C devices](https://learn.adafruit.com/working-with-i2c-devices/overview)
     - Digital serial bus using 4 wires (VCC, GND, SDA, SCL)
     - Multiple devices can be on the same bus
