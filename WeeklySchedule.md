@@ -723,6 +723,7 @@ In Class Workshop
 - Download / clone GitHub code repository [https://github.com/mangtronix/MusicDevices](https://github.com/mangtronix/MusicDevices)
 - Assemble class kit
 - Run demo NeoKey code [demo_neokey.py](https://github.com/mangtronix/MusicDevices/blob/main/CircuitPython/demo_neokey.py)
+    - [NeoKey 1x4 QT I2C](https://learn.adafruit.com/neokey-1x4-qt-i2c) - breakout board with keys, NeoPixels, and I2C controller
 
 <!--
 Device examples
