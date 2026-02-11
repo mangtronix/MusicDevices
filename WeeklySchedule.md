@@ -705,7 +705,9 @@ MIDI - Musical Instrument Digital Interface
 - Make sure your board is running CircuitPython 10.x
 
 ## Week 4.2
+Announcements
 - Dustin Foster IM Lab Manager introduction
+- Class will be in IM Lab until further notice
 
 ### Music Devices Tutorial Videos
 [![MD NeoKey Code 250216_1 1 1](https://github.com/user-attachments/assets/e40368f5-4963-4202-8ec7-90fd50161495)](https://youtube.com/playlist?list=PLu4XhOBNpasRh4gECFa_265TXL6ad-JZS&si=HkdT5z8YmPgwWKKj)
@@ -718,8 +720,11 @@ MIDI - Musical Instrument Digital Interface
 In Class Workshop
 - Make sure you board is on CircuitPython 10.x
 - Secure your screen with super glue
+- Download / clone GitHub code repository [https://github.com/mangtronix/MusicDevices](https://github.com/mangtronix/MusicDevices)
 - Assemble class kit
+- Run demo NeoKey code [demo_neokey.py](https://github.com/mangtronix/MusicDevices/blob/main/CircuitPython/demo_neokey.py)
 
+<!--
 Device examples
 - [Arcana Instruments Strum Accessible Instrument (CDM)](https://www.synthtopia.com/content/2025/02/04/arcana-instruments-strum-accessible-instrument/)
     - "The Arcana Strum is an example of adaptive technology, designed to be able to be used by people with a wide range of physical and cognitive abilities."
@@ -727,6 +732,7 @@ Device examples
 - [Circle Guitar (YouTube)](https://www.youtube.com/watch?v=gMPO4oCp_6I&t=41s)
     - Rotary wheel with plectrums strums guitar strings
     - Buttons and knobs control Ableton
+-->
 
 <!--
 
