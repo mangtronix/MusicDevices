@@ -565,11 +565,12 @@ Workshop: CircuitPython / ESP32-S3
             - Unplug and replug the board
             - Check boot_out.txt on the CIRCUITPY drive, it should look like this
 ```
-Adafruit CircuitPython 9.2.4 on 2025-01-29; Adafruit Feather ESP32-S3 Reverse TFT with ESP32S3
+Adafruit CircuitPython 10.0.3 on 2025-10-17; Adafruit Feather ESP32-S3 Reverse TFT with ESP32S3
 Board ID:adafruit_feather_esp32s3_reverse_tft
-UID:468E3337EEC8
+UID:468E3337CD07
+MAC:C0:8A:CB:3F:58:53
 boot.py output:
-Enabling USB MIDI
+Enabling MIDI
 ```
 
 - [Install Mu editor](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/installing-mu-editor)
