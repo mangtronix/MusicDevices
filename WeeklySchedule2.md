@@ -9,16 +9,15 @@
 - [Week 5](WeeklySchedule.md#week-5) – Musical sensors
 - [Week 6](WeeklySchedule.md#week-6) – Rapid prototyping
 - [Week 7](WeeklySchedule.md#week-7) – Inspiration day / 3D Printing Workshop
-- 7-Week Finals Break
+- SPRING BREAK
 - [Week 8](#week-8) – Idea Lab / Project proposal development
 - [Week 9](#week-9) – Project proposal presentation, implementation starts!
-- SPRING BREAK
 - [Week 10](#week-10) – Telling your story / documenting your work
 - [Week 11](#week-11) – Guest Speaker, project production
 - [Week 12](#week-12) – Music performance, project feedback, user testing
 - [Week 13](#week-13) – Final project production / polish
 - [Week 14](#week-14) – Final project presentations
-- [IM SHOW](#im-show) – Show final project / Update final documentation
+- [IM SHOW](#im-show) Friday May 8 – Show final project / Update final documentation
 
 Note: Exact due dates for assignments and readings are indicated in Brightspace
 

@@ -4,21 +4,20 @@
 
 - [Week 1](#week-1) – Introduction / NIME, Music Devices, and Sound Installations
 - [Week 2](#week-2) – Applied music theory, Western and beyond
-- [Week 3](#week-3) – CircuitPython / Physical computing for NIME
+- [Week 3](#week-3) – Huang Yi class visit / CircuitPython and Physical computing for NIME
 - [Week 4](#week-4) – Musical interface design, MIDI
 - [Week 5](#week-5) – Musical sensors
 - [Week 6](#week-6) – Rapid prototyping
 - [Week 7](#week-7) – Inspiration day / 3D Printing Workshop
-- 7-Week Finals Break
+- SPRING BREAK
 - [Week 8](WeeklySchedule2.md#week-8) – Project proposal development
 - [Week 9](WeeklySchedule2.md#week-9) – Project proposal presentation, implementation starts!
-- SPRING BREAK
 - [Week 10](WeeklySchedule2.md#week-10) – Telling your story / documenting your work
 - [Week 11](WeeklySchedule2.md#week-11) – Guest Speaker, project production
 - [Week 12](WeeklySchedule2.md#week-12) – Music performance, project feedback, user testing
 - [Week 13](WeeklySchedule2.md#week-13) – Final project production / polish
 - [Week 14](WeeklySchedule2.md#week-14) – Final project presentations
-- [IM SHOW](WeeklySchedule2.md#im-show) – Show final project / Update final documentation
+- [IM SHOW](WeeklySchedule2.md#im-show) Friday May 8 – Show final project / Update final documentation
 
 Note: Exact due dates for assignments and readings are indicated in Brightspace
 
@@ -33,12 +32,20 @@ Introduction
     - What's your technical background?
     - What's your experience with music?
     - What are you hoping to achieve in the course?
-    - [Dunewind Resonator](https://kildall.com/newest-artworks/dunewindresonator) by Michael Ang and Scott Kildall
-    - [Sonoglider Duet](https://kildall.com/newest-artworks/sonogliderduet) by Michael Ang and Scott Kildall
+    - About Mang
+        - [Dunewind Resonator](https://michaelang.com/dunewindresonator) by Michael Ang and Scott Kildall
+        - [Sonoglider Duet](https://kildall.com/newest-artworks/sonogliderduet) by Michael Ang and Scott Kildall
+        - [Magnesynth](https://michaelang.com/magnesynth) by Michael Ang
 - Review syllabus
 - Textbook at bookstore
     - [Push, Turn, Move (Bjooks)](https://bjooks.com/products/push-turn-move-the-book)
 - Class kits will be distributed in class
+
+- Questions
+    - Who has done tool training Fall 2024 or later?
+    - Who has experience with Ableton Live or other music software?
+    - More interested in performance, practical devices, or installations?
+
 
 ## Week 1.2
 
@@ -64,8 +71,8 @@ Music Devices, NIME and Sound Installations
     - Some historical and current examples of commercial alternative MIDI controllers
  
 - Technologies used in the course
-    - [Arduino](https://www.arduino.cc/) - open source electronic prototyping platform
-        - [Adafruit ESP32-S3 Reverse TFT Feather](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/overview) - Arduino-compatible microcontroller board with builtin screen, battery charger, WiFi, and Bluetooth
+    - [CircuitPython](https://circuitpython.org/) - open source electronic prototyping platform
+        - [Adafruit ESP32-S3 Reverse TFT Feather](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/overview) - CircuitPython and Arduino-compatible microcontroller board with builtin screen, battery charger, WiFi, and Bluetooth
         - various inputs and sensors
         - motors, light, and other physical outputs are possible
     - [Ableton Live](https://www.ableton.com/en/live/) - music production DAW, Ableton 12 Suite available in music lab, Lite licenses can be found
@@ -76,6 +83,9 @@ Music Devices, NIME and Sound Installations
     - [Laser cutting](https://www.instructables.com/Laser-Cutting-Basics/)
     - Other software / hardware depending on interests!
 
+- Class visits
+    - [Huang Yi - Ink](https://publicprograms.nyuad.nyu.edu/en/the-arts-center/events/2026/february/ink-huang-yi.html)
+    - [Sxip Shirey](https://www.sxipshireymusic.com/)
 
 ### Homework - Week 1.2
 
@@ -88,7 +98,7 @@ Due before start of next class
 - **Read** [Moldover-The Godfather of Controllerism
 (MIDI Association)](https://midi.org/moldover-the-godfather-of-controllerism)
     - What makes Moldover's approach to controller design effective or not effective?
-    - How can combining controller design and sound design help you connect with an audience? What techniques are you planning to use?
+    - How can combining controller design and sound design help you connect with an audience?
 - **Post** your response in the discussion forum
     - See Brightspace->Discussions->Readings for details
 - **Be ready** to discuss the topic in class
@@ -99,11 +109,13 @@ Due before start of next class
 ## Week 2.1
 Announcements
 - Pick up book from Bookstore
-    - Push, Turn, Move 
-- Questions
-    - Who has done tool training Fall 2023 or later?
-    - Who has experience with Ableton Live or other music software?
-    - More interested in performance, practical devices, or installations?
+    - Push, Turn, Move
+- Brightspace discussions vs assignments
+- Software availability
+    - Ableton Live
+    - Autodesk Fusion
+- Guest visit
+    - Huang Yi - Taiwanese Choreographer Huang Yi , presenting his performance "Ink" dancing along with an industrial robot he programmed, more info on the performance Thu, Feb 5 @ 7:30pm and his bio [here](https://publicprograms.nyuad.nyu.edu/en/the-arts-center/events/2026/february/ink-huang-yi.html)
 
 - Discuss Controllerism reading
     - [The How To Show - Moldover (YouTube)](https://www.youtube.com/watch?v=IwjiUSnjrQk)
@@ -141,6 +153,15 @@ Sampling
   (YouTube)](https://www.youtube.com/watch?v=NUMBYbbG6tE)
 - [Live Finger Drumming - Gnarly (YouTube)](https://www.youtube.com/watch?v=W9s8aPM8kK0)
 
+What is a MIDI controller?
+- Digital controller designed for music
+- Communicates using the Musical Instrument Digital Interface (MIDI) standard
+    - Originally designed in the 1980s
+    - [MIDI Basics (Pro Audio)](https://theproaudiofiles.com/midi-basics/)
+- A MIDI controller by itself doesn't usually create sound
+- The controller sends / receives notes and controller information to the computer or other device (like a sound module, musical robot)
+- MIDI controller demo
+
 Applied music theory, Western and beyond
 - [Learn music theory in half an hour (Andrew Huang / YouTube)](https://youtu.be/rgaTLrZGlk0?si=n52AtMMm5wVyZF4t)
 - [Music Theory For Beginners (Taetro / YouTube)](https://www.youtube.com/watch?v=CluuHrr7HG4&list=PLoO2tOP2r-XvoFc7cnfYcomf1X0XcQvDC)
@@ -155,8 +176,38 @@ Applied music theory, Western and beyond
 - Watch [Learn music theory in half an hour (Andrew Huang / YouTube)](https://youtu.be/rgaTLrZGlk0?si=n52AtMMm5wVyZF4t)
     - No response required
 - Pick up class book from Bookstore
+- Who wants an Ableton Lite license?
+    - Live Lite (free license) comes with many hardware controllers and some apps
+        - iOS apps with free Live Lite license
+          - [Koala Sampler (Ableton license available on iOS only)](https://www.koalasampler.com/)
+            - Settings -> Get Live Lite
+          - [Ableton Note](https://www.ableton.com/en/note/)
+            - Settings -> Get Ableton Live Lite
 
 ## Week 2.2
+**Announcements**
+- [Tamass Festival](https://publicprograms.nyuad.nyu.edu/en/the-arts-center/events/2026/january/tamaas-festival.html) - Thursday in front of the Arts Center
+    - Featuring [Al-Qasar القصر](https://www.youtube.com/watch?v=jtD_AjWVAYc&list=RDjtD_AjWVAYc&start_radio=1)
+- Huang Yi guest visit next class
+
+### Huang Yi - INK
+
+Book your ticket to [INK - Huang Yi Studio +](https://publicprograms.nyuad.nyu.edu/en/the-arts-center/events/2026/february/ink-huang-yi.html)
+
+*Upcoming workshop and talk:*
+
+Dance Workshop: Whispers of the Body - A Workshop on Awareness and Movement Dialogue with Huang Yi from Ink on 2 February at 6:30pm. [Register here](https://publicprograms.nyuad.nyu.edu/en/the-arts-center/events/2026/february/whispers-of-the-body.html)
+
+Artist Talk: Art, Movement, and Gratitude with Huang Yi on 3 February at 6:30pm. [Register here](https://publicprograms.nyuad.nyu.edu/en/the-arts-center/events/2026/february/art-movement-and-gratitude.html)
+
+Taiwanese dancer, choreographer, inventor, and videographer Huang Yi’s pioneering work is steeped in his fascination with the partnership between humans and robots. He interweaves continuous movement with mechanical and multimedia elements to create a form of dance which corresponds with the flow of data, effectively making the performer a dancing instrument. Named by Dance Magazine as one of the “25 to Watch,” Huang was immersed in the arts at a young age, spending much of his childhood in his parents’ studio watching them teach tango and learning to paint alongside his father. Huang has been Artist-in-Residence of the National Theater & Concert Hall, the National Performing Arts Center, Taiwan, and is widely considered one of Asia’s most prolific choreographers. 
+
+Huang’s groundbreaking and award-winning work, HUANG YI & KUKA, in which he and his dancers perform alongside an industrial robot he programmed, has opened the Ars Electronica Festival (Austria), TED Conference (Vancouver), and toured globally since 2015 including in Australia, the Americas, Europe, Asia, and the UAE, including The Arts Center at NYU Abu Dhabi. 
+
+Huang Yi premiered Under the Horizon, a hybrid opera, in collaboration with Berlin-based Ryoichi Kurokawa and the Netherlands Chamber Choir, in Holland and Taiwan in 2018. In February 2019 he premiered A Million Miles Away at Taiwan's celebrated National Theater. His latest work, Ink, premiered at the National Taichung Theater and the National Theater in Taipei in June 2023.
+
+
+
 What is a DAW?
 - A Digital Audio Workstation (DAW) is software that allows you to record, edit, and produce audio
 - [What is a DAW? Your guide to digital audio workstations (Avid)](https://www.avid.com/resource-center/what-is-a-daw)
@@ -179,7 +230,7 @@ Workshop: Ableton, software synthesizers
     - Live 12 Suite is available in C3-116
     - Live Lite (free license) comes with many hardware controllers and some apps
         - iOS apps with free Live Lite license
-          - [Koala Sampler](https://www.koalasampler.com/)
+          - [Koala Sampler (Ableton license available on iOS only)](https://www.koalasampler.com/)
             - Settings -> Get Live Lite
           - [Ableton Note](https://www.ableton.com/en/note/)
             - Settings -> Get Ableton Live Lite
@@ -198,17 +249,46 @@ Workshop: Ableton, software synthesizers
     - Using Ableton tuning with VSTs
  
 In-class workshop - Part 1
+- Basic Ableton setup in the Music Lab
+    - To hear system audio (e.g. Chrome / YouTube) on headphones
+        - Apple -> System Settings -> Sound Output -> Scarlett
+    - To hear Ableton Live audio on headphones 
+        - Live -> Settings -> Audio -> Audio Output Device -> Focusrite Scarlett
+    - Physical volume knob above headphone jack also controls headphone volume
+    - Save project to "SAVE HERE" drive
+    - Ableton Live settings
+        - Settings -> Link, Tempo & MIDI
+            - Input Ports -> MiniLab MKII -> Track X, Remote X
+            - Record, Warp & Launch -> Exclusive Arm: Enabled
+            - Audio -> Audio Output Device: Focusrite Scarlett
+        - View -> Info: Enabled
+    - Create a new set
+    - Create a new drums track
+        - Drag Browser -> 808 Core Kit into the session view to a create drum track
+        - Record enable the track by clicking the small note icon on the track
+        - Play the controller pads to hear drums
+    - Create a new MIDI instrument track
+        - Drag Browser -> Synth Piano into the session view to create a MIDI track
+        - Record enable the track by clicking the small note icon on the track
+        - Play the controller keys to hear the notes
+    - Adjust Piano Synth sound parameters
+        - Click on the Synth Piano track
+        - Make sure View -> Device View is set to see the instrument parameters
+        - Adjust parameters like Envelope -> Release and Filter -> Freq to change the sound
+    - Map Piano Synth parameters to MIDI controller
+        - Click MIDI icon in upper right
+        - Mappable parameters turn blue
+        - Click on Filter -> Freq
+        - Turn a knob on the MIDI controller
+        - Click on MIDI to disable mapping
+        - Turn physical knob - the onscreen knob should also update
+        - Repeat for the Release parameter
+      
 - Follow first two lessons from [Ableton Live for Beginners (Taetro / YouTube)](https://www.youtube.com/watch?v=RSnjD6xe5bM&list=PLoO2tOP2r-XsXH0lybWl9zMvYp3lpLF46)
     - [Ableton Live For Beginners (pt. 1)
  (Taetro / YouTube)](https://youtu.be/RSnjD6xe5bM?si=b2DxnyvIicIyD0Ab)
     - [Ableton Live For Beginners (pt. 2) (Taetro / YouTube)](https://www.youtube.com/watch?v=PIYRINw6Kog&list=PLoO2tOP2r-XsXH0lybWl9zMvYp3lpLF46&index=2)
     - Start making some basic music
-    - To hear system audio (e.g. Chrome / YouTube) on headphones
-        - Apple -> System Settings -> Sound Output -> Scarlet
-    - To hear Ableton Live audio on headphones 
-        - Live -> Settings -> Audio -> Audio Output Device -> Focusrite Scarlet
-    - Physical volume knob above headphone jack also controls headphone volume
-    - Save project to "SAVE HERE" drive
 - Ask questions!
 - Start making some music
 
@@ -233,6 +313,7 @@ In-class workshop - Part 2
     - Press the big Record button
 - Exporting your composition as a .wav + .mp3
     - [How to Export an MP3 File from Ableton Live (Berklee)](https://online.berklee.edu/help/en_US/ableton-live/1656745-how-to-export-an-mp3-file-from-ableton-live)
+    - [How to Export MP3s (YouTube Short)](https://www.youtube.com/shorts/lv9f41Sjde0)
     - Switch to Arrangement view
     - Drag to select the time range you want to export
     - File -> Export Audio/Video
@@ -260,14 +341,6 @@ In-class workshop - Part 2
     - Right-click on directory -> Compress to create zip (e.g. 250127 Demo Project.zip)
 - Practice mapping, recording, and exporting
 
-Upcoming events at Arts Center
-- [Artist Talk - Finding a Voice Between Tradition and Contemporary](https://publicprograms.nyuad.nyu.edu/en/the-arts-center/events/2025/february/finding-a-voice-between-tradition-and-contemporary.html) - Feb 11
-- [Music Workshop with KOKOKO!](https://publicprograms.nyuad.nyu.edu/en/the-arts-center/events/2025/february/kokoko-workshop.html) - Feb 12
-    - DIY instruments
-    - They're visiting our class that day
-- [Music Workshop with Cimafunk](https://publicprograms.nyuad.nyu.edu/en/the-arts-center/events/2025/february/afrocuban-music-workshop.html) - Feb 12
-    - Afrocuban rhythms
-
 ### Homework - Week 2.2
 
 Due before start of next class
@@ -294,20 +367,28 @@ Due before start of next class
         - [Ableton Tuning Guide](https://tuning.ableton.com/)
         - [Explore the tuning systems in Live 12 (tuning.ableton.com)](https://tuning.ableton.com/introduction/where-to-go-from-here/)
 -->
+
 - **Create** a short musical composition in Ableton Live 12
 - **See Brightspace -> Discussion -> Individual Exercises** for details
 - **Post** your work in the discussion forum
     - See Brightspace->Discussions->Exercises for details
 - **Be ready** to show / discuss the work in class
 
+- **Pick up** course textbook *Push, Turn, Move* from Bookstore
+
+- **Think** of some questions to ask Huang Yi during his artist visit next class
+
 ---
 
 # Week 3
 
 ## Week 3.1
+
+### Guest Visit: Huang Yi
+
 - Review homework
 
-Overview of music devices
+Some example music devices
 - [Korg Volca Keys](https://www.korg.com/us/products/dj/volca_keys/)
     - Basic synthesizer
 - [Roland TR-808](https://en.wikipedia.org/wiki/Roland_TR-808)
@@ -318,6 +399,22 @@ Overview of music devices
 Song Structures
 - ["Bury It" song structure (learningmusic.ableton.com)](https://learningmusic.ableton.com/song-structure/bury-it.html)
  
+
+### Homework Week 3.1
+Due before start of next class
+- **Read** *Push, Turn, Move* pp. 14-27, 34
+    - No response required
+
+- **Review** Sxip Shiry bio and videos below. Think of some questions to ask him when he visits our class!
+
+## Week 3.2
+### Meet in Music Lab - C3-116 as usual
+
+### Guest Artist: Sxip Shiry
+[Sxip Shiry](https://www.sxipshireymusic.com/) is an American electric-acoustic composer, performer, and story-teller. He is going to stay a month on campus for research on creating a live version of his performance The Gauntlet. Sxip is known for working with found objects, traditional and rare modified instruments, as well as computers and other electronic instruments, like in these videos: 
+- [Sxip Shirey: Pandora (YouTube)](https://www.youtube.com/watch?v=oxhYhFkhYoE)
+- [RuckUS2020 -- Sxip Shirey and Coco Karol](https://www.youtube.com/watch?v=evzLgj4iHbA)
+- Bio: [https://www.sxipshireymusic.com/about](https://www.sxipshireymusic.com/about)
 
 Hardware kit
 - [Adafruit ESP32-S3 Reverse TFT Feather (Adafruit)](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/overview)
@@ -341,69 +438,6 @@ Hardware kit
         - Lab hours
         - [Connect2 Arts Booking (Intranet)](https://nyuad-artsbooking.nyu.edu/)
 
-
-### Homework Week 3.1
-
-Due before start of next class
-
-- **Pick up** course textbook *Push, Turn, Move* from Bookstore
-- **Read** *Push, Turn, Move* pp. 14-27, 34
-    - No response required
-
-## Week 3.2
-### Meet in IM Lab - C3-029
-Workshop: CircuitPython / ESP32-S3
-- [ESP32-S3 Reverse TFT Feather](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/overview)
-    - Microcontroller board that supports Arduino and CircuitPython
-    - Builtin screen, battery charger, connector for QT / I2C peripheral boards
-    - Supports Bluetooth Low Energy (Arduino only) and wifi (but not Enterprise wifi)
-- [CircuitPython](https://circuitpython.org/)
-    - Alternative to Arduino software that uses dynamically interpreted scripts (Python) rather than compiled code (C/C++)
-    - Supported on many of the same hardware boards as Arduino
-    - Development cycle
-        - Plug CircuitPython board to computer
-        - CIRCUITPY drive appears
-        - Edit code directly on the CIRCUITPY drive
-        - Hit save to start running your code
-    - Advantages
-        - For larger projects, much faster to see changes in code (no need to recompile entire program)
-        - Can drag and drop small media files to the CIRCUITPY drive and access through code
-    - Disadvantages
-        - Newer with relatively fewer examples
-        - Less access to low-level chip features like interrupts
-        - Not all features supported by Arduino are supported on all boards
-- One time setup
-    - [Install CircuitPython (Adafruit)](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/install-circuitpython)
-    - Update bootloader
-        - Lowest level of code running on the board, handles board startup
-        - Follow instructions at bottom right [Install, Repair, or Update UF2 Bootloader](https://circuitpython.org/board/adafruit_feather_esp32s3_reverse_tft/)
-    - Install CircuitPython 9.x
-        - CircuitPython interpreter will run our .py script files
-        - Includes code for making the CIRCUITPY drive appear
-        - Follow instructions to [Install CircuitPython](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/install-circuitpython)
-            - Download CircuitPython 9.x uf2
-            - Double click Reset button
-            - Drag and drop .uf2 file to FTHRS3BOOT
-            - Open CIRCUITPY drive
-            - Copy [boot.py](https://github.com/mangtronix/MusicDevices/blob/main/CircuitPython/boot.py) to the CIRCUITPY drive
-                - This file enable USB MIDI, which we'll use later
-            - Unplug and replug the board
-            - Check boot_out.txt on the CIRCUITPY drive, it should look like this
-```
-Adafruit CircuitPython 9.2.4 on 2025-01-29; Adafruit Feather ESP32-S3 Reverse TFT with ESP32S3
-Board ID:adafruit_feather_esp32s3_reverse_tft
-UID:468E3337EEC8
-boot.py output:
-Enabling USB MIDI
-```
-
-- [Install Mu editor](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/installing-mu-editor)
-- [CircuitPython Essentials](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/circuitpython-essentials)
-    - [Blink example](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/blink)
-    - [Digital input example](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/digital-input)
-    - [Digital input multiple buttons example](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/digital-input-multiple-buttons)
-    - [Neopixel example](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/neopixel)
-        - Note we have to install the Neopixel library in to CIRCUITPY/lib
 
 <!--
 - [Arduino IDE Setup for ESP32-S3 Reverse TFT Feather(Adafruit)](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/arduino-ide-setup-2)
@@ -446,12 +480,14 @@ Enabling USB MIDI
 
 Due before start of next class
 
+<!--
 - **Sign** [IM Program Policies](https://docs.google.com/forms/d/e/1FAIpQLSfCx-YtOJYsbzMRJEVwXrCxGyCoN2VpmJYbAhEhydcT_tIzmA/viewform) at nyuadim.com
 - **Sign up** for Autodesk Fusion personal / education license
     - [Autodesk Fusion](https://www.autodesk.com/products/fusion-360/personal)
     - Will be used later in the course
 - **Read** *Push, Turn, Move* pp. 14-27, 34
     - No response required
+-->
 <!--
 - **Peruse** the Control section of *Push, Turn, Move* pp. 60-123 to see a catalogue of different physical UI elements
     - Can skip the interviews for now
@@ -463,27 +499,87 @@ Due before start of next class
     - Your controller should send note on/off messages as well as continous controller messages
     - Use your MIDI controller to control sounds in Ableton Live
 -->
+
+<!-- Move to later
 - **Create** a CircuitPython sketch that responds to the 3 buttons
 - **Post** your work in the discussion forum
     - See [Brightspace->Discussions->Individual Exercises](https://brightspace.nyu.edu/d2l/le/435258/discussions/topics/532535/View) for details
 - **Be ready** to show / discuss your work in class
+-->
+
+Reading 2 - Musical Interface design
+  - See [Brightspace -> Discussions -> Reading 2](https://brightspace.nyu.edu/d2l/le/538990/discussions/topics/597774/View) for details
 
 ---
 
 # Week 4
 
 ## Week 4.1
+### Meet in IM Lab this week
 - Review homework
-- New printer this semester: [Prusa XL](https://www.prusa3d.com/product/original-prusa-xl-assembled-5-toolhead-3d-printer/)
+- Sound recording from Sxip Shirey workshop
+    - [Music_Devices_Sound_Stories.wav](https://drive.google.com/file/d/10uObyhR_rm90bhvbIESx3SbcLB_vDcXa/view?usp=sharing)
+    - loading a snippet into Simpler!
 - Start downloading these tools:
     - [Visual Studio Code](https://code.visualstudio.com/) - popular code editor
     - [Protokol](https://hexler.net/protokol#get) - MIDI monitoring tool
     - [Flynth](https://www.fingerlab.net/portfolio/flynth) - MacOS simple synthesizer
 
-Controller example
-- [Arcana Instruments Strum Accessible Instrument (CDM)](https://www.synthtopia.com/content/2025/02/04/arcana-instruments-strum-accessible-instrument/)
-    - "The Arcana Strum is an example of adaptive technology, designed to be able to be used by people with a wide range of physical and cognitive abilities."
-    - [Arcana Strum (Arcana)](https://arcanainstruments.com/product/arcana-instrument/)
+Workshop: CircuitPython / ESP32-S3
+- [ESP32-S3 Reverse TFT Feather](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/overview)
+    - Microcontroller board that supports Arduino and CircuitPython
+    - Builtin screen, battery charger, connector for QT / I2C peripheral boards
+    - Supports Bluetooth Low Energy (Arduino only) and wifi (but not Enterprise wifi)
+- [CircuitPython](https://circuitpython.org/)
+    - Alternative to Arduino software that uses dynamically interpreted scripts (Python) rather than compiled code (C/C++)
+    - Supported on many of the same hardware boards as Arduino
+    - Development cycle
+        - Plug CircuitPython board to computer
+        - CIRCUITPY drive appears
+        - Edit code directly on the CIRCUITPY drive
+        - Hit save to start running your code
+    - Advantages
+        - For larger projects, much faster to see changes in code (no need to recompile entire program)
+        - Can drag and drop small media files to the CIRCUITPY drive and access through code
+    - Disadvantages
+        - Newer with relatively fewer examples
+        - Less access to low-level chip features like interrupts
+        - Not all features supported by Arduino are supported on all boards
+- One time setup
+    - [Install CircuitPython 10](Tutorials/CircuitPython_Install.md) 
+    - [Install CircuitPython (Adafruit)](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/install-circuitpython)
+    - Do a complete factory reset to update to latest bootloader and CircuitPython 10.2
+        - Update bootloader
+        - Lowest level of code running on the board, handles board startup
+        - Follow instructions at bottom right [Install, Repair, or Update UF2 Bootloader](https://circuitpython.org/board/adafruit_feather_esp32s3_reverse_tft/)
+    - Install CircuitPython 10.x
+        - CircuitPython interpreter will run our .py script files
+        - Includes code for making the CIRCUITPY drive appear
+        - Follow instructions to [Install CircuitPython](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/install-circuitpython)
+            - Download CircuitPython 10.x uf2
+            - Double click Reset button
+            - Drag and drop .uf2 file to FTHRS3BOOT
+            - Open CIRCUITPY drive
+            - Copy [boot.py](https://github.com/mangtronix/MusicDevices/blob/main/CircuitPython/boot.py) to the CIRCUITPY drive
+                - This file enable USB MIDI, which we'll use later
+            - Unplug and replug the board
+            - Check boot_out.txt on the CIRCUITPY drive, it should look like this
+```
+Adafruit CircuitPython 10.0.3 on 2025-10-17; Adafruit Feather ESP32-S3 Reverse TFT with ESP32S3
+Board ID:adafruit_feather_esp32s3_reverse_tft
+UID:468E3337CD07
+MAC:C0:8A:CB:3F:58:53
+boot.py output:
+Enabling MIDI
+```
+
+- [Install Mu editor](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/installing-mu-editor)
+- [CircuitPython Essentials](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/circuitpython-essentials)
+    - [Blink example](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/blink)
+    - [Digital input example](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/digital-input)
+    - [Digital input multiple buttons example](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/digital-input-multiple-buttons)
+    - [Neopixel example](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/neopixel)
+        - Note we have to install the Neopixel library in to CIRCUITPY/lib
  
 CircuitPython
 - [How do I learn Python?](https://learn.adafruit.com/welcome-to-circuitpython/how-do-i-learn-python "How do I learn Python?")
@@ -605,33 +701,44 @@ MIDI - Musical Instrument Digital Interface
             - Controller -> loopMIDI -> music app
 -->
 
-### Homework - Week 4.1
-
-Due before start of next class
-
-- **Read** an interview that interests you in *Push, Turn, Move*
-    - Summarize the points from the interview that most interest you in one paragraph
-    - What do you think is the most important contribution that the interviewee has made to electronic instrument interface design?
-    - What principles did you learn that you can apply to creating your own musical device?
-- **Post** your response in the discussion forum
-    - See Brightspace->Discussions->Readings for details
-- **Be ready** to discuss the topic in class
+### Homework
+- Make sure your board is running CircuitPython 10.x
 
 ## Week 4.2
-### Meet in C3-116
-Class Visit - KOKOKO!
-- [KOKOKO!](https://www.kokokomusic.com/)
-- [KOKOKO!: NPR Music Tiny Desk Concert](https://www.youtube.com/watch?v=wA7MgcgqaZA)
-- [Performance Thursday 7pm](https://publicprograms.nyuad.nyu.edu/en/the-arts-center/events/2025/february/tamaas-festival.html)
+Announcements
+- Dustin Foster IM Lab Manager introduction
+- Class will be in IM Lab until further notice
 
-
-Reading Discussion
-- Push, Turn, Move interviews
-
-Device example
+### Music Devices Tutorial Videos
+[![MD NeoKey Code 250216_1 1 1](https://github.com/user-attachments/assets/e40368f5-4963-4202-8ec7-90fd50161495)](https://youtube.com/playlist?list=PLu4XhOBNpasRh4gECFa_265TXL6ad-JZS&si=HkdT5z8YmPgwWKKj)
+- [Music Devices YouTube Playlist](https://youtube.com/playlist?list=PLu4XhOBNpasRh4gECFa_265TXL6ad-JZS&si=HkdT5z8YmPgwWKKj)
+  - [Kit Assembly](https://youtu.be/vAgwV33kiOU?si=QKxKICChgR6l4rMc)
+  - [Code Loading](https://youtu.be/gwZex-az2hU?si=E-3hAvah1zIFgp7R)
+  - [NeoKey Code](https://youtu.be/80llQv0Q1WA?si=rYfYmgNDvY5Ikkgp)
+  - [NeoKey with NeoSlider](https://youtu.be/xHsPLdk2F3g?si=xtr8p8tNdD0yENxc)
+ 
+In Class Workshop
+- Make sure you board is on CircuitPython 10.x
+- Secure your screen with super glue
+- Download / clone GitHub code repository [https://github.com/mangtronix/MusicDevices](https://github.com/mangtronix/MusicDevices)
+- Assemble class kit
+- Run demo NeoKey code [demo_neokey.py](https://github.com/mangtronix/MusicDevices/blob/main/CircuitPython/demo_neokey.py)
+    - [NeoKey 1x4 QT I2C](https://learn.adafruit.com/neokey-1x4-qt-i2c) - breakout board with keys, NeoPixels, and I2C controller
+    - Copy library files from [lib into CIRCUITPY/lib](https://github.com/mangtronix/MusicDevices/tree/main/CircuitPython/lib)
+- [Working with I2C devices](https://learn.adafruit.com/working-with-i2c-devices/overview)
+    - Digital serial bus using 4 wires (VCC, GND, SDA, SCL)
+    - Multiple devices can be on the same bus
+    - Each device on the bus must have a unique address (usually set by jumpers on the board)
+ 
+<!--
+Device examples
+- [Arcana Instruments Strum Accessible Instrument (CDM)](https://www.synthtopia.com/content/2025/02/04/arcana-instruments-strum-accessible-instrument/)
+    - "The Arcana Strum is an example of adaptive technology, designed to be able to be used by people with a wide range of physical and cognitive abilities."
+    - [Arcana Strum (Arcana)](https://arcanainstruments.com/product/arcana-instrument/)
 - [Circle Guitar (YouTube)](https://www.youtube.com/watch?v=gMPO4oCp_6I&t=41s)
     - Rotary wheel with plectrums strums guitar strings
     - Buttons and knobs control Ableton
+-->
 
 <!--
 
@@ -663,7 +770,8 @@ Workshop: MIDI controllers, wired and wireless
         - [Why is there so much latency on my android device?
  (Koala Sampler)](https://www.koalasampler.com/help/android/why-is-there-so-much-latency-on-my-android-device/)
 -->
-     
+
+<!--
 - Example projects in CircuitPython
     - Portable MIDI Controller (with 4x4 buttons)<br/>
           - Controller with 4x4 DIY button pad controlling DAW<br/>
@@ -700,6 +808,7 @@ Workshop: MIDI controllers, wired and wireless
               - [Youtube demo](https://youtu.be/WqyBWcjs_oY?si=cx8jjEUhm263ez9p)<br/>
               - [Website tutorial and code](https://educ8s.tv/oled-animation/)<br/>
               - <img src="Media/Animations.png" width="350"><br/>
+-->
 
 - Demo of using code.py to load another file
     - Keep your code in another file, e.g. ```midi_buttons.py```
@@ -769,13 +878,7 @@ Due before start of next class
 # Week 5
 
 ## Week 5.1
-### Music Devices Tutorial Videos
-[![MD NeoKey Code 250216_1 1 1](https://github.com/user-attachments/assets/e40368f5-4963-4202-8ec7-90fd50161495)](https://youtube.com/playlist?list=PLu4XhOBNpasRh4gECFa_265TXL6ad-JZS&si=HkdT5z8YmPgwWKKj)
-- [Music Devices YouTube Playlist](https://youtube.com/playlist?list=PLu4XhOBNpasRh4gECFa_265TXL6ad-JZS&si=HkdT5z8YmPgwWKKj)
-  - [Kit Assembly](https://youtu.be/vAgwV33kiOU?si=QKxKICChgR6l4rMc)
-  - [Code Loading](https://youtu.be/gwZex-az2hU?si=E-3hAvah1zIFgp7R)
-  - [NeoKey Code](https://youtu.be/80llQv0Q1WA?si=rYfYmgNDvY5Ikkgp)
-  - [NeoKey with NeoSlider](https://youtu.be/xHsPLdk2F3g?si=xtr8p8tNdD0yENxc)
+
 
 Example Devices
 - [Afternoon Generative Ambient (Vimeo)](https://vimeo.com/914151652?share=copy#t=0) by Mangtronix
