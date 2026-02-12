@@ -21,6 +21,7 @@ print("demo_rotaryneopixel")
 encoder_address = 0x37
 print("Using rotary encoder at address: ", hex(encoder_address))
 print("Make sure to solder the A0 jumper on the back of the board to change the address to 0x37")
+print("Turn to change hue, push and turn to change brightness")
 
 
 import board
@@ -44,7 +45,7 @@ seesaw.pin_mode(24, seesaw.INPUT_PULLUP)
 switch = digitalio.DigitalIO(seesaw, 24)
 
 pixel = neopixel.NeoPixel(seesaw, 6, 1)
-pixel.brightness = 0.25
+pixel.brightness = 0.2
 
 last_position = -1
 color = 0  # start at red
@@ -67,9 +68,9 @@ while True:
 
         else:  # If the button is pressed...
             # ...change the brightness.
-            if position > last_position:  # Increase the brightness.
-                pixel.brightness = min(1.0, pixel.brightness + 0.1)
-            else:  # Decrease the brightness.
+            if position > last_position: # Decrease the brightness.
                 pixel.brightness = max(0, pixel.brightness - 0.1)
+            else: # Increase the brightness.
+                pixel.brightness = min(1.0, pixel.brightness + 0.1)
 
     last_position = position
