@@ -8,7 +8,7 @@ import demo_neoslider
 #import i2c_scan
 
 #import demo_distance
-#import demo_rotary
+#import demo_encoder
 
 # import demo_slider_key # load python file and run it
 
