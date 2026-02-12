@@ -13,6 +13,16 @@
 
 print("demo_rotaryneopixel")
 
+# IMPORTANT§
+# The default address of 0x36 conflicts with the default address of the
+# ESP32-S3 Reverse TFT battery monitor. To use the rotary encoder we
+# can change the address by soldering the A0 jumper on the back of the
+# board to change the address to 0x37
+encoder_address = 0x37
+print("Using rotary encoder at address: ", hex(encoder_address))
+print("Make sure to solder the A0 jumper on the back of the board to change the address to 0x37")
+
+
 import board
 from rainbowio import colorwheel
 from adafruit_seesaw import seesaw, neopixel, rotaryio, digitalio
@@ -27,7 +37,7 @@ color_increment = 2
 
 i2c = board.I2C()  # uses board.SCL and board.SDA
 # i2c = board.STEMMA_I2C()  # For using the built-in STEMMA QT connector on a microcontroller
-seesaw = seesaw.Seesaw(i2c, 0x36)
+seesaw = seesaw.Seesaw(i2c, encoder_address)
 
 encoder = rotaryio.IncrementalEncoder(seesaw)
 seesaw.pin_mode(24, seesaw.INPUT_PULLUP)
