@@ -2,8 +2,10 @@
 # SPDX-License-Identifier: MIT
 #
 # Modified by Michael Ang for NYUAD IM Music Devices
-# - faster color cycling
-# - lower default brightness
+# - Use address 0x37 to avoid conflict with ESP32-S3 Reverse TFT battery monitor
+# - Faster color cycling
+# - Lower default brightness
+# - Additional debug output
 #
 # Instructions:
 # - rotate encoder to change color
@@ -11,7 +13,7 @@
 
 """I2C rotary encoder NeoPixel color picker and brightness setting example."""
 
-print("demo_rotaryneopixel")
+print("demo_encoder_neopixel")
 
 # IMPORTANT§
 # The default address of 0x36 conflicts with the default address of the
@@ -42,7 +44,7 @@ seesaw = seesaw.Seesaw(i2c, encoder_address)
 
 encoder = rotaryio.IncrementalEncoder(seesaw)
 seesaw.pin_mode(24, seesaw.INPUT_PULLUP)
-switch = digitalio.DigitalIO(seesaw, 24)
+button = digitalio.DigitalIO(seesaw, 24)
 
 pixel = neopixel.NeoPixel(seesaw, 6, 1)
 pixel.brightness = 0.2
@@ -50,14 +52,34 @@ pixel.brightness = 0.2
 last_position = -1
 color = 0  # start at red
 
+# Boolean to track button state so can detect when it is pressed and released as
+# discrete transitions
+button_was_held = False
+
 while True:
-    # negate the position to make clockwise rotation positive
-    position = -encoder.position
+    # Get the current encoder position. We could negate this value to change
+    # the direction of rotation if desired
+    position = encoder.position
+
+    # Debug output for the switch state and position
+    # button.value is False when the button is pressed
+    if not button.value:
+        # Button currently pressed
+        if not button_was_held:
+            # Button was just pressed
+            print("Button pressed")
+            button_was_held = True
+    else:
+        # Button currently not pressed
+        if button_was_held:
+            # Button was just released
+            print("Button released")
+            button_was_held = False
 
     if position != last_position:
-        print(position)
+        print("Position:", position)
 
-        if switch.value:
+        if button.value:
             # Change the LED color.
             if position > last_position:  # Advance forward through the colorwheel.
                 color += color_increment
@@ -68,7 +90,7 @@ while True:
 
         else:  # If the button is pressed...
             # ...change the brightness.
-            if position > last_position: # Decrease the brightness.
+            if position < last_position: # Decrease the brightness.
                 pixel.brightness = max(0, pixel.brightness - 0.1)
             else: # Increase the brightness.
                 pixel.brightness = min(1.0, pixel.brightness + 0.1)
