@@ -609,97 +609,6 @@ Visual Studio Code with CircuitPython
         - Click Start Monitoring
     - Note: you may have to reselect the port and click Start Monitoring if you manually reset the board
 
-MIDI - Musical Instrument Digital Interface
-- Standard for communication between digital instruments dating back to the 80s
-- Allows e.g. a controller keyboard to be hooked up to a synthesizer module, or computer to record notes from a controller and play them back on a software or hardware synthesizer
-- [Introduction to the MIDI Standard (Indiana University)](https://cecm.indiana.edu/361/midi.html)
-- [MIDI (Wikipedia)](https://en.wikipedia.org/wiki/MIDI) - comprehensive overview
-- MIDI 1.0 is a very basic protocol
-    - Uses 7-bit values (0-127)
-    - Common messages
-        - Note on/off
-            - Based on 12-tone piano keyboard (e.g. C, C#, D, D#, E, F)
-        - Continous controllers (CC) - e.g. knob value from 0-127
-            - Can suffer from "stair stepping" audible artifacts
-        - Pitch bend - 14-bit value from 0-16383
-            - Pitch bend of 8192 means "no bend" / wheel centered
-        - Modulation wheel - 14-bit value from 0-16383
-            - Used to add expression depending on specific synthesizer / patch, e.g. player moves the mod wheel to smoothly change the sound
-        - Clock, start, stop
-        - System Exclusive - non-standard messages, e.g. upload / download synthesizer patch from software editor
-    - Transmission speed / bandwidth is low (31250 bits per second, like an old modem)
-        - Have to limit the rate of control change messages
-        - [MIDI Advantages / Disadvantages (CCRMA)](https://ccrma.stanford.edu/~gary/controllers/midi.html)
-    - Designed as unidirectional protocol, sender to receiver
-        - e.g. keyboard -> sound module, MIDI keyboard -> computer -> synthesizer
-        - controller and receiver have to be in agreement on control mapping
-    - Not designed to represent fretless instruments or non-Western scales
-        - [Oud Taksim Bayātī (بياتي, Uşşâk, Bayat) by Hesham Hamra (YouTube)](https://www.youtube.com/watch?v=1DrzYlc8DAM)
-            - This performance would be very difficult to represent using MIDI as it uses notes outside the 12-tone Western scale and incorporates string articulations as an important aspect of the performance
-        - Playing quarter tone and "microtonal" scales can be accomplished using specialized software or hardware
-            - [47SOUL - Intro To Shamstep (YouTube)](https://www.youtube.com/watch?v=5N0phc4nK-0)
-                - The keyboardist makes use of a special device ([Kelfar AK tuning converter](https://kelfar.net/ak-5-pro-world-scale-tuning-converter/)) designed specifically to enable Arabic scales for live performance
-        - Demo of playing Maqam Bayati inside Ableton Live, using Western scale, Ableton tuning, and dedicated software instrument ([Taqsim SOLO](https://taqs.im/shop/solo/))
-        - What kind of music did you grow up with? What instruments do your favourite musicians play? How well do you feel these instruments are represented in electronic music?
-        - How do you think the instruments we have available affect the music we make and listen to?
-- [MIDI for Makers (Adafruit)](https://learn.adafruit.com/midi-for-makers)
-- MIDI 2.0
-    - Just released in 2020, starting to be used
-    - Allows bidirectional communication, "conversation" between devices
-        - e.g. controller can ask "are you a mixer?" and configure itself accordingly or ask the name of a parameter that is being controlled in order to show it on a display as it's being manipulated
-    - Higher resolution (e.g. 32-bit control values with 4 million steps)
-    - More controllers
-    - Better timing (e.g. play notes of chord together)
-    - [What Musicians & Artists need to know about MIDI 2.0 (MIDI Association)](https://midi.org/what-musicians-artists-need-to-know-about-midi-2-0)
-        - "Can MIDI 2.0 make it easier to have microtonal control and different non-western scales? Yes, MIDI 2.0 Voice Channel Messages allow Per Note precise control of the pitch of every note to better support non-western scales, arbitrary pitches, note retuning, dynamic pitch fluctuations or inflections, or to escape equal temperament when using the western 12 tone scale."
-    - A bit early for us to use MIDI 2.0 but something to keep an eye on
-        - [AM MIDI 2.0 Lib for Arduino (GitHub)](https://github.com/midi2-dev/AM_MIDI2.0Lib)
-
-- [MIDI for Makers (Adafruit)](https://learn.adafruit.com/midi-for-makers/overview)
-- [DIY USB Midi Controller With Arduino: a Beginner's Guide
-(Instructables)](https://www.instructables.com/DIY-USB-Midi-Controller-With-Arduino-a-Beginners-G/)
-- [Create a MIDI Device
- (Arduino tutorials)](https://docs.arduino.cc/tutorials/generic/midi-device/)
-- [How to Build Arduino MIDI Controllers - The Complete Guide (Nerd Musician / YouTube)](https://www.youtube.com/watch?v=IwfycC8rLos)
-- [MIDIUSB Library for Arduino
- (GitHub)](https://github.com/arduino-libraries/MIDIUSB)
-
-- MIDI button example for ESP32-S3
-    - [CircuitPython examples directory (GitHub)](https://github.com/mangtronix/MusicDevices/tree/main/CircuitPython)
-        - Copy libraries in ```/lib``` to ```CIRCUITPY/lib```
-    - [midi_demo.py (GitHub)](https://github.com/mangtronix/MusicDevices/blob/main/CircuitPython/midi_demo.py)
-        - Sends NoteOn and NoteOff
-    - [midi_buttons.py (GitHub)](https://github.com/mangtronix/MusicDevices/blob/main/CircuitPython/midi_buttons.py)
-        - Sends NoteOn / NoteOff for each button
-
-<!--
-- Wireless MIDI
-    - MIDI over classic / paired Bluetooth (older technique, not commonly used anymore)
-    - MIDI over WiFi
-        - Possible using [RTP-MIDI](https://midi.org/rtp-midi-or-midi-over-networks)
-        - Not easily accessible for end-users
-        - Generally complicated and difficult to use
-        - [Share MIDI information over a network in Audio MIDI Setup on Mac (Apple)](https://support.apple.com/en-ae/guide/audio-midi-setup/ams1012/mac)
-    - MIDI over Bluetooth LE (Low Energy)
-        - Allows wireless connection to iOS, Mac, Android, Windows
-        - Introduces some latency
-            - Can be surprisingly low, but with larger pauses after some time
-            - Competing for bandwidth with other devices like WiFi
-        - iOS
-            - Look for Bluetooth symbol in your app's MIDI settings
-            - Or use [midimittr](https://apps.apple.com/us/app/midimittr/id925495245) to find and connect BLE controller
-                - To connect a BLE controller go to Devices tab
-        - MacOS
-            - Audio MIDI Setup.app -> Window -> Show MIDI Studio -> (Bluetooth symbol)
-                - After connecting the BLE controller will show as regular MIDI source
-        - Android
-            - [MIDI BLE Connect](https://play.google.com/store/apps/details?id=com.mobileer.example.midibtlepairing&hl=en)
-        - Windows
-            - Create a virtual loopback MIDI port using [loopMIDI](https://www.tobias-erichsen.de/software/loopmidi.html)
-            - Use [BLE-MIDI Connect](https://apps.microsoft.com/detail/9nvmlzttwwvl?hl=en-US&gl=US) to scan for BLE controller and connect to loopback MIDI port
-            - Go into your app and select loopback MIDI port
-            - Controller -> loopMIDI -> music app
--->
 
 ### Homework
 - Make sure your board is running CircuitPython 10.x
@@ -860,6 +769,15 @@ Due before start of next class
 # Week 5
 
 ## Week 5.1
+I2C / QT addresses
+- [Working with I2C Devices (Adafruit)](https://learn.adafruit.com/working-with-i2c-devices/overview])
+- Each QT board has its own address and each board must have a unique address
+- We read and write to each board over the same I2C / QT bus (4 wire connector) by specifying the board's address
+- [Stemma QT / I2C connector on ESP32-S3 Feather board (Adafruit Pinouts)](https://learn.adafruit.com/adafruit-esp32-s3-feather/pinouts#stemma-qt-3115995)
+- [Music Devices I2C Addresses](https://docs.google.com/spreadsheets/d/1xVRkgUelCfqRvcu3c_-A4PI7lurgY0dIFDRF3tWYtEo/edit?usp=sharing)
+- **Note:** the NeoKey and NeoSlider each have the same default address (0x30). Cut the A3 jumper on the back of the NeoSlider to change its address to 0x38 (see [NeoSlider address](https://learn.adafruit.com/adafruit-neoslider?view=all#address-jumpers-3107357))
+- The QT Rotary encoder has the same default address as the onboard battery monitor (0x36) so we need to set the address of the Encoder to 0x37 by soldering across A0 on the back of the board (see below for pictures and code)
+
 Final kit assembly
 - [I2C QT Rotary encoder](https://learn.adafruit.com/adafruit-i2c-qt-rotary-encoder)
     - Gives us endless rotation, clicky button, and LED feedback
@@ -874,11 +792,100 @@ Final kit assembly
 
 ![Encoder_A0_soldered](https://github.com/user-attachments/assets/a8cb08cd-19a9-4510-af5d-6110931622e1)
 
-
+![MusicBase_v5](https://github.com/user-attachments/assets/20db618e-613b-47dd-9aae-af972aca10f5)
+Completed Music Base with [ESP32-S3](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/overview), [Encoder](https://learn.adafruit.com/adafruit-i2c-qt-rotary-encoder), [NeoKey 1x4](https://learn.adafruit.com/neokey-1x4-qt-i2c), and [NeoSlider](https://learn.adafruit.com/adafruit-neoslider)
  
+MIDI - Musical Instrument Digital Interface
+- Standard for communication between digital instruments dating back to the 80s
+- Allows e.g. a controller keyboard to be hooked up to a synthesizer module, or computer to record notes from a controller and play them back on a software or hardware synthesizer
+- [Introduction to the MIDI Standard (Indiana University)](https://cecm.indiana.edu/361/midi.html)
+- [MIDI (Wikipedia)](https://en.wikipedia.org/wiki/MIDI) - comprehensive overview
+- MIDI 1.0 is a very basic protocol
+    - Uses 7-bit values (0-127)
+    - Common messages
+        - Note on/off
+            - Based on 12-tone piano keyboard (e.g. C, C#, D, D#, E, F)
+        - Continous controllers (CC) - e.g. knob value from 0-127
+            - Can suffer from "stair stepping" audible artifacts
+        - Pitch bend - 14-bit value from 0-16383
+            - Pitch bend of 8192 means "no bend" / wheel centered
+        - Modulation wheel - 14-bit value from 0-16383
+            - Used to add expression depending on specific synthesizer / patch, e.g. player moves the mod wheel to smoothly change the sound
+        - Clock, start, stop
+        - System Exclusive - non-standard messages, e.g. upload / download synthesizer patch from software editor
+    - Transmission speed / bandwidth is low (31250 bits per second, like an old modem)
+        - Have to limit the rate of control change messages
+        - [MIDI Advantages / Disadvantages (CCRMA)](https://ccrma.stanford.edu/~gary/controllers/midi.html)
+    - Designed as unidirectional protocol, sender to receiver
+        - e.g. keyboard -> sound module, MIDI keyboard -> computer -> synthesizer
+        - controller and receiver have to be in agreement on control mapping
+    - Not designed to represent fretless instruments or non-Western scales
+        - [Oud Taksim Bayātī (بياتي, Uşşâk, Bayat) by Hesham Hamra (YouTube)](https://www.youtube.com/watch?v=1DrzYlc8DAM)
+            - This performance would be very difficult to represent using MIDI as it uses notes outside the 12-tone Western scale and incorporates string articulations as an important aspect of the performance
+        - Playing quarter tone and "microtonal" scales can be accomplished using specialized software or hardware
+            - [47SOUL - Intro To Shamstep (YouTube)](https://www.youtube.com/watch?v=5N0phc4nK-0)
+                - The keyboardist makes use of a special device ([Kelfar AK tuning converter](https://kelfar.net/ak-5-pro-world-scale-tuning-converter/)) designed specifically to enable Arabic scales for live performance
+        - Demo of playing Maqam Bayati inside Ableton Live, using Western scale, Ableton tuning, and dedicated software instrument ([Taqsim SOLO](https://taqs.im/shop/solo/))
+        - What kind of music did you grow up with? What instruments do your favourite musicians play? How well do you feel these instruments are represented in electronic music?
+        - How do you think the instruments we have available affect the music we make and listen to?
+- [MIDI for Makers (Adafruit)](https://learn.adafruit.com/midi-for-makers)
+- MIDI 2.0
+    - Just released in 2020, starting to be used
+    - Allows bidirectional communication, "conversation" between devices
+        - e.g. controller can ask "are you a mixer?" and configure itself accordingly or ask the name of a parameter that is being controlled in order to show it on a display as it's being manipulated
+    - Higher resolution (e.g. 32-bit control values with 4 million steps)
+    - More controllers
+    - Better timing (e.g. play notes of chord together)
+    - [What Musicians & Artists need to know about MIDI 2.0 (MIDI Association)](https://midi.org/what-musicians-artists-need-to-know-about-midi-2-0)
+        - "Can MIDI 2.0 make it easier to have microtonal control and different non-western scales? Yes, MIDI 2.0 Voice Channel Messages allow Per Note precise control of the pitch of every note to better support non-western scales, arbitrary pitches, note retuning, dynamic pitch fluctuations or inflections, or to escape equal temperament when using the western 12 tone scale."
+    - A bit early for us to use MIDI 2.0 but something to keep an eye on
+        - [AM MIDI 2.0 Lib for Arduino (GitHub)](https://github.com/midi2-dev/AM_MIDI2.0Lib)
 
+- [MIDI for Makers (Adafruit)](https://learn.adafruit.com/midi-for-makers/overview)
+- [DIY USB Midi Controller With Arduino: a Beginner's Guide
+(Instructables)](https://www.instructables.com/DIY-USB-Midi-Controller-With-Arduino-a-Beginners-G/)
+- [Create a MIDI Device
+ (Arduino tutorials)](https://docs.arduino.cc/tutorials/generic/midi-device/)
+- [How to Build Arduino MIDI Controllers - The Complete Guide (Nerd Musician / YouTube)](https://www.youtube.com/watch?v=IwfycC8rLos)
+- [MIDIUSB Library for Arduino
+ (GitHub)](https://github.com/arduino-libraries/MIDIUSB)
 
-- Sending MIDI from CircuitPython
+- MIDI button example for ESP32-S3
+    - [CircuitPython examples directory (GitHub)](https://github.com/mangtronix/MusicDevices/tree/main/CircuitPython)
+        - Copy libraries in ```/lib``` to ```CIRCUITPY/lib```
+    - [midi_demo.py (GitHub)](https://github.com/mangtronix/MusicDevices/blob/main/CircuitPython/midi_demo.py)
+        - Sends NoteOn and NoteOff
+    - [midi_buttons.py (GitHub)](https://github.com/mangtronix/MusicDevices/blob/main/CircuitPython/midi_buttons.py)
+        - Sends NoteOn / NoteOff for each button
+          
+Wireless MIDI
+    - MIDI over classic / paired Bluetooth (older technique, not commonly used anymore)
+    - MIDI over WiFi
+        - Possible using [RTP-MIDI](https://midi.org/rtp-midi-or-midi-over-networks)
+        - Not easily accessible for end-users
+        - Generally complicated and difficult to use
+        - [Share MIDI information over a network in Audio MIDI Setup on Mac (Apple)](https://support.apple.com/en-ae/guide/audio-midi-setup/ams1012/mac)
+    - MIDI over Bluetooth LE (Low Energy)
+        - Allows wireless connection to iOS, Mac, Android, Windows
+        - Introduces some latency
+            - Can be surprisingly low, but with larger pauses after some time
+            - Competing for bandwidth with other devices like WiFi
+        - iOS
+            - Look for Bluetooth symbol in your app's MIDI settings
+            - Or use [midimittr](https://apps.apple.com/us/app/midimittr/id925495245) to find and connect BLE controller
+                - To connect a BLE controller go to Devices tab
+        - MacOS
+            - Audio MIDI Setup.app -> Window -> Show MIDI Studio -> (Bluetooth symbol)
+                - After connecting the BLE controller will show as regular MIDI source
+        - Android
+            - [MIDI BLE Connect](https://play.google.com/store/apps/details?id=com.mobileer.example.midibtlepairing&hl=en)
+        - Windows
+            - Create a virtual loopback MIDI port using [loopMIDI](https://www.tobias-erichsen.de/software/loopmidi.html)
+            - Use [BLE-MIDI Connect](https://apps.microsoft.com/detail/9nvmlzttwwvl?hl=en-US&gl=US) to scan for BLE controller and connect to loopback MIDI port
+            - Go into your app and select loopback MIDI port
+            - Controller -> loopMIDI -> music app
+
+Sending MIDI from CircuitPython
     - Need to copy library files from [MusicDevices/CircuitPython/lib](https://github.com/mangtronix/MusicDevices/tree/main/CircuitPython/lib) to your ```CIRCUITPY/lib directory```
         - [MusicDevices repository zip file download](https://github.com/mangtronix/MusicDevices/archive/refs/heads/main.zip)
     - We are using the [adafruit_midi](https://docs.circuitpython.org/projects/midi/en/latest/api.html) library with the [usb_midi](https://docs.circuitpython.org/en/latest/shared-bindings/usb_midi/) library for transport of the MIDI messages over USB
@@ -948,15 +955,6 @@ Musical sensors
         - [Adafruit VL53L4CD Time of Flight Distance Sensor
 ](https://learn.adafruit.com/adafruit-vl53l4cd-time-of-flight-distance-sensor)
             - [CircuitPython example code (Adafruit)](https://learn.adafruit.com/adafruit-vl53l4cd-time-of-flight-distance-sensor/python-circuitpython#circuitpython-usage-3112891)
-
-
-I2C / QT addresses
-- [Working with I2C Devices (Adafruit)](https://learn.adafruit.com/working-with-i2c-devices/overview])
-- Each QT board has its own address and each board must have a unique address
-- We read and write to each board over the same I2C / QT bus (4 wire connector) by specifying the board's address
-- [Stemma QT / I2C connector on ESP32-S3 Feather board (Adafruit Pinouts)](https://learn.adafruit.com/adafruit-esp32-s3-feather/pinouts#stemma-qt-3115995)
-- [Music Devices I2C Addresses](https://docs.google.com/spreadsheets/d/1xVRkgUelCfqRvcu3c_-A4PI7lurgY0dIFDRF3tWYtEo/edit?usp=sharing)
-- **Note:** the NeoKey and NeoSlider each have the same default address (0x30). Cut the A3 jumper on the back of the NeoSlider to change its address to 0x38 (see [NeoSlider address](https://learn.adafruit.com/adafruit-neoslider?view=all#address-jumpers-3107357))
 
         
 
