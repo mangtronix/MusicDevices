@@ -774,9 +774,10 @@ I2C / QT addresses
 - Each QT board has its own address and each board must have a unique address
 - We read and write to each board over the same I2C / QT bus (4 wire connector) by specifying the board's address
 - [Stemma QT / I2C connector on ESP32-S3 Feather board (Adafruit Pinouts)](https://learn.adafruit.com/adafruit-esp32-s3-feather/pinouts#stemma-qt-3115995)
-- [Music Devices I2C Addresses](https://docs.google.com/spreadsheets/d/1xVRkgUelCfqRvcu3c_-A4PI7lurgY0dIFDRF3tWYtEo/edit?usp=sharing)
-- **Note:** the NeoKey and NeoSlider each have the same default address (0x30). Cut the A3 jumper on the back of the NeoSlider to change its address to 0x38 (see [NeoSlider address](https://learn.adafruit.com/adafruit-neoslider?view=all#address-jumpers-3107357))
-- The QT Rotary encoder has the same default address as the onboard battery monitor (0x36) so we need to set the address of the Encoder to 0x37 by soldering across A0 on the back of the board (see below for pictures and code)
+- [Music Devices I2C Addresses](https://docs.google.com/spreadsheets/d/1xVRkgUelCfqRvcu3c_-A4PI7lurgY0dIFDRF3tWYtEo/edit?usp=sharing) - default and recommended addresses for all components that we use
+- **Address notes**
+    - The NeoKey and NeoSlider each have the same default address (0x30). Cut the A3 jumper on the back of the NeoSlider to change its address to 0x38 (see [NeoSlider address](https://learn.adafruit.com/adafruit-neoslider?view=all#address-jumpers-3107357))
+    - The QT Rotary encoder has the same default address as the onboard battery monitor (0x36) so we need to set the address of the Encoder to 0x37 by soldering across A0 on the back of the board (see below for pictures and code)
 
 Final kit assembly
 - [I2C QT Rotary encoder](https://learn.adafruit.com/adafruit-i2c-qt-rotary-encoder)
