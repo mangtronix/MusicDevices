@@ -769,6 +769,8 @@ Due before start of next class
 # Week 5
 
 ## Week 5.1
+- Review homework
+
 I2C / QT addresses
 - [Working with I2C Devices (Adafruit)](https://learn.adafruit.com/working-with-i2c-devices/overview])
 - Each QT board has its own address and each board must have a unique address
