@@ -830,6 +830,7 @@ MIDI - Musical Instrument Digital Interface
         - What kind of music did you grow up with? What instruments do your favourite musicians play? How well do you feel these instruments are represented in electronic music?
         - How do you think the instruments we have available affect the music we make and listen to?
 - [MIDI for Makers (Adafruit)](https://learn.adafruit.com/midi-for-makers)
+
 - MIDI 2.0
     - Just released in 2020, starting to be used
     - Allows bidirectional communication, "conversation" between devices
@@ -850,6 +851,19 @@ MIDI - Musical Instrument Digital Interface
 - [How to Build Arduino MIDI Controllers - The Complete Guide (Nerd Musician / YouTube)](https://www.youtube.com/watch?v=IwfycC8rLos)
 - [MIDIUSB Library for Arduino
  (GitHub)](https://github.com/arduino-libraries/MIDIUSB)
+
+- Working with MIDI
+    - Tools to monitor MIDI messages
+        - [Protokol](https://hexler.net/protokol) - MIDI monitor for Mac
+        - [MidiView](https://hautetechnique.com/midi/midiview/) - MIDI monitor for Windows and Mac
+    - Simple MIDI synths
+        - [MIDI Piano](https://midipiano.freewebtools.net/) - simple MIDI piano. Requires Chrome browser.
+        - [Flynth](https://www.fingerlab.net/portfolio/flynth) - synthesizer for Mac
+            - Settings -> MIDI (enabled) -> Select MIDI device
+
+    - Ableton Live
+        - [MIDI Controller Setup and Mapping in Ableton Live](https://online.berklee.edu/help/ableton-live/1818195-midi-controller-setup-and-mapping-in-ableton-live)
+        - [MIDI mapping in Ableton Live](https://www.ableton.com/en/manual/midi-and-key-remote-control/)
 
 - MIDI button example for ESP32-S3
     - [CircuitPython examples directory (GitHub)](https://github.com/mangtronix/MusicDevices/tree/main/CircuitPython)
