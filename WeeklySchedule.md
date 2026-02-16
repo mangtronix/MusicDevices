@@ -872,6 +872,8 @@ MIDI - Musical Instrument Digital Interface
         - Sends NoteOn and NoteOff
     - [midi_buttons.py (GitHub)](https://github.com/mangtronix/MusicDevices/blob/main/CircuitPython/midi_buttons.py)
         - Sends NoteOn / NoteOff for each button
+    - [midi_buttons_ble](https://github.com/mangtronix/MusicDevices/blob/main/CircuitPython/midi_buttons_ble.py)
+        - Advanced example for sending MIDI notes over Bluetooth Low Energy (BLE) 
           
 Wireless MIDI (advanced topic for a later class)
 - MIDI over classic / paired Bluetooth (older technique, not commonly used anymore)
