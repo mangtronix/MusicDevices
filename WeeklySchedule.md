@@ -5,8 +5,8 @@
 - [Week 1](#week-1) – Introduction / NIME, Music Devices, and Sound Installations
 - [Week 2](#week-2) – Applied music theory, Western and beyond
 - [Week 3](#week-3) – Huang Yi class visit / CircuitPython and Physical computing for NIME
-- [Week 4](#week-4) – Musical interface design, MIDI
-- [Week 5](#week-5) – Musical sensors
+- [Week 4](#week-4) – Musical interface design
+- [Week 5](#week-5) – MIDI / Musical sensors
 - [Week 6](#week-6) – Rapid prototyping
 - [Week 7](#week-7) – Inspiration day / 3D Printing Workshop
 - SPRING BREAK
