@@ -859,32 +859,32 @@ MIDI - Musical Instrument Digital Interface
     - [midi_buttons.py (GitHub)](https://github.com/mangtronix/MusicDevices/blob/main/CircuitPython/midi_buttons.py)
         - Sends NoteOn / NoteOff for each button
           
-Wireless MIDI
-    - MIDI over classic / paired Bluetooth (older technique, not commonly used anymore)
-    - MIDI over WiFi
-        - Possible using [RTP-MIDI](https://midi.org/rtp-midi-or-midi-over-networks)
-        - Not easily accessible for end-users
-        - Generally complicated and difficult to use
-        - [Share MIDI information over a network in Audio MIDI Setup on Mac (Apple)](https://support.apple.com/en-ae/guide/audio-midi-setup/ams1012/mac)
-    - MIDI over Bluetooth LE (Low Energy)
-        - Allows wireless connection to iOS, Mac, Android, Windows
-        - Introduces some latency
-            - Can be surprisingly low, but with larger pauses after some time
-            - Competing for bandwidth with other devices like WiFi
-        - iOS
-            - Look for Bluetooth symbol in your app's MIDI settings
-            - Or use [midimittr](https://apps.apple.com/us/app/midimittr/id925495245) to find and connect BLE controller
-                - To connect a BLE controller go to Devices tab
-        - MacOS
-            - Audio MIDI Setup.app -> Window -> Show MIDI Studio -> (Bluetooth symbol)
-                - After connecting the BLE controller will show as regular MIDI source
-        - Android
-            - [MIDI BLE Connect](https://play.google.com/store/apps/details?id=com.mobileer.example.midibtlepairing&hl=en)
-        - Windows
-            - Create a virtual loopback MIDI port using [loopMIDI](https://www.tobias-erichsen.de/software/loopmidi.html)
-            - Use [BLE-MIDI Connect](https://apps.microsoft.com/detail/9nvmlzttwwvl?hl=en-US&gl=US) to scan for BLE controller and connect to loopback MIDI port
-            - Go into your app and select loopback MIDI port
-            - Controller -> loopMIDI -> music app
+Wireless MIDI (advanced topic for a later class)
+- MIDI over classic / paired Bluetooth (older technique, not commonly used anymore)
+- MIDI over WiFi
+    - Possible using [RTP-MIDI](https://midi.org/rtp-midi-or-midi-over-networks)
+    - Not easily accessible for end-users
+    - Generally complicated and difficult to use
+    - [Share MIDI information over a network in Audio MIDI Setup on Mac (Apple)](https://support.apple.com/en-ae/guide/audio-midi-setup/ams1012/mac)
+- MIDI over Bluetooth LE (Low Energy)
+    - Allows wireless connection to iOS, Mac, Android, Windows
+    - Introduces some latency
+        - Can be surprisingly low, but with larger pauses after some time
+        - Competing for bandwidth with other devices like WiFi
+    - iOS
+        - Look for Bluetooth symbol in your app's MIDI settings
+        - Or use [midimittr](https://apps.apple.com/us/app/midimittr/id925495245) to find and connect BLE controller
+            - To connect a BLE controller go to Devices tab
+    - MacOS
+        - Audio MIDI Setup.app -> Window -> Show MIDI Studio -> (Bluetooth symbol)
+            - After connecting the BLE controller will show as regular MIDI source
+    - Android
+        - [MIDI BLE Connect](https://play.google.com/store/apps/details?id=com.mobileer.example.midibtlepairing&hl=en)
+    - Windows
+        - Create a virtual loopback MIDI port using [loopMIDI](https://www.tobias-erichsen.de/software/loopmidi.html)
+        - Use [BLE-MIDI Connect](https://apps.microsoft.com/detail/9nvmlzttwwvl?hl=en-US&gl=US) to scan for BLE controller and connect to loopback MIDI port
+        - Go into your app and select loopback MIDI port
+        - Controller -> loopMIDI -> music app
 
 Sending MIDI from CircuitPython
     - Need to copy library files from [MusicDevices/CircuitPython/lib](https://github.com/mangtronix/MusicDevices/tree/main/CircuitPython/lib) to your ```CIRCUITPY/lib directory```
