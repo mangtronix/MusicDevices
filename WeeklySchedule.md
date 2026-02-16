@@ -827,24 +827,6 @@ import midi_buttons # Send NoteOn/NoteOff from builtin buttons
 
 # import spritesheet # Demo of bitmap sprites
 ```
-
-- Sending MIDI from CircuitPython
-    - Need to copy library files from [MusicDevices/CircuitPython/lib](https://github.com/mangtronix/MusicDevices/tree/main/CircuitPython/lib) to your ```CIRCUITPY/lib directory```
-        - [MusicDevices repository zip file download](https://github.com/mangtronix/MusicDevices/archive/refs/heads/main.zip)
-    - We are using the [adafruit_midi](https://docs.circuitpython.org/projects/midi/en/latest/api.html) library with the [usb_midi](https://docs.circuitpython.org/en/latest/shared-bindings/usb_midi/) library for transport of the MIDI messages over USB
-        - [Using Adafruit USB MIDI (Adafruit)](https://learn.adafruit.com/grand-central-usb-midi-controller-in-circuitpython/code-usb-midi-in-circuitpython#using-adafruit-usb-midi-3016197)
-    - [midi_demo.py (MD GitHub)](https://github.com/mangtronix/MusicDevices/blob/main/CircuitPython/midi_demo.py)
-        - Sends NoteOn / NoteOff and Control Change messages
-    - Checking MIDI messages using [Protokol](https://hexler.net/protokol)
-        - Protokol->Settings->MIDI
-            - Make sure your Feather is visible as an input
-        - MIDI tab->Enabled
-        - You should see MIDI messages sent from your Feather to your computer over USB
-    - [midi_buttons.py (MD GitHub)](https://github.com/mangtronix/MusicDevices/blob/main/CircuitPython/midi_buttons.py)
-        - Sends NoteOn / NoteOff from ESP32-S3 buttons
-    - [spritekeys.py (MD GitHub)](https://github.com/mangtronix/MusicDevices/blob/main/CircuitPython/spritekeys.py) - for next class
-        - Example using NeoKeys, NeoSlider, and display
-        - You also need to copy CircuitPython/lib/spritesheet.png to CIRCUITPY/spritesheet.png
   
 ### Homework - Week 4.2
 
@@ -878,7 +860,41 @@ Due before start of next class
 # Week 5
 
 ## Week 5.1
+Final kit assembly
+- [I2C QT Rotary encoder](https://learn.adafruit.com/adafruit-i2c-qt-rotary-encoder)
+    - Gives us endless rotation, clicky button, and LED feedback
+    - Good for implementing a menu with the screen, for example
+    - The default I2C address is 0x36, which conflicts with the [battery monitor on the ESP32-S3 Reverse TFT Feather](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/pinouts#max17048-battery-monitor-3138950) board
+    - Set the address of the QT Encoder board to 0x37 by soldering across pad A0 on the back of the board
+    - Connect the QT Encoder board with a QT cable
+    - Attach the encoder board to your Music Base
+    - Test the encoder using [demo_encoder_neopixel.py](CircuitPython/demo_encoder_neopixel.py)
 
+![Encoder_A0](https://github.com/user-attachments/assets/49d9a5be-f8ab-41b1-89d7-b86385017296)
+
+![Encoder_A0_soldered](https://github.com/user-attachments/assets/a8cb08cd-19a9-4510-af5d-6110931622e1)
+
+
+ 
+
+
+- Sending MIDI from CircuitPython
+    - Need to copy library files from [MusicDevices/CircuitPython/lib](https://github.com/mangtronix/MusicDevices/tree/main/CircuitPython/lib) to your ```CIRCUITPY/lib directory```
+        - [MusicDevices repository zip file download](https://github.com/mangtronix/MusicDevices/archive/refs/heads/main.zip)
+    - We are using the [adafruit_midi](https://docs.circuitpython.org/projects/midi/en/latest/api.html) library with the [usb_midi](https://docs.circuitpython.org/en/latest/shared-bindings/usb_midi/) library for transport of the MIDI messages over USB
+        - [Using Adafruit USB MIDI (Adafruit)](https://learn.adafruit.com/grand-central-usb-midi-controller-in-circuitpython/code-usb-midi-in-circuitpython#using-adafruit-usb-midi-3016197)
+    - [midi_demo.py (MD GitHub)](https://github.com/mangtronix/MusicDevices/blob/main/CircuitPython/midi_demo.py)
+        - Sends NoteOn / NoteOff and Control Change messages
+    - Checking MIDI messages using [Protokol](https://hexler.net/protokol)
+        - Protokol->Settings->MIDI
+            - Make sure your Feather is visible as an input
+        - MIDI tab->Enabled
+        - You should see MIDI messages sent from your Feather to your computer over USB
+    - [midi_buttons.py (MD GitHub)](https://github.com/mangtronix/MusicDevices/blob/main/CircuitPython/midi_buttons.py)
+        - Sends NoteOn / NoteOff from ESP32-S3 buttons
+    - [spritekeys.py (MD GitHub)](https://github.com/mangtronix/MusicDevices/blob/main/CircuitPython/spritekeys.py) - for next class
+        - Example using NeoKeys, NeoSlider, and display
+        - You also need to copy CircuitPython/lib/spritesheet.png to CIRCUITPY/spritesheet.png
 
 Example Devices
 - [Afternoon Generative Ambient (Vimeo)](https://vimeo.com/914151652?share=copy#t=0) by Mangtronix
