@@ -593,7 +593,7 @@ CircuitPython
     - [Arduino to CircuitPython - time](https://learn.adafruit.com/arduino-to-circuitpython/time)
 - [RGB color codes](https://www.rapidtables.com/web/color/RGB_Color.html)
 
-Visual Studio Code with CircuitPython
+### Visual Studio Code with CircuitPython
 - Download [Visual Studio Code](https://code.visualstudio.com/)
 - Open the CIRCUITPY/code.py file
     - Install Python when prompted
