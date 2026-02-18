@@ -100,46 +100,49 @@ while True:
         if button0.value == False:
             # Pressed
             if not button_was_pressed[0]:
-                print("Note 0 ON")
-                midi.send(NoteOn(notes[0], velocity))
+                note = notes[0]
+                print(f"Note {note} ON")
+                midi.send(NoteOn(note, velocity))
                 button_was_pressed[0] = True
         else:
             # Not pressed
             if button_was_pressed[0]:
-                print("Note 0 off")
-                midi.send(NoteOff(notes[0], 0))
+                note = notes[0]
+                print(f"Note {note} off")
+                midi.send(NoteOff(note, 0))
                 button_was_pressed[0] = False
 
         # Button D1 goes true when it's pressed
         if button1.value == True:
             # Pressed
             if not button_was_pressed[1]:
-                print("Note 1 ON")
-                midi.send(NoteOn(notes[1], velocity))
+                note = notes[1]
+                print(f"Note {note} ON")
+                midi.send(NoteOn(note, velocity))
                 button_was_pressed[1] = True
         else:
             # Not pressed
             if button_was_pressed[1]:
-                print("Note 1 off")
-                midi.send(NoteOff(notes[1], 0))
+                note = notes[1]
+                print(f"Note {note} off")
+                midi.send(NoteOff(note, 0))
                 button_was_pressed[1] = False
 
         # Button D2 goes false when it's pressed
         if button2.value == True:
             # Pressed
             if not button_was_pressed[2]:
-                print("Note 2 ON")
-                midi.send(NoteOn(notes[2], velocity))
+                note = notes[2]
+                print(f"Note {note} ON")
+                midi.send(NoteOn(note, velocity))
                 button_was_pressed[2] = True
         else:
             # Not pressed
             if button_was_pressed[2]:
-                print("Note 2 off")
-                midi.send(NoteOff(notes[2], 0))
+                note = notes[2]
+                print(f"Note {note} off")
+                midi.send(NoteOff(note, 0))
                 button_was_pressed[2] = False
-
-
-        # Write your code here :-)
 
 
 

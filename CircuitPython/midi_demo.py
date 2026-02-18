@@ -61,8 +61,10 @@ rest = note_hold / 5
 
 print("MIDI Out demo")
 print("Default output channel:", midi.out_channel + 1)
+print("Check the output with a MIDI monitor or synth")
 
 while True:
+    print("Sending MIDI messages on channel", midi.out_channel + 1)
     # midi.send(ControlChange(64, 0))  # sustain CC
     midi.send(ControlChange(1, 0))  # modulation CC
 
