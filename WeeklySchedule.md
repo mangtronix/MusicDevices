@@ -891,8 +891,14 @@ MIDI - Musical Instrument Digital Interface
         - Sends NoteOn and NoteOff
     - [midi_buttons.py (GitHub)](https://github.com/mangtronix/MusicDevices/blob/main/CircuitPython/midi_buttons.py)
         - Sends NoteOn / NoteOff for each button
-    - [midi_buttons_ble](https://github.com/mangtronix/MusicDevices/blob/main/CircuitPython/midi_buttons_ble.py)
-        - Advanced example for sending MIDI notes over Bluetooth Low Energy (BLE) 
+    - [midi_buttons_ble.py](https://github.com/mangtronix/MusicDevices/blob/main/CircuitPython/midi_buttons_ble.py)
+        - Intermediate example for sending MIDI notes over Bluetooth Low Energy (BLE)
+        - You need to manually connect the CircuitPython BLE device to your machine
+            - [Set up Bluetooth MIDI devices in Audio MIDI Setup on Mac (Apple)](https://support.apple.com/en-ae/guide/audio-midi-setup/ams33f013765/mac)
+            - [Korg Bluetooth MIDI Connect (Mac App Store)](https://apps.apple.com/us/app/bluetooth-midi-connect/id1074606480) - simple app to get to BLE connect settings
+            - [Korg Bluetooth MIDI Connect (iPhone App Store)](https://apps.apple.com/us/app/bluetooth-midi-connect/id1108321791)
+            - [BLE-MIDI Connect for Windows (Microsoft)](https://apps.microsoft.com/detail/9nvmlzttwwvl?hl=en-US&gl=US)
+            - [MIDI BLE Connect for Android (Google Play Store)](https://play.google.com/store/apps/details?id=com.mobileer.example.midibtlepairing&hl=en)
           
 Wireless MIDI (advanced topic for a later class)
 - MIDI over classic / paired Bluetooth (older technique, not commonly used anymore)
