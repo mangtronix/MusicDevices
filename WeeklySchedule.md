@@ -817,6 +817,7 @@ MIDI - Musical Instrument Digital Interface
 - Standard for communication between digital instruments dating back to the 80s
 - Allows e.g. a controller keyboard to be hooked up to a synthesizer module, or computer to record notes from a controller and play them back on a software or hardware synthesizer
 - [MIDI for Makers (Adafruit)](https://learn.adafruit.com/midi-for-makers/overview)
+    - Nice overview of just what we need for the class, with CircuitPython examples
 - [Introduction to the MIDI Standard (Indiana University)](https://cecm.indiana.edu/361/midi.html)
 - [MIDI (Wikipedia)](https://en.wikipedia.org/wiki/MIDI) - comprehensive overview
 - MIDI 1.0 is a very basic protocol
@@ -847,7 +848,6 @@ MIDI - Musical Instrument Digital Interface
         - Demo of playing Maqam Bayati inside Ableton Live, using Western scale, Ableton tuning, and dedicated software instrument ([Taqsim SOLO](https://taqs.im/shop/solo/))
         - What kind of music did you grow up with? What instruments do your favourite musicians play? How well do you feel these instruments are represented in electronic music?
         - How do you think the instruments we have available affect the music we make and listen to?
-- [MIDI for Makers (Adafruit)](https://learn.adafruit.com/midi-for-makers)
 
 - MIDI 2.0
     - Just released in 2020, starting to be used
@@ -861,7 +861,7 @@ MIDI - Musical Instrument Digital Interface
     - A bit early for us to use MIDI 2.0 but something to keep an eye on
         - [AM MIDI 2.0 Lib for Arduino (GitHub)](https://github.com/midi2-dev/AM_MIDI2.0Lib)
 
-- [MIDI for Makers (Adafruit)](https://learn.adafruit.com/midi-for-makers/overview)
+<!--
 - [DIY USB Midi Controller With Arduino: a Beginner's Guide
 (Instructables)](https://www.instructables.com/DIY-USB-Midi-Controller-With-Arduino-a-Beginners-G/)
 - [Create a MIDI Device
@@ -869,6 +869,7 @@ MIDI - Musical Instrument Digital Interface
 - [How to Build Arduino MIDI Controllers - The Complete Guide (Nerd Musician / YouTube)](https://www.youtube.com/watch?v=IwfycC8rLos)
 - [MIDIUSB Library for Arduino
  (GitHub)](https://github.com/arduino-libraries/MIDIUSB)
+-->
 
 - Working with MIDI
     - Tools to monitor MIDI messages
