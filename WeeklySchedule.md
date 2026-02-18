@@ -798,6 +798,17 @@ Final kit assembly
 ![MusicBase_v5](https://github.com/user-attachments/assets/20db618e-613b-47dd-9aae-af972aca10f5)
 Completed Music Base with [ESP32-S3](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/overview), [Encoder](https://learn.adafruit.com/adafruit-i2c-qt-rotary-encoder), [NeoKey 1x4](https://learn.adafruit.com/neokey-1x4-qt-i2c), and [NeoSlider](https://learn.adafruit.com/adafruit-neoslider)
  
+### Homework
+
+Due before start of next class
+- **Complete** these tutorials
+  - [Kit Assembly](https://youtu.be/vAgwV33kiOU?si=QKxKICChgR6l4rMc)
+  - [Code Loading](https://youtu.be/gwZex-az2hU?si=E-3hAvah1zIFgp7R)
+  - [NeoKey Code](https://youtu.be/80llQv0Q1WA?si=rYfYmgNDvY5Ikkgp)
+  - [NeoKey with NeoSlider](https://youtu.be/xHsPLdk2F3g?si=xtr8p8tNdD0yENxc)
+
+
+## Week 5.2
 MIDI - Musical Instrument Digital Interface
 - Standard for communication between digital instruments dating back to the 80s
 - Allows e.g. a controller keyboard to be hooked up to a synthesizer module, or computer to record notes from a controller and play them back on a software or hardware synthesizer
@@ -930,18 +941,6 @@ Example Devices
     - Pocketable musical devices that lets you play chords modulated by a joystick
     - [HiChord demos on TikTok](https://www.tiktok.com/@hichord)
 
-
-### Homework
-
-Due before start of next class
-- **Complete** these tutorials
-  - [Kit Assembly](https://youtu.be/vAgwV33kiOU?si=QKxKICChgR6l4rMc)
-  - [Code Loading](https://youtu.be/gwZex-az2hU?si=E-3hAvah1zIFgp7R)
-  - [NeoKey Code](https://youtu.be/80llQv0Q1WA?si=rYfYmgNDvY5Ikkgp)
-  - [NeoKey with NeoSlider](https://youtu.be/xHsPLdk2F3g?si=xtr8p8tNdD0yENxc)
-
-
-## Week 5.2
 Musical sensors
 - What types of input do we want to sense?
 - How expressive are our inputs and outputs?
