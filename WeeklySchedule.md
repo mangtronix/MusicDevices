@@ -809,9 +809,14 @@ Due before start of next class
 
 
 ## Week 5.2
+Announcements
+- Clone [MusicDevices repository](https://github.com/mangtronix/MusicDevices) using [GitHub Desktop](https://github.com/apps/desktop) or git command-line
+    - Can do a "git pull" to pull any changes in the GitHub repository to your local machine
+
 MIDI - Musical Instrument Digital Interface
 - Standard for communication between digital instruments dating back to the 80s
 - Allows e.g. a controller keyboard to be hooked up to a synthesizer module, or computer to record notes from a controller and play them back on a software or hardware synthesizer
+- [MIDI for Makers (Adafruit)](https://learn.adafruit.com/midi-for-makers/overview)
 - [Introduction to the MIDI Standard (Indiana University)](https://cecm.indiana.edu/361/midi.html)
 - [MIDI (Wikipedia)](https://en.wikipedia.org/wiki/MIDI) - comprehensive overview
 - MIDI 1.0 is a very basic protocol
