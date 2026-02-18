@@ -593,7 +593,7 @@ CircuitPython
     - [Arduino to CircuitPython - time](https://learn.adafruit.com/arduino-to-circuitpython/time)
 - [RGB color codes](https://www.rapidtables.com/web/color/RGB_Color.html)
 
-Visual Studio Code with CircuitPython
+### Visual Studio Code with CircuitPython
 - Download [Visual Studio Code](https://code.visualstudio.com/)
 - Open the CIRCUITPY/code.py file
     - Install Python when prompted
@@ -798,9 +798,26 @@ Final kit assembly
 ![MusicBase_v5](https://github.com/user-attachments/assets/20db618e-613b-47dd-9aae-af972aca10f5)
 Completed Music Base with [ESP32-S3](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/overview), [Encoder](https://learn.adafruit.com/adafruit-i2c-qt-rotary-encoder), [NeoKey 1x4](https://learn.adafruit.com/neokey-1x4-qt-i2c), and [NeoSlider](https://learn.adafruit.com/adafruit-neoslider)
  
+### Homework
+
+Due before start of next class
+- **Complete** these tutorials
+  - [Kit Assembly](https://youtu.be/vAgwV33kiOU?si=QKxKICChgR6l4rMc)
+  - [Code Loading](https://youtu.be/gwZex-az2hU?si=E-3hAvah1zIFgp7R)
+  - [NeoKey Code](https://youtu.be/80llQv0Q1WA?si=rYfYmgNDvY5Ikkgp)
+  - [NeoKey with NeoSlider](https://youtu.be/xHsPLdk2F3g?si=xtr8p8tNdD0yENxc)
+
+
+## Week 5.2
+Announcements
+- Clone [MusicDevices repository](https://github.com/mangtronix/MusicDevices) using [GitHub Desktop](https://github.com/apps/desktop) or git command-line
+    - Can do a "git pull" to pull any changes in the GitHub repository to your local machine
+
 MIDI - Musical Instrument Digital Interface
 - Standard for communication between digital instruments dating back to the 80s
 - Allows e.g. a controller keyboard to be hooked up to a synthesizer module, or computer to record notes from a controller and play them back on a software or hardware synthesizer
+- [MIDI for Makers (Adafruit)](https://learn.adafruit.com/midi-for-makers/overview)
+    - Nice overview of just what we need for the class, with CircuitPython examples
 - [Introduction to the MIDI Standard (Indiana University)](https://cecm.indiana.edu/361/midi.html)
 - [MIDI (Wikipedia)](https://en.wikipedia.org/wiki/MIDI) - comprehensive overview
 - MIDI 1.0 is a very basic protocol
@@ -831,7 +848,6 @@ MIDI - Musical Instrument Digital Interface
         - Demo of playing Maqam Bayati inside Ableton Live, using Western scale, Ableton tuning, and dedicated software instrument ([Taqsim SOLO](https://taqs.im/shop/solo/))
         - What kind of music did you grow up with? What instruments do your favourite musicians play? How well do you feel these instruments are represented in electronic music?
         - How do you think the instruments we have available affect the music we make and listen to?
-- [MIDI for Makers (Adafruit)](https://learn.adafruit.com/midi-for-makers)
 
 - MIDI 2.0
     - Just released in 2020, starting to be used
@@ -845,7 +861,7 @@ MIDI - Musical Instrument Digital Interface
     - A bit early for us to use MIDI 2.0 but something to keep an eye on
         - [AM MIDI 2.0 Lib for Arduino (GitHub)](https://github.com/midi2-dev/AM_MIDI2.0Lib)
 
-- [MIDI for Makers (Adafruit)](https://learn.adafruit.com/midi-for-makers/overview)
+<!--
 - [DIY USB Midi Controller With Arduino: a Beginner's Guide
 (Instructables)](https://www.instructables.com/DIY-USB-Midi-Controller-With-Arduino-a-Beginners-G/)
 - [Create a MIDI Device
@@ -853,6 +869,7 @@ MIDI - Musical Instrument Digital Interface
 - [How to Build Arduino MIDI Controllers - The Complete Guide (Nerd Musician / YouTube)](https://www.youtube.com/watch?v=IwfycC8rLos)
 - [MIDIUSB Library for Arduino
  (GitHub)](https://github.com/arduino-libraries/MIDIUSB)
+-->
 
 - Working with MIDI
     - Tools to monitor MIDI messages
@@ -874,8 +891,14 @@ MIDI - Musical Instrument Digital Interface
         - Sends NoteOn and NoteOff
     - [midi_buttons.py (GitHub)](https://github.com/mangtronix/MusicDevices/blob/main/CircuitPython/midi_buttons.py)
         - Sends NoteOn / NoteOff for each button
-    - [midi_buttons_ble](https://github.com/mangtronix/MusicDevices/blob/main/CircuitPython/midi_buttons_ble.py)
-        - Advanced example for sending MIDI notes over Bluetooth Low Energy (BLE) 
+    - [midi_buttons_ble.py](https://github.com/mangtronix/MusicDevices/blob/main/CircuitPython/midi_buttons_ble.py)
+        - Intermediate example for sending MIDI notes over Bluetooth Low Energy (BLE)
+        - You need to manually connect the CircuitPython BLE device to your machine
+            - [Set up Bluetooth MIDI devices in Audio MIDI Setup on Mac (Apple)](https://support.apple.com/en-ae/guide/audio-midi-setup/ams33f013765/mac)
+            - [Korg Bluetooth MIDI Connect (Mac App Store)](https://apps.apple.com/us/app/bluetooth-midi-connect/id1074606480) - simple app to get to BLE connect settings
+            - [Korg Bluetooth MIDI Connect (iPhone App Store)](https://apps.apple.com/us/app/bluetooth-midi-connect/id1108321791)
+            - [BLE-MIDI Connect for Windows (Microsoft)](https://apps.microsoft.com/detail/9nvmlzttwwvl?hl=en-US&gl=US)
+            - [MIDI BLE Connect for Android (Google Play Store)](https://play.google.com/store/apps/details?id=com.mobileer.example.midibtlepairing&hl=en)
           
 Wireless MIDI (advanced topic for a later class)
 - MIDI over classic / paired Bluetooth (older technique, not commonly used anymore)
@@ -930,18 +953,6 @@ Example Devices
     - Pocketable musical devices that lets you play chords modulated by a joystick
     - [HiChord demos on TikTok](https://www.tiktok.com/@hichord)
 
-
-### Homework
-
-Due before start of next class
-- **Complete** these tutorials
-  - [Kit Assembly](https://youtu.be/vAgwV33kiOU?si=QKxKICChgR6l4rMc)
-  - [Code Loading](https://youtu.be/gwZex-az2hU?si=E-3hAvah1zIFgp7R)
-  - [NeoKey Code](https://youtu.be/80llQv0Q1WA?si=rYfYmgNDvY5Ikkgp)
-  - [NeoKey with NeoSlider](https://youtu.be/xHsPLdk2F3g?si=xtr8p8tNdD0yENxc)
-
-
-## Week 5.2
 Musical sensors
 - What types of input do we want to sense?
 - How expressive are our inputs and outputs?
