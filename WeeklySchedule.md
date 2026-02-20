@@ -67,6 +67,10 @@ Music Devices, NIME and Sound Installations
 -->
 - [Cave of Sounds](https://caveofsounds.com/) 
     - Public installation of 8 bespoke interactive musical instruments
+    - [Cave of Sounds: 8 instruments, 3 continents, 10 years](https://timmb.com/cave-of-sounds-8-instruments-3-continents-10-years/) - technical details of installation / touring setup
+    - [CAVE OF SOUNDS: interview with Tim Murray-Browne (YouTube)](https://www.youtube.com/watch?v=n5PhrCX-WiM)
+    - [The Cave Of Sounds: An Interactive Installation Exploring
+How We Create Music Together (NIME proceedings pdf)](https://www.nime.org/proceedings/2014/nime2014_288.pdf)
 - [Alternative MIDI Controllers: New Ways To Touch Music (Perfect Circuit)](https://www.perfectcircuit.com/signal/alternative-midi-controllers)
     - Some historical and current examples of commercial alternative MIDI controllers
  
