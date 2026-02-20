@@ -1352,17 +1352,8 @@ Due before start of next class
 
 ## Week 7+
 Announcements
-- TouchDesigner workshop tonight 7:30-9:00pm
-![Workshop Poster](https://github.com/user-attachments/assets/76b5696c-ab16-4829-9ee4-3ea810af6be2)
 
 Review 3D prints
-
-MIDI for Makers
-- [MIDI for Makers](https://learn.adafruit.com/midi-for-makers/overview)
-- Most important messages
-    - Note On / Note Off
-    - CC (Continuous Controller)
-    - Pitch Bend 
 
 Example projects
 - [Control motors with MIDI](https://learn.adafruit.com/midi-for-makers/control-motors-with-midi)
