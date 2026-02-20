@@ -1077,9 +1077,6 @@ Video tutorials:
 
 
 ## Week 6.2
-### Meet on Zoom
-[https://nyu.zoom.us/j/98623154843](https://nyu.zoom.us/j/98623154843)
-
 Review homework from Week 5
 
 Review Fusion 360
