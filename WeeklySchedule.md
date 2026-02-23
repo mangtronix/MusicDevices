@@ -1039,7 +1039,6 @@ Workshop: Musical sensors
 
 
 ## Week 6.2
-Review Fusion 360
 ### Meet in C3-116
 
 Autodesk Fusion Workshop
