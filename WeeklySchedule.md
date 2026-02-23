@@ -980,6 +980,7 @@ Due before start of next class
 
 ## Week 6.1
 **Announcements**
+
 Autodesk Fusion
 - You have been granted access to Fusion through your @nyu.edu email address
     - If you don't have an Autodesk account check your email for the "Welcome to Autodesk" invitation link
