@@ -24,10 +24,12 @@ display.rotation = 180
 
 print("spritekeys")
 
-# Whether to print serial debug messages (slows down loop)
+# Whether to print serial debug messages
+# Logging to serial is quite slow, so turn off the debugging messages to
+# make the controller more responsive
 serial_debug = True
 if serial_debug:
-    print("Serial debug ON")
+    print("Serial debug ON - turn off for faster response")
 
 import time
 time.sleep(0.5) # Might help I2C devices to power on
@@ -230,7 +232,8 @@ bb_minor_midi_array_octave_up = [
 # Each NeoKey will be mapped to a note in the scale. You can change this to use different notes or
 # scales. Just make sure to use MIDI note numbers (60 = middle C, 61 = C#, etc.)
 #notes = c_major_scale
-notes = c_major_pentatonic_scale
+#notes = c_major_pentatonic_scale
+notes = e_minor_pentatonic_scale
 velocity = 100 # velocity for notes
 
 """Turn all of our notes off"""
