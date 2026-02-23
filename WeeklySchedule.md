@@ -67,6 +67,10 @@ Music Devices, NIME and Sound Installations
 -->
 - [Cave of Sounds](https://caveofsounds.com/) 
     - Public installation of 8 bespoke interactive musical instruments
+    - [Cave of Sounds: 8 instruments, 3 continents, 10 years](https://timmb.com/cave-of-sounds-8-instruments-3-continents-10-years/) - technical details of installation / touring setup
+    - [CAVE OF SOUNDS: interview with Tim Murray-Browne (YouTube)](https://www.youtube.com/watch?v=n5PhrCX-WiM)
+    - [The Cave Of Sounds: An Interactive Installation Exploring
+How We Create Music Together (NIME proceedings pdf)](https://www.nime.org/proceedings/2014/nime2014_288.pdf)
 - [Alternative MIDI Controllers: New Ways To Touch Music (Perfect Circuit)](https://www.perfectcircuit.com/signal/alternative-midi-controllers)
     - Some historical and current examples of commercial alternative MIDI controllers
  
@@ -945,6 +949,55 @@ Sending MIDI from CircuitPython
     - Example using NeoKeys, NeoSlider, and display
     - You also need to copy CircuitPython/lib/spritesheet.png to CIRCUITPY/spritesheet.png
 
+
+ 
+### Homework - Week 5.2
+
+Due before start of next class
+- **Reading 3** see Brightspace -> Discussions for details
+
+<!--
+- **Choose** a song you like and modify our MIDI controller so you can play along with the song
+- See [Brightspace Discussions->Exercise 3](https://brightspace.nyu.edu/d2l/le/435258/discussions/topics/534517/View) for details and to post your work
+-->
+
+<!--
+- **Perform** using your MIDI controller
+    - Add more controls to your MIDI controller that allow you to perform a short piece of music in the style of Controllerism
+    - Use at least one non-traditional UI element (something other than key, pot, fader)
+        - e.g. light sensor, bend sensor, non-traditional switch
+    - Create an Ableton Live set that goes with your MIDI controller
+        - Some suggestions for possible integrations:
+            - Trigger notes directly in instruments
+            - Start / stop clips
+            - Map to synthesizer parameters
+            - Map to device parameters, for example arpeggiator settings
+    - Record a short video of a performance using your controller and Ableton Live set
+- **Post** your work in the discussion forum
+    - See Brightspace->Discussions->Exercises for details
+    - Host your video on a site like YouTube or Vimeo and embed it in your post
+- **Be ready** to show / discuss your work in class
+-->
+
+---
+
+# Week 6
+
+## Week 6.1
+**Announcements**
+Autodesk Fusion
+- You have been granted access to Fusion through your @nyu.edu email address
+    - If you don't have an Autodesk account check your email for the "Welcome to Autodesk" invitation link
+    - If you *already* have an Autodesk account Fusion will show up under "My Products" (no welcome email will be sent)
+    - [Autodesk Fusion for education](https://www.autodesk.com/education/edu-software/fusion)
+    - Your access is tied to my teacher access - it's also possible to apply for your own educational license
+- Fusion is available in C3-116, C3-019 Film Edit Lab, or download to your own machine
+- [Sign in](https://www.autodesk.com/education/edu-software/fusion) and go to Products to download
+- See [Fusion Installation (Music Devices YouTube)](https://www.youtube.com/watch?v=5us5B8Kd23A&list=PLu4XhOBNpasRh4gECFa_265TXL6ad-JZS&index=6) for step by step installation instructions
+
+Review homework from Week 5
+
+<!--
 Example Devices
 - [Afternoon Generative Ambient (Vimeo)](https://vimeo.com/914151652?share=copy#t=0) by Mangtronix
     - Modular synthesizer generative composition
@@ -952,6 +1005,7 @@ Example Devices
 - [HiChord Pocket Synthesizer](https://hichord.shop/)
     - Pocketable musical devices that lets you play chords modulated by a joystick
     - [HiChord demos on TikTok](https://www.tiktok.com/@hichord)
+-->
 
 Musical sensors
 - What types of input do we want to sense?
@@ -985,187 +1039,6 @@ Musical sensors
         - [Adafruit VL53L4CD Time of Flight Distance Sensor
 ](https://learn.adafruit.com/adafruit-vl53l4cd-time-of-flight-distance-sensor)
             - [CircuitPython example code (Adafruit)](https://learn.adafruit.com/adafruit-vl53l4cd-time-of-flight-distance-sensor/python-circuitpython#circuitpython-usage-3112891)
-
-        
-
-Workshop: Musical sensors
-- Connect buttons to trigger notes
-- Connect potentiometers / faders to send CCs
-- Connect a different sensor, e.g. LDR light sensor
-    - Trigger note or CC
- 
-### Homework - Week 5.2
-
-Due before start of next class
-- **Choose** a song you like and modify our MIDI controller so you can play along with the song
-- See [Brightspace Discussions->Exercise 3](https://brightspace.nyu.edu/d2l/le/435258/discussions/topics/534517/View) for details and to post your work
-
-<!--
-- **Perform** using your MIDI controller
-    - Add more controls to your MIDI controller that allow you to perform a short piece of music in the style of Controllerism
-    - Use at least one non-traditional UI element (something other than key, pot, fader)
-        - e.g. light sensor, bend sensor, non-traditional switch
-    - Create an Ableton Live set that goes with your MIDI controller
-        - Some suggestions for possible integrations:
-            - Trigger notes directly in instruments
-            - Start / stop clips
-            - Map to synthesizer parameters
-            - Map to device parameters, for example arpeggiator settings
-    - Record a short video of a performance using your controller and Ableton Live set
-- **Post** your work in the discussion forum
-    - See Brightspace->Discussions->Exercises for details
-    - Host your video on a site like YouTube or Vimeo and embed it in your post
-- **Be ready** to show / discuss your work in class
--->
-
----
-
-# Week 6
-
-## Week 6.1
-### Meet in C3-116
-
-Autodesk Fusion Workshop
-- You have been granted access to Fusion through your @nyu.edu email address
-    - If you don't have an Autodesk account check your email for the "Welcome to Autodesk" invitation link
-    - If you *already* have an Autodesk account Fusion will show up under "My Products" (no welcome email will be sent)
-    - [Autodesk Fusion for education](https://www.autodesk.com/education/edu-software/fusion)
-    - Your access is tied to my teacher access - it's also possible to apply for your own educational license
-- Fusion is available in C3-116, C3-019 Film Edit Lab, or download to your own machine
-- [Sign in](https://www.autodesk.com/education/edu-software/fusion) and go to Products to download
-
-Video tutorials:
-- [Music Devices Fusion 0 - Installation](https://youtu.be/5us5B8Kd23A?si=is5FpoX7s-aixaB-)
-    - Downloading / accessing Fusion app
-    - **Note:** to access the MangLab hub and Music Devices project you need to click the Team Account button in top left in Fusion and select MangLab and then click on the Music Devices project
-    - [Switch between hubs (Autodesk)](https://help.autodesk.com/view/fusion360/ENU/?guid=FT-SWITCH-BETWEEN-TEAMS) for how to switch to the MangLab hub
-    - You should also get an email invitation to join the hub
-<img width="473" alt="Screenshot 2025-02-24 at 5 44 52 PM" src="https://github.com/user-attachments/assets/cfa2d792-0c7e-44ca-bdaf-c97fcb65ab09" />
-
-
-- [Music Devices Fusion 1 - Basic modeling](https://www.youtube.com/watch?v=-jZU_3DBTc4)
-    - Follow tutorial to create the knob
-    - Expand the knob by adding more shapes, text, etc to turn it into something unique
-        - [Rotary arm example (Fusion)](https://a360.co/3EPXycB)
-- [Music Devices Fusion 2 - More modeling](https://youtu.be/iwORyv7a8Dg?si=hDeALyrmNELBr7YT)
-    - Smoothing out the edges, adding text, idea for using the encoder as a rotary arm 
-
-- More Fusion 360 tutorials
-    - [Fusion 360 Complete Guide - MADE EASY 2024 (YouTube)](https://youtu.be/JyFbIpzzxFE?si=t3gltvMcdjBBVMcy)
-        - Nice basic overview geared towards 3D printing  
-    - [Fusion 360 for Absolute Beginners (Lars Christensen / YouTube)](https://www.youtube.com/playlist?list=PL40d7srwyc_Ow4aaOGXlP2idPGwD7ruKg)
-        - Goes through modeling a complete part from scratch in a smart way using sketches and constraints
- 
-  
-### Homework for next class
-**Follow these video tutorials**
-- [Music Devices Fusion 1 - Basic modeling](https://www.youtube.com/watch?v=-jZU_3DBTc4)
-- [Music Devices Fusion 2 - More modeling](https://youtu.be/iwORyv7a8Dg?si=hDeALyrmNELBr7YT)
-    - Create a folder with your name in the MangLab / Music Devices project
-    - See [Switch between hubs (Autodesk)](https://help.autodesk.com/view/fusion360/ENU/?guid=FT-SWITCH-BETWEEN-TEAMS) for how to switch to the MangLab hub
-    - Create a project with your knob within your folder
-
-**Watch** this video tutorial to learn about different ways of modifying shapes and creating shapes using sketches
-- [Fusion 360 Complete Guide - MADE EASY 2024 (YouTube)](https://youtu.be/JyFbIpzzxFE?si=t3gltvMcdjBBVMcy)
-
-**Modify** your basic knob by adding text and / or changing the shape of the knob - be creative!
-
-**Save** your work inside your folder in MangLab / Music Devices
-    - e.g. MangLab hub, Music Devices project, Mang folder
-    <img width="393" alt="Screenshot 2025-02-24 at 5 57 08 PM" src="https://github.com/user-attachments/assets/5f0e1c26-7dc8-4b94-8e93-dcc97de42797" />
-
-
-
-## Week 6.2
-### Meet on Zoom
-[https://nyu.zoom.us/j/98623154843](https://nyu.zoom.us/j/98623154843)
-
-Review homework from Week 5
-
-Review Fusion 360
-
-Introduction to rapid prototyping
-- Laser cutting
-    - [Laser Cutting Basics](https://www.instructables.com/Laser-Cutting-Basics/)
-    - [IM Lab Laser Cutting presentation (Google Slides)](https://docs.google.com/presentation/d/1l6x9M0nAiH3uMHQKQtethxi2cAhx7vBo1srYkkMT4bA/edit?usp=sharing)
-- 3D printing
-    - [https://www.instructables.com/3D-Printing-Basics/](https://www.instructables.com/3D-Printing-Basics/)
-    - Community models
-        - User uploaded models
-        - Quality varies
-        - Good for test prints and inspiration
-        - [Printables](https://www.printables.com/)
-        - [Thingiverse](https://www.thingiverse.com/)
-        - [Cults 3D](https://cults3d.com/)
-    - Example files
-        - [Simple Cherry MX Keycap (Printables)](https://www.printables.com/model/118708-simple-cherry-mx-keycap)
-            - Printable keycap for our NeoKey board
-            - Can be customized and printed in multi-colour
-    - [Adafruit Example Projects](https://learn.adafruit.com/category/3d-printing)
-        - [Guitar Synth with CircuitPython SynthIO (Adafruit)](https://learn.adafruit.com/guitar-synth-with-circuitpython-synthio)
-    - [Adafruit parts CAD library](https://learn.adafruit.com/how-to-use-3d-parts-github-repo/overview)
-        - Downloadable models you can use in Fusion to create designs that match with the Adafruit parts
-    - IM Lab Print Farm
-        - 4x [Prusa MK4S with Input Shaper](https://www.prusa3d.com/product/original-prusa-mk4s-3d-printer-5/)
-        - Ultimaker also available
-    - [PrusaSlicer](https://www.prusa3d.com/page/prusaslicer_424/)
-        - Converts solid 3D model to code for Prusa MK4 3D printers
-        - Useful for estimating print time
-        - Choose Prusa MK4S IS (Input Shaper) as the printer
-        - Make sure to enable supports if model has overhangs
-        - Can enable brim if model is very tall or has a small adhesion surface to bed
-
-
-### Homework - Week 6.2
-
-Due before start of next class
-
-- **Create** a 3D design for a custom component for a musical device
-- **See** [Brightspace->Discussions Exercise 4](https://brightspace.nyu.edu/d2l/le/435258/discussions/topics/535232/View) for details and to post your work
----
-
-# Week 7
-
-## Week 7.1
-Review homework
-- You can upload file directly into your Brightspace post but please keep videos <50MB (otherwise it takes a long time to download)
-- **Inaccessible files / broken links** are not considered submitted.  Please go back check that your links have the correct permissions ("Everyone") / are still accessible.
-- Some images are showing as broken links
-- Some great work so far!
-
-Exercise 3 - MIDI play-along
-- Did you start to get a feeling for the "shape" of the song?
-
-> The project helped me understand the song better. I was surprised to realize that identical notes felt different depending on their placement in the melody. Playing the song myself helped me notice how each note contributes to the overall musical progression.
-
-— Joonha
-
-- [Jason's controller](https://brightspace.nyu.edu/d2l/le/435258/discussions/threads/1971597/View) played triads of notes (chords) selected by the slider
-- How could you use the slider to help you progress through the song?
-
-
-Week 4 Fusion design
-- [Zhaniy's constellation keycaps](https://brightspace.nyu.edu/d2l/le/435258/discussions/threads/1991136/View)
-    - [Gustav Holst - The Planets (YouTube)](https://www.youtube.com/watch?v=Isic2Z2e2xs)
-    - [Gustav Holst - The Planets (Wikipedia)](https://en.wikipedia.org/wiki/The_Planets)
-- [Example of joined bodies](https://brightspace.nyu.edu/d2l/le/435258/discussions/threads/1988728/View)
-    - Demo of [Section Analysis](https://help.autodesk.com/view/fusion360/ENU/?guid=SLD-SECTION-ANALYSIS)
-    - Demo of combining bodies by selecting the bodies in the Browser
-    - Demo of saving a mesh that combines all bodies automatically by right-clicking on highest level in Browser
-- Demo of using [PrusaSlicer](https://prusaslicer.net/) to check how your model will be look after 3D printing
-
-Inspiration day
-- Look at examples of creative music controller / instrument projects
-    - [Adafruit MIDI projects](https://learn.adafruit.com/search?q=midi)
-        - Have source code and often Fusion files available 
-        - Hacking an existing controller / device - [MIDI Cyber Cat Keyboard (Adafruit)](https://learn.adafruit.com/midi-cyber-cat-keyboard/overview)
-    - [Guthman Musical Instrument Competition - Finalists 2025](https://guthman.gatech.edu/2025-finalists)
-    - [Guthman Musical Instrument Competition - Finalists 2024](https://guthman.gatech.edu/2024-finalists)
-    - [Maker Music Festival](https://www.makermusicfestival.com/building/Moog/)
-        - [Extended Psalter](https://makermusicfestival.com/projectdirectory/extended-psalter/)
-    - [Megachordotron](https://embedded-lab.com/blog/megachordotron-diy-midi-controller-using-teensy/)
-        - Handheld controller with automatic chords
-- Start ideating on our projects
 
 Common controller interface elements
 - Button
@@ -1253,6 +1126,164 @@ Common controller interface elements
     - Useful helper libraries (fonts, shapes, buttons, etc.):
         - You can also directly download from our CircuitPython --> lib folder. All the digitalio libraries are in there. 
 [Helper Libraries](https://learn.adafruit.com/circuitpython-display-support-using-displayio/helper-libraries)
+
+Example projects
+- [Control motors with MIDI](https://learn.adafruit.com/midi-for-makers/control-motors-with-midi)
+- [Bricktunes Lego Glove (Adafruit)](https://learn.adafruit.com/bricktunes-lego-glove-synthesizer/overview)
+    - Colour sensor on glove triggers different musical notes
+    - [CircuitPython synthio library](https://learn.adafruit.com/audio-synthesis-with-circuitpython-synthio/overview)
+    - [Chime library for generating chime sounds (GitHub)](https://github.com/CedarGroveStudios/CircuitPython_Chime?tab=readme-ov-file)
+- [Tyrell Desktop Synthesizer](https://learn.adafruit.com/tyrell-desktop-synthesizer/overview)
+    - Touch sensitive pyramid synthesizer
+- [Circle of Fifths Euclidean Synth](https://learn.adafruit.com/circle-of-fifths-euclidean-synth-with-synthio-and-circuitpython)
+- [Faderwave synthesizer](https://learn.adafruit.com/faderwave-synthesizer)
+- [MIDI Stomping Pads](https://learn.adafruit.com/midi-stomping-pads)
+
+  
+
+## Week 6.2
+Workshop: Musical sensors
+- Connect buttons to trigger notes
+- Connect potentiometers / faders to send CCs
+- Connect a different sensor, e.g. LDR light sensor
+    - Trigger note or CC
+
+  
+### Homework for next class
+**Follow these video tutorials**
+- [Music Devices Fusion 1 - Basic modeling](https://www.youtube.com/watch?v=-jZU_3DBTc4)
+- [Music Devices Fusion 2 - More modeling](https://youtu.be/iwORyv7a8Dg?si=hDeALyrmNELBr7YT)
+    - Create a folder with your name in the MangLab / Music Devices project
+    - See [Switch between hubs (Autodesk)](https://help.autodesk.com/view/fusion360/ENU/?guid=FT-SWITCH-BETWEEN-TEAMS) for how to switch to the MangLab hub
+    - Create a project with your knob within your folder
+
+**Watch** this video tutorial to learn about different ways of modifying shapes and creating shapes using sketches
+- [Fusion 360 Complete Guide - MADE EASY 2024 (YouTube)](https://youtu.be/JyFbIpzzxFE?si=t3gltvMcdjBBVMcy)
+
+**Modify** your basic knob by adding text and / or changing the shape of the knob - be creative!
+
+**Save** your work inside your folder in MangLab / Music Devices
+    - e.g. MangLab hub, Music Devices project, Mang folder
+    <img width="393" alt="Screenshot 2025-02-24 at 5 57 08 PM" src="https://github.com/user-attachments/assets/5f0e1c26-7dc8-4b94-8e93-dcc97de42797" />
+
+
+
+Introduction to rapid prototyping
+- Laser cutting
+    - [Laser Cutting Basics](https://www.instructables.com/Laser-Cutting-Basics/)
+    - [IM Lab Laser Cutting presentation (Google Slides)](https://docs.google.com/presentation/d/1l6x9M0nAiH3uMHQKQtethxi2cAhx7vBo1srYkkMT4bA/edit?usp=sharing)
+- 3D printing
+    - [https://www.instructables.com/3D-Printing-Basics/](https://www.instructables.com/3D-Printing-Basics/)
+    - Community models
+        - User uploaded models
+        - Quality varies
+        - Good for test prints and inspiration
+        - [Printables](https://www.printables.com/)
+        - [Thingiverse](https://www.thingiverse.com/)
+        - [Cults 3D](https://cults3d.com/)
+    - Example files
+        - [Simple Cherry MX Keycap (Printables)](https://www.printables.com/model/118708-simple-cherry-mx-keycap)
+            - Printable keycap for our NeoKey board
+            - Can be customized and printed in multi-colour
+    - [Adafruit Example Projects](https://learn.adafruit.com/category/3d-printing)
+        - [Guitar Synth with CircuitPython SynthIO (Adafruit)](https://learn.adafruit.com/guitar-synth-with-circuitpython-synthio)
+    - [Adafruit parts CAD library](https://learn.adafruit.com/how-to-use-3d-parts-github-repo/overview)
+        - Downloadable models you can use in Fusion to create designs that match with the Adafruit parts
+    - IM Lab Print Farm
+        - 4x [Prusa MK4S with Input Shaper](https://www.prusa3d.com/product/original-prusa-mk4s-3d-printer-5/)
+        - Ultimaker also available
+    - [PrusaSlicer](https://www.prusa3d.com/page/prusaslicer_424/)
+        - Converts solid 3D model to code for Prusa MK4 3D printers
+        - Useful for estimating print time
+        - Choose Prusa MK4S IS (Input Shaper) as the printer
+        - Make sure to enable supports if model has overhangs
+        - Can enable brim if model is very tall or has a small adhesion surface to bed
+
+
+### Homework - Week 6.2
+
+Due before start of next class
+
+- **Create** a 3D design for a custom component for a musical device
+- **See** [Brightspace->Discussions Exercise 4](https://brightspace.nyu.edu/d2l/le/435258/discussions/topics/535232/View) for details and to post your work
+---
+
+# Week 7
+
+## Week 7.1
+Review homework
+- You can upload file directly into your Brightspace post but please keep videos <50MB (otherwise it takes a long time to download)
+- **Inaccessible files / broken links** are not considered submitted.  Please go back check that your links have the correct permissions ("Everyone") / are still accessible.
+- Some images are showing as broken links
+- Some great work so far!
+
+Exercise 3 - MIDI play-along
+- Did you start to get a feeling for the "shape" of the song?
+
+> The project helped me understand the song better. I was surprised to realize that identical notes felt different depending on their placement in the melody. Playing the song myself helped me notice how each note contributes to the overall musical progression.
+
+— Joonha
+
+- [Jason's controller](https://brightspace.nyu.edu/d2l/le/435258/discussions/threads/1971597/View) played triads of notes (chords) selected by the slider
+- How could you use the slider to help you progress through the song?
+
+
+Week 4 Fusion design
+- [Zhaniy's constellation keycaps](https://brightspace.nyu.edu/d2l/le/435258/discussions/threads/1991136/View)
+    - [Gustav Holst - The Planets (YouTube)](https://www.youtube.com/watch?v=Isic2Z2e2xs)
+    - [Gustav Holst - The Planets (Wikipedia)](https://en.wikipedia.org/wiki/The_Planets)
+- [Example of joined bodies](https://brightspace.nyu.edu/d2l/le/435258/discussions/threads/1988728/View)
+    - Demo of [Section Analysis](https://help.autodesk.com/view/fusion360/ENU/?guid=SLD-SECTION-ANALYSIS)
+    - Demo of combining bodies by selecting the bodies in the Browser
+    - Demo of saving a mesh that combines all bodies automatically by right-clicking on highest level in Browser
+- Demo of using [PrusaSlicer](https://prusaslicer.net/) to check how your model will be look after 3D printing
+
+### Meet in C3-116
+
+Autodesk Fusion Workshop
+- You have been granted access to Fusion through your @nyu.edu email address
+    - If you don't have an Autodesk account check your email for the "Welcome to Autodesk" invitation link
+    - If you *already* have an Autodesk account Fusion will show up under "My Products" (no welcome email will be sent)
+    - [Autodesk Fusion for education](https://www.autodesk.com/education/edu-software/fusion)
+    - Your access is tied to my teacher access - it's also possible to apply for your own educational license
+- Fusion is available in C3-116, C3-019 Film Edit Lab, or download to your own machine
+- [Sign in](https://www.autodesk.com/education/edu-software/fusion) and go to Products to download
+
+Video tutorials:
+- [Music Devices Fusion 0 - Installation](https://youtu.be/5us5B8Kd23A?si=is5FpoX7s-aixaB-)
+    - Downloading / accessing Fusion app
+    - **Note:** to access the MangLab hub and Music Devices project you need to click the Team Account button in top left in Fusion and select MangLab and then click on the Music Devices project
+    - [Switch between hubs (Autodesk)](https://help.autodesk.com/view/fusion360/ENU/?guid=FT-SWITCH-BETWEEN-TEAMS) for how to switch to the MangLab hub
+    - You should also get an email invitation to join the hub
+<img width="473" alt="Screenshot 2025-02-24 at 5 44 52 PM" src="https://github.com/user-attachments/assets/cfa2d792-0c7e-44ca-bdaf-c97fcb65ab09" />
+
+- [Music Devices Fusion 1 - Basic modeling](https://www.youtube.com/watch?v=-jZU_3DBTc4)
+    - Follow tutorial to create the knob
+    - Expand the knob by adding more shapes, text, etc to turn it into something unique
+        - [Rotary arm example (Fusion)](https://a360.co/3EPXycB)
+- [Music Devices Fusion 2 - More modeling](https://youtu.be/iwORyv7a8Dg?si=hDeALyrmNELBr7YT)
+    - Smoothing out the edges, adding text, idea for using the encoder as a rotary arm 
+
+- More Fusion 360 tutorials
+    - [Fusion 360 Complete Guide - MADE EASY 2024 (YouTube)](https://youtu.be/JyFbIpzzxFE?si=t3gltvMcdjBBVMcy)
+        - Nice basic overview geared towards 3D printing  
+    - [Fusion 360 for Absolute Beginners (Lars Christensen / YouTube)](https://www.youtube.com/playlist?list=PL40d7srwyc_Ow4aaOGXlP2idPGwD7ruKg)
+        - Goes through modeling a complete part from scratch in a smart way using sketches and constraints
+ 
+
+Inspiration day
+- Look at examples of creative music controller / instrument projects
+    - [Adafruit MIDI projects](https://learn.adafruit.com/search?q=midi)
+        - Have source code and often Fusion files available 
+        - Hacking an existing controller / device - [MIDI Cyber Cat Keyboard (Adafruit)](https://learn.adafruit.com/midi-cyber-cat-keyboard/overview)
+    - [Guthman Musical Instrument Competition - Finalists 2025](https://guthman.gatech.edu/2025-finalists)
+    - [Guthman Musical Instrument Competition - Finalists 2024](https://guthman.gatech.edu/2024-finalists)
+    - [Maker Music Festival](https://www.makermusicfestival.com/building/Moog/)
+        - [Extended Psalter](https://makermusicfestival.com/projectdirectory/extended-psalter/)
+    - [Megachordotron](https://embedded-lab.com/blog/megachordotron-diy-midi-controller-using-teensy/)
+        - Handheld controller with automatic chords
+- Start ideating on our projects
+
 
 
 ## Homework
@@ -1350,31 +1381,6 @@ Due before start of next class
 ---
 
 ## Week 7+
-Announcements
-- TouchDesigner workshop tonight 7:30-9:00pm
-![Workshop Poster](https://github.com/user-attachments/assets/76b5696c-ab16-4829-9ee4-3ea810af6be2)
-
-Review 3D prints
-
-MIDI for Makers
-- [MIDI for Makers](https://learn.adafruit.com/midi-for-makers/overview)
-- Most important messages
-    - Note On / Note Off
-    - CC (Continuous Controller)
-    - Pitch Bend 
-
-Example projects
-- [Control motors with MIDI](https://learn.adafruit.com/midi-for-makers/control-motors-with-midi)
-- [Bricktunes Lego Glove (Adafruit)](https://learn.adafruit.com/bricktunes-lego-glove-synthesizer/overview)
-    - Colour sensor on glove triggers different musical notes
-    - [CircuitPython synthio library](https://learn.adafruit.com/audio-synthesis-with-circuitpython-synthio/overview)
-    - [Chime library for generating chime sounds (GitHub)](https://github.com/CedarGroveStudios/CircuitPython_Chime?tab=readme-ov-file)
-- [Tyrell Desktop Synthesizer](https://learn.adafruit.com/tyrell-desktop-synthesizer/overview)
-    - Touch sensitive pyramid synthesizer
-- [Circle of Fifths Euclidean Synth](https://learn.adafruit.com/circle-of-fifths-euclidean-synth-with-synthio-and-circuitpython)
-- [Faderwave synthesizer](https://learn.adafruit.com/faderwave-synthesizer)
-- [MIDI Stomping Pads](https://learn.adafruit.com/midi-stomping-pads)
-
 Some project ideas
 - Custom controller for [Koala Sampler](https://www.koalasampler.com/) or software synthesizer
 - Interactive sound sculpture where sensors trigger and change the sound

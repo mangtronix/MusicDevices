@@ -306,9 +306,6 @@ Project check-in
 Project Production
 
 ## Week 12.2
-Announcements
-- [Magnesynth debut in Dubai Saturday](https://www.instagram.com/p/DIxnV0NJDhV/?img_index=1)
-
 
 ### Production Mode - GO!
 
@@ -411,7 +408,8 @@ In-class project presentations
 - Come to Black Box and have project running at 4:45pm
 - Show time is 5-7pm in Black Box
 
-### Homework - Final Documentation submission due Friday May 9
+### Homework - Final Documentation
+- **Submission due Wednesday May 13 (no extension possible)**
 - **Post** your project documentation to the class website in your project directory in [MusicDevices/Projects](https://github.com/mangtronix/MusicDevices/tree/main/Projects)
     - See [Syllabus->Final Project](https://docs.google.com/document/d/1NaQrfuxLaoMKMixZ_BOIEzCix7Gx2jokPu_qFPAmvVw/edit#heading=h.2noy7dxf6pp6) and [Syllabus->Project Web Page / Video](https://docs.google.com/document/d/1NaQrfuxLaoMKMixZ_BOIEzCix7Gx2jokPu_qFPAmvVw/edit#heading=h.vksuuzysxkk4) for details
 

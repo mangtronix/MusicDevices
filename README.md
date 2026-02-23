@@ -14,7 +14,7 @@ Music Devices is taught by Michael Ang, Assistant Professor of Practice of Inter
 
 [Weekly Schedule / Notes - Weeks 8-14](WeeklySchedule2.md)
 
-[Interactive Media Lab](https://sites.google.com/nyu.edu/nyuad-arts/interactive-media/new-029-interactive-media-lab) - lab hours, equipment guides, equipment checkout
+[Interactive Media Lab](https://sites.google.com/nyu.edu/nyuad-arts/interactive-media/new-029-interactive-media-lab) - lab hours, equipment guides, [equipment checkout](https://nyuad-artsbooking.nyu.edu/)
 
 ![IMG_0546](https://github.com/user-attachments/assets/5e2272b4-eaab-4312-863c-0e1180f7601b)
 [Bling Rings](Projects/BlingRings) Hip-Hop controller by Sara Almulla, Diana Donatella, and Hind Younus
