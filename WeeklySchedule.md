@@ -1006,7 +1006,7 @@ Example Devices
 Spritekeys example
 - [spritekeys.py (MD GitHub)](https://github.com/mangtronix/MusicDevices/blob/main/CircuitPython/spritekeys.py)
     - Example using NeoKeys, NeoSlider, and display
-    - You need the spritekeys.py file, libraries, and you need to copy CircuitPython/lib/spritesheet.png to CIRCUITPY/spritesheet.png
+    - You need the spritekeys.py file, libraries, and you need to copy CircuitPython/lib/spritesheet.gif to CIRCUITPY/spritesheet.gif
     - Demo of playing in Ableton Live
     - How can you extend the code to use the rotary encoder / push button?
 
