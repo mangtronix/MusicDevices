@@ -949,6 +949,44 @@ Sending MIDI from CircuitPython
     - Example using NeoKeys, NeoSlider, and display
     - You also need to copy CircuitPython/lib/spritesheet.png to CIRCUITPY/spritesheet.png
 
+
+ 
+### Homework - Week 5.2
+
+Due before start of next class
+- **Reading 3** see Brightspace -> Discussions for details
+
+<!--
+- **Choose** a song you like and modify our MIDI controller so you can play along with the song
+- See [Brightspace Discussions->Exercise 3](https://brightspace.nyu.edu/d2l/le/435258/discussions/topics/534517/View) for details and to post your work
+-->
+
+<!--
+- **Perform** using your MIDI controller
+    - Add more controls to your MIDI controller that allow you to perform a short piece of music in the style of Controllerism
+    - Use at least one non-traditional UI element (something other than key, pot, fader)
+        - e.g. light sensor, bend sensor, non-traditional switch
+    - Create an Ableton Live set that goes with your MIDI controller
+        - Some suggestions for possible integrations:
+            - Trigger notes directly in instruments
+            - Start / stop clips
+            - Map to synthesizer parameters
+            - Map to device parameters, for example arpeggiator settings
+    - Record a short video of a performance using your controller and Ableton Live set
+- **Post** your work in the discussion forum
+    - See Brightspace->Discussions->Exercises for details
+    - Host your video on a site like YouTube or Vimeo and embed it in your post
+- **Be ready** to show / discuss your work in class
+-->
+
+---
+
+# Week 6
+
+## Week 6.1
+Review homework from Week 5
+
+<!--
 Example Devices
 - [Afternoon Generative Ambient (Vimeo)](https://vimeo.com/914151652?share=copy#t=0) by Mangtronix
     - Modular synthesizer generative composition
@@ -956,6 +994,7 @@ Example Devices
 - [HiChord Pocket Synthesizer](https://hichord.shop/)
     - Pocketable musical devices that lets you play chords modulated by a joystick
     - [HiChord demos on TikTok](https://www.tiktok.com/@hichord)
+-->
 
 Musical sensors
 - What types of input do we want to sense?
@@ -997,36 +1036,10 @@ Workshop: Musical sensors
 - Connect potentiometers / faders to send CCs
 - Connect a different sensor, e.g. LDR light sensor
     - Trigger note or CC
- 
-### Homework - Week 5.2
 
-Due before start of next class
-- **Choose** a song you like and modify our MIDI controller so you can play along with the song
-- See [Brightspace Discussions->Exercise 3](https://brightspace.nyu.edu/d2l/le/435258/discussions/topics/534517/View) for details and to post your work
 
-<!--
-- **Perform** using your MIDI controller
-    - Add more controls to your MIDI controller that allow you to perform a short piece of music in the style of Controllerism
-    - Use at least one non-traditional UI element (something other than key, pot, fader)
-        - e.g. light sensor, bend sensor, non-traditional switch
-    - Create an Ableton Live set that goes with your MIDI controller
-        - Some suggestions for possible integrations:
-            - Trigger notes directly in instruments
-            - Start / stop clips
-            - Map to synthesizer parameters
-            - Map to device parameters, for example arpeggiator settings
-    - Record a short video of a performance using your controller and Ableton Live set
-- **Post** your work in the discussion forum
-    - See Brightspace->Discussions->Exercises for details
-    - Host your video on a site like YouTube or Vimeo and embed it in your post
-- **Be ready** to show / discuss your work in class
--->
-
----
-
-# Week 6
-
-## Week 6.1
+## Week 6.2
+Review Fusion 360
 ### Meet in C3-116
 
 Autodesk Fusion Workshop
@@ -1079,11 +1092,6 @@ Video tutorials:
     <img width="393" alt="Screenshot 2025-02-24 at 5 57 08 PM" src="https://github.com/user-attachments/assets/5f0e1c26-7dc8-4b94-8e93-dcc97de42797" />
 
 
-
-## Week 6.2
-Review homework from Week 5
-
-Review Fusion 360
 
 Introduction to rapid prototyping
 - Laser cutting
