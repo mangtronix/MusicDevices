@@ -1040,49 +1040,114 @@ Musical sensors
 ](https://learn.adafruit.com/adafruit-vl53l4cd-time-of-flight-distance-sensor)
             - [CircuitPython example code (Adafruit)](https://learn.adafruit.com/adafruit-vl53l4cd-time-of-flight-distance-sensor/python-circuitpython#circuitpython-usage-3112891)
 
-        
+Common controller interface elements
+- Button
+  - [I built an Arcade DIY MIDI controller with an Arduino Pro Micro: The Fliper (Nerd Musician/YouTube)](https://www.youtube.com/watch?v=nv42rTRwKIg)
+- Rotary potentiometer (pot)
+  - [4# How to Code Potentiometers (Complete Guide) - MIDI Programming for the Arduino (Nerd Musician/YouTube)](https://www.youtube.com/watch?v=hcm5H6f8MI8&t=1797s)
+- Linear potentiometer (fader)
+  - [Arduino ribbon synth explanation (gr4yhound/YouTube)](https://www.youtube.com/watch?v=YpkzLo6yx_g)
+- Keys
+  - [How To Make Arduino Piano With Buzzer | | Tinker Cad (Mr. Screw Driver/YouTube)](https://youtu.be/FoXk6OL8GfQ?si=bV51UJTCKdfoOd2O&t=22)
+- Pitch / Mod Wheels
+- Indicators / displays
+  - LED
+    - Numeric display
+    - Text Display
+      - [Arduino based Decibel Meter with Sound Sensor & LCD Display (IoT Project Ideas/YouTube)](https://www.youtube.com/watch?v=4pqeavhW_is)
+    - Graphic display
+- Touch surface
+  - Linear
+  - XY Pad
+    - [Touch Screen as a MIDI Ribbon Controller (MITXela)](https://mitxela.com/projects/ribbon_controller)
+  - Capacitive Touch
+    - [Touch Sensing Midi Controller! | Capacitive Touch and Arduino (The Maker Monster/YouTube)](https://youtu.be/DQ7lrEOZrwc?si=JUcSrtJURW6rNfP-&t=351)
+- Flex Sensor
+  - [DIY Music Glove - Rhythm in the Air (Jesse Yang/YouTube)](https://www.youtube.com/watch?v=WHePx-BSZvs)
+  - [Project from NYU Shanghai Students](https://wp.nyu.edu/mattkerseydocumentationblog/2023/03/22/jazz-hands-matthew-kersey-gottfried-haider/)
+- Pressure sensitivity
+  - Piezo Vibration Disks
+    - [Arduino MIDI Drums with Piezo Disc Triggers (with schematic and code)(Unrelated Activities/YouTube)](https://www.youtube.com/watch?v=TiwmAPjXFcE) 
+  - Keyboard aftertouch
+    - Monophonic / channel aftertouch
+    - Polyphonic (MPE) aftertouch
+  - Breath
+    - DIY Breath Sensors 
+      - [Simplest Breath Sensor for a MIDI Wind Instrument EVER - From a plastic water bottle (KontinuumLAB/YouTube)](https://www.youtube.com/watch?v=es92GqYBge0)
+      - [KontinuumLAB WORKSHOPS: 3 DIY Breath Sensors (KontinuumLAB/YouTube)](https://www.youtube.com/watch?v=qmlhkcaMYX0&t=49s)
+      - [The Harminator, original wind instrument. Worlds first prototype (KontinuumLAB/YouTube)](https://www.youtube.com/watch?v=y6OzpsGPxNU&t=127s)
+- Controller motion
+  - [Gyroscope / accelerometer (attitude sensors)](https://www.youtube.com/watch?v=Wzjms3tgF6w)
+- Presence / human motion
+  - Theremin
+      - [I Built a MIDI THEREMIN! Theremidi - A DIY Arduino MIDI Controller (Nerd Musician/YouTube)](https://www.youtube.com/watch?v=CWPtxGrBlU8&t=499s)
+  - Distance sensors
+    - [Musical Instrument Using Arduino + Ultrasonic Distance Sensor (AutoDesk Instructables/Maker Saga)](https://www.instructables.com/Musical-Instrument-Using-Arduino-Ultrasonic-Distan/)
+    - Camera tracking
+- Light
+  - Light Sensors
+    - [Illumaphone: Light-based Musical Instrument With Arduino (AutoDesk Instructables/bonniee)](https://www.instructables.com/Illumaphone-Light-based-Electronic-Musical-Instrum/)
+  - Laser distance
+    - [Building LASER Harp with an Arduino (Science Shack/YouTube)](https://www.youtube.com/watch?v=pddGR5Eyc0Q)
+- External data (data sonification)
+  - Note: for our class we would build a real-time sensor interface
+    - Wind
+    - Plants
+      - [/Biodata Sonification - Arduino Shield Breadboard Kit v02.pdf(Github)](https://github.com/electricityforprogress/BiodataSonificationBreadboardKit/blob/ac8b28a86406faa1d3ad3d88cac917c3296f4fc5/Biodata%20Sonification%20-%20Arduino%20Shield%20Breadboard%20Kit%20v02.pdf)
+    - DNA sequence
+    - Planetary motion
+      - [The Sounds of a New Planetary System (NASA / YouTube)
+](https://www.youtube.com/watch?v=2BCiOTJjcQQ)
+    - Etc, etc
+- Learning digitalio for graphical displays:
+    - How it works:
+        - [displayio Library Overview](https://learn.adafruit.com/circuitpython-display-support-using-displayio/library-overview)
+        - [Using bitmaps and palettes](https://learn.adafruit.com/circuitpython-display-support-using-displayio/bitmap-and-palette)
+    - Examples:
+        - [Displaying text](https://learn.adafruit.com/circuitpython-display-support-using-displayio/text)
+            - Download this library to use for the tutorial/code: [adafruit_display_text](https://github.com/adafruit/Adafruit_CircuitPython_Display_Text)
+            - <img src="Media/Digitalio_Text_Example.jpg" width="350">
+        - [Displaying a bitmap/image](https://learn.adafruit.com/circuitpython-display-support-using-displayio/display-a-bitmap)
+            - Download the bitmap they provide to follow along: [purple flowers](https://cdn-learn.adafruit.com/assets/assets/000/074/681/original/purple.bmp?1555717198)
+            - <img src="Media/Digitalio_Bitmap_Example.jpg" width="350">
+        - [Using sprites](https://learn.adafruit.com/circuitpython-display-support-using-displayio/sprite-sheet)
+            - This example takes a sprite sheet of different sprites and displays each one over time every 2 seconds. Some of the sprites pictured below:
+            - Download this image loader library and bitmap file to use for the tutorial/code: [adafruit_imageload](https://github.com/adafruit/Adafruit_CircuitPython_ImageLoad) + [sprite bitmap](https://cdn-learn.adafruit.com/assets/assets/000/074/925/original/cp_sprite_sheet.bmp?1556152347) 
+             <img src="Media/Digitalio_Sprite_Example_1.jpg" width="200">
+             <img src="Media/Digitalio_Sprite_Example_2.jpg" width="200">
+             <img src="Media/Digitalio_Sprite_Example_3.jpg" width="200">
+        - [Drawing pixels on screen](https://learn.adafruit.com/circuitpython-display-support-using-displayio/draw-pixels)
+            - <img src="Media/Digitalio_Pixels_Example.jpg" width="350">
+            - The tutorial uses black and white, but you can change the colors to play around with it:
+            - <img src="Media/Digitalio_Pixels_Example_2.jpg" width="350">
+        - [Manipulating tiles and bitmaps to form groups](https://learn.adafruit.com/circuitpython-display-support-using-displayio/sprite-sheet)
+            - Download this image loader library and bitmap file to use for the tutorial/code: [adafruit_imageload](https://github.com/adafruit/Adafruit_CircuitPython_ImageLoad) + [bitmap](https://cdn-learn.adafruit.com/assets/assets/000/075/025/original/castle_sprite_sheet.bmp?1556343110)
+            - <img src="Media/Digitalio_Groups_Example.jpg" width="350">
+    - Useful helper libraries (fonts, shapes, buttons, etc.):
+        - You can also directly download from our CircuitPython --> lib folder. All the digitalio libraries are in there. 
+[Helper Libraries](https://learn.adafruit.com/circuitpython-display-support-using-displayio/helper-libraries)
 
+Example projects
+- [Control motors with MIDI](https://learn.adafruit.com/midi-for-makers/control-motors-with-midi)
+- [Bricktunes Lego Glove (Adafruit)](https://learn.adafruit.com/bricktunes-lego-glove-synthesizer/overview)
+    - Colour sensor on glove triggers different musical notes
+    - [CircuitPython synthio library](https://learn.adafruit.com/audio-synthesis-with-circuitpython-synthio/overview)
+    - [Chime library for generating chime sounds (GitHub)](https://github.com/CedarGroveStudios/CircuitPython_Chime?tab=readme-ov-file)
+- [Tyrell Desktop Synthesizer](https://learn.adafruit.com/tyrell-desktop-synthesizer/overview)
+    - Touch sensitive pyramid synthesizer
+- [Circle of Fifths Euclidean Synth](https://learn.adafruit.com/circle-of-fifths-euclidean-synth-with-synthio-and-circuitpython)
+- [Faderwave synthesizer](https://learn.adafruit.com/faderwave-synthesizer)
+- [MIDI Stomping Pads](https://learn.adafruit.com/midi-stomping-pads)
+
+  
+
+## Week 6.2
 Workshop: Musical sensors
 - Connect buttons to trigger notes
 - Connect potentiometers / faders to send CCs
 - Connect a different sensor, e.g. LDR light sensor
     - Trigger note or CC
 
-
-## Week 6.2
-### Meet in C3-116
-
-Autodesk Fusion Workshop
-- You have been granted access to Fusion through your @nyu.edu email address
-    - If you don't have an Autodesk account check your email for the "Welcome to Autodesk" invitation link
-    - If you *already* have an Autodesk account Fusion will show up under "My Products" (no welcome email will be sent)
-    - [Autodesk Fusion for education](https://www.autodesk.com/education/edu-software/fusion)
-    - Your access is tied to my teacher access - it's also possible to apply for your own educational license
-- Fusion is available in C3-116, C3-019 Film Edit Lab, or download to your own machine
-- [Sign in](https://www.autodesk.com/education/edu-software/fusion) and go to Products to download
-
-Video tutorials:
-- [Music Devices Fusion 0 - Installation](https://youtu.be/5us5B8Kd23A?si=is5FpoX7s-aixaB-)
-    - Downloading / accessing Fusion app
-    - **Note:** to access the MangLab hub and Music Devices project you need to click the Team Account button in top left in Fusion and select MangLab and then click on the Music Devices project
-    - [Switch between hubs (Autodesk)](https://help.autodesk.com/view/fusion360/ENU/?guid=FT-SWITCH-BETWEEN-TEAMS) for how to switch to the MangLab hub
-    - You should also get an email invitation to join the hub
-<img width="473" alt="Screenshot 2025-02-24 at 5 44 52 PM" src="https://github.com/user-attachments/assets/cfa2d792-0c7e-44ca-bdaf-c97fcb65ab09" />
-
-
-- [Music Devices Fusion 1 - Basic modeling](https://www.youtube.com/watch?v=-jZU_3DBTc4)
-    - Follow tutorial to create the knob
-    - Expand the knob by adding more shapes, text, etc to turn it into something unique
-        - [Rotary arm example (Fusion)](https://a360.co/3EPXycB)
-- [Music Devices Fusion 2 - More modeling](https://youtu.be/iwORyv7a8Dg?si=hDeALyrmNELBr7YT)
-    - Smoothing out the edges, adding text, idea for using the encoder as a rotary arm 
-
-- More Fusion 360 tutorials
-    - [Fusion 360 Complete Guide - MADE EASY 2024 (YouTube)](https://youtu.be/JyFbIpzzxFE?si=t3gltvMcdjBBVMcy)
-        - Nice basic overview geared towards 3D printing  
-    - [Fusion 360 for Absolute Beginners (Lars Christensen / YouTube)](https://www.youtube.com/playlist?list=PL40d7srwyc_Ow4aaOGXlP2idPGwD7ruKg)
-        - Goes through modeling a complete part from scratch in a smart way using sketches and constraints
- 
   
 ### Homework for next class
 **Follow these video tutorials**
@@ -1173,6 +1238,39 @@ Week 4 Fusion design
     - Demo of saving a mesh that combines all bodies automatically by right-clicking on highest level in Browser
 - Demo of using [PrusaSlicer](https://prusaslicer.net/) to check how your model will be look after 3D printing
 
+### Meet in C3-116
+
+Autodesk Fusion Workshop
+- You have been granted access to Fusion through your @nyu.edu email address
+    - If you don't have an Autodesk account check your email for the "Welcome to Autodesk" invitation link
+    - If you *already* have an Autodesk account Fusion will show up under "My Products" (no welcome email will be sent)
+    - [Autodesk Fusion for education](https://www.autodesk.com/education/edu-software/fusion)
+    - Your access is tied to my teacher access - it's also possible to apply for your own educational license
+- Fusion is available in C3-116, C3-019 Film Edit Lab, or download to your own machine
+- [Sign in](https://www.autodesk.com/education/edu-software/fusion) and go to Products to download
+
+Video tutorials:
+- [Music Devices Fusion 0 - Installation](https://youtu.be/5us5B8Kd23A?si=is5FpoX7s-aixaB-)
+    - Downloading / accessing Fusion app
+    - **Note:** to access the MangLab hub and Music Devices project you need to click the Team Account button in top left in Fusion and select MangLab and then click on the Music Devices project
+    - [Switch between hubs (Autodesk)](https://help.autodesk.com/view/fusion360/ENU/?guid=FT-SWITCH-BETWEEN-TEAMS) for how to switch to the MangLab hub
+    - You should also get an email invitation to join the hub
+<img width="473" alt="Screenshot 2025-02-24 at 5 44 52 PM" src="https://github.com/user-attachments/assets/cfa2d792-0c7e-44ca-bdaf-c97fcb65ab09" />
+
+- [Music Devices Fusion 1 - Basic modeling](https://www.youtube.com/watch?v=-jZU_3DBTc4)
+    - Follow tutorial to create the knob
+    - Expand the knob by adding more shapes, text, etc to turn it into something unique
+        - [Rotary arm example (Fusion)](https://a360.co/3EPXycB)
+- [Music Devices Fusion 2 - More modeling](https://youtu.be/iwORyv7a8Dg?si=hDeALyrmNELBr7YT)
+    - Smoothing out the edges, adding text, idea for using the encoder as a rotary arm 
+
+- More Fusion 360 tutorials
+    - [Fusion 360 Complete Guide - MADE EASY 2024 (YouTube)](https://youtu.be/JyFbIpzzxFE?si=t3gltvMcdjBBVMcy)
+        - Nice basic overview geared towards 3D printing  
+    - [Fusion 360 for Absolute Beginners (Lars Christensen / YouTube)](https://www.youtube.com/playlist?list=PL40d7srwyc_Ow4aaOGXlP2idPGwD7ruKg)
+        - Goes through modeling a complete part from scratch in a smart way using sketches and constraints
+ 
+
 Inspiration day
 - Look at examples of creative music controller / instrument projects
     - [Adafruit MIDI projects](https://learn.adafruit.com/search?q=midi)
@@ -1186,92 +1284,6 @@ Inspiration day
         - Handheld controller with automatic chords
 - Start ideating on our projects
 
-Common controller interface elements
-- Button
-  - [I built an Arcade DIY MIDI controller with an Arduino Pro Micro: The Fliper (Nerd Musician/YouTube)](https://www.youtube.com/watch?v=nv42rTRwKIg)
-- Rotary potentiometer (pot)
-  - [4# How to Code Potentiometers (Complete Guide) - MIDI Programming for the Arduino (Nerd Musician/YouTube)](https://www.youtube.com/watch?v=hcm5H6f8MI8&t=1797s)
-- Linear potentiometer (fader)
-  - [Arduino ribbon synth explanation (gr4yhound/YouTube)](https://www.youtube.com/watch?v=YpkzLo6yx_g)
-- Keys
-  - [How To Make Arduino Piano With Buzzer | | Tinker Cad (Mr. Screw Driver/YouTube)](https://youtu.be/FoXk6OL8GfQ?si=bV51UJTCKdfoOd2O&t=22)
-- Pitch / Mod Wheels
-- Indicators / displays
-  - LED
-    - Numeric display
-    - Text Display
-      - [Arduino based Decibel Meter with Sound Sensor & LCD Display (IoT Project Ideas/YouTube)](https://www.youtube.com/watch?v=4pqeavhW_is)
-    - Graphic display
-- Touch surface
-  - Linear
-  - XY Pad
-    - [Touch Screen as a MIDI Ribbon Controller (MITXela)](https://mitxela.com/projects/ribbon_controller)
-  - Capacitive Touch
-    - [Touch Sensing Midi Controller! | Capacitive Touch and Arduino (The Maker Monster/YouTube)](https://youtu.be/DQ7lrEOZrwc?si=JUcSrtJURW6rNfP-&t=351)
-- Flex Sensor
-  - [DIY Music Glove - Rhythm in the Air (Jesse Yang/YouTube)](https://www.youtube.com/watch?v=WHePx-BSZvs)
-  - [Project from NYU Shanghai Students](https://wp.nyu.edu/mattkerseydocumentationblog/2023/03/22/jazz-hands-matthew-kersey-gottfried-haider/)
-- Pressure sensitivity
-  - Piezo Vibration Disks
-    - [Arduino MIDI Drums with Piezo Disc Triggers (with schematic and code)(Unrelated Activities/YouTube)](https://www.youtube.com/watch?v=TiwmAPjXFcE) 
-  - Keyboard aftertouch
-    - Monophonic / channel aftertouch
-    - Polyphonic (MPE) aftertouch
-  - Breath
-    - DIY Breath Sensors 
-      - [Simplest Breath Sensor for a MIDI Wind Instrument EVER - From a plastic water bottle (KontinuumLAB/YouTube)](https://www.youtube.com/watch?v=es92GqYBge0)
-      - [KontinuumLAB WORKSHOPS: 3 DIY Breath Sensors (KontinuumLAB/YouTube)](https://www.youtube.com/watch?v=qmlhkcaMYX0&t=49s)
-      - [The Harminator, original wind instrument. Worlds first prototype (KontinuumLAB/YouTube)](https://www.youtube.com/watch?v=y6OzpsGPxNU&t=127s)
-- Controller motion
-  - [Gyroscope / accelerometer (attitude sensors)](https://www.youtube.com/watch?v=Wzjms3tgF6w)
-- Presence / human motion
-  - Theremin
-      - [I Built a MIDI THEREMIN! Theremidi - A DIY Arduino MIDI Controller (Nerd Musician/YouTube)](https://www.youtube.com/watch?v=CWPtxGrBlU8&t=499s)
-  - Distance sensors
-    - [Musical Instrument Using Arduino + Ultrasonic Distance Sensor (AutoDesk Instructables/Maker Saga)](https://www.instructables.com/Musical-Instrument-Using-Arduino-Ultrasonic-Distan/)
-    - Camera tracking
-- Light
-  - Light Sensors
-    - [Illumaphone: Light-based Musical Instrument With Arduino (AutoDesk Instructables/bonniee)](https://www.instructables.com/Illumaphone-Light-based-Electronic-Musical-Instrum/)
-  - Laser distance
-    - [Building LASER Harp with an Arduino (Science Shack/YouTube)](https://www.youtube.com/watch?v=pddGR5Eyc0Q)
-- External data (data sonification)
-  - Note: for our class we would build a real-time sensor interface
-    - Wind
-    - Plants
-      - [/Biodata Sonification - Arduino Shield Breadboard Kit v02.pdf(Github)](https://github.com/electricityforprogress/BiodataSonificationBreadboardKit/blob/ac8b28a86406faa1d3ad3d88cac917c3296f4fc5/Biodata%20Sonification%20-%20Arduino%20Shield%20Breadboard%20Kit%20v02.pdf)
-    - DNA sequence
-    - Planetary motion
-      - [The Sounds of a New Planetary System (NASA / YouTube)
-](https://www.youtube.com/watch?v=2BCiOTJjcQQ)
-    - Etc, etc
-- Learning digitalio for graphical displays:
-    - How it works:
-        - [displayio Library Overview](https://learn.adafruit.com/circuitpython-display-support-using-displayio/library-overview)
-        - [Using bitmaps and palettes](https://learn.adafruit.com/circuitpython-display-support-using-displayio/bitmap-and-palette)
-    - Examples:
-        - [Displaying text](https://learn.adafruit.com/circuitpython-display-support-using-displayio/text)
-            - Download this library to use for the tutorial/code: [adafruit_display_text](https://github.com/adafruit/Adafruit_CircuitPython_Display_Text)
-            - <img src="Media/Digitalio_Text_Example.jpg" width="350">
-        - [Displaying a bitmap/image](https://learn.adafruit.com/circuitpython-display-support-using-displayio/display-a-bitmap)
-            - Download the bitmap they provide to follow along: [purple flowers](https://cdn-learn.adafruit.com/assets/assets/000/074/681/original/purple.bmp?1555717198)
-            - <img src="Media/Digitalio_Bitmap_Example.jpg" width="350">
-        - [Using sprites](https://learn.adafruit.com/circuitpython-display-support-using-displayio/sprite-sheet)
-            - This example takes a sprite sheet of different sprites and displays each one over time every 2 seconds. Some of the sprites pictured below:
-            - Download this image loader library and bitmap file to use for the tutorial/code: [adafruit_imageload](https://github.com/adafruit/Adafruit_CircuitPython_ImageLoad) + [sprite bitmap](https://cdn-learn.adafruit.com/assets/assets/000/074/925/original/cp_sprite_sheet.bmp?1556152347) 
-             <img src="Media/Digitalio_Sprite_Example_1.jpg" width="200">
-             <img src="Media/Digitalio_Sprite_Example_2.jpg" width="200">
-             <img src="Media/Digitalio_Sprite_Example_3.jpg" width="200">
-        - [Drawing pixels on screen](https://learn.adafruit.com/circuitpython-display-support-using-displayio/draw-pixels)
-            - <img src="Media/Digitalio_Pixels_Example.jpg" width="350">
-            - The tutorial uses black and white, but you can change the colors to play around with it:
-            - <img src="Media/Digitalio_Pixels_Example_2.jpg" width="350">
-        - [Manipulating tiles and bitmaps to form groups](https://learn.adafruit.com/circuitpython-display-support-using-displayio/sprite-sheet)
-            - Download this image loader library and bitmap file to use for the tutorial/code: [adafruit_imageload](https://github.com/adafruit/Adafruit_CircuitPython_ImageLoad) + [bitmap](https://cdn-learn.adafruit.com/assets/assets/000/075/025/original/castle_sprite_sheet.bmp?1556343110)
-            - <img src="Media/Digitalio_Groups_Example.jpg" width="350">
-    - Useful helper libraries (fonts, shapes, buttons, etc.):
-        - You can also directly download from our CircuitPython --> lib folder. All the digitalio libraries are in there. 
-[Helper Libraries](https://learn.adafruit.com/circuitpython-display-support-using-displayio/helper-libraries)
 
 
 ## Homework
@@ -1369,22 +1381,6 @@ Due before start of next class
 ---
 
 ## Week 7+
-Announcements
-
-Review 3D prints
-
-Example projects
-- [Control motors with MIDI](https://learn.adafruit.com/midi-for-makers/control-motors-with-midi)
-- [Bricktunes Lego Glove (Adafruit)](https://learn.adafruit.com/bricktunes-lego-glove-synthesizer/overview)
-    - Colour sensor on glove triggers different musical notes
-    - [CircuitPython synthio library](https://learn.adafruit.com/audio-synthesis-with-circuitpython-synthio/overview)
-    - [Chime library for generating chime sounds (GitHub)](https://github.com/CedarGroveStudios/CircuitPython_Chime?tab=readme-ov-file)
-- [Tyrell Desktop Synthesizer](https://learn.adafruit.com/tyrell-desktop-synthesizer/overview)
-    - Touch sensitive pyramid synthesizer
-- [Circle of Fifths Euclidean Synth](https://learn.adafruit.com/circle-of-fifths-euclidean-synth-with-synthio-and-circuitpython)
-- [Faderwave synthesizer](https://learn.adafruit.com/faderwave-synthesizer)
-- [MIDI Stomping Pads](https://learn.adafruit.com/midi-stomping-pads)
-
 Some project ideas
 - Custom controller for [Koala Sampler](https://www.koalasampler.com/) or software synthesizer
 - Interactive sound sculpture where sensors trigger and change the sound
