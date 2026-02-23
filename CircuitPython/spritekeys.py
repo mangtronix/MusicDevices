@@ -52,11 +52,15 @@ from adafruit_midi.note_on import NoteOn
 
 
 
-# Start i2c connection
-i2c_success = False
-i2c_chances = 5
+### I2C SETUP
+# Turn on i2c power. On the ESP32-S3 Reverse TFT we can explicitly disable
+# the power to the TFT and I2C devices in order to save power. Here we
+# turn it on so we can connect to our NeoSlider and NeoKey devices.
 i2c_power = digitalio.DigitalInOut(board.TFT_I2C_POWER)
 i2c_power.direction = digitalio.Direction.OUTPUT
+i2c_power.value = True
+i2c_success = False
+i2c_chances = 5
 
 print("Initializing I2C")
 while (not i2c_success) and i2c_chances > 0:
@@ -76,16 +80,13 @@ while (not i2c_success) and i2c_chances > 0:
 if not i2c_success:
     raise RuntimeError("Failed to initialize i2c")
 
-#i2c = board.STEMMA_I2C()  # For using the built-in STEMMA QT connector on a microcontroller
-
 
 ## NeoSlider Setup
 #neoslider = Seesaw(i2c, 0x30) # Default address
 neoslider_address = 0x38 # Address with A3 cut, to avoid conflicts with Neokey at 0x30
 print("Connecting to Neoslider at %x" % neoslider_address)
 
-# Try connecting with NeoSlider - for some reason the initial connection often
-# doesn't work, so we retry several times
+# Connect to NeoSlider with retries
 neoslider_success = False
 neoslider_chances = 10
 while (not neoslider_success) and neoslider_chances > 0:
@@ -101,8 +102,8 @@ while (not neoslider_success) and neoslider_chances > 0:
 if not neoslider_success:
     raise RuntimeError("  Could not connect to NeoSlider")
 
-slider = AnalogInput(neoslider, 18)
-old_cc_value = slider.value # So we can act only on changes
+slider = AnalogInput(neoslider, 18) # Used to read the position of the fader on the NeoSlider
+old_cc_value = slider.value # Track old value of slider map to MIDI CC so we can act only on changes
 pixels = neopixel.NeoPixel(neoslider, 14, 4, pixel_order=neopixel.GRB)
 
 ## Set up Neokey
@@ -128,10 +129,6 @@ def slider_to_color(value):
 def slider_to_cc_value(value):
     # Map 0-1023 to 127-0
     return int(adafruit_simplemath.map_range(value, 0, 1023, 127, 0))
-#    return 127 - int((value / 1023) * 127)
-
-display = board.DISPLAY
-display.rotation = 180 # Flip display so buttons are on right
 
 # Dimensions in .bmp file
 tile_width = 32
@@ -230,9 +227,11 @@ bb_minor_midi_array_octave_up = [
 ]
 
 
-notes = bb_minor_midi_array_octave_up
-#notes = c_major_scale
-velocity = 100
+# Each NeoKey will be mapped to a note in the scale. You can change this to use different notes or
+# scales. Just make sure to use MIDI note numbers (60 = middle C, 61 = C#, etc.)
+notes = c_major_scale
+#notes = bb_minor_midi_array_octave_up
+velocity = 100 # velocity for notes
 
 """Turn all of our notes off"""
 def notesOff():
@@ -243,7 +242,7 @@ def notesOff():
 cc_number = 1 # Modulation CC
     
 
-# Give MIDI a chance to reconnect
+# Give MIDI a chance to reconnect on board reset
 time.sleep(0.5)
 # Turn all the notes off in case we left any hanging (e.g. unplugged or reset board)
 notesOff()
