@@ -984,6 +984,17 @@ Due before start of next class
 # Week 6
 
 ## Week 6.1
+**Announcements**
+Autodesk Fusion
+- You have been granted access to Fusion through your @nyu.edu email address
+    - If you don't have an Autodesk account check your email for the "Welcome to Autodesk" invitation link
+    - If you *already* have an Autodesk account Fusion will show up under "My Products" (no welcome email will be sent)
+    - [Autodesk Fusion for education](https://www.autodesk.com/education/edu-software/fusion)
+    - Your access is tied to my teacher access - it's also possible to apply for your own educational license
+- Fusion is available in C3-116, C3-019 Film Edit Lab, or download to your own machine
+- [Sign in](https://www.autodesk.com/education/edu-software/fusion) and go to Products to download
+- See [Fusion Installation (Music Devices YouTube)](https://www.youtube.com/watch?v=5us5B8Kd23A&list=PLu4XhOBNpasRh4gECFa_265TXL6ad-JZS&index=6) for step by step installation instructions
+
 Review homework from Week 5
 
 <!--
