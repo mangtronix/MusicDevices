@@ -945,11 +945,6 @@ Sending MIDI from CircuitPython
     - You should see MIDI messages sent from your Feather to your computer over USB
 - [midi_buttons.py (MD GitHub)](https://github.com/mangtronix/MusicDevices/blob/main/CircuitPython/midi_buttons.py)
     - Sends NoteOn / NoteOff from ESP32-S3 buttons
-- [spritekeys.py (MD GitHub)](https://github.com/mangtronix/MusicDevices/blob/main/CircuitPython/spritekeys.py) - for next class
-    - Example using NeoKeys, NeoSlider, and display
-    - You also need to copy CircuitPython/lib/spritesheet.png to CIRCUITPY/spritesheet.png
-
-
  
 ### Homework - Week 5.2
 
@@ -1139,7 +1134,21 @@ Example projects
 - [Faderwave synthesizer](https://learn.adafruit.com/faderwave-synthesizer)
 - [MIDI Stomping Pads](https://learn.adafruit.com/midi-stomping-pads)
 
-  
+Spritekeys example
+- [spritekeys.py (MD GitHub)](https://github.com/mangtronix/MusicDevices/blob/main/CircuitPython/spritekeys.py)
+    - Example using NeoKeys, NeoSlider, and display
+    - You also need to copy CircuitPython/lib/spritesheet.png to CIRCUITPY/spritesheet.png
+    - How can you extend it by using the rotary encoder / push button?
+
+### Homework for next class
+- Get spritekeys example working
+    - See output in your MIDI monitor (e.g. Protokol)
+    - Use to control MIDI instrument in Ableton Live
+    - Map slider to a parameter of the MIDI instrument in Live
+    - Find a song you like
+        - Find out what key (set of musical notes) the song uses
+        - Update the ```notes``` array in spritekeys.py to contain notes from that key
+        - Try playing along to the song 
 
 ## Week 6.2
 Workshop: Musical sensors
