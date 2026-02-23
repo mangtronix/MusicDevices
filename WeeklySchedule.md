@@ -1003,6 +1003,13 @@ Example Devices
     - [HiChord demos on TikTok](https://www.tiktok.com/@hichord)
 -->
 
+Spritekeys example
+- [spritekeys.py (MD GitHub)](https://github.com/mangtronix/MusicDevices/blob/main/CircuitPython/spritekeys.py)
+    - Example using NeoKeys, NeoSlider, and display
+    - You need the spritekeys.py file, libraries, and you need to copy CircuitPython/lib/spritesheet.png to CIRCUITPY/spritesheet.png
+    - Demo of playing in Ableton Live
+    - How can you extend the code to use the rotary encoder / push button?
+
 Musical sensors
 - What types of input do we want to sense?
 - How expressive are our inputs and outputs?
@@ -1134,12 +1141,6 @@ Example projects
 - [Circle of Fifths Euclidean Synth](https://learn.adafruit.com/circle-of-fifths-euclidean-synth-with-synthio-and-circuitpython)
 - [Faderwave synthesizer](https://learn.adafruit.com/faderwave-synthesizer)
 - [MIDI Stomping Pads](https://learn.adafruit.com/midi-stomping-pads)
-
-Spritekeys example
-- [spritekeys.py (MD GitHub)](https://github.com/mangtronix/MusicDevices/blob/main/CircuitPython/spritekeys.py)
-    - Example using NeoKeys, NeoSlider, and display
-    - You need the spritekeys.py file, libraries, and you need to copy CircuitPython/lib/spritesheet.png to CIRCUITPY/spritesheet.png
-    - How can you extend the code to use the rotary encoder / push button?
 
 ### Homework for next class
 - Get spritekeys example working
