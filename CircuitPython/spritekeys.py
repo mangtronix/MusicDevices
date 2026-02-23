@@ -229,8 +229,8 @@ bb_minor_midi_array_octave_up = [
 
 # Each NeoKey will be mapped to a note in the scale. You can change this to use different notes or
 # scales. Just make sure to use MIDI note numbers (60 = middle C, 61 = C#, etc.)
-notes = c_major_scale
-#notes = bb_minor_midi_array_octave_up
+#notes = c_major_scale
+notes = c_major_pentatonic_scale
 velocity = 100 # velocity for notes
 
 """Turn all of our notes off"""
@@ -239,8 +239,8 @@ def notesOff():
         midi.send(NoteOff(note, 0))
 
 # Which Control Change the slider will send
-cc_number = 1 # Modulation CC
-    
+# cc_number = 1 # Modulation CC
+cc_number = 74 # Brightness (filter cutoff) CC
 
 # Give MIDI a chance to reconnect on board reset
 time.sleep(0.5)
