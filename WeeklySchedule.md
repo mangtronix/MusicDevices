@@ -1159,7 +1159,6 @@ Workshop: Musical sensors
 - Connect a different sensor, e.g. LDR light sensor
     - Trigger note or CC
 
-  
 ### Homework for next class
 **Follow these video tutorials**
 - [Music Devices Fusion 1 - Basic modeling](https://www.youtube.com/watch?v=-jZU_3DBTc4)
