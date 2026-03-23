@@ -27,6 +27,9 @@ Note: Exact due dates for assignments and readings are indicated in Brightspace
 Announcements
 - Check-in
 - Classes online
+  - Timezones
+  - Cameras
+  - Recordings
 - Midterm
 - Rest of semester
 
