@@ -34,8 +34,6 @@ Announcements
 - Rest of semester
 
 ## Homework - Week 8.1
-*Complete* your midterm assignment
-
 *Record* five sounds from your environment
 
 <!--
@@ -68,6 +66,7 @@ Project lifecycle
 ### Homework - Week 8.2
 
 Due before start of next class
+*Complete* your midterm assignment
 
 - **Form** groups of 2-4 students
 - **Finish** your Project Proposal
