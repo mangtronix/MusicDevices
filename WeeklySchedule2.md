@@ -34,12 +34,17 @@ Announcements
 - Rest of semester
 
 ## Homework - Week 8.1
+*Complete* your midterm assignment
+
+*Record* five sounds from your environment
+
+<!--
 **Think** of a project idea
 
 **Post** your idea to the [Brightspace Discussions -> Individual Exercises -> Initial Project Idea](https://brightspace.nyu.edu/d2l/le/435258/discussions/topics/538217/View)
 
 **Be ready** to discuss your idea in the next class
-
+-->
 
 ## Week 8.2
 ### Idea Lab
