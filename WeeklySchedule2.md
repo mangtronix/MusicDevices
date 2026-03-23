@@ -36,6 +36,8 @@ Announcements
 ## Homework - Week 8.1
 *Record* five sounds from your environment
 
+*Download* and try Fusion
+
 <!--
 **Think** of a project idea
 
