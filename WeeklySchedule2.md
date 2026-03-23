@@ -34,9 +34,11 @@ Announcements
 - Rest of semester
 
 ## Homework - Week 8.1
-*Record* five sounds from your environment
+- *Record* five sounds from your environment
 
-*Download* and try Fusion
+- *Download* and try Fusion
+
+- *Work* on your Midterm project. The midterm is due Monday March 30 _before_ class
 
 <!--
 **Think** of a project idea
@@ -68,7 +70,8 @@ Project lifecycle
 ### Homework - Week 8.2
 
 Due before start of next class
-*Complete* your midterm assignment
+*Complete* your midterm assignment and submit it via Brightspace->Discussions
+
 
 - **Form** groups of 2-4 students
 - **Finish** your Project Proposal
