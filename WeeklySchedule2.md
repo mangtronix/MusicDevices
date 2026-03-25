@@ -49,6 +49,49 @@ Announcements
 -->
 
 ## Week 8.2
+
+3D printing example
+
+Sampling with Ableton Live demo
+
+Midterm progress feedback
+
+### Homework - Week 8.2
+
+Due before start of next class
+*Complete* your midterm assignment and submit it via Brightspace->Discussions
+
+---
+
+# Week 9
+
+## Week 9.1
+Share midterm
+
+3D Design with Tinkercad
+
+- Debouncing buttons
+    - Often want to react to **changes** in button state rather than whether button is currently pressed
+    - Can keep previous state of button and compare to current state to react to transitions 
+    - [CircuitPython debouncer library](https://learn.adafruit.com/debouncer-library-python-circuitpython-buttons-sensors/basic-debouncing)
+
+## Week 9.2
+
+Introduce Final Project
+
+3D Design workshop
+  
+### Homework - Week 9.2
+
+Due before start of next class
+- **Prepare** a project idea
+
+
+---
+
+# Week 10
+
+## Week 10.1
 ### Idea Lab
 Round Table of Project Ideas
 
@@ -67,53 +110,6 @@ Project lifecycle
 - Documentation
 
 
-### Homework - Week 8.2
-
-Due before start of next class
-*Complete* your midterm assignment and submit it via Brightspace->Discussions
-
-
-- **Form** groups of 2-4 students
-- **Finish** your Project Proposal
-    - See [Syllabus->Project Proposal](https://docs.google.com/document/d/1NaQrfuxLaoMKMixZ_BOIEzCix7Gx2jokPu_qFPAmvVw/edit#heading=h.disn06hi3v03) for details
-- **Prepare** to present your Project Proposal in class
----
-
-# Week 9
-
-## Week 9.1
-Project proposal work session and feedback
-- Individual group consultations on project proposal and implementation plan
-- Group work session for project proposal
-
-## Week 9.2
-Project proposal presentations
-- Each group get 7 minutes to present
-- Feedback from class and professor
-- Collect technical topics from proposed projects
-
-- Debouncing buttons
-    - Often want to react to **changes** in button state rather than whether button is currently pressed
-    - Can keep previous state of button and compare to current state to react to transitions 
-    - [CircuitPython debouncer library](https://learn.adafruit.com/debouncer-library-python-circuitpython-buttons-sensors/basic-debouncing)
-
-  
-### Homework - Week 9.2
-
-Due before start of next class
-
-- **Work** on your implementation plan
-    - Identify most difficult / uncertain parts of project
-    - What technologies you will use
-- **Find** example music that matches what you are trying to create
-- **Post** a link to your implementation plan and music examples on [Brightspace Discussion](https://brightspace.nyu.edu/d2l/le/435258/discussions/topics/538992/View)
----
-# SPRING BREAK / SPRING BREAK / SPRING BREAK #
----
-
-# Week 10
-
-## Week 10.1
 - Review implementation plans
 - Update week-by-week plans
 - What is the most challenging part of your project?
@@ -166,11 +162,24 @@ Due before start of next class
 - **Update** your project implementation plan
 - **Make** a plan for your in-class production next class
 
-## Week 10.2
-## Meet in IM Lab
-Announcements
-- Prusa XL - need prior permission for prints that go into next day, can email Mang with .3mf export file from PrusaSlicer showing time and slicer options
+- **Work** on your implementation plan
+    - Identify most difficult / uncertain parts of project
+    - What technologies you will use
+- **Find** example music that matches what you are trying to create
+- **Post** a link to your implementation plan and music examples on [Brightspace Discussion](https://brightspace.nyu.edu/d2l/le/435258/discussions/topics/538992/View)
 
+
+## Week 10.2
+
+Project proposal work session and feedback
+- Individual group consultations on project proposal and implementation plan
+- Group work session for project proposal
+
+Project proposal presentations
+- Each group get 7 minutes to present
+- Feedback from class and professor
+- Collect technical topics from proposed projects
+- 
 Project production
 - Work towards resolving your largest challenge
 
