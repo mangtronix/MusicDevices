@@ -49,12 +49,23 @@ Announcements
 -->
 
 ## Week 8.2
+Announcements
+- Let me know when there's a sound issue (now on Ethernet)
 
 3D printing example
 
 Sampling with Ableton Live demo
 
 Midterm progress feedback
+
+Zoom sound sharing test
+- Enable sound when sharing screen, can try "Stereo (high-fidelity)"
+- Check that Ableton is using Zoom sound device
+<img width="649" height="638" alt="Screenshot 2026-03-25 at 7 36 09 AM" src="https://github.com/user-attachments/assets/55d8c2a9-e151-4523-b650-b72eae6b7cb6" />
+<img width="560" height="615" alt="Screenshot 2026-03-25 at 7 34 07 AM" src="https://github.com/user-attachments/assets/0f997562-9599-4ac8-80c2-8a37bfaed1f4" />
+
+
+
 
 ### Homework - Week 8.2
 
