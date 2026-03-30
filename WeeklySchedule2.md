@@ -96,7 +96,7 @@ Using multiple instruments in Ableton
     - [CircuitPython debouncer library](https://learn.adafruit.com/debouncer-library-python-circuitpython-buttons-sensors/basic-debouncing)
 -->
 
-### Homework
+### Week 9.1 Homework
 3D Design with Tinkercad
 - Sign up for [Tinkercad](https://www.tinkercad.com/)
 - Join the Music Devices S2026 classroom - check your email or Brightspace->Announcements for the link
