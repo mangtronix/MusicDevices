@@ -129,10 +129,13 @@ Using multiple instruments in Ableton
 Introduce Final Project
 
 3D Design workshop
+- [Design custom 3D printed parts (YouTube)](https://youtu.be/ub5NFpyP8wk?si=j-Nbh7sWbeWTdjs0)
   
 ### Homework - Week 9.2
 
 Due before start of next class
+- **Complete** 3D design exercise
+  - Progress is automatically tracked in Tinkercad classroom, no separate submission
 - **Prepare** a project idea
 
 
