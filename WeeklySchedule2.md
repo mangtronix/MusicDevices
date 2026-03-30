@@ -86,6 +86,23 @@ Tips on using AI
 - You can test pure Python functions using the built in python interpreter on your laptop or in an IDE
 - Credit the generated code in your source code with a link to the conversation with AI
 
+Improving latency in CircuitPython
+- Our python code typically executes synchronously, line by line
+- Avoid functions that take a long time, such as serial prints
+- Make your serial debugging conditional on a variable so they're easy to turn on for debugging, and off for speed
+
+Example
+```
+serial_debug = True # on for debugging
+#serial_debug = False # off for speed
+
+while True:
+  if serial_debug:
+    print("This will slow things down")
+
+  do_something()
+```
+
 Using multiple instruments in Ableton
 - Refer to today's Zoom recording for details
 
