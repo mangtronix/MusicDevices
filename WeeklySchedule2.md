@@ -105,6 +105,7 @@ while True:
 
 Using multiple instruments in Ableton
 - Refer to today's Zoom recording for details
+- Ableton Live set [Week 9 - Multiple instruments](https://github.com/mangtronix/MusicDevices/tree/main/Ableton/Week%209%20-%20Multiple%20instruments%20Project)
 
 <!--
 - Debouncing buttons
