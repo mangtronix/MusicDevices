@@ -1159,7 +1159,6 @@ Workshop: Musical sensors
 - Connect a different sensor, e.g. LDR light sensor
     - Trigger note or CC
 
-  
 ### Homework for next class
 **Follow these video tutorials**
 - [Music Devices Fusion 1 - Basic modeling](https://www.youtube.com/watch?v=-jZU_3DBTc4)
@@ -1222,11 +1221,15 @@ Due before start of next class
 # Week 7
 
 ## Week 7.1
+Canceled due to the situation
+
+<!--
 Review homework
 - You can upload file directly into your Brightspace post but please keep videos <50MB (otherwise it takes a long time to download)
 - **Inaccessible files / broken links** are not considered submitted.  Please go back check that your links have the correct permissions ("Everyone") / are still accessible.
 - Some images are showing as broken links
 - Some great work so far!
+-->
 
 Exercise 3 - MIDI play-along
 - Did you start to get a feeling for the "shape" of the song?
@@ -1312,7 +1315,20 @@ Idea Lab
 -->
 
 ## Week 7.2
-## Workshop: 3D printing workshop with IM Lab Instructor ##
+Announcements
+- Class is online for the rest of the semester
+- Lab / classroom access via keycard will stay the same for now
+- Please keep your Music Devices kit with you so we can continue the class after the Spring break
+    - e.g. pick up from Lab when safe and take with you if traveling
+    - If you're unable to pick up your kit likely we can send it to you
+- Normal attendance policy will apply for online classes
+- No synchronous class Monday, just think about your final projects if able
+- Class will be adapted for online format
+- Mang is available if you have any questions or just want to talk!
+- Stay safe
+
+
+## Workshop: 3D printing workshop with IM Lab Instructor (postponed) ##
 Agenda:
 - See laser cutter and materials available (no demo since laser cutter inoperable)
 - See MK4 printers

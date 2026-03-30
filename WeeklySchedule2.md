@@ -25,20 +25,125 @@ Note: Exact due dates for assignments and readings are indicated in Brightspace
 
 ## Week 8.1
 Announcements
-- Working on tutorials for generating sound directly on the CircuitPython board
-    - [Basic tone demo on CircuitPython (MusicDevices GitHub)](https://github.com/mangtronix/MusicDevices/blob/main/Tutorials/Speaker_Hardware_Software.md)
-
-String Thing Demo
+- Check-in
+- Classes online
+  - Timezones
+  - Cameras
+  - Recordings
+- Midterm
+- Rest of semester
 
 ## Homework - Week 8.1
+- *Record* five sounds from your environment
+
+- *Download* and try Fusion
+
+- *Work* on your Midterm project. The midterm is due Monday March 30 _before_ class
+
+<!--
 **Think** of a project idea
 
 **Post** your idea to the [Brightspace Discussions -> Individual Exercises -> Initial Project Idea](https://brightspace.nyu.edu/d2l/le/435258/discussions/topics/538217/View)
 
 **Be ready** to discuss your idea in the next class
-
+-->
 
 ## Week 8.2
+Announcements
+- Let me know when there's a sound issue (now on Ethernet)
+
+3D printing example
+
+Sampling with Ableton Live demo
+
+Midterm progress feedback
+
+Zoom sound sharing test
+- Enable sound when sharing screen, can try "Stereo (high-fidelity)"
+- Check that Ableton is using Zoom sound device
+<img width="649" height="638" alt="Screenshot 2026-03-25 at 7 36 09 AM" src="https://github.com/user-attachments/assets/55d8c2a9-e151-4523-b650-b72eae6b7cb6" />
+<img width="560" height="615" alt="Screenshot 2026-03-25 at 7 34 07 AM" src="https://github.com/user-attachments/assets/0f997562-9599-4ac8-80c2-8a37bfaed1f4" />
+
+
+
+
+### Homework - Week 8.2
+
+Due before start of next class
+*Complete* your midterm assignment and submit it via Brightspace->Discussions
+
+---
+
+# Week 9
+
+## Week 9.1
+Midterm sharing
+
+Tips on using AI
+- When generating code, generate small functions that do one thing
+- Don't just accept the generated code - make sure it works!
+- Generate a function that you can use to test the generated code
+- You can test pure Python functions using the built in python interpreter on your laptop or in an IDE
+- Credit the generated code in your source code with a link to the conversation with AI
+
+Improving latency in CircuitPython
+- Our python code typically executes synchronously, line by line
+- Avoid functions that take a long time, such as serial prints
+- Make your serial debugging conditional on a variable so they're easy to turn on for debugging, and off for speed
+
+Example
+```
+serial_debug = True # on for debugging
+#serial_debug = False # off for speed
+
+while True:
+  if serial_debug:
+    print("This will slow things down")
+
+  do_something()
+```
+
+Using multiple instruments in Ableton
+- Refer to today's Zoom recording for details
+
+<!--
+- Debouncing buttons
+    - Often want to react to **changes** in button state rather than whether button is currently pressed
+    - Can keep previous state of button and compare to current state to react to transitions 
+    - [CircuitPython debouncer library](https://learn.adafruit.com/debouncer-library-python-circuitpython-buttons-sensors/basic-debouncing)
+-->
+
+### Week 9.1 Homework
+3D Design with Tinkercad
+- Sign up for [Tinkercad](https://www.tinkercad.com/)
+- Join the Music Devices S2026 classroom - check your email or Brightspace->Announcements for the link
+- Complete the tutorials in the "Tutorials" activivity (Let's Learn Tinkercad, Introduction to Primitive Shapes, Creating Holes, Monogrammed Ring)
+- Your progress in the tutorials is tracked through Tinkercad Classrooms. Make sure to complete the final tutorial of making a custom ring
+<img width="1332" height="391" alt="Screenshot 2026-03-30 at 3 52 56 PM" src="https://github.com/user-attachments/assets/76d60112-d98d-48b8-a014-0918eab1e298" />
+
+
+
+
+## Week 9.2
+
+Introduce Final Project
+
+3D Design workshop
+- [Design custom 3D printed parts (YouTube)](https://youtu.be/ub5NFpyP8wk?si=j-Nbh7sWbeWTdjs0)
+  
+### Homework - Week 9.2
+
+Due before start of next class
+- **Complete** 3D design exercise
+  - Progress is automatically tracked in Tinkercad classroom, no separate submission
+- **Prepare** a project idea
+
+
+---
+
+# Week 10
+
+## Week 10.1
 ### Idea Lab
 Round Table of Project Ideas
 
@@ -57,51 +162,6 @@ Project lifecycle
 - Documentation
 
 
-### Homework - Week 8.2
-
-Due before start of next class
-
-- **Form** groups of 2-4 students
-- **Finish** your Project Proposal
-    - See [Syllabus->Project Proposal](https://docs.google.com/document/d/1NaQrfuxLaoMKMixZ_BOIEzCix7Gx2jokPu_qFPAmvVw/edit#heading=h.disn06hi3v03) for details
-- **Prepare** to present your Project Proposal in class
----
-
-# Week 9
-
-## Week 9.1
-Project proposal work session and feedback
-- Individual group consultations on project proposal and implementation plan
-- Group work session for project proposal
-
-## Week 9.2
-Project proposal presentations
-- Each group get 7 minutes to present
-- Feedback from class and professor
-- Collect technical topics from proposed projects
-
-- Debouncing buttons
-    - Often want to react to **changes** in button state rather than whether button is currently pressed
-    - Can keep previous state of button and compare to current state to react to transitions 
-    - [CircuitPython debouncer library](https://learn.adafruit.com/debouncer-library-python-circuitpython-buttons-sensors/basic-debouncing)
-
-  
-### Homework - Week 9.2
-
-Due before start of next class
-
-- **Work** on your implementation plan
-    - Identify most difficult / uncertain parts of project
-    - What technologies you will use
-- **Find** example music that matches what you are trying to create
-- **Post** a link to your implementation plan and music examples on [Brightspace Discussion](https://brightspace.nyu.edu/d2l/le/435258/discussions/topics/538992/View)
----
-# SPRING BREAK / SPRING BREAK / SPRING BREAK #
----
-
-# Week 10
-
-## Week 10.1
 - Review implementation plans
 - Update week-by-week plans
 - What is the most challenging part of your project?
@@ -154,11 +214,24 @@ Due before start of next class
 - **Update** your project implementation plan
 - **Make** a plan for your in-class production next class
 
-## Week 10.2
-## Meet in IM Lab
-Announcements
-- Prusa XL - need prior permission for prints that go into next day, can email Mang with .3mf export file from PrusaSlicer showing time and slicer options
+- **Work** on your implementation plan
+    - Identify most difficult / uncertain parts of project
+    - What technologies you will use
+- **Find** example music that matches what you are trying to create
+- **Post** a link to your implementation plan and music examples on [Brightspace Discussion](https://brightspace.nyu.edu/d2l/le/435258/discussions/topics/538992/View)
 
+
+## Week 10.2
+
+Project proposal work session and feedback
+- Individual group consultations on project proposal and implementation plan
+- Group work session for project proposal
+
+Project proposal presentations
+- Each group get 7 minutes to present
+- Feedback from class and professor
+- Collect technical topics from proposed projects
+- 
 Project production
 - Work towards resolving your largest challenge
 
