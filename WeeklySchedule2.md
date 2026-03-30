@@ -77,14 +77,35 @@ Due before start of next class
 # Week 9
 
 ## Week 9.1
-Share midterm
+Midterm sharing
 
-3D Design with Tinkercad
+Tips on using AI
+- When generating code, generate small functions that do one thing
+- Don't just accept the generated code - make sure it works!
+- Generate a function that you can use to test the generated code
+- You can test pure Python functions using the built in python interpreter on your laptop or in an IDE
+- Credit the generated code in your source code with a link to the conversation with AI
 
+Using multiple instruments in Ableton
+- Refer to today's Zoom recording for details
+
+<!--
 - Debouncing buttons
     - Often want to react to **changes** in button state rather than whether button is currently pressed
     - Can keep previous state of button and compare to current state to react to transitions 
     - [CircuitPython debouncer library](https://learn.adafruit.com/debouncer-library-python-circuitpython-buttons-sensors/basic-debouncing)
+-->
+
+### Homework
+3D Design with Tinkercad
+- Sign up for [Tinkercad](https://www.tinkercad.com/)
+- Join the Music Devices S2026 classroom - check your email or Brightspace->Announcements for the link
+- Complete the tutorials in the "Tutorials" activivity (Let's Learn Tinkercad, Introduction to Primitive Shapes, Creating Holes, Monogrammed Ring)
+- Your progress in the tutorials is tracked through Tinkercad Classrooms. Make sure to complete the final tutorial of making a custom ring
+<img width="1332" height="391" alt="Screenshot 2026-03-30 at 3 52 56 PM" src="https://github.com/user-attachments/assets/76d60112-d98d-48b8-a014-0918eab1e298" />
+
+
+
 
 ## Week 9.2
 
