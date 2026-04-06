@@ -146,7 +146,9 @@ Due before start of next class
 
 ## Week 10.1
 Announcements
-- Class materials stipend will be loaded to your FAB cards
+- Class materials stipend of $120 will be loaded to your FAB cards
+- Should be credited April 15
+- Can be used to buy electronic components, small tools like soldering irons, 3D printing, laser cutting
 
 3D Design / Printing
 
