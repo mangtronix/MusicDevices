@@ -145,6 +145,15 @@ Due before start of next class
 # Week 10
 
 ## Week 10.1
+Announcements
+- Class materials stipend will be loaded to your FAB cards
+
+3D Design / Printing
+
+Discuss Final Project
+
+## Week 10.2
+
 ### Idea Lab
 Round Table of Project Ideas
 
