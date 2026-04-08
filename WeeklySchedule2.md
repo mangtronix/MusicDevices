@@ -152,9 +152,22 @@ Announcements
 
 3D Design / Printing
 
-Discuss Final Project
 
 ## Week 10.2
+
+Discuss Final Project
+
+3D Design / Printing
+
+### Week 10.2 Homework
+
+3D Design
+
+Final Project Idea
+
+# Week 11
+
+## Week 11.1
 
 ### Idea Lab
 Round Table of Project Ideas
