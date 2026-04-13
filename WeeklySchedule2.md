@@ -168,6 +168,15 @@ Final Project Idea
 # Week 11
 
 ## Week 11.1
+- Review homework
+- Web MIDI
+  - [About Web MIDI (midi.org)](https://midi.org/about-web-midi)
+  - [Web MIDI API (MDN)](https://developer.mozilla.org/en-US/docs/Web/API/Web_MIDI_API)
+  - [WEBMIDI.js](https://webmidijs.org/)
+  - Example sketches
+    - [midi tester (editor.p5js.org)](https://editor.p5js.org/sandpills/sketches/ckEr2thWV)
+    - [p5js_webmidi](https://github.com/FSUdigitalmedia/p5js_webmidi)
+
 
 ### Idea Lab
 Round Table of Project Ideas
