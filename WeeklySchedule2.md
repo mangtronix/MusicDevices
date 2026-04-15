@@ -406,6 +406,9 @@ Project topics
 
 Due before start of next class
 
+**Create** a final project idea
+- **Post** your project idea to the [Brightspace Discussions](https://brightspace.nyu.edu/d2l/le/538990/discussions/topics/597780/View) forum
+
 <!--
 - **Conduct user testing** of your project
     - Test your project with multiple users
