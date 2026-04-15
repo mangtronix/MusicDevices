@@ -373,6 +373,11 @@ Musical Inspiration
     - [Where are Voyager 1 and Voyager 2 Now? (NASA)](https://science.nasa.gov/mission/voyager/where-are-voyager-1-and-voyager-2-now/)
     - [The Voyager Golden Record: A reminder that we are all connected (United Nations)](https://www.youtube.com/watch?v=l5BG5nGmGFQ)
 
+Using MIDI with p5.js
+- [midi tester (p5 sketch)](https://editor.p5js.org/mangtronix/sketches/ZiNpPVMyM)
+  - Shows and plays notes sent from MIDI controller
+  - Uses browser MIDI functionality directly
+
 
 Workshop: Project production
 - Share your project progress
