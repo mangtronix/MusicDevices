@@ -382,6 +382,7 @@ Using Web MIDI with p5.js
 - [midi tester (p5 sketch)](https://editor.p5js.org/mangtronix/sketches/ZiNpPVMyM)
   - Shows and plays notes sent from MIDI controller
   - Uses browser MIDI functionality directly
+- [Making Your Own Musical Instruments with P5.js, Arduino, and WebMIDI](https://medium.com/@luisa.ph/making-your-own-musical-instruments-with-p5-js-arduino-and-webmidi-2422b9596791)
 
 
 Workshop: Project production
