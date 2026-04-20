@@ -110,9 +110,9 @@ function spawnBurst(note, vel) {
 
   const x     = noteXFrac(note) * window.innerWidth;
   const y     = window.innerHeight * 0.65;
-  const count = Math.round(10 + (vel / 127) * 25);  // velocity → burst size
+  const count = Math.round(10 + (vel / 127) * 25);
 
-  for (let i = 0; i < count; i++) spawnParticle(x, y, cfg.color, vel);
+  for (let i = 0; i < count; i++) spawnParticle(x, y, note, cfg.color, vel);
 }
 
 function spawnTrickle(note) {
@@ -120,12 +120,12 @@ function spawnTrickle(note) {
   if (!cfg) return;
   const x = noteXFrac(note) * window.innerWidth;
   const y = window.innerHeight * 0.65;
-  for (let i = 0; i < 2; i++) spawnParticle(x, y, cfg.color, 60);
+  for (let i = 0; i < 2; i++) spawnParticle(x, y, note, cfg.color, 60);
 }
 
-function spawnParticle(x, y, color, vel) {
+function spawnParticle(x, y, note, color, vel) {
   const speed = 1.5 + Math.random() * (3 + vel / 127 * 5);
-  const angle = -Math.PI * (0.15 + Math.random() * 0.70);  // upward arc
+  const angle = -Math.PI * (0.15 + Math.random() * 0.70);
   const jitter = 20;
   midi.particles.push({
     x: x + (Math.random() - 0.5) * jitter,
@@ -137,10 +137,71 @@ function spawnParticle(x, y, color, vel) {
     b: clamp(color[2] + (Math.random() - 0.5) * 50),
     size: 2.5 + Math.random() * 3.5,
     life: 1.0,
+    note,          // which note owns this particle (used for interactions)
   });
 }
 
 function clamp(v) { return Math.max(0, Math.min(255, v)); }
+
+// ─── Particle interactions ────────────────────────────────────────────────────
+// Particles from DIFFERENT notes repel at close range and weakly attract at
+// medium range. Same-note particles ignore each other. The attraction band
+// makes clouds orbit around each other rather than just flying apart.
+//
+// A spatial hash grid limits comparisons to nearby particles → O(N) per frame.
+
+const CELL = 80;   // grid cell size in pixels
+
+function buildGrid(particles) {
+  const grid = new Map();
+  for (const pt of particles) {
+    const key = `${Math.floor(pt.x / CELL)},${Math.floor(pt.y / CELL)}`;
+    if (!grid.has(key)) grid.set(key, []);
+    grid.get(key).push(pt);
+  }
+  return grid;
+}
+
+function applyInteractions(particles, grid) {
+  const MAX_SPEED = 12;
+
+  for (const pt of particles) {
+    const cx = Math.floor(pt.x / CELL);
+    const cy = Math.floor(pt.y / CELL);
+
+    for (let dx = -1; dx <= 1; dx++) {
+      for (let dy = -1; dy <= 1; dy++) {
+        const cell = grid.get(`${cx + dx},${cy + dy}`);
+        if (!cell) continue;
+        for (const other of cell) {
+          if (other === pt || other.note === pt.note) continue;
+
+          const nx   = pt.x - other.x;
+          const ny   = pt.y - other.y;
+          const dist = Math.sqrt(nx * nx + ny * ny);
+          if (dist < 1) continue;
+
+          if (dist < 40) {
+            // Close range: strong repulsion — clouds bounce off each other
+            const f = 2.5 / dist;
+            pt.vx += (nx / dist) * f;
+            pt.vy += (ny / dist) * f;
+          } else if (dist < 120) {
+            // Medium range: weak attraction — clouds swirl and orbit
+            const t = (dist - 40) / 80;   // 0 at 40 px, 1 at 120 px
+            const f = 0.09 * (1 - t);
+            pt.vx -= (nx / dist) * f;
+            pt.vy -= (ny / dist) * f;
+          }
+        }
+      }
+    }
+
+    // Cap speed so forces don't blow up
+    const spd = Math.sqrt(pt.vx * pt.vx + pt.vy * pt.vy);
+    if (spd > MAX_SPEED) { pt.vx = pt.vx / spd * MAX_SPEED; pt.vy = pt.vy / spd * MAX_SPEED; }
+  }
+}
 
 // ─── Web Audio: chromatically tuned explosion sounds ─────────────────────────
 // Each NoteOn fires a three-layer sound:
@@ -294,31 +355,37 @@ new p5(function(p) {
       spawnTrickle(note);
     }
 
-    // Update and draw particles
+    // Build spatial grid once per frame (used for both physics and sparks)
+    const grid = buildGrid(midi.particles);
+
+    // Cross-note physics: repulsion + orbital attraction
+    applyInteractions(midi.particles, grid);
+
+    // Update positions and draw particles
     for (const pt of midi.particles) {
       pt.vy += g;
       pt.x  += pt.vx;
       pt.y  += pt.vy;
-      pt.vx *= 0.995;   // very slight drag
+      pt.vx *= 0.995;
       pt.life -= 0.007;
 
       const a = pt.life * 255;
 
-      // Soft outer glow
       p.noStroke();
       p.fill(pt.r, pt.g, pt.b, a * 0.08);
       p.circle(pt.x, pt.y, pt.size * 6);
 
-      // Mid halo
       p.fill(pt.r, pt.g, pt.b, a * 0.25);
       p.circle(pt.x, pt.y, pt.size * 2.8);
 
-      // Bright core
       p.fill(pt.r, pt.g, pt.b, a);
       p.circle(pt.x, pt.y, pt.size);
     }
 
-    // Remove dead particles (faded out or off-screen)
+    // Connection sparks: bright arcs between close different-note particles
+    drawConnectionSparks(midi.particles, grid);
+
+    // Remove dead particles
     midi.particles = midi.particles.filter(
       pt => pt.life > 0 && pt.y < p.height + 80 && pt.y > -80
     );
@@ -351,6 +418,52 @@ new p5(function(p) {
       p.text('click page · press a key · move a slider', p.width / 2, p.height / 2);
     }
   };
+
+  // ── Connection sparks: energy arcs between close different-note particles ──
+  function drawConnectionSparks(particles, grid) {
+    const SPARK_R = 28;   // px — within this distance a spark is drawn
+
+    for (const pt of particles) {
+      const cx = Math.floor(pt.x / CELL);
+      const cy = Math.floor(pt.y / CELL);
+
+      for (let dx = -1; dx <= 1; dx++) {
+        for (let dy = -1; dy <= 1; dy++) {
+          const cell = grid.get(`${cx + dx},${cy + dy}`);
+          if (!cell) continue;
+          for (const other of cell) {
+            // Skip same note and only process each pair once (pt < other by ref)
+            if (other === pt || other.note === pt.note || other < pt) continue;
+
+            const nx   = pt.x - other.x;
+            const ny   = pt.y - other.y;
+            const dist = Math.sqrt(nx * nx + ny * ny);
+            if (dist > SPARK_R) continue;
+
+            const t = 1 - dist / SPARK_R;   // 1 = touching, 0 = at edge
+            const a = t * 200 * Math.min(pt.life, other.life);
+
+            // Blended midpoint color
+            const mr = (pt.r + other.r) / 2;
+            const mg = (pt.g + other.g) / 2;
+            const mb = (pt.b + other.b) / 2;
+            const mx = (pt.x + other.x) / 2;
+            const my = (pt.y + other.y) / 2;
+
+            // Arc between the two particles
+            p.stroke(mr, mg, mb, a);
+            p.strokeWeight(1 + t);
+            p.line(pt.x, pt.y, other.x, other.y);
+
+            // Bright flare at midpoint
+            p.noStroke();
+            p.fill(mr, mg, mb, a * 1.4);
+            p.circle(mx, my, 4 * t + 1);
+          }
+        }
+      }
+    }
+  }
 
   // ── Bottom UI: note dots (left) + CC gravity meter (right) ────────────────
   function drawBottomUI(g) {
