@@ -142,6 +142,84 @@ function spawnParticle(x, y, color, vel) {
 
 function clamp(v) { return Math.max(0, Math.min(255, v)); }
 
+// ─── Web Audio: chromatically tuned explosion sounds ─────────────────────────
+// Each NoteOn fires a three-layer sound:
+//   1. Pitched sine at the MIDI note's frequency (main body)
+//   2. Sub-octave sine at freq/2 (low-end weight)
+//   3. Band-pass filtered noise burst (transient "crack")
+// All layers use a sharp attack and exponential decay so they feel percussive.
+
+let audioCtx = null;
+
+function getAudio() {
+  if (!audioCtx) audioCtx = new AudioContext();
+  if (audioCtx.state === 'suspended') audioCtx.resume();
+  return audioCtx;
+}
+
+// Browsers require a user gesture to start AudioContext.
+// Clicking anywhere on the page satisfies that requirement.
+document.addEventListener('click', () => getAudio(), { once: true });
+
+function midiToHz(note) {
+  return 440 * Math.pow(2, (note - 69) / 12);
+}
+
+function playExplosion(note, vel) {
+  const ctx  = getAudio();
+  const now  = ctx.currentTime;
+  const freq = midiToHz(note);
+  const amp  = 0.55 * (vel / 127);
+
+  // Master gain for this event
+  const master = ctx.createGain();
+  master.gain.setValueAtTime(amp, now);
+  master.connect(ctx.destination);
+
+  // Layer 1: pitched sine — starts a minor third sharp, drops to pitch in 25 ms
+  // This pitch-drop attack gives the "thud" character of a tuned kick drum.
+  const osc1 = ctx.createOscillator();
+  const env1 = ctx.createGain();
+  osc1.type = 'sine';
+  osc1.frequency.setValueAtTime(freq * 1.2, now);
+  osc1.frequency.exponentialRampToValueAtTime(freq, now + 0.025);
+  env1.gain.setValueAtTime(1.0, now);
+  env1.gain.exponentialRampToValueAtTime(0.001, now + 0.7);
+  osc1.connect(env1); env1.connect(master);
+  osc1.start(now); osc1.stop(now + 0.75);
+
+  // Layer 2: sub-octave sine for low-end weight
+  const osc2 = ctx.createOscillator();
+  const env2 = ctx.createGain();
+  osc2.type = 'sine';
+  osc2.frequency.setValueAtTime(freq / 2, now);
+  env2.gain.setValueAtTime(0.7, now);
+  env2.gain.exponentialRampToValueAtTime(0.001, now + 0.55);
+  osc2.connect(env2); env2.connect(master);
+  osc2.start(now); osc2.stop(now + 0.6);
+
+  // Layer 3: short burst of white noise band-passed at the note frequency
+  const bufLen  = Math.ceil(ctx.sampleRate * 0.12);
+  const noiseBuf = ctx.createBuffer(1, bufLen, ctx.sampleRate);
+  const data     = noiseBuf.getChannelData(0);
+  for (let i = 0; i < bufLen; i++) data[i] = Math.random() * 2 - 1;
+
+  const noise  = ctx.createBufferSource();
+  noise.buffer = noiseBuf;
+
+  const bpf = ctx.createBiquadFilter();
+  bpf.type = 'bandpass';
+  bpf.frequency.value = freq * 2;   // colour the noise around the 2nd harmonic
+  bpf.Q.value = 1.2;
+
+  const env3 = ctx.createGain();
+  env3.gain.setValueAtTime(0.8, now);
+  env3.gain.exponentialRampToValueAtTime(0.001, now + 0.10);
+
+  noise.connect(bpf); bpf.connect(env3); env3.connect(master);
+  noise.start(now); noise.stop(now + 0.12);
+}
+
 // ─── WebMIDI setup ────────────────────────────────────────────────────────────
 WebMidi.enable()
   .then(() => {
@@ -149,13 +227,14 @@ WebMidi.enable()
       document.getElementById('device-name').textContent = input.name;
       document.getElementById('device-name').classList.remove('none');
 
-      // NoteOn: register note, track it as active, spawn particle burst
+      // NoteOn: register note, spawn particles and play tuned explosion
       input.addListener('noteon', e => {
         const note = e.note.number;
         const vel  = e.rawVelocity;
         registerNote(note);
         midi.activeNotes.add(note);
         spawnBurst(note, vel);
+        playExplosion(note, vel);
       });
 
       // NoteOff: stop the trickle
@@ -269,7 +348,7 @@ new p5(function(p) {
       p.fill(55, 55, 80);
       p.textAlign(p.CENTER, p.CENTER);
       p.textSize(14);
-      p.text('press a key · move a slider', p.width / 2, p.height / 2);
+      p.text('click page · press a key · move a slider', p.width / 2, p.height / 2);
     }
   };
 
