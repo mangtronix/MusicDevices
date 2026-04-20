@@ -1,3 +1,15 @@
+// 02 -- Note Visualizer
+//
+// Listens for MIDI note-on messages and spawns a coloured expanding ripple
+// for each note, with velocity controlling the ring's size and speed. Notes
+// are registered dynamically on first arrival -- each pitch class gets its
+// own hue around the colour wheel, and positions are assigned by pitch rank
+// so any controller (four buttons or a full keyboard) gets a clean layout
+// with no hard-coded mapping.
+//
+// Written with Claude by Michael Ang for Music Devices (IM-UH 3116, NYU Abu Dhabi).
+// More info: https://mangtronix.github.io/MusicDevices/p5examples.html#02-note-visualizer
+
 // --- Shared MIDI state (written by WebMIDI, read by p5) ----------------------
 const midi = {
   activeNotes: new Set(),   // set of currently held note numbers

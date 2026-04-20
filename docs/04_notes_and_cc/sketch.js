@@ -1,3 +1,15 @@
+// 04 -- Integrated p5 / CircuitPython
+//
+// Press keys to spawn glowing particle bursts with chromatically-pitched
+// explosion sounds; move a slider to change the gravity that pulls them up
+// or down. Particles from different notes repel at close range and orbit
+// at medium range, with bright connection sparks where they meet. Pairs
+// with CircuitPython/midi_particles.py so the hardware buttons and slider
+// match the on-screen particle colours and the gravity CC.
+//
+// Written with Claude by Michael Ang for Music Devices (IM-UH 3116, NYU Abu Dhabi).
+// More info: https://mangtronix.github.io/MusicDevices/p5examples.html#04-notes-and-cc
+
 // --- Shared MIDI state -------------------------------------------------------
 // Written by WebMIDI listeners, read by the p5 draw loop.
 const midi = {

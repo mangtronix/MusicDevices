@@ -1,3 +1,14 @@
+// 01 -- MIDI Monitor
+//
+// Lists every connected MIDI input and output and shows a live, colour-coded
+// log of every incoming MIDI message (note on/off, control change, pitch bend,
+// and anything else) with timestamps and a filter. Useful as an oscilloscope
+// for MIDI when you are building your own controllers and need to see what
+// they are actually sending.
+//
+// Written with Claude by Michael Ang for Music Devices (IM-UH 3116, NYU Abu Dhabi).
+// More info: https://mangtronix.github.io/MusicDevices/p5examples.html#01-midi-monitor
+
 // --- State -------------------------------------------------------------------
 let messageCount = 0;
 const MAX_ENTRIES = 200;   // keep the DOM lean

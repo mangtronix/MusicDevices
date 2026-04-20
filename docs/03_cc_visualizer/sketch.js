@@ -1,3 +1,14 @@
+// 03 -- CC Visualizer
+//
+// Shows every incoming MIDI Control Change (knob, slider, pedal) as a live
+// dial plus a scrolling waveform of its recent history, with a grid of chips
+// at the bottom showing every CC seen so far. Each (channel, CC number) pair
+// is tracked separately, so a full controller sending many CCs at once is
+// visible in one view without having to pick which one to watch.
+//
+// Written with Claude by Michael Ang for Music Devices (IM-UH 3116, NYU Abu Dhabi).
+// More info: https://mangtronix.github.io/MusicDevices/p5examples.html#03-cc-visualizer
+
 // --- Common CC names ---------------------------------------------------------
 const CC_NAMES = {
   0:'Bank Select',  1:'Modulation',   2:'Breath',        4:'Foot Ctrl',
