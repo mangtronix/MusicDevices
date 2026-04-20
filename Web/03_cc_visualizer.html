@@ -12,8 +12,9 @@
 
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { background: #0d0d14; overflow: hidden; }
+    body { background: #0d0d14; overflow: hidden; font-family: 'Courier New', monospace; }
 
+    /* Top status bar */
     #hud {
       position: fixed;
       top: 0; left: 0; right: 0;
@@ -22,47 +23,65 @@
       align-items: center;
       gap: 16px;
       background: rgba(13,13,20,0.85);
-      font-family: 'Courier New', monospace;
       font-size: 12px;
       color: #555;
       z-index: 10;
       pointer-events: none;
     }
-
     #hud .title { color: #a0c4ff; }
     #hud #device-name { color: #56b4f7; }
     #hud #device-name.none { color: #333; }
 
-    /* CC number selector — pointer-events enabled */
-    #cc-controls {
+    /* Big readout line: Ch · CC · Name · Value */
+    #cc-info {
       position: fixed;
-      bottom: 16px; left: 50%;
-      transform: translateX(-50%);
-      font-family: 'Courier New', monospace;
-      font-size: 12px;
-      color: #444;
+      top: 38px; left: 0; right: 0;
+      padding: 10px 20px;
+      background: rgba(13,13,20,0.7);
+      font-size: 18px;
+      color: #aaa;
+      z-index: 10;
+      pointer-events: none;
       display: flex;
       align-items: center;
-      gap: 12px;
-      z-index: 10;
+      gap: 10px;
+      flex-wrap: wrap;
     }
+    #cc-info .field    { color: #555; font-size: 0.75em; letter-spacing: 0.08em; text-transform: uppercase; }
+    #cc-info .val      { color: #56b4f7; font-weight: bold; }
+    #cc-info .name     { color: #e0e0f0; }
+    #cc-info .sep      { color: #333; }
+    #cc-info .val-big  { color: #56b4f7; font-weight: bold; font-size: 1.25em; }
+    #cc-info .hint     { color: #444; font-size: 14px; }
 
-    #cc-controls label { color: #444; }
-
-    #cc-select {
+    /* List of auto-detected CCs */
+    #cc-list {
+      position: fixed;
+      bottom: 16px; left: 0; right: 0;
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      padding: 0 16px;
+      z-index: 10;
+      pointer-events: none;
+      font-size: 11px;
+    }
+    .cc-chip {
+      padding: 4px 10px;
       background: #13131f;
       border: 1px solid #2a2a40;
-      color: #888;
-      padding: 4px 8px;
-      font-family: inherit;
-      font-size: 12px;
-      cursor: pointer;
+      color: #666;
+      white-space: nowrap;
+    }
+    .cc-chip.active {
+      border-color: #56b4f7;
+      color: #56b4f7;
     }
 
     #back {
       position: fixed;
       top: 8px; right: 16px;
-      font-family: 'Courier New', monospace;
       font-size: 11px;
       color: #333;
       text-decoration: none;
@@ -78,32 +97,114 @@
   <span>MIDI:</span>
   <span id="device-name" class="none">no device</span>
 </div>
-<a href="index.html" id="back">← back</a>
 
-<div id="cc-controls">
-  <label for="cc-select">Monitor CC:</label>
-  <select id="cc-select">
-    <option value="0" selected>CC 0  (NeoSlider default)</option>
-    <option value="1">CC 1  (Mod wheel)</option>
-    <option value="7">CC 7  (Volume)</option>
-    <option value="11">CC 11 (Expression)</option>
-    <option value="74">CC 74 (Filter cutoff)</option>
-  </select>
-  <span id="raw-value" style="color:#56b4f7; min-width:40px; text-align:right;">—</span>
-  <span style="color:#333;">/ 127</span>
+<div id="cc-info">
+  <span class="hint">move a slider or knob on your controller…</span>
 </div>
 
+<div id="cc-list"></div>
+
+<a href="index.html" id="back">← back</a>
+
 <script>
-// ─── Shared state ─────────────────────────────────────────────────────────────
-const state = {
-  ccNumber:   0,       // which CC to display (updated by <select>)
-  ccValue:    64,      // current raw value 0–127
-  history:    [],      // circular buffer of past values for the waveform
-  historyLen: 300,     // number of samples to keep
+// ─── Common MIDI Control Change names ─────────────────────────────────────────
+// Covers the most frequently-used CCs from the MIDI 1.0 spec. Anything not in
+// this table falls back to "(generic CC)".
+const CC_NAMES = {
+  0:   'Bank Select (MSB)',
+  1:   'Modulation',
+  2:   'Breath',
+  4:   'Foot Controller',
+  5:   'Portamento Time',
+  7:   'Channel Volume',
+  8:   'Balance',
+  10:  'Pan',
+  11:  'Expression',
+  12:  'Effect Ctrl 1',
+  13:  'Effect Ctrl 2',
+  32:  'Bank Select (LSB)',
+  64:  'Sustain Pedal',
+  65:  'Portamento On/Off',
+  66:  'Sostenuto',
+  67:  'Soft Pedal',
+  68:  'Legato Footswitch',
+  71:  'Filter Resonance',
+  72:  'Release Time',
+  73:  'Attack Time',
+  74:  'Filter Cutoff',
+  75:  'Decay Time',
+  76:  'Vibrato Rate',
+  77:  'Vibrato Depth',
+  78:  'Vibrato Delay',
+  91:  'Reverb Depth',
+  92:  'Tremolo Depth',
+  93:  'Chorus Depth',
+  94:  'Detune',
+  95:  'Phaser Depth',
+  120: 'All Sound Off',
+  121: 'Reset All Controllers',
+  123: 'All Notes Off',
 };
 
-// Pre-fill history with mid-point so the line doesn't jump from 0
-for (let i = 0; i < state.historyLen; i++) state.history.push(64);
+// ─── Shared state ─────────────────────────────────────────────────────────────
+// Each incoming (channel, cc) pair gets its own entry in ccData with its own
+// running history. activeKey points at whichever was most recently updated.
+const state = {
+  activeKey:  null,     // "channel:cc" or null
+  ccData:     {},       // { "1:0": { channel, cc, value, history } }
+  historyLen: 300,      // waveform length
+};
+
+function keyFor(channel, cc) { return `${channel}:${cc}`; }
+
+function registerCc(channel, cc, value) {
+  const key = keyFor(channel, cc);
+  if (!state.ccData[key]) {
+    // Pre-fill history so the waveform doesn't jump up from 0
+    const history = new Array(state.historyLen).fill(value);
+    state.ccData[key] = { channel, cc, value, history };
+  }
+  return state.ccData[key];
+}
+
+function ccName(cc) { return CC_NAMES[cc] || '(generic CC)'; }
+
+// ─── HTML updates ─────────────────────────────────────────────────────────────
+function updateInfoDisplay() {
+  const el = document.getElementById('cc-info');
+  if (!state.activeKey) {
+    el.innerHTML = '<span class="hint">move a slider or knob on your controller…</span>';
+    return;
+  }
+  const d = state.ccData[state.activeKey];
+  el.innerHTML =
+    `<span class="field">ch</span> <span class="val">${d.channel}</span>` +
+    `<span class="sep">·</span>` +
+    `<span class="field">cc</span> <span class="val">${d.cc}</span>` +
+    `<span class="sep">·</span>` +
+    `<span class="name">${ccName(d.cc)}</span>` +
+    `<span class="sep">·</span>` +
+    `<span class="field">value</span> <span class="val-big">${d.value}</span>` +
+    `<span class="sep">/ 127</span>`;
+}
+
+function updateCcList() {
+  const el = document.getElementById('cc-list');
+  el.innerHTML = '';
+  // Sort by channel then CC number for a stable display
+  const keys = Object.keys(state.ccData).sort((a, b) => {
+    const [ac, an] = a.split(':').map(Number);
+    const [bc, bn] = b.split(':').map(Number);
+    return ac === bc ? an - bn : ac - bc;
+  });
+  for (const key of keys) {
+    const d = state.ccData[key];
+    const chip = document.createElement('div');
+    chip.className = 'cc-chip' + (key === state.activeKey ? ' active' : '');
+    chip.textContent = `ch ${d.channel} · cc ${d.cc}`;
+    el.appendChild(chip);
+  }
+}
 
 // ─── WebMIDI setup ────────────────────────────────────────────────────────────
 WebMidi.enable()
@@ -112,15 +213,22 @@ WebMidi.enable()
       document.getElementById('device-name').textContent = input.name;
       document.getElementById('device-name').classList.remove('none');
 
-      // Control Change — fired by sliders, knobs, pedals
+      // Control Change — fired by sliders, knobs, pedals, footswitches
       input.addListener('controlchange', e => {
-        if (e.controller.number !== state.ccNumber) return;
+        const channel = e.message.channel;    // 1–16
+        const cc      = e.controller.number;  // 0–127
+        const value   = e.rawValue;           // 0–127
 
-        state.ccValue = e.rawValue;    // 0–127
-        state.history.push(state.ccValue);
-        if (state.history.length > state.historyLen) state.history.shift();
+        const d = registerCc(channel, cc, value);
+        d.value = value;
+        d.history.push(value);
+        if (d.history.length > state.historyLen) d.history.shift();
 
-        document.getElementById('raw-value').textContent = state.ccValue;
+        // The most recently updated CC becomes the one we visualize
+        state.activeKey = keyFor(channel, cc);
+
+        updateInfoDisplay();
+        updateCcList();
       });
     }
 
@@ -143,19 +251,10 @@ WebMidi.enable()
     console.error(err);
   });
 
-// Update which CC we're listening to when the select changes
-document.getElementById('cc-select').addEventListener('change', e => {
-  state.ccNumber = parseInt(e.target.value);
-  state.ccValue  = 64;
-  state.history.fill(64);
-  document.getElementById('raw-value').textContent = '—';
-});
-
 // ─── p5.js sketch ─────────────────────────────────────────────────────────────
 new p5(function(p) {
 
-  // Accent color: steel blue
-  const ACCENT = [86, 180, 247];
+  const ACCENT = [86, 180, 247];   // steel blue
 
   p.setup = function() {
     p.createCanvas(p.windowWidth, p.windowHeight);
@@ -166,20 +265,25 @@ new p5(function(p) {
   p.draw = function() {
     p.background(13, 13, 20);
 
-    const cx     = p.width  * 0.30;    // dial center x
-    const cy     = p.height * 0.50;    // dial center y
-    const dialR  = Math.min(p.width * 0.18, p.height * 0.32);
+    // Nothing to draw until a CC message has been received
+    if (!state.activeKey) return;
 
-    drawDial(cx, cy, dialR);
-    drawWaveform();
+    const d = state.ccData[state.activeKey];
+
+    const cx    = p.width  * 0.30;
+    const cy    = p.height * 0.52;
+    const dialR = Math.min(p.width * 0.18, p.height * 0.30);
+
+    drawDial(cx, cy, dialR, d);
+    drawWaveform(d);
     drawDivider(cx + dialR + 40);
   };
 
   // ── Circular dial ──────────────────────────────────────────────────────────
-  function drawDial(cx, cy, r) {
-    const norm = state.ccValue / 127;  // 0–1
+  function drawDial(cx, cy, r, d) {
+    const norm = d.value / 127;  // 0–1
 
-    // Arc sweeps from -210° to +30° (240° range), clockwise
+    // Arc sweeps from 150° to 30° the long way around (240° range)
     const startAngle = p.radians(150);
     const sweepAngle = p.radians(240);
     const endAngle   = startAngle + sweepAngle * norm;
@@ -197,23 +301,30 @@ new p5(function(p) {
       p.arc(cx, cy, r * 2, r * 2, startAngle, endAngle);
     }
 
-    // Needle tip dot
+    // Needle tip
     const tipX = cx + Math.cos(endAngle) * r;
     const tipY = cy + Math.sin(endAngle) * r;
     p.fill(ACCENT[0], ACCENT[1], ACCENT[2]);
     p.noStroke();
     p.circle(tipX, tipY, 14);
 
-    // Center numeric readout
+    // Center numeric readout — big, bright
     p.fill(ACCENT[0], ACCENT[1], ACCENT[2]);
     p.textAlign(p.CENTER, p.CENTER);
-    p.textSize(dialR * 0.45);
-    p.text(state.ccValue, cx, cy - 6);
+    p.textStyle(p.BOLD);
+    p.textSize(r * 0.55);
+    p.text(d.value, cx, cy - r * 0.05);
 
     // "/ 127" sub-label
     p.fill(60, 60, 80);
-    p.textSize(dialR * 0.14);
-    p.text('/ 127', cx, cy + dialR * 0.32);
+    p.textStyle(p.NORMAL);
+    p.textSize(r * 0.14);
+    p.text('/ 127', cx, cy + r * 0.35);
+
+    // CC identifier under the dial
+    p.fill(120, 120, 150);
+    p.textSize(r * 0.13);
+    p.text(`ch ${d.channel} · cc ${d.cc}`, cx, cy + r * 0.55);
 
     // Tick marks at 0, 64, 127
     drawTick(cx, cy, r, startAngle, '0');
@@ -243,10 +354,10 @@ new p5(function(p) {
   }
 
   // ── Scrolling waveform ─────────────────────────────────────────────────────
-  function drawWaveform() {
+  function drawWaveform(d) {
     const left   = p.width  * 0.50;
     const right  = p.width  - 40;
-    const top    = p.height * 0.20;
+    const top    = p.height * 0.24;
     const bottom = p.height * 0.80;
     const midY   = (top + bottom) / 2;
     const h      = bottom - top;
@@ -257,7 +368,7 @@ new p5(function(p) {
     p.strokeWeight(1);
     p.line(left, top,    right, top);
     p.line(left, bottom, right, bottom);
-    p.line(left, midY,   right, midY);     // 64 line
+    p.line(left, midY,   right, midY);
     p.line(left, top,    left,  bottom);
 
     // Axis labels
@@ -269,18 +380,7 @@ new p5(function(p) {
     p.text(' 64', left - 6, midY);
     p.text('  0', left - 6, bottom);
 
-    // Waveform line
-    const hist = state.history;
-    p.noFill();
-    p.stroke(ACCENT[0], ACCENT[1], ACCENT[2], 220);
-    p.strokeWeight(2);
-    p.beginShape();
-    for (let i = 0; i < hist.length; i++) {
-      const x = left  + (i / (hist.length - 1)) * w;
-      const y = bottom - (hist[i] / 127) * h;
-      p.vertex(x, y);
-    }
-    p.endShape();
+    const hist = d.history;
 
     // Filled area under curve
     p.noStroke();
@@ -295,18 +395,35 @@ new p5(function(p) {
     p.vertex(right, bottom);
     p.endShape(p.CLOSE);
 
+    // Waveform line
+    p.noFill();
+    p.stroke(ACCENT[0], ACCENT[1], ACCENT[2], 220);
+    p.strokeWeight(2);
+    p.beginShape();
+    for (let i = 0; i < hist.length; i++) {
+      const x = left  + (i / (hist.length - 1)) * w;
+      const y = bottom - (hist[i] / 127) * h;
+      p.vertex(x, y);
+    }
+    p.endShape();
+
     // Current value indicator on the right edge
-    const curY = bottom - (state.ccValue / 127) * h;
+    const curY = bottom - (d.value / 127) * h;
     p.fill(ACCENT[0], ACCENT[1], ACCENT[2]);
     p.noStroke();
     p.circle(right, curY, 8);
+
+    // Current value number next to the indicator
+    p.fill(ACCENT[0], ACCENT[1], ACCENT[2]);
+    p.textAlign(p.LEFT, p.CENTER);
+    p.textSize(13);
+    p.text(d.value, right + 8, curY);
   }
 
-  // Thin vertical divider between dial and waveform
   function drawDivider(x) {
     p.stroke(20, 20, 32);
     p.strokeWeight(1);
-    p.line(x, p.height * 0.15, x, p.height * 0.85);
+    p.line(x, p.height * 0.18, x, p.height * 0.85);
   }
 
   p.windowResized = function() {
