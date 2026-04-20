@@ -100,6 +100,54 @@
       color: #555;
     }
 
+    .tips {
+      max-width: 800px;
+      margin: 64px auto 0;
+      padding: 24px 28px;
+      background: #13131f;
+      border: 1px solid #222238;
+    }
+
+    .tips h2 {
+      font-size: 1.1rem;
+      color: #a0c4ff;
+      margin-bottom: 6px;
+      letter-spacing: 0.03em;
+    }
+
+    .tips .intro {
+      color: #888;
+      font-size: 0.82rem;
+      line-height: 1.6;
+      margin-bottom: 18px;
+    }
+
+    .tips ol {
+      list-style: decimal outside;
+      padding-left: 22px;
+      color: #bbb;
+      font-size: 0.82rem;
+      line-height: 1.7;
+    }
+
+    .tips li {
+      margin-bottom: 14px;
+    }
+
+    .tips li strong {
+      color: #e0e0f0;
+    }
+
+    .tips li em {
+      color: #f4a261;
+      font-style: normal;
+    }
+
+    .tips code {
+      color: #f4a261;
+      font-size: 0.78rem;
+    }
+
     footer {
       max-width: 800px;
       margin: 48px auto 0;
@@ -177,8 +225,71 @@
 
 </div>
 
+<section class="tips">
+  <h2>Tips for generating similar projects with AI</h2>
+  <p class="intro">
+    These examples were built with Claude as a pair-programmer. A few things that helped —
+    useful whether you start from scratch or copy one of these and diff your way to something new.
+  </p>
+
+  <ol>
+    <li>
+      <strong>Say what it should <em>do</em>, not just what it <em>is</em>.</strong>
+      &ldquo;A page where pressing a key spawns a coloured ripple that fades over ~1 second,
+      and the ripple&rsquo;s size grows with velocity&rdquo; beats &ldquo;a note visualiser&rdquo;.
+      Describe the behaviour a user would see &mdash; inputs, outputs, how things move,
+      what changes over time. The model will fill in reasonable code; it can&rsquo;t fill in your intent.
+    </li>
+    <li>
+      <strong>Point the AI at an existing file for hardware setup.</strong>
+      Instead of retyping pin numbers and I2C addresses, say
+      &ldquo;use the same hardware setup as <code>CircuitPython/spritekeys.py</code>&rdquo;
+      (or whichever file matches your rig). It will read it, pick up the NeoKey / NeoSlider
+      init code, and match the firmware you already have working &mdash; no guessing about
+      which addresses or which notes.
+    </li>
+    <li>
+      <strong>Ask for one example at a time.</strong>
+      Generating four visualisers in one prompt gives you four shallow visualisers.
+      Generating them sequentially &mdash; each building on the last &mdash; gives you one
+      that actually works and three that borrow from it.
+    </li>
+    <li>
+      <strong>When something breaks, show the model the <em>symptom</em>, not your theory.</strong>
+      &ldquo;The dial draws only the outer arc, the center is blank&rdquo; is more useful than
+      &ldquo;I think there&rsquo;s a scope problem with dialR&rdquo;. The model will find the real cause
+      faster from the observable behaviour.
+    </li>
+    <li>
+      <strong>Get it running first, then ask for changes.</strong>
+      Before asking the AI to add features, make sure the basic version actually opens in your
+      browser and responds to your controller. If the first version doesn&rsquo;t work, a second round of
+      &ldquo;also add sound and particles&rdquo; is going to pile new bugs on top of old ones.
+      Small working step &rarr; small change &rarr; small working step.
+    </li>
+    <li>
+      <strong>Ask the AI to explain anything you don&rsquo;t understand.</strong>
+      If it gives you code with <code>Math.pow(2, (note - 69) / 12)</code> or an
+      <code>hsvToRgb</code> function and you&rsquo;re not sure what those do, ask.
+      &ldquo;Explain this line&rdquo; or &ldquo;why did you choose this formula&rdquo; is a
+      legitimate prompt &mdash; you&rsquo;ll learn the technique and be able to modify it yourself
+      next time. Shipping code you can&rsquo;t read means you&rsquo;re stuck the moment it breaks.
+    </li>
+    <li>
+      <strong>Read the code you commit.</strong>
+      AI will confidently hand you code that uses a variable that doesn&rsquo;t exist, or listens
+      to a wrong event name. Open the file, skim it once, run it &mdash; don&rsquo;t paste-and-ship.
+    </li>
+    <li>
+      <strong>Tell the model what you&rsquo;ve ruled out.</strong>
+      &ldquo;I already checked that <code>WebMidi.enable()</code> succeeds and the listener fires &mdash; the bug is
+      in the render path&rdquo; saves five rounds of diagnostic suggestions.
+    </li>
+  </ol>
+</section>
+
 <footer>
-  <p>Uses <a href="https://webmidijs.org" style="color:#444">WebMIDI.js v3</a> and <a href="https://p5js.org" style="color:#444">p5.js</a></p>
+  <p>Uses <a href="https://webmidijs.org" style="color:#444">WebMIDI.js v3</a> and <a href="https://p5js.org" style="color:#444">p5.js</a> &mdash; see <a href="README.md" style="color:#666">README.md</a> for how each example was built.</p>
 </footer>
 
 </body>
