@@ -9,7 +9,7 @@ expandable technique notes, and tips on using AI to generate similar projects.
 ## Quick start
 
 ```
-cd Web && python3 -m http.server 8000
+cd docs && python3 -m http.server 8000
 ```
 
 Then open http://localhost:8000 in Chrome or Edge.
