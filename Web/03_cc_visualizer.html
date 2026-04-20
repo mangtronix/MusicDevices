@@ -5,87 +5,95 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>03 — CC Visualizer</title>
 
-  <!-- WebMIDI.js v3 -->
   <script src="https://cdn.jsdelivr.net/npm/webmidi@3/dist/iife/webmidi.iife.js"></script>
-  <!-- p5.js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.min.js"></script>
 
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { background: #0d0d14; overflow: hidden; font-family: 'Courier New', monospace; }
 
-    /* Top status bar */
+    /* ── Top status bar ── */
     #hud {
-      position: fixed;
-      top: 0; left: 0; right: 0;
+      position: fixed; top: 0; left: 0; right: 0;
       padding: 10px 16px;
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      background: rgba(13,13,20,0.85);
-      font-size: 12px;
-      color: #555;
-      z-index: 10;
-      pointer-events: none;
+      display: flex; align-items: center; gap: 16px;
+      background: rgba(13,13,20,0.9);
+      font-size: 12px; color: #555;
+      z-index: 10; pointer-events: none;
     }
-    #hud .title { color: #a0c4ff; }
+    #hud .title       { color: #a0c4ff; }
     #hud #device-name { color: #56b4f7; }
     #hud #device-name.none { color: #333; }
 
-    /* Big readout line: Ch · CC · Name · Value */
+    /* ── Active CC info line ── */
     #cc-info {
-      position: fixed;
-      top: 38px; left: 0; right: 0;
-      padding: 10px 20px;
-      background: rgba(13,13,20,0.7);
-      font-size: 18px;
-      color: #aaa;
-      z-index: 10;
-      pointer-events: none;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      flex-wrap: wrap;
+      position: fixed; top: 38px; left: 0; right: 0;
+      padding: 8px 20px;
+      background: rgba(13,13,20,0.75);
+      font-size: 16px; color: #aaa;
+      z-index: 10; pointer-events: none;
+      display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
     }
-    #cc-info .field    { color: #555; font-size: 0.75em; letter-spacing: 0.08em; text-transform: uppercase; }
-    #cc-info .val      { color: #56b4f7; font-weight: bold; }
-    #cc-info .name     { color: #e0e0f0; }
-    #cc-info .sep      { color: #333; }
-    #cc-info .val-big  { color: #56b4f7; font-weight: bold; font-size: 1.25em; }
-    #cc-info .hint     { color: #444; font-size: 14px; }
+    #cc-info .field   { color: #555; font-size: 0.72em; text-transform: uppercase; }
+    #cc-info .val     { color: #56b4f7; font-weight: bold; }
+    #cc-info .name    { color: #e0e0f0; }
+    #cc-info .sep     { color: #2a2a40; }
+    #cc-info .val-big { color: #56b4f7; font-weight: bold; font-size: 1.2em; }
+    #cc-info .hint    { color: #333; font-size: 13px; }
 
-    /* List of auto-detected CCs */
+    /* ── CC chip grid at the bottom ── */
     #cc-list {
-      position: fixed;
-      bottom: 16px; left: 0; right: 0;
-      display: flex;
-      justify-content: center;
-      gap: 8px;
-      flex-wrap: wrap;
-      padding: 0 16px;
+      position: fixed; bottom: 0; left: 0; right: 0;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: #0a0a12;       /* gap colour */
+      border-top: 1px solid #1a1a28;
       z-index: 10;
-      pointer-events: none;
-      font-size: 11px;
     }
+
     .cc-chip {
-      padding: 4px 10px;
-      background: #13131f;
-      border: 1px solid #2a2a40;
-      color: #666;
-      white-space: nowrap;
+      background: #0d0d18;
+      padding: 9px 12px 8px;
+      display: flex; flex-direction: column; gap: 4px;
     }
     .cc-chip.active {
-      border-color: #56b4f7;
-      color: #56b4f7;
+      background: #0e1422;
+      border-top: 2px solid #56b4f7;
+      padding-top: 7px;   /* compensate for extra border */
     }
 
+    .chip-top {
+      display: flex; justify-content: space-between; align-items: baseline;
+    }
+    .chip-value {
+      font-size: 22px; font-weight: bold;
+      color: #56b4f7; min-width: 38px;
+    }
+    .cc-chip.active .chip-value { color: #82d4ff; }
+
+    .chip-name {
+      font-size: 10px; color: #666;
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+      max-width: 62%; text-align: right;
+    }
+    .cc-chip.active .chip-name { color: #999; }
+
+    .chip-bar-track {
+      height: 3px; background: #1a1a28; border-radius: 2px; overflow: hidden;
+    }
+    .chip-bar-fill {
+      height: 100%; width: 0%; background: #2a5070;
+      transition: width 0.06s linear;
+    }
+    .cc-chip.active .chip-bar-fill { background: #56b4f7; }
+
+    .chip-meta { font-size: 10px; color: #333; }
+    .cc-chip.active .chip-meta { color: #445; }
+
     #back {
-      position: fixed;
-      top: 8px; right: 16px;
-      font-size: 11px;
-      color: #333;
-      text-decoration: none;
-      z-index: 20;
+      position: fixed; top: 8px; right: 16px;
+      font-size: 11px; color: #333; text-decoration: none; z-index: 20;
     }
     #back:hover { color: #888; }
   </style>
@@ -107,103 +115,95 @@
 <a href="index.html" id="back">← back</a>
 
 <script>
-// ─── Common MIDI Control Change names ─────────────────────────────────────────
-// Covers the most frequently-used CCs from the MIDI 1.0 spec. Anything not in
-// this table falls back to "(generic CC)".
+// ─── Common CC names ──────────────────────────────────────────────────────────
 const CC_NAMES = {
-  0:   'Bank Select (MSB)',
-  1:   'Modulation',
-  2:   'Breath',
-  4:   'Foot Controller',
-  5:   'Portamento Time',
-  7:   'Channel Volume',
-  8:   'Balance',
-  10:  'Pan',
-  11:  'Expression',
-  12:  'Effect Ctrl 1',
-  13:  'Effect Ctrl 2',
-  32:  'Bank Select (LSB)',
-  64:  'Sustain Pedal',
-  65:  'Portamento On/Off',
-  66:  'Sostenuto',
-  67:  'Soft Pedal',
-  68:  'Legato Footswitch',
-  71:  'Filter Resonance',
-  72:  'Release Time',
-  73:  'Attack Time',
-  74:  'Filter Cutoff',
-  75:  'Decay Time',
-  76:  'Vibrato Rate',
-  77:  'Vibrato Depth',
-  78:  'Vibrato Delay',
-  91:  'Reverb Depth',
-  92:  'Tremolo Depth',
-  93:  'Chorus Depth',
-  94:  'Detune',
-  95:  'Phaser Depth',
-  120: 'All Sound Off',
-  121: 'Reset All Controllers',
-  123: 'All Notes Off',
+  0:'Bank Select',  1:'Modulation',   2:'Breath',        4:'Foot Ctrl',
+  5:'Portamento Time', 7:'Volume',    8:'Balance',       10:'Pan',
+  11:'Expression',  12:'Effect 1',   13:'Effect 2',     32:'Bank (LSB)',
+  64:'Sustain',     65:'Portamento', 66:'Sostenuto',    67:'Soft Pedal',
+  68:'Legato',      71:'Resonance',  72:'Release',      73:'Attack',
+  74:'Filter Cutoff', 75:'Decay',    76:'Vib Rate',     77:'Vib Depth',
+  78:'Vib Delay',   91:'Reverb',     92:'Tremolo',      93:'Chorus',
+  94:'Detune',      95:'Phaser',    120:'All Sound Off',121:'Reset Ctrls',
+  123:'All Notes Off',
 };
 
-// ─── Shared state ─────────────────────────────────────────────────────────────
-// Each incoming (channel, cc) pair gets its own entry in ccData with its own
-// running history. activeKey points at whichever was most recently updated.
+function ccName(cc) { return CC_NAMES[cc] || ''; }
+
+// ─── State ────────────────────────────────────────────────────────────────────
+const HISTORY_LEN = 300;
+
 const state = {
-  activeKey:  null,     // "channel:cc" or null
-  ccData:     {},       // { "1:0": { channel, cc, value, history } }
-  historyLen: 300,      // waveform length
+  activeKey: null,
+  ccData: {},        // "ch:cc" → { channel, cc, value, history[] }
 };
 
-function keyFor(channel, cc) { return `${channel}:${cc}`; }
+function keyFor(ch, cc) { return `${ch}:${cc}`; }
 
-function registerCc(channel, cc, value) {
+function getOrCreate(channel, cc, value) {
   const key = keyFor(channel, cc);
   if (!state.ccData[key]) {
-    // Pre-fill history so the waveform doesn't jump up from 0
-    const history = new Array(state.historyLen).fill(value);
-    state.ccData[key] = { channel, cc, value, history };
+    state.ccData[key] = {
+      channel, cc, value,
+      history: new Array(HISTORY_LEN).fill(value),
+    };
   }
   return state.ccData[key];
 }
 
-function ccName(cc) { return CC_NAMES[cc] || '(generic CC)'; }
-
-// ─── HTML updates ─────────────────────────────────────────────────────────────
-function updateInfoDisplay() {
+// ─── HTML update helpers ──────────────────────────────────────────────────────
+function updateInfoLine() {
   const el = document.getElementById('cc-info');
   if (!state.activeKey) {
     el.innerHTML = '<span class="hint">move a slider or knob on your controller…</span>';
     return;
   }
   const d = state.ccData[state.activeKey];
+  const name = CC_NAMES[d.cc] || '(generic CC)';
   el.innerHTML =
     `<span class="field">ch</span> <span class="val">${d.channel}</span>` +
-    `<span class="sep">·</span>` +
+    `<span class="sep"> · </span>` +
     `<span class="field">cc</span> <span class="val">${d.cc}</span>` +
-    `<span class="sep">·</span>` +
-    `<span class="name">${ccName(d.cc)}</span>` +
-    `<span class="sep">·</span>` +
+    `<span class="sep"> · </span>` +
+    `<span class="name">${name}</span>` +
+    `<span class="sep"> · </span>` +
     `<span class="field">value</span> <span class="val-big">${d.value}</span>` +
     `<span class="sep">/ 127</span>`;
 }
 
-function updateCcList() {
-  const el = document.getElementById('cc-list');
-  el.innerHTML = '';
-  // Sort by channel then CC number for a stable display
-  const keys = Object.keys(state.ccData).sort((a, b) => {
-    const [ac, an] = a.split(':').map(Number);
-    const [bc, bn] = b.split(':').map(Number);
-    return ac === bc ? an - bn : ac - bc;
-  });
-  for (const key of keys) {
-    const d = state.ccData[key];
-    const chip = document.createElement('div');
+function updateChips() {
+  const container = document.getElementById('cc-list');
+
+  for (const [key, d] of Object.entries(state.ccData)) {
+    let chip = document.getElementById('chip-' + key);
+
+    // Create chip on first appearance
+    if (!chip) {
+      chip = document.createElement('div');
+      chip.id = 'chip-' + key;
+      chip.innerHTML =
+        `<div class="chip-top">` +
+          `<span class="chip-value" id="val-${key}">0</span>` +
+          `<span class="chip-name">${ccName(d.cc) || 'CC ' + d.cc}</span>` +
+        `</div>` +
+        `<div class="chip-bar-track"><div class="chip-bar-fill" id="bar-${key}"></div></div>` +
+        `<div class="chip-meta">ch ${d.channel} · cc ${d.cc}</div>`;
+      container.appendChild(chip);
+    }
+
+    // Update active styling
     chip.className = 'cc-chip' + (key === state.activeKey ? ' active' : '');
-    chip.textContent = `ch ${d.channel} · cc ${d.cc}`;
-    el.appendChild(chip);
+
+    // Update value and bar (in-place, no DOM rebuild)
+    document.getElementById('val-' + key).textContent = d.value;
+    document.getElementById('bar-' + key).style.width = (d.value / 127 * 100).toFixed(1) + '%';
   }
+}
+
+// Estimate chip grid height so the canvas avoids it
+function chipGridHeight() {
+  const rows = Math.max(1, Math.ceil(Object.keys(state.ccData).length / 4));
+  return rows * 74 + 1;   // ~74px per row + border
 }
 
 // ─── WebMIDI setup ────────────────────────────────────────────────────────────
@@ -213,22 +213,19 @@ WebMidi.enable()
       document.getElementById('device-name').textContent = input.name;
       document.getElementById('device-name').classList.remove('none');
 
-      // Control Change — fired by sliders, knobs, pedals, footswitches
       input.addListener('controlchange', e => {
-        const channel = e.message.channel;    // 1–16
-        const cc      = e.controller.number;  // 0–127
-        const value   = e.rawValue;           // 0–127
+        const channel = e.message.channel;
+        const cc      = e.controller.number;
+        const value   = e.rawValue;
 
-        const d = registerCc(channel, cc, value);
+        const d = getOrCreate(channel, cc, value);
         d.value = value;
         d.history.push(value);
-        if (d.history.length > state.historyLen) d.history.shift();
+        if (d.history.length > HISTORY_LEN) d.history.shift();
 
-        // The most recently updated CC becomes the one we visualize
         state.activeKey = keyFor(channel, cc);
-
-        updateInfoDisplay();
-        updateCcList();
+        updateInfoLine();
+        updateChips();
       });
     }
 
@@ -237,7 +234,6 @@ WebMidi.enable()
     WebMidi.addListener('connected', e => {
       if (e.port.type === 'input') attachInput(e.port);
     });
-
     WebMidi.addListener('disconnected', e => {
       const el = document.getElementById('device-name');
       if (el.textContent === e.port.name) {
@@ -254,7 +250,7 @@ WebMidi.enable()
 // ─── p5.js sketch ─────────────────────────────────────────────────────────────
 new p5(function(p) {
 
-  const ACCENT = [86, 180, 247];   // steel blue
+  const ACCENT = [86, 180, 247];
 
   p.setup = function() {
     p.createCanvas(p.windowWidth, p.windowHeight);
@@ -265,32 +261,49 @@ new p5(function(p) {
   p.draw = function() {
     p.background(13, 13, 20);
 
-    // Nothing to draw until a CC message has been received
-    if (!state.activeKey) return;
+    if (!state.activeKey) {
+      p.noStroke();
+      p.fill(60, 60, 90);
+      p.textAlign(p.CENTER, p.CENTER);
+      p.textSize(14);
+      p.text('move a slider or knob on your controller…', p.width / 2, p.height / 2);
+      return;
+    }
 
     const d = state.ccData[state.activeKey];
 
-    const cx    = p.width  * 0.30;
-    const cy    = p.height * 0.52;
-    const dialR = Math.min(p.width * 0.18, p.height * 0.30);
+    // Layout: reserve space for the top HUD (85px) and bottom chip grid
+    const topPad  = 85;
+    const botPad  = chipGridHeight() + 10;
+    const availH  = p.height - topPad - botPad;
+
+    // Dial — centered horizontally, upper portion of available area
+    const dialR = Math.min(p.width * 0.15, availH * 0.38);
+    const cx    = p.width / 2;
+    const cy    = topPad + dialR + 10;
+
+    // Waveform — full width, between dial and chip grid
+    const waveTop    = cy + dialR + 30;
+    const waveBottom = p.height - botPad - 10;
+    const waveLeft   = p.width * 0.06;
+    const waveRight  = p.width * 0.94;
 
     drawDial(cx, cy, dialR, d);
-    drawWaveform(d);
-    drawDivider(cx + dialR + 40);
+    if (waveBottom > waveTop + 40) {   // only draw if there's room
+      drawWaveform(d, waveLeft, waveRight, waveTop, waveBottom);
+    }
   };
 
-  // ── Circular dial ──────────────────────────────────────────────────────────
+  // ── Dial ──────────────────────────────────────────────────────────────────
   function drawDial(cx, cy, r, d) {
-    const norm = d.value / 127;  // 0–1
-
-    // Arc sweeps from 150° to 30° the long way around (240° range)
+    const norm       = d.value / 127;
     const startAngle = p.radians(150);
     const sweepAngle = p.radians(240);
     const endAngle   = startAngle + sweepAngle * norm;
 
     // Background track
     p.noFill();
-    p.stroke(30, 30, 45);
+    p.stroke(28, 28, 42);
     p.strokeWeight(8);
     p.arc(cx, cy, r * 2, r * 2, startAngle, startAngle + sweepAngle);
 
@@ -301,70 +314,57 @@ new p5(function(p) {
       p.arc(cx, cy, r * 2, r * 2, startAngle, endAngle);
     }
 
-    // Needle tip
-    const tipX = cx + Math.cos(endAngle) * r;
-    const tipY = cy + Math.sin(endAngle) * r;
+    // Needle tip dot
     p.fill(ACCENT[0], ACCENT[1], ACCENT[2]);
     p.noStroke();
-    p.circle(tipX, tipY, 14);
+    p.circle(
+      cx + Math.cos(endAngle) * r,
+      cy + Math.sin(endAngle) * r,
+      12
+    );
 
-    // Center numeric readout — big, bright
+    // Center value (big)
     p.fill(ACCENT[0], ACCENT[1], ACCENT[2]);
     p.textAlign(p.CENTER, p.CENTER);
     p.textStyle(p.BOLD);
     p.textSize(r * 0.55);
-    p.text(d.value, cx, cy - r * 0.05);
+    p.text(d.value, cx, cy - r * 0.04);
 
-    // "/ 127" sub-label
-    p.fill(60, 60, 80);
+    // "/ 127"
+    p.fill(55, 55, 75);
     p.textStyle(p.NORMAL);
     p.textSize(r * 0.14);
-    p.text('/ 127', cx, cy + r * 0.35);
+    p.text('/ 127', cx, cy + r * 0.34);
 
-    // CC identifier under the dial
-    p.fill(120, 120, 150);
-    p.textSize(r * 0.13);
-    p.text(`ch ${d.channel} · cc ${d.cc}`, cx, cy + r * 0.55);
-
-    // Tick marks at 0, 64, 127
-    drawTick(cx, cy, r, startAngle, '0');
+    // Tick marks
+    drawTick(cx, cy, r, startAngle,                   '0');
     drawTick(cx, cy, r, startAngle + sweepAngle * 0.5, '64');
-    drawTick(cx, cy, r, startAngle + sweepAngle, '127');
+    drawTick(cx, cy, r, startAngle + sweepAngle,       '127');
   }
 
   function drawTick(cx, cy, r, angle, label) {
-    const inner = r * 1.12;
-    const outer = r * 1.22;
-    const lx    = cx + Math.cos(angle) * (r * 1.38);
-    const ly    = cy + Math.sin(angle) * (r * 1.38);
-
-    p.stroke(40, 40, 60);
+    p.stroke(38, 38, 55);
     p.strokeWeight(1.5);
     p.line(
-      cx + Math.cos(angle) * inner,
-      cy + Math.sin(angle) * inner,
-      cx + Math.cos(angle) * outer,
-      cy + Math.sin(angle) * outer,
+      cx + Math.cos(angle) * r * 1.12, cy + Math.sin(angle) * r * 1.12,
+      cx + Math.cos(angle) * r * 1.22, cy + Math.sin(angle) * r * 1.22,
     );
     p.noStroke();
-    p.fill(50, 50, 70);
+    p.fill(48, 48, 68);
+    p.textStyle(p.NORMAL);
     p.textSize(11);
     p.textAlign(p.CENTER, p.CENTER);
-    p.text(label, lx, ly);
+    p.text(label, cx + Math.cos(angle) * r * 1.38, cy + Math.sin(angle) * r * 1.38);
   }
 
-  // ── Scrolling waveform ─────────────────────────────────────────────────────
-  function drawWaveform(d) {
-    const left   = p.width  * 0.50;
-    const right  = p.width  - 40;
-    const top    = p.height * 0.24;
-    const bottom = p.height * 0.80;
-    const midY   = (top + bottom) / 2;
-    const h      = bottom - top;
-    const w      = right - left;
+  // ── Waveform ──────────────────────────────────────────────────────────────
+  function drawWaveform(d, left, right, top, bottom) {
+    const midY = (top + bottom) / 2;
+    const h    = bottom - top;
+    const w    = right - left;
 
     // Axes
-    p.stroke(30, 30, 45);
+    p.stroke(25, 25, 40);
     p.strokeWeight(1);
     p.line(left, top,    right, top);
     p.line(left, bottom, right, bottom);
@@ -373,57 +373,45 @@ new p5(function(p) {
 
     // Axis labels
     p.noStroke();
-    p.fill(40, 40, 60);
+    p.fill(38, 38, 58);
+    p.textStyle(p.NORMAL);
     p.textSize(10);
     p.textAlign(p.RIGHT, p.CENTER);
-    p.text('127', left - 6, top);
-    p.text(' 64', left - 6, midY);
-    p.text('  0', left - 6, bottom);
+    p.text('127', left - 5, top);
+    p.text(' 64', left - 5, midY);
+    p.text('  0', left - 5, bottom);
 
     const hist = d.history;
 
-    // Filled area under curve
+    // Filled area
     p.noStroke();
-    p.fill(ACCENT[0], ACCENT[1], ACCENT[2], 30);
+    p.fill(ACCENT[0], ACCENT[1], ACCENT[2], 25);
     p.beginShape();
     p.vertex(left, bottom);
     for (let i = 0; i < hist.length; i++) {
-      const x = left  + (i / (hist.length - 1)) * w;
-      const y = bottom - (hist[i] / 127) * h;
-      p.vertex(x, y);
+      p.vertex(left + (i / (hist.length - 1)) * w, bottom - (hist[i] / 127) * h);
     }
     p.vertex(right, bottom);
     p.endShape(p.CLOSE);
 
-    // Waveform line
+    // Line
     p.noFill();
-    p.stroke(ACCENT[0], ACCENT[1], ACCENT[2], 220);
+    p.stroke(ACCENT[0], ACCENT[1], ACCENT[2], 210);
     p.strokeWeight(2);
     p.beginShape();
     for (let i = 0; i < hist.length; i++) {
-      const x = left  + (i / (hist.length - 1)) * w;
-      const y = bottom - (hist[i] / 127) * h;
-      p.vertex(x, y);
+      p.vertex(left + (i / (hist.length - 1)) * w, bottom - (hist[i] / 127) * h);
     }
     p.endShape();
 
-    // Current value indicator on the right edge
+    // Current value dot + label on right edge
     const curY = bottom - (d.value / 127) * h;
     p.fill(ACCENT[0], ACCENT[1], ACCENT[2]);
     p.noStroke();
     p.circle(right, curY, 8);
-
-    // Current value number next to the indicator
-    p.fill(ACCENT[0], ACCENT[1], ACCENT[2]);
     p.textAlign(p.LEFT, p.CENTER);
-    p.textSize(13);
+    p.textSize(12);
     p.text(d.value, right + 8, curY);
-  }
-
-  function drawDivider(x) {
-    p.stroke(20, 20, 32);
-    p.strokeWeight(1);
-    p.line(x, p.height * 0.18, x, p.height * 0.85);
   }
 
   p.windowResized = function() {
