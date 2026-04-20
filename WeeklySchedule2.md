@@ -426,6 +426,9 @@ Project check-in
 
 - [Live Key Detection](https://keyfinder.live/live)
 
+WebMIDI + p5.js
+- [WebMIDI + p5 examples](https://mangtronix.github.io/MusicDevices/p5examples.html)
+
 ## Week 12.2
 
 ### Production Mode - GO!
