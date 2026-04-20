@@ -16,9 +16,7 @@
 #
 # Setup
 #   1. Make sure boot.py enables USB MIDI (it should already do this).
-#   2. On your computer run:  python3 generate_particles_sprites.py
-#   3. Copy particles_sprites.bmp to the root of your CIRCUITPY drive.
-#   4. Copy this file to CIRCUITPY/code.py  (or import it from code.py).
+#   2. Copy this file to CIRCUITPY/code.py  (or import it from code.py).
 
 import time
 import board
