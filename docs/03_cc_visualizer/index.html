@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>03 — CC Visualizer</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/webmidi@3/dist/iife/webmidi.iife.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.min.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="hud">
+  <span class="title">03 — CC Visualizer</span>
+  <span>MIDI:</span>
+  <span id="device-name" class="none">no device</span>
+</div>
+
+<div id="cc-info">
+  <span class="hint">move a slider or knob on your controller...</span>
+</div>
+
+<div id="cc-list"></div>
+
+<a href="../p5examples.html" id="back">&larr; back</a>
+
+<script src="script.js"></script>
+</body>
+</html>

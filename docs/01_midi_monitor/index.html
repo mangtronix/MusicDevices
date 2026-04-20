@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>01 &mdash; MIDI Monitor</title>
+
+  <!-- WebMIDI.js v3: provides the WebMidi global object -->
+  <script src="https://cdn.jsdelivr.net/npm/webmidi@3/dist/iife/webmidi.iife.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>01 &mdash; MIDI Monitor</h1>
+  <span id="status">Waiting for MIDI access...</span>
+  <a href="../p5examples.html" style="margin-left:auto; color:#333; font-size:0.75rem; text-decoration:none;">&larr; back</a>
+</header>
+
+<div id="sidebar">
+  <div class="section-label">Inputs</div>
+  <div id="inputs-list"><span class="no-devices">none</span></div>
+
+  <div class="section-label" style="margin-top:16px;">Outputs</div>
+  <div id="outputs-list"><span class="no-devices">none</span></div>
+</div>
+
+<div id="log-panel">
+  <div id="log-controls">
+    <button id="btn-clear">Clear</button>
+    <label>
+      Filter:
+      <select id="filter">
+        <option value="all">All messages</option>
+        <option value="noteon">Note On</option>
+        <option value="noteoff">Note Off</option>
+        <option value="controlchange">CC</option>
+      </select>
+    </label>
+    <span id="log-count">0 messages</span>
+  </div>
+  <div id="log"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

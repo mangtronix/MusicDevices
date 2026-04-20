@@ -1,0 +1,138 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: #0d0d14;
+  color: #e0e0f0;
+  font-family: 'Courier New', monospace;
+  font-size: 13px;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-columns: 260px 1fr;
+  grid-template-areas:
+    "header header"
+    "sidebar log";
+}
+
+header {
+  grid-area: header;
+  padding: 16px 20px;
+  background: #13131f;
+  border-bottom: 1px solid #1e1e30;
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+}
+
+h1 { font-size: 0.95rem; color: #a0c4ff; }
+
+#status {
+  font-size: 0.8rem;
+  color: #555;
+}
+
+#status.ok   { color: #6fcf97; }
+#status.err  { color: #eb5757; }
+
+/* Sidebar: device list */
+#sidebar {
+  grid-area: sidebar;
+  padding: 16px;
+  border-right: 1px solid #1e1e30;
+  overflow-y: auto;
+}
+
+.section-label {
+  font-size: 0.7rem;
+  color: #444;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 8px;
+}
+
+.device {
+  padding: 6px 8px;
+  margin-bottom: 4px;
+  background: #13131f;
+  border: 1px solid #1e1e30;
+  color: #888;
+  font-size: 0.78rem;
+}
+
+.device.active {
+  border-color: #6fcf97;
+  color: #6fcf97;
+}
+
+.device.output { color: #9b8fff; }
+
+.no-devices { color: #333; font-size: 0.78rem; }
+
+/* Log panel */
+#log-panel {
+  grid-area: log;
+  display: flex;
+  flex-direction: column;
+}
+
+#log-controls {
+  padding: 10px 16px;
+  border-bottom: 1px solid #1e1e30;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+button {
+  background: #1a1a2a;
+  border: 1px solid #2a2a40;
+  color: #888;
+  padding: 4px 12px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.78rem;
+}
+button:hover { background: #22223a; color: #ccc; }
+
+#filter {
+  background: #13131f;
+  border: 1px solid #2a2a40;
+  color: #ccc;
+  padding: 4px 10px;
+  font-family: inherit;
+  font-size: 0.78rem;
+}
+
+label { color: #555; font-size: 0.78rem; }
+
+#log {
+  flex: 1;
+  overflow-y: auto;
+  padding: 8px 0;
+}
+
+.entry {
+  display: grid;
+  grid-template-columns: 90px 90px 1fr;
+  gap: 0 12px;
+  padding: 3px 16px;
+  border-bottom: 1px solid #0f0f1a;
+  line-height: 1.5;
+}
+.entry:hover { background: #13131f; }
+
+.time   { color: #444; }
+.type   { font-weight: bold; }
+.detail { color: #aaa; }
+
+/* color coding by message type */
+.type-noteon     { color: #6fcf97; }
+.type-noteoff    { color: #4a8f6a; }
+.type-cc         { color: #56b4f7; }
+.type-pitchbend  { color: #e8a838; }
+.type-other      { color: #777; }
+
+#log-count {
+  font-size: 0.75rem;
+  color: #444;
+}

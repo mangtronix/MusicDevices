@@ -1,0 +1,32 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: #000; overflow: hidden; }
+
+#hud {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: rgba(0,0,0,0.6);
+  font-family: 'Courier New', monospace;
+  font-size: 12px;
+  color: #555;
+  z-index: 10;
+  pointer-events: none;
+}
+
+#hud .title { color: #a0c4ff; }
+#hud #device-name { color: #6fcf97; }
+#hud #device-name.none { color: #444; }
+
+#back {
+  position: fixed;
+  top: 8px; right: 16px;
+  font-family: 'Courier New', monospace;
+  font-size: 11px;
+  color: #333;
+  text-decoration: none;
+  z-index: 20;
+}
+#back:hover { color: #888; }

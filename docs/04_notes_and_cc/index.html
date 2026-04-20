@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>04 — Integrated p5 / CircuitPython</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/webmidi@3/dist/iife/webmidi.iife.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.min.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="start-overlay">
+  <button id="start-btn">Start visualizer</button>
+</div>
+
+<div id="hud">
+  <span class="title">04 &mdash; Integrated p5 / CircuitPython</span>
+  <span>MIDI:</span>
+  <span id="device-name" class="none">no device</span>
+  <button id="sound-toggle" title="Toggle sound"
+          data-on="&#x1F50A;" data-off="&#x1F507;">&#x1F507;</button>
+</div>
+<a href="../p5examples.html" id="back">&larr; back</a>
+
+<script src="script.js"></script>
+</body>
+</html>
