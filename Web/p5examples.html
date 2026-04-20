@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WebMIDI + p5.js Examples</title>
+  <link rel="stylesheet" href="site.css">
+</head>
+<body>
+
+<div class="container">
+
+  <h1>WebMIDI + p5.js Examples</h1>
+  <p class="subtitle">Music Devices &mdash; IM-UH 3116 / NYU Abu Dhabi</p>
+
+  <p>
+    Four small browser pages showing how to read MIDI in the browser with
+    <a href="https://webmidijs.org">WebMIDI.js</a> and visualize it with
+    <a href="https://p5js.org">p5.js</a>. Built alongside the class hardware kit
+    (ESP32-S3 Reverse TFT Feather + NeoKey 1x4 + NeoSlider) but any MIDI controller
+    will work.
+  </p>
+
+  <div class="alert">
+    <div class="alert-title">Requirements</div>
+    <p>
+      Use <strong>Chrome</strong> or <strong>Edge</strong> &mdash; they have built-in Web MIDI support.
+      Firefox needs the <a href="https://jazz-soft.net/download/Jazz-Plugin/">Jazz plugin</a>.
+    </p>
+    <p>
+      These pages must be served over HTTP, not opened as a file. From inside the
+      <code>Web/</code> directory:
+    </p>
+    <pre class="shell"><code>cd Web &amp;&amp; python3 -m http.server 8000</code></pre>
+    <p>
+      Then open <a href="http://localhost:8000/p5examples.html"><code>http://localhost:8000/p5examples.html</code></a>.
+    </p>
+  </div>
+
+  <h2>Shared setup</h2>
+  <p>All four examples are built from the same ingredients:</p>
+  <ul>
+    <li><strong>WebMIDI.js v3</strong> handles talking to MIDI devices from the browser &mdash; enumerating inputs, and subscribing to events like &ldquo;note on&rdquo; and &ldquo;control change&rdquo;.</li>
+    <li><strong>p5.js</strong> provides a drawing canvas and a 60 fps render loop.</li>
+  </ul>
+  <p>
+    The pattern shared by every example:
+    <strong>MIDI events update state; the render loop reads state.</strong>
+    MIDI messages arrive at unpredictable times, but p5 draws on a fixed tick.
+    Keeping the two decoupled is the single most important idea &mdash;
+    it&rsquo;s what stops the canvas from flashing, stuttering, or missing events
+    when your controller gets chatty.
+  </p>
+
+  <h2>Examples</h2>
+
+  <div class="examples">
+
+    <div class="card">
+      <div class="card-header">
+        <span class="card-num">01</span>
+        <a class="card-title" href="01_midi_monitor.html">MIDI Monitor</a>
+        <span class="tag">WebMIDI only</span>
+      </div>
+      <p class="card-desc">
+        List all connected MIDI devices and watch a live log of every incoming message &mdash;
+        notes, velocity, CC values. A useful debugging tool when building your own controllers.
+      </p>
+      <details>
+        <summary>Techniques</summary>
+        <div class="detail-body">
+          <ul>
+            <li><strong>Listen broadly.</strong> Subscribes to named events (note on/off, control change, pitch bend) and a catch-all that fires on every raw MIDI byte &mdash; so messages the library doesn&rsquo;t have a convenience event for still show up.</li>
+            <li><strong>Cap the log.</strong> The message list is trimmed to the most recent 200 entries so a long session doesn&rsquo;t slow the page down.</li>
+            <li><strong>Colour-coded types.</strong> Notes, CCs, and everything else each get their own colour &mdash; so at a glance you can see which kinds of messages your controller is actually sending.</li>
+            <li><strong>Filter dropdown.</strong> Narrow the view to one message type when you&rsquo;re hunting a specific bug.</li>
+          </ul>
+          <h3>Why start here</h3>
+          <p>Before you build any visualiser, you need to see what your controller is actually sending. Half the bugs in a later example are really surprises in the MIDI stream &mdash; a duplicated note-on, a CC on channel 2 when you expected channel 1. This page is your oscilloscope.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <span class="card-num">02</span>
+        <a class="card-title" href="02_note_visualizer.html">Note Visualizer</a>
+        <span class="tag">WebMIDI + p5.js</span>
+      </div>
+      <p class="card-desc">
+        Press the four NeoKey buttons to spawn colorful ripples on a p5.js canvas.
+        Each button maps to a position and color; velocity controls the ring size.
+      </p>
+      <details>
+        <summary>Techniques</summary>
+        <div class="detail-body">
+          <ul>
+            <li><strong>Dynamic registration.</strong> No pre-configured mapping of note to colour or screen position. The first time a note is received, it&rsquo;s given a hue and a slot on the screen.</li>
+            <li><strong>Pitch-based colour.</strong> Each pitch class (C, C#, D, &hellip;) gets its own hue, rotating around the colour wheel by semitone. Two notes an octave apart share a colour; neighbouring notes look similar.</li>
+            <li><strong>Layout computed at draw time.</strong> The currently-seen notes are sorted by pitch and spread evenly across the canvas every frame. A 3-note song and a 12-note song both get a clean layout with no hard-coded positions.</li>
+            <li><strong>Velocity-scaled ripples.</strong> A harder hit produces a larger, longer-lived ring. Velocity is free expressive data &mdash; use it.</li>
+            <li><strong>Readable labels.</strong> Note name in bold and MIDI number underneath, large enough to read from across the room.</li>
+          </ul>
+          <h3>Why this shape</h3>
+          <p>The temptation with a &ldquo;four-button visualiser&rdquo; is to hard-code four positions. Resist it. If the same code handles 1 note or 20 with no config, you can reuse it with a keyboard, a drum pad, or a wind controller &mdash; whatever happens to be plugged in.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <span class="card-num">03</span>
+        <a class="card-title" href="03_cc_visualizer.html">CC Visualizer</a>
+        <span class="tag">WebMIDI + p5.js</span>
+      </div>
+      <p class="card-desc">
+        Move the NeoSlider to see a live dial and scrolling waveform in p5.js.
+        Shows how to read Control Change messages and map them to visual parameters.
+      </p>
+      <details>
+        <summary>Techniques</summary>
+        <div class="detail-body">
+          <ul>
+            <li><strong>Keyed by channel + CC number.</strong> Channel 1 CC 74 and channel 2 CC 74 are tracked as separate streams, since they often come from different controllers or different knobs.</li>
+            <li><strong>Named CCs.</strong> A small lookup table turns the raw number into a friendly label &mdash; CC 74 becomes &ldquo;Filter Cutoff&rdquo;, CC 1 becomes &ldquo;Mod Wheel&rdquo;, and so on. Unknown numbers just show as &ldquo;CC 42&rdquo;.</li>
+            <li><strong>Two views of the same data.</strong> The dial is the instantaneous value (&ldquo;where is it now?&rdquo;); the waveform is history (&ldquo;how has it been moving?&rdquo;). Each answers a different question, so both earn their place on screen.</li>
+            <li><strong>Grid of live chips.</strong> Every CC ever received is kept as a small card with an in-place value bar. Wiggle three knobs and you see three bars update simultaneously &mdash; no &ldquo;select which one to watch&rdquo; dropdown.</li>
+          </ul>
+          <h3>Why it works this way</h3>
+          <p>Controllers rarely send a single CC. A synth knob bank, a mod wheel, a foot pedal, and a breath controller all at once is normal. A visualiser that assumes one-CC-at-a-time breaks the moment you plug in real gear. Build for many from the start.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <span class="card-num">04</span>
+        <a class="card-title" href="04_notes_and_cc.html">Notes + CC</a>
+        <span class="tag">WebMIDI + p5.js</span>
+      </div>
+      <p class="card-desc">
+        Press keys to spawn glowing particle bursts; move the slider to change gravity.
+        Notes and CC are both auto-detected. Demonstrates using NoteOn/Off events
+        alongside a continuous CC value to control physics in real time.
+      </p>
+      <p class="card-desc">
+        Pairs with <a href="https://github.com/mangtronix/MusicDevices/blob/main/CircuitPython/midi_particles.py"><code>CircuitPython/midi_particles.py</code></a> &mdash; the hardware sends the same
+        notes (E minor pentatonic) and CC number, with button colours matching the on-screen particle hues.
+      </p>
+      <details>
+        <summary>Techniques</summary>
+        <div class="detail-body">
+          <ul>
+            <li><strong>Gravity from CC.</strong> The continuous CC value is mapped to a gravity value that goes from strongly negative (float upward) through zero (weightless) to positive (fall). One knob, the whole behaviour range.</li>
+            <li><strong>Chromatically tuned explosion sounds.</strong> Every note press fires a short synthesised burst whose pitch matches the MIDI note. Built from three stacked layers &mdash; a pitched &ldquo;thump&rdquo; that drops in frequency, a sub-octave body, and filtered noise for sparkle.</li>
+            <li><strong>Particle interactions between different notes.</strong> Particles from the same note ignore each other. Particles from different notes push apart at close range and pull together at medium range, creating swirling orbits when multiple notes are held.</li>
+            <li><strong>Connection sparks.</strong> When particles from different notes get very close, a short glowing arc is drawn between them &mdash; the system &ldquo;notices&rdquo; the interaction and makes it visible.</li>
+            <li><strong>Fast enough at N particles.</strong> The example uses a spatial grid to only check nearby neighbours, keeping the frame rate smooth even with hundreds of particles on screen.</li>
+          </ul>
+        </div>
+      </details>
+    </div>
+
+  </div>
+
+  <h2 id="tips">Tips for generating similar projects with AI</h2>
+
+  <div class="alert alert-tip">
+    <div class="alert-title">Tip</div>
+    <p>
+      These examples were built with Claude as a pair-programmer. The advice below
+      is useful whether you start from scratch or copy one of these and diff your
+      way to something new.
+    </p>
+  </div>
+
+  <div class="tips">
+    <ol>
+      <li>
+        <strong>Say what it should <em>do</em>, not just what it <em>is</em>.</strong>
+        &ldquo;A page where pressing a key spawns a coloured ripple that fades over ~1 second,
+        and the ripple&rsquo;s size grows with velocity&rdquo; beats &ldquo;a note visualiser&rdquo;.
+        Describe the behaviour a user would see &mdash; inputs, outputs, how things move,
+        what changes over time. The model will fill in reasonable code; it can&rsquo;t fill in your intent.
+      </li>
+      <li>
+        <strong>Point the AI at an existing file for hardware setup.</strong>
+        Instead of retyping pin numbers and I2C addresses, say
+        &ldquo;use the same hardware setup as <code>CircuitPython/spritekeys.py</code>&rdquo;
+        (or whichever file matches your rig). It will read it, pick up the NeoKey / NeoSlider
+        init code, and match the firmware you already have working &mdash; no guessing about
+        which addresses or which notes.
+      </li>
+      <li>
+        <strong>Ask for one example at a time.</strong>
+        Generating four visualisers in one prompt gives you four shallow visualisers.
+        Generating them sequentially &mdash; each building on the last &mdash; gives you one
+        that actually works and three that borrow from it.
+      </li>
+      <li>
+        <strong>When something breaks, show the model the <em>symptom</em>, not your theory.</strong>
+        &ldquo;The dial draws only the outer arc, the center is blank&rdquo; is more useful than
+        &ldquo;I think there&rsquo;s a scope problem with dialR&rdquo;. The model will find the real cause
+        faster from the observable behaviour.
+      </li>
+      <li>
+        <strong>Get it running first, then ask for changes.</strong>
+        Before asking the AI to add features, make sure the basic version actually opens in your
+        browser and responds to your controller. If the first version doesn&rsquo;t work, a second round of
+        &ldquo;also add sound and particles&rdquo; is going to pile new bugs on top of old ones.
+        Small working step &rarr; small change &rarr; small working step.
+      </li>
+      <li>
+        <strong>Ask the AI to explain anything you don&rsquo;t understand.</strong>
+        If it gives you code with <code>Math.pow(2, (note - 69) / 12)</code> or an
+        <code>hsvToRgb</code> function and you&rsquo;re not sure what those do, ask.
+        &ldquo;Explain this line&rdquo; or &ldquo;why did you choose this formula&rdquo; is a
+        legitimate prompt &mdash; you&rsquo;ll learn the technique and be able to modify it yourself
+        next time. Shipping code you can&rsquo;t read means you&rsquo;re stuck the moment it breaks.
+      </li>
+      <li>
+        <strong>Read the code you commit.</strong>
+        AI will confidently hand you code that uses a variable that doesn&rsquo;t exist, or listens
+        to a wrong event name. Open the file, skim it once, run it &mdash; don&rsquo;t paste-and-ship.
+      </li>
+      <li>
+        <strong>Tell the model what you&rsquo;ve ruled out.</strong>
+        &ldquo;I already checked that <code>WebMidi.enable()</code> succeeds and the listener fires &mdash; the bug is
+        in the render path&rdquo; saves five rounds of diagnostic suggestions.
+      </li>
+    </ol>
+  </div>
+
+  <footer>
+    <p>Uses <a href="https://webmidijs.org">WebMIDI.js v3</a> and <a href="https://p5js.org">p5.js</a>.</p>
+  </footer>
+
+</div>
+
+</body>
+</html>
