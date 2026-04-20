@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>03 — CC Visualizer</title>
+
+  <!-- WebMIDI.js v3 -->
+  <script src="https://cdn.jsdelivr.net/npm/webmidi@3/dist/iife/webmidi.iife.js"></script>
+  <!-- p5.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.min.js"></script>
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #0d0d14; overflow: hidden; }
+
+    #hud {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      padding: 10px 16px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: rgba(13,13,20,0.85);
+      font-family: 'Courier New', monospace;
+      font-size: 12px;
+      color: #555;
+      z-index: 10;
+      pointer-events: none;
+    }
+
+    #hud .title { color: #a0c4ff; }
+    #hud #device-name { color: #56b4f7; }
+    #hud #device-name.none { color: #333; }
+
+    /* CC number selector — pointer-events enabled */
+    #cc-controls {
+      position: fixed;
+      bottom: 16px; left: 50%;
+      transform: translateX(-50%);
+      font-family: 'Courier New', monospace;
+      font-size: 12px;
+      color: #444;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      z-index: 10;
+    }
+
+    #cc-controls label { color: #444; }
+
+    #cc-select {
+      background: #13131f;
+      border: 1px solid #2a2a40;
+      color: #888;
+      padding: 4px 8px;
+      font-family: inherit;
+      font-size: 12px;
+      cursor: pointer;
+    }
+
+    #back {
+      position: fixed;
+      top: 8px; right: 16px;
+      font-family: 'Courier New', monospace;
+      font-size: 11px;
+      color: #333;
+      text-decoration: none;
+      z-index: 20;
+    }
+    #back:hover { color: #888; }
+  </style>
+</head>
+<body>
+
+<div id="hud">
+  <span class="title">03 — CC Visualizer</span>
+  <span>MIDI:</span>
+  <span id="device-name" class="none">no device</span>
+</div>
+<a href="index.html" id="back">← back</a>
+
+<div id="cc-controls">
+  <label for="cc-select">Monitor CC:</label>
+  <select id="cc-select">
+    <option value="0" selected>CC 0  (NeoSlider default)</option>
+    <option value="1">CC 1  (Mod wheel)</option>
+    <option value="7">CC 7  (Volume)</option>
+    <option value="11">CC 11 (Expression)</option>
+    <option value="74">CC 74 (Filter cutoff)</option>
+  </select>
+  <span id="raw-value" style="color:#56b4f7; min-width:40px; text-align:right;">—</span>
+  <span style="color:#333;">/ 127</span>
+</div>
+
+<script>
+// ─── Shared state ─────────────────────────────────────────────────────────────
+const state = {
+  ccNumber:   0,       // which CC to display (updated by <select>)
+  ccValue:    64,      // current raw value 0–127
+  history:    [],      // circular buffer of past values for the waveform
+  historyLen: 300,     // number of samples to keep
+};
+
+// Pre-fill history with mid-point so the line doesn't jump from 0
+for (let i = 0; i < state.historyLen; i++) state.history.push(64);
+
+// ─── WebMIDI setup ────────────────────────────────────────────────────────────
+WebMidi.enable()
+  .then(() => {
+    function attachInput(input) {
+      document.getElementById('device-name').textContent = input.name;
+      document.getElementById('device-name').classList.remove('none');
+
+      // Control Change — fired by sliders, knobs, pedals
+      input.addListener('controlchange', e => {
+        if (e.controller.number !== state.ccNumber) return;
+
+        state.ccValue = e.rawValue;    // 0–127
+        state.history.push(state.ccValue);
+        if (state.history.length > state.historyLen) state.history.shift();
+
+        document.getElementById('raw-value').textContent = state.ccValue;
+      });
+    }
+
+    WebMidi.inputs.forEach(attachInput);
+
+    WebMidi.addListener('connected', e => {
+      if (e.port.type === 'input') attachInput(e.port);
+    });
+
+    WebMidi.addListener('disconnected', e => {
+      const el = document.getElementById('device-name');
+      if (el.textContent === e.port.name) {
+        el.textContent = 'no device';
+        el.classList.add('none');
+      }
+    });
+  })
+  .catch(err => {
+    document.getElementById('device-name').textContent = 'MIDI denied';
+    console.error(err);
+  });
+
+// Update which CC we're listening to when the select changes
+document.getElementById('cc-select').addEventListener('change', e => {
+  state.ccNumber = parseInt(e.target.value);
+  state.ccValue  = 64;
+  state.history.fill(64);
+  document.getElementById('raw-value').textContent = '—';
+});
+
+// ─── p5.js sketch ─────────────────────────────────────────────────────────────
+new p5(function(p) {
+
+  // Accent color: steel blue
+  const ACCENT = [86, 180, 247];
+
+  p.setup = function() {
+    p.createCanvas(p.windowWidth, p.windowHeight);
+    p.colorMode(p.RGB, 255, 255, 255, 255);
+    p.textFont('Courier New');
+  };
+
+  p.draw = function() {
+    p.background(13, 13, 20);
+
+    const cx     = p.width  * 0.30;    // dial center x
+    const cy     = p.height * 0.50;    // dial center y
+    const dialR  = Math.min(p.width * 0.18, p.height * 0.32);
+
+    drawDial(cx, cy, dialR);
+    drawWaveform();
+    drawDivider(cx + dialR + 40);
+  };
+
+  // ── Circular dial ──────────────────────────────────────────────────────────
+  function drawDial(cx, cy, r) {
+    const norm = state.ccValue / 127;  // 0–1
+
+    // Arc sweeps from -210° to +30° (240° range), clockwise
+    const startAngle = p.radians(150);
+    const sweepAngle = p.radians(240);
+    const endAngle   = startAngle + sweepAngle * norm;
+
+    // Background track
+    p.noFill();
+    p.stroke(30, 30, 45);
+    p.strokeWeight(8);
+    p.arc(cx, cy, r * 2, r * 2, startAngle, startAngle + sweepAngle);
+
+    // Value arc
+    if (norm > 0) {
+      p.stroke(ACCENT[0], ACCENT[1], ACCENT[2]);
+      p.strokeWeight(8);
+      p.arc(cx, cy, r * 2, r * 2, startAngle, endAngle);
+    }
+
+    // Needle tip dot
+    const tipX = cx + Math.cos(endAngle) * r;
+    const tipY = cy + Math.sin(endAngle) * r;
+    p.fill(ACCENT[0], ACCENT[1], ACCENT[2]);
+    p.noStroke();
+    p.circle(tipX, tipY, 14);
+
+    // Center numeric readout
+    p.fill(ACCENT[0], ACCENT[1], ACCENT[2]);
+    p.textAlign(p.CENTER, p.CENTER);
+    p.textSize(dialR * 0.45);
+    p.text(state.ccValue, cx, cy - 6);
+
+    // "/ 127" sub-label
+    p.fill(60, 60, 80);
+    p.textSize(dialR * 0.14);
+    p.text('/ 127', cx, cy + dialR * 0.32);
+
+    // Tick marks at 0, 64, 127
+    drawTick(cx, cy, r, startAngle, '0');
+    drawTick(cx, cy, r, startAngle + sweepAngle * 0.5, '64');
+    drawTick(cx, cy, r, startAngle + sweepAngle, '127');
+  }
+
+  function drawTick(cx, cy, r, angle, label) {
+    const inner = r * 1.12;
+    const outer = r * 1.22;
+    const lx    = cx + Math.cos(angle) * (r * 1.38);
+    const ly    = cy + Math.sin(angle) * (r * 1.38);
+
+    p.stroke(40, 40, 60);
+    p.strokeWeight(1.5);
+    p.line(
+      cx + Math.cos(angle) * inner,
+      cy + Math.sin(angle) * inner,
+      cx + Math.cos(angle) * outer,
+      cy + Math.sin(angle) * outer,
+    );
+    p.noStroke();
+    p.fill(50, 50, 70);
+    p.textSize(11);
+    p.textAlign(p.CENTER, p.CENTER);
+    p.text(label, lx, ly);
+  }
+
+  // ── Scrolling waveform ─────────────────────────────────────────────────────
+  function drawWaveform() {
+    const left   = p.width  * 0.50;
+    const right  = p.width  - 40;
+    const top    = p.height * 0.20;
+    const bottom = p.height * 0.80;
+    const midY   = (top + bottom) / 2;
+    const h      = bottom - top;
+    const w      = right - left;
+
+    // Axes
+    p.stroke(30, 30, 45);
+    p.strokeWeight(1);
+    p.line(left, top,    right, top);
+    p.line(left, bottom, right, bottom);
+    p.line(left, midY,   right, midY);     // 64 line
+    p.line(left, top,    left,  bottom);
+
+    // Axis labels
+    p.noStroke();
+    p.fill(40, 40, 60);
+    p.textSize(10);
+    p.textAlign(p.RIGHT, p.CENTER);
+    p.text('127', left - 6, top);
+    p.text(' 64', left - 6, midY);
+    p.text('  0', left - 6, bottom);
+
+    // Waveform line
+    const hist = state.history;
+    p.noFill();
+    p.stroke(ACCENT[0], ACCENT[1], ACCENT[2], 220);
+    p.strokeWeight(2);
+    p.beginShape();
+    for (let i = 0; i < hist.length; i++) {
+      const x = left  + (i / (hist.length - 1)) * w;
+      const y = bottom - (hist[i] / 127) * h;
+      p.vertex(x, y);
+    }
+    p.endShape();
+
+    // Filled area under curve
+    p.noStroke();
+    p.fill(ACCENT[0], ACCENT[1], ACCENT[2], 30);
+    p.beginShape();
+    p.vertex(left, bottom);
+    for (let i = 0; i < hist.length; i++) {
+      const x = left  + (i / (hist.length - 1)) * w;
+      const y = bottom - (hist[i] / 127) * h;
+      p.vertex(x, y);
+    }
+    p.vertex(right, bottom);
+    p.endShape(p.CLOSE);
+
+    // Current value indicator on the right edge
+    const curY = bottom - (state.ccValue / 127) * h;
+    p.fill(ACCENT[0], ACCENT[1], ACCENT[2]);
+    p.noStroke();
+    p.circle(right, curY, 8);
+  }
+
+  // Thin vertical divider between dial and waveform
+  function drawDivider(x) {
+    p.stroke(20, 20, 32);
+    p.strokeWeight(1);
+    p.line(x, p.height * 0.15, x, p.height * 0.85);
+  }
+
+  p.windowResized = function() {
+    p.resizeCanvas(p.windowWidth, p.windowHeight);
+  };
+});
+</script>
+</body>
+</html>

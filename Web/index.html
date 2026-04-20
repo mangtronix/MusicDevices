@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WebMIDI + p5.js Examples</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #0d0d14;
+      color: #e0e0f0;
+      font-family: 'Courier New', monospace;
+      padding: 40px 20px;
+      min-height: 100vh;
+    }
+
+    header {
+      max-width: 800px;
+      margin: 0 auto 48px;
+    }
+
+    h1 {
+      font-size: 1.6rem;
+      color: #a0c4ff;
+      margin-bottom: 8px;
+      letter-spacing: 0.05em;
+    }
+
+    .subtitle {
+      color: #666;
+      font-size: 0.85rem;
+    }
+
+    .notice {
+      margin-top: 20px;
+      padding: 12px 16px;
+      background: #1a1a2a;
+      border-left: 3px solid #f4a261;
+      color: #ccc;
+      font-size: 0.82rem;
+      line-height: 1.6;
+    }
+
+    .notice code {
+      color: #f4a261;
+    }
+
+    .examples {
+      max-width: 800px;
+      margin: 0 auto;
+      display: grid;
+      gap: 16px;
+    }
+
+    .card {
+      display: block;
+      padding: 24px 28px;
+      background: #13131f;
+      border: 1px solid #222238;
+      text-decoration: none;
+      color: inherit;
+      transition: border-color 0.15s, background 0.15s;
+    }
+
+    .card:hover {
+      background: #17172a;
+      border-color: #a0c4ff;
+    }
+
+    .card-header {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 8px;
+    }
+
+    .card-num {
+      font-size: 0.75rem;
+      color: #555;
+    }
+
+    .card-title {
+      font-size: 1.1rem;
+      color: #a0c4ff;
+    }
+
+    .card-desc {
+      color: #888;
+      font-size: 0.82rem;
+      line-height: 1.6;
+    }
+
+    .tag {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 2px 8px;
+      font-size: 0.7rem;
+      border: 1px solid #333;
+      color: #555;
+    }
+
+    footer {
+      max-width: 800px;
+      margin: 48px auto 0;
+      color: #333;
+      font-size: 0.75rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>WebMIDI + p5.js Examples</h1>
+  <p class="subtitle">Music Devices — IM-UH 3116 / NYU Abu Dhabi</p>
+
+  <div class="notice">
+    <strong>Requirements:</strong> Use Chrome or Edge — they have built-in Web MIDI support.
+    Firefox requires the <a href="https://jazz-soft.net/download/Jazz-Plugin/" style="color:#f4a261">Jazz plugin</a>.<br>
+    These pages must be served over HTTP (not opened as a file). From inside the <code>Web/</code>
+    directory, run a local server:
+    <br><code>cd Web &amp;&amp; python3 -m http.server 8000</code>
+    <br>then open <a href="http://localhost:8000" style="color:#f4a261"><code>http://localhost:8000</code></a>
+  </div>
+</header>
+
+<div class="examples">
+
+  <a class="card" href="01_midi_monitor.html">
+    <div class="card-header">
+      <span class="card-num">01</span>
+      <span class="card-title">MIDI Monitor</span>
+    </div>
+    <p class="card-desc">
+      List all connected MIDI devices and watch a live log of every incoming message —
+      notes, velocity, CC values. A useful debugging tool when building your own controllers.
+    </p>
+    <span class="tag">WebMIDI only</span>
+  </a>
+
+  <a class="card" href="02_note_visualizer.html">
+    <div class="card-header">
+      <span class="card-num">02</span>
+      <span class="card-title">Note Visualizer</span>
+    </div>
+    <p class="card-desc">
+      Press the four NeoKey buttons to spawn colorful ripples on a p5.js canvas.
+      Each button maps to a position and color; velocity controls the ring size.
+    </p>
+    <span class="tag">WebMIDI + p5.js</span>
+  </a>
+
+  <a class="card" href="03_cc_visualizer.html">
+    <div class="card-header">
+      <span class="card-num">03</span>
+      <span class="card-title">CC Visualizer</span>
+    </div>
+    <p class="card-desc">
+      Move the NeoSlider to see a live dial and scrolling waveform in p5.js.
+      Shows how to read Control Change messages and map them to visual parameters.
+    </p>
+    <span class="tag">WebMIDI + p5.js</span>
+  </a>
+
+</div>
+
+<footer>
+  <p>Uses <a href="https://webmidijs.org" style="color:#444">WebMIDI.js v3</a> and <a href="https://p5js.org" style="color:#444">p5.js</a></p>
+</footer>
+
+</body>
+</html>

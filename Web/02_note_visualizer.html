@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>02 — Note Visualizer</title>
+
+  <!-- WebMIDI.js v3 -->
+  <script src="https://cdn.jsdelivr.net/npm/webmidi@3/dist/iife/webmidi.iife.js"></script>
+  <!-- p5.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.min.js"></script>
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #000; overflow: hidden; }
+
+    #hud {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      padding: 10px 16px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: rgba(0,0,0,0.6);
+      font-family: 'Courier New', monospace;
+      font-size: 12px;
+      color: #555;
+      z-index: 10;
+      pointer-events: none;
+    }
+
+    #hud .title { color: #a0c4ff; }
+    #hud #device-name { color: #6fcf97; }
+    #hud #device-name.none { color: #444; }
+
+    #back {
+      position: fixed;
+      top: 8px; right: 16px;
+      font-family: 'Courier New', monospace;
+      font-size: 11px;
+      color: #333;
+      text-decoration: none;
+      z-index: 20;
+    }
+    #back:hover { color: #888; }
+  </style>
+</head>
+<body>
+
+<div id="hud">
+  <span class="title">02 — Note Visualizer</span>
+  <span>MIDI:</span>
+  <span id="device-name" class="none">no device</span>
+</div>
+<a href="index.html" id="back">← back</a>
+
+<script>
+// ─── Shared MIDI state (written by WebMIDI, read by p5) ───────────────────────
+const midi = {
+  activeNotes: new Set(),   // set of currently held note numbers
+  ripples: [],              // expanding ring animations
+  deviceName: 'no device',
+};
+
+// ─── NeoKey 1x4 note mapping ──────────────────────────────────────────────────
+// Em pentatonic default from neokey_midi.ino: 64 67 69 71
+// Each note maps to an x position (0–1) and a color [r, g, b]
+const NOTE_CONFIG = {
+  64: { xFrac: 0.2, color: [80,  210, 255] },   // E4 — cyan
+  67: { xFrac: 0.4, color: [80,  255, 140] },   // G4 — green
+  69: { xFrac: 0.6, color: [255, 210,  60] },   // A4 — yellow
+  71: { xFrac: 0.8, color: [255,  90, 180] },   // B4 — pink
+};
+
+// Any note not in NOTE_CONFIG still gets a ripple at a default position
+function configForNote(note) {
+  if (NOTE_CONFIG[note]) return NOTE_CONFIG[note];
+  // Map arbitrary notes to hue using HSB
+  const hue = (note * 7) % 360;
+  return { xFrac: 0.5, hue };
+}
+
+// ─── WebMIDI setup ────────────────────────────────────────────────────────────
+WebMidi.enable()
+  .then(() => {
+    function attachInput(input) {
+      midi.deviceName = input.name;
+      document.getElementById('device-name').textContent = input.name;
+      document.getElementById('device-name').classList.remove('none');
+
+      input.addListener('noteon', e => {
+        const note   = e.note.number;
+        const vel    = e.rawVelocity;   // 0–127
+        const cfg    = configForNote(note);
+
+        midi.activeNotes.add(note);
+
+        // Queue a ripple for p5 to draw
+        midi.ripples.push({
+          note,
+          xFrac:    cfg.xFrac,
+          color:    cfg.color || hsvToRgb(cfg.hue, 0.8, 1.0),
+          radius:   0,
+          maxR:     map(vel, 0, 127, 80, 260),  // velocity → size
+          alpha:    255,
+          speed:    map(vel, 0, 127, 2, 5),     // velocity → speed
+        });
+      });
+
+      input.addListener('noteoff', e => {
+        midi.activeNotes.delete(e.note.number);
+      });
+    }
+
+    WebMidi.inputs.forEach(attachInput);
+
+    WebMidi.addListener('connected', e => {
+      if (e.port.type === 'input') attachInput(e.port);
+    });
+
+    WebMidi.addListener('disconnected', e => {
+      if (midi.deviceName === e.port.name) {
+        midi.deviceName = 'no device';
+        document.getElementById('device-name').textContent = 'no device';
+        document.getElementById('device-name').classList.add('none');
+      }
+    });
+  })
+  .catch(err => {
+    document.getElementById('device-name').textContent = 'MIDI denied';
+    console.error(err);
+  });
+
+// ─── Helper: map a value from one range to another (mirrors p5's map()) ───────
+function map(v, a, b, c, d) {
+  return c + (v - a) / (b - a) * (d - c);
+}
+
+// ─── p5.js sketch ─────────────────────────────────────────────────────────────
+new p5(function(p) {
+
+  // Persistent "glow" layer on a graphics buffer so old ripples leave trails
+  let bg;
+
+  p.setup = function() {
+    p.createCanvas(p.windowWidth, p.windowHeight);
+    p.colorMode(p.RGB, 255, 255, 255, 255);
+
+    bg = p.createGraphics(p.width, p.height);
+    bg.background(10, 10, 18);
+  };
+
+  p.draw = function() {
+    // Slowly fade the background layer — creates the trail effect
+    bg.noStroke();
+    bg.fill(10, 10, 18, 18);       // low alpha = long trail
+    bg.rect(0, 0, p.width, p.height);
+
+    // Draw background layer onto canvas
+    p.image(bg, 0, 0);
+
+    // ── Ripples ──────────────────────────────────────────────────────────────
+    for (const r of midi.ripples) {
+      r.radius += r.speed;
+      r.alpha  -= 255 / (r.maxR / r.speed);   // fade as it expands
+
+      const x = r.xFrac * p.width;
+      const y = p.height * 0.5;
+
+      // Outer ring
+      p.noFill();
+      p.stroke(r.color[0], r.color[1], r.color[2], Math.max(0, r.alpha));
+      p.strokeWeight(2.5);
+      p.circle(x, y, r.radius * 2);
+
+      // Inner softer ring
+      p.stroke(r.color[0], r.color[1], r.color[2], Math.max(0, r.alpha * 0.4));
+      p.strokeWeight(6);
+      p.circle(x, y, r.radius * 1.6);
+
+      // Also paint onto the persistent bg layer (dimly) for the glow trail
+      bg.noFill();
+      bg.stroke(r.color[0], r.color[1], r.color[2], Math.max(0, r.alpha * 0.12));
+      bg.strokeWeight(3);
+      bg.circle(x, y, r.radius * 2);
+    }
+
+    // Remove fully faded ripples
+    midi.ripples = midi.ripples.filter(r => r.alpha > 0);
+
+    // ── Button indicators at bottom ──────────────────────────────────────────
+    drawButtonRow();
+  };
+
+  function drawButtonRow() {
+    const y       = p.height - 48;
+    const dotR    = 14;
+    const labelY  = y + 28;
+
+    const noteNames = { 64:'E4', 67:'G4', 69:'A4', 71:'B4' };
+
+    for (const [noteStr, cfg] of Object.entries(NOTE_CONFIG)) {
+      const note   = parseInt(noteStr);
+      const x      = cfg.xFrac * p.width;
+      const active = midi.activeNotes.has(note);
+      const [r, g, b] = cfg.color;
+
+      // Ring
+      p.noFill();
+      p.stroke(r, g, b, active ? 200 : 50);
+      p.strokeWeight(active ? 2 : 1);
+      p.circle(x, y, dotR * 2);
+
+      // Fill when active
+      if (active) {
+        p.fill(r, g, b, 180);
+        p.noStroke();
+        p.circle(x, y, dotR * 2);
+      }
+
+      // Label
+      p.noStroke();
+      p.fill(r, g, b, active ? 200 : 60);
+      p.textFont('Courier New');
+      p.textSize(10);
+      p.textAlign(p.CENTER, p.CENTER);
+      p.text(noteNames[note] || note, x, labelY);
+    }
+  }
+
+  p.windowResized = function() {
+    p.resizeCanvas(p.windowWidth, p.windowHeight);
+    bg.resizeCanvas(p.width, p.height);
+    bg.background(10, 10, 18);
+  };
+});
+</script>
+</body>
+</html>
