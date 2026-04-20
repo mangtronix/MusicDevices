@@ -1,6 +1,9 @@
 # midi_particles.py
 # CircuitPython controller designed to work with Web Example 04 — Notes + CC
 #
+# Written with Claude inside Visual Studio Code based
+# on handwritten code spritekeys.py by Michael Ang
+#
 # Hardware
 #   Adafruit ESP32-S3 Reverse TFT Feather
 #   Adafruit NeoKey 1x4 QT  (default I2C addr 0x30)
