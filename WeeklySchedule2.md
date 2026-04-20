@@ -421,10 +421,10 @@ Due before start of next class
 
 ## Week 12.1
 Project check-in
-- What did you get working?
-- What do you still need to do?
+- What's your project idea?
+- Do you need additional resources (materials, code, advice)?
 
-Project Production
+- [Live Key Detection](https://keyfinder.live/live)
 
 ## Week 12.2
 
