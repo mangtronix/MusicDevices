@@ -24,8 +24,44 @@
     #hud #device-name  { color: #6fcf97; }
     #hud #device-name.none { color: #333; }
 
+    #sound-toggle {
+      pointer-events: auto;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      line-height: 1;
+      padding: 2px 4px;
+      color: #555;
+      transition: color 0.15s;
+      margin-left: auto;
+    }
+    #sound-toggle:hover { color: #aaa; }
+    #sound-toggle.on    { color: #6fcf97; }
+
+    #start-overlay {
+      position: fixed; inset: 0;
+      display: flex; align-items: center; justify-content: center;
+      z-index: 30;
+    }
+    #start-overlay button {
+      background: none;
+      border: 1px solid #444;
+      color: #a0c4ff;
+      font-family: 'Courier New', monospace;
+      font-size: 14px;
+      padding: 12px 28px;
+      cursor: pointer;
+      letter-spacing: 0.05em;
+      transition: border-color 0.15s, color 0.15s;
+    }
+    #start-overlay button:hover {
+      border-color: #a0c4ff;
+      color: #fff;
+    }
+
     #back {
-      position: fixed; top: 8px; right: 16px;
+      position: fixed; top: 8px; right: 48px;
       font-size: 11px; color: #333; text-decoration: none; z-index: 20;
     }
     #back:hover { color: #888; }
@@ -33,10 +69,15 @@
 </head>
 <body>
 
+<div id="start-overlay">
+  <button id="start-btn">Start visualizer</button>
+</div>
+
 <div id="hud">
   <span class="title">04 — Integrated p5 / CircuitPython</span>
   <span>MIDI:</span>
   <span id="device-name" class="none">no device</span>
+  <button id="sound-toggle" title="Toggle sound">🔇</button>
 </div>
 <a href="index.html" id="back">← back</a>
 
@@ -210,24 +251,47 @@ function applyInteractions(particles, grid) {
 //   3. Band-pass filtered noise burst (transient "crack")
 // All layers use a sharp attack and exponential decay so they feel percussive.
 
-let audioCtx = null;
+let audioCtx  = null;
+let soundOn   = false;
 
-function getAudio() {
-  if (!audioCtx) audioCtx = new AudioContext();
-  if (audioCtx.state === 'suspended') audioCtx.resume();
-  return audioCtx;
+const soundBtn = document.getElementById('sound-toggle');
+
+function updateSoundIcon() {
+  soundBtn.textContent = soundOn ? '🔊' : '🔇';
+  soundBtn.classList.toggle('on', soundOn);
 }
 
-// Browsers require a user gesture to start AudioContext.
-// Clicking anywhere on the page satisfies that requirement.
-document.addEventListener('click', () => getAudio(), { once: true });
+document.getElementById('start-btn').addEventListener('click', () => {
+  if (!audioCtx) audioCtx = new AudioContext();
+  audioCtx.resume();
+  soundOn = true;
+  updateSoundIcon();
+  document.getElementById('start-overlay').remove();
+});
+
+soundBtn.addEventListener('click', () => {
+  if (!audioCtx) return;
+  if (soundOn) {
+    audioCtx.suspend();
+    soundOn = false;
+  } else {
+    audioCtx.resume();
+    soundOn = true;
+  }
+  updateSoundIcon();
+});
+
+function getAudio() {
+  return (soundOn && audioCtx) ? audioCtx : null;
+}
 
 function midiToHz(note) {
   return 440 * Math.pow(2, (note - 69) / 12);
 }
 
 function playExplosion(note, vel) {
-  const ctx  = getAudio();
+  const ctx = getAudio();
+  if (!ctx) return;
   const now  = ctx.currentTime;
   const freq = midiToHz(note);
   const amp  = 0.55 * (vel / 127);
@@ -415,7 +479,7 @@ new p5(function(p) {
       p.fill(55, 55, 80);
       p.textAlign(p.CENTER, p.CENTER);
       p.textSize(14);
-      p.text('click page · press a key · move a slider', p.width / 2, p.height / 2);
+      p.text('press a key · move a slider', p.width / 2, p.height / 2);
     }
   };
 
