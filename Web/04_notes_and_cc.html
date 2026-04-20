@@ -145,23 +145,26 @@ function gravityAccel() {
 }
 
 // ─── Particle spawning (called from WebMIDI callbacks, outside p5) ────────────
+const MAX_PARTICLES = 400;
+
 function spawnBurst(note, vel) {
   const cfg = midi.seenNotes[note];
   if (!cfg) return;
-
+  const room  = MAX_PARTICLES - midi.particles.length;
+  if (room <= 0) return;
   const x     = noteXFrac(note) * window.innerWidth;
   const y     = window.innerHeight * 0.65;
-  const count = Math.round(10 + (vel / 127) * 25);
-
+  const count = Math.min(Math.round(10 + (vel / 127) * 20), room);
   for (let i = 0; i < count; i++) spawnParticle(x, y, note, cfg.color, vel);
 }
 
 function spawnTrickle(note) {
+  if (midi.particles.length >= MAX_PARTICLES) return;
   const cfg = midi.seenNotes[note];
   if (!cfg) return;
   const x = noteXFrac(note) * window.innerWidth;
   const y = window.innerHeight * 0.65;
-  for (let i = 0; i < 2; i++) spawnParticle(x, y, note, cfg.color, 60);
+  spawnParticle(x, y, note, cfg.color, 60);  // 1 per frame instead of 2
 }
 
 function spawnParticle(x, y, note, color, vel) {
@@ -289,17 +292,22 @@ function midiToHz(note) {
   return 440 * Math.pow(2, (note - 69) / 12);
 }
 
+let activeVoices = 0;
+const MAX_VOICES = 6;
+
 function playExplosion(note, vel) {
   const ctx = getAudio();
   if (!ctx) return;
+  if (activeVoices >= MAX_VOICES) return;
   const now  = ctx.currentTime;
   const freq = midiToHz(note);
   const amp  = 0.55 * (vel / 127);
 
-  // Master gain for this event
+  activeVoices++;
   const master = ctx.createGain();
   master.gain.setValueAtTime(amp, now);
   master.connect(ctx.destination);
+  setTimeout(() => { activeVoices--; }, 780);  // release slot after longest layer
 
   // Layer 1: pitched sine — starts a minor third sharp, drops to pitch in 25 ms
   // This pitch-drop attack gives the "thud" character of a tuned kick drum.
