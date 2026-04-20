@@ -234,9 +234,9 @@ new p5(function(p) {
   }
 
   function drawButtonRow(sorted) {
-    const y      = p.height - 48;
-    const dotR   = 14;
-    const labelY = y + 28;
+    const y      = p.height - 80;
+    const dotR   = 16;
+    const labelY = y + 40;
 
     for (let i = 0; i < sorted.length; i++) {
       const note      = sorted[i];
@@ -258,13 +258,20 @@ new p5(function(p) {
         p.circle(x, y, dotR * 2);
       }
 
-      // Label
+      // Label: note name on top line, MIDI number below in a dimmer color
       p.noStroke();
-      p.fill(r, g, b, active ? 200 : 60);
       p.textFont('Courier New');
-      p.textSize(10);
       p.textAlign(p.CENTER, p.CENTER);
+
+      p.fill(r, g, b, active ? 240 : 150);
+      p.textStyle(p.BOLD);
+      p.textSize(20);
       p.text(noteName(note), x, labelY);
+
+      p.fill(r, g, b, active ? 190 : 110);
+      p.textStyle(p.NORMAL);
+      p.textSize(14);
+      p.text(note, x, labelY + 22);
     }
   }
 
