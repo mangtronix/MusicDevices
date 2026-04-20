@@ -2,28 +2,8 @@
 
 Class notes for IM-UH 3116 (Music Devices, NYUAD). This is a high-level tour
 of the techniques each example uses — so you can pick the right one to start
-from when you build your own. Tips on using AI to generate similar projects
-live on the landing page.
-
----
-
-## Shared setup
-
-All four examples are built from the same ingredients:
-
-- **WebMIDI.js v3** handles talking to MIDI devices from the browser —
-  enumerating inputs, and subscribing to events like "note on" and
-  "control change".
-- **p5.js** provides a drawing canvas and a 60 fps render loop.
-- Pages are served over HTTP (not opened as files) via
-  `cd Web && python3 -m http.server 8000`.
-- Chrome / Edge work natively; Firefox needs the Jazz plugin.
-
-The pattern shared by every example: **MIDI events update state; the render
-loop reads state**. MIDI messages arrive at unpredictable times, but p5
-draws on a fixed tick. Keeping the two decoupled is the single most important
-idea — it's what stops the canvas from flashing, stuttering, or missing
-events when your controller gets chatty.
+from when you build your own. The landing page (`index.html`) covers the
+shared setup and tips on using AI to generate similar projects.
 
 ---
 

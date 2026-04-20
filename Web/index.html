@@ -5,341 +5,394 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WebMIDI + p5.js Examples</title>
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * { box-sizing: border-box; }
 
     :root {
-      --accent: #2c5bb6;
-      --accent-soft: #e8f0ff;
-      --warn: #c6541a;
-      --warn-soft: #fdf3ea;
-      --text: #1a1a1a;
-      --muted: #666;
-      --rule: #e2e2e6;
+      --text: #1f2328;
+      --muted: #59636e;
+      --link: #0969da;
+      --rule: #d1d9e0;
+      --rule-muted: #d1d9e0b3;
+      --bg: #ffffff;
+      --canvas-subtle: #f6f8fa;
+      --code-bg: #818b981f;
+      --note-border: #0969da;
+      --note-bg: #ddf4ff80;
+      --tip-border: #1a7f37;
+      --tip-bg: #dafbe180;
     }
+
+    html, body { margin: 0; padding: 0; }
 
     body {
-      background: #fafaf7;
+      background: var(--bg);
       color: var(--text);
-      font-family: Georgia, 'Iowan Old Style', 'Times New Roman', serif;
-      font-size: 17px;
-      line-height: 1.55;
-      padding: 48px 20px;
-      min-height: 100vh;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+      font-size: 16px;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
     }
 
-    code, .mono {
-      font-family: 'SF Mono', Menlo, Consolas, 'Courier New', monospace;
-      font-size: 0.92em;
+    .container {
+      max-width: 1012px;
+      margin: 0 auto;
+      padding: 32px;
     }
 
-    a { color: var(--accent); }
+    @media (max-width: 768px) {
+      .container { padding: 16px; }
+    }
 
-    header {
-      max-width: 780px;
-      margin: 0 auto 40px;
+    code, kbd, pre, samp, .mono {
+      font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 85%;
+    }
+
+    p code, li code, td code {
+      padding: 0.2em 0.4em;
+      background: var(--code-bg);
+      border-radius: 6px;
+      white-space: break-spaces;
+    }
+
+    a {
+      color: var(--link);
+      text-decoration: none;
+    }
+    a:hover { text-decoration: underline; }
+
+    h1, h2, h3 {
+      margin-top: 24px;
+      margin-bottom: 16px;
+      font-weight: 600;
+      line-height: 1.25;
     }
 
     h1 {
-      font-size: 2rem;
-      color: var(--text);
-      margin-bottom: 6px;
-      letter-spacing: -0.01em;
+      font-size: 2em;
+      padding-bottom: 0.3em;
+      border-bottom: 1px solid var(--rule-muted);
+      margin-top: 0;
+    }
+
+    h2 {
+      font-size: 1.5em;
+      padding-bottom: 0.3em;
+      border-bottom: 1px solid var(--rule-muted);
+    }
+
+    h3 { font-size: 1.25em; }
+
+    p { margin: 0 0 16px; }
+
+    ul, ol {
+      margin: 0 0 16px;
+      padding-left: 2em;
+    }
+    li { margin-bottom: 4px; }
+    li > p { margin: 8px 0; }
+
+    hr {
+      border: 0;
+      border-top: 1px solid var(--rule-muted);
+      margin: 24px 0;
+      height: 0;
     }
 
     .subtitle {
       color: var(--muted);
-      font-size: 0.95rem;
-      font-style: italic;
+      font-size: 0.95em;
+      margin-top: -12px;
+      margin-bottom: 16px;
     }
 
-    .notice {
-      margin-top: 24px;
-      padding: 14px 18px;
-      background: var(--warn-soft);
-      border-left: 3px solid var(--warn);
-      color: #3d2615;
-      font-size: 0.92rem;
-      line-height: 1.6;
+    /* GitHub-style alert / note callout */
+    .alert {
+      padding: 8px 16px;
+      margin-bottom: 16px;
+      color: inherit;
+      border-left: 0.25em solid var(--note-border);
+      background: transparent;
+    }
+    .alert p { margin: 8px 0; }
+    .alert-title {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: 600;
+      color: var(--note-border);
+      margin-bottom: 4px;
     }
 
-    .notice code {
-      color: var(--warn);
-      background: #fff;
-      padding: 1px 5px;
-      border: 1px solid #f0dcc8;
-    }
+    .alert-tip { border-left-color: var(--tip-border); }
+    .alert-tip .alert-title { color: var(--tip-border); }
 
-    .notice a { color: var(--warn); }
-
+    /* Example cards: laid out like a repo's file list */
     .examples {
-      max-width: 780px;
-      margin: 0 auto;
-      display: grid;
-      gap: 14px;
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      overflow: hidden;
+      margin: 16px 0 24px;
+      background: #fff;
     }
 
     .card {
       display: block;
-      padding: 22px 26px;
-      background: #fff;
-      border: 1px solid var(--rule);
-      border-radius: 4px;
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--rule);
       text-decoration: none;
       color: inherit;
-      transition: border-color 0.15s, box-shadow 0.15s, transform 0.15s;
+      transition: background 0.1s;
     }
-
+    .card:last-child { border-bottom: 0; }
     .card:hover {
-      border-color: var(--accent);
-      box-shadow: 0 2px 10px rgba(44, 91, 182, 0.08);
-      transform: translateY(-1px);
+      background: var(--canvas-subtle);
+      text-decoration: none;
     }
 
     .card-header {
       display: flex;
       align-items: baseline;
-      gap: 14px;
-      margin-bottom: 6px;
+      gap: 10px;
+      margin-bottom: 4px;
     }
 
     .card-num {
-      font-family: 'SF Mono', Menlo, Consolas, 'Courier New', monospace;
-      font-size: 0.8rem;
-      color: var(--accent);
-      background: var(--accent-soft);
-      padding: 2px 8px;
-      border-radius: 3px;
+      font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 12px;
+      color: var(--muted);
     }
 
     .card-title {
-      font-size: 1.2rem;
-      color: var(--text);
-      font-weight: normal;
+      font-size: 1em;
+      font-weight: 600;
+      color: var(--link);
     }
+    .card:hover .card-title { text-decoration: underline; }
 
     .card-desc {
-      color: #444;
-      font-size: 0.95rem;
-      line-height: 1.55;
+      color: var(--muted);
+      font-size: 0.9em;
+      line-height: 1.5;
     }
 
     .tag {
       display: inline-block;
-      margin-top: 12px;
-      padding: 2px 10px;
-      font-family: 'SF Mono', Menlo, Consolas, 'Courier New', monospace;
-      font-size: 0.72rem;
+      margin-top: 6px;
+      padding: 0 7px;
+      font-size: 12px;
+      line-height: 18px;
       border: 1px solid var(--rule);
       color: var(--muted);
-      border-radius: 3px;
+      border-radius: 2em;
+      background: var(--canvas-subtle);
     }
 
-    .tips {
-      max-width: 780px;
-      margin: 56px auto 0;
-      padding: 28px 32px;
-      background: #fff;
-      border: 1px solid var(--rule);
-      border-radius: 4px;
+    pre.shell, .codeblock {
+      background: var(--canvas-subtle);
+      border-radius: 6px;
+      padding: 12px 16px;
+      overflow-x: auto;
+      font-size: 85%;
+      line-height: 1.45;
+    }
+    pre.shell code, .codeblock code {
+      padding: 0;
+      background: transparent;
+      border-radius: 0;
     }
 
-    .tips h2 {
-      font-size: 1.3rem;
-      color: var(--text);
-      margin-bottom: 8px;
-      font-weight: normal;
-      letter-spacing: -0.01em;
-    }
-
-    .tips .intro {
-      color: var(--muted);
-      font-size: 0.95rem;
-      line-height: 1.6;
-      margin-bottom: 20px;
-      font-style: italic;
-    }
-
-    .tips ol {
-      list-style: decimal outside;
-      padding-left: 26px;
-      color: #333;
-      font-size: 0.98rem;
-      line-height: 1.65;
-    }
-
-    .tips li {
-      margin-bottom: 16px;
-    }
-
-    .tips li::marker {
-      color: var(--accent);
-      font-weight: bold;
-    }
-
-    .tips li strong {
-      color: var(--text);
-    }
-
-    .tips li em {
-      color: var(--warn);
-      font-style: italic;
-    }
-
-    .tips code {
-      color: var(--warn);
-      background: var(--warn-soft);
-      padding: 1px 5px;
-      border-radius: 3px;
-    }
+    .tips ol { margin-top: 8px; }
+    .tips li { margin-bottom: 10px; line-height: 1.6; }
+    .tips em { color: var(--text); font-style: italic; }
 
     footer {
-      max-width: 780px;
-      margin: 48px auto 0;
-      padding-top: 20px;
-      border-top: 1px solid var(--rule);
+      margin-top: 32px;
+      padding-top: 16px;
+      border-top: 1px solid var(--rule-muted);
       color: var(--muted);
-      font-size: 0.85rem;
+      font-size: 12px;
     }
-
-    footer a { color: var(--muted); text-decoration: underline; }
-    footer a:hover { color: var(--accent); }
   </style>
 </head>
 <body>
 
-<header>
+<div class="container">
+
   <h1>WebMIDI + p5.js Examples</h1>
-  <p class="subtitle">Music Devices — IM-UH 3116 / NYU Abu Dhabi</p>
+  <p class="subtitle">Music Devices &mdash; IM-UH 3116 / NYU Abu Dhabi</p>
 
-  <div class="notice">
-    <strong>Requirements:</strong> Use Chrome or Edge — they have built-in Web MIDI support.
-    Firefox requires the <a href="https://jazz-soft.net/download/Jazz-Plugin/">Jazz plugin</a>.<br>
-    These pages must be served over HTTP (not opened as a file). From inside the <code>Web/</code>
-    directory, run a local server:
-    <br><code>cd Web &amp;&amp; python3 -m http.server 8000</code>
-    <br>then open <a href="http://localhost:8000"><code>http://localhost:8000</code></a>
-  </div>
-</header>
-
-<div class="examples">
-
-  <a class="card" href="01_midi_monitor.html">
-    <div class="card-header">
-      <span class="card-num">01</span>
-      <span class="card-title">MIDI Monitor</span>
-    </div>
-    <p class="card-desc">
-      List all connected MIDI devices and watch a live log of every incoming message —
-      notes, velocity, CC values. A useful debugging tool when building your own controllers.
-    </p>
-    <span class="tag">WebMIDI only</span>
-  </a>
-
-  <a class="card" href="02_note_visualizer.html">
-    <div class="card-header">
-      <span class="card-num">02</span>
-      <span class="card-title">Note Visualizer</span>
-    </div>
-    <p class="card-desc">
-      Press the four NeoKey buttons to spawn colorful ripples on a p5.js canvas.
-      Each button maps to a position and color; velocity controls the ring size.
-    </p>
-    <span class="tag">WebMIDI + p5.js</span>
-  </a>
-
-  <a class="card" href="03_cc_visualizer.html">
-    <div class="card-header">
-      <span class="card-num">03</span>
-      <span class="card-title">CC Visualizer</span>
-    </div>
-    <p class="card-desc">
-      Move the NeoSlider to see a live dial and scrolling waveform in p5.js.
-      Shows how to read Control Change messages and map them to visual parameters.
-    </p>
-    <span class="tag">WebMIDI + p5.js</span>
-  </a>
-
-  <a class="card" href="04_notes_and_cc.html">
-    <div class="card-header">
-      <span class="card-num">04</span>
-      <span class="card-title">Notes + CC</span>
-    </div>
-    <p class="card-desc">
-      Press keys to spawn glowing particle bursts; move the slider to change gravity.
-      Notes and CC are both auto-detected. Demonstrates using NoteOn/Off events
-      alongside a continuous CC value to control physics in real time.
-    </p>
-    <span class="tag">WebMIDI + p5.js</span>
-  </a>
-
-</div>
-
-<section class="tips">
-  <h2>Tips for generating similar projects with AI</h2>
-  <p class="intro">
-    These examples were built with Claude as a pair-programmer. A few things that helped —
-    useful whether you start from scratch or copy one of these and diff your way to something new.
+  <p>
+    Four small browser pages showing how to read MIDI in the browser with
+    <a href="https://webmidijs.org">WebMIDI.js</a> and visualize it with
+    <a href="https://p5js.org">p5.js</a>. Built alongside the class hardware kit
+    (ESP32-S3 Reverse TFT Feather + NeoKey 1x4 + NeoSlider) but any MIDI controller
+    will work.
   </p>
 
-  <ol>
-    <li>
-      <strong>Say what it should <em>do</em>, not just what it <em>is</em>.</strong>
-      &ldquo;A page where pressing a key spawns a coloured ripple that fades over ~1 second,
-      and the ripple&rsquo;s size grows with velocity&rdquo; beats &ldquo;a note visualiser&rdquo;.
-      Describe the behaviour a user would see &mdash; inputs, outputs, how things move,
-      what changes over time. The model will fill in reasonable code; it can&rsquo;t fill in your intent.
-    </li>
-    <li>
-      <strong>Point the AI at an existing file for hardware setup.</strong>
-      Instead of retyping pin numbers and I2C addresses, say
-      &ldquo;use the same hardware setup as <code>CircuitPython/spritekeys.py</code>&rdquo;
-      (or whichever file matches your rig). It will read it, pick up the NeoKey / NeoSlider
-      init code, and match the firmware you already have working &mdash; no guessing about
-      which addresses or which notes.
-    </li>
-    <li>
-      <strong>Ask for one example at a time.</strong>
-      Generating four visualisers in one prompt gives you four shallow visualisers.
-      Generating them sequentially &mdash; each building on the last &mdash; gives you one
-      that actually works and three that borrow from it.
-    </li>
-    <li>
-      <strong>When something breaks, show the model the <em>symptom</em>, not your theory.</strong>
-      &ldquo;The dial draws only the outer arc, the center is blank&rdquo; is more useful than
-      &ldquo;I think there&rsquo;s a scope problem with dialR&rdquo;. The model will find the real cause
-      faster from the observable behaviour.
-    </li>
-    <li>
-      <strong>Get it running first, then ask for changes.</strong>
-      Before asking the AI to add features, make sure the basic version actually opens in your
-      browser and responds to your controller. If the first version doesn&rsquo;t work, a second round of
-      &ldquo;also add sound and particles&rdquo; is going to pile new bugs on top of old ones.
-      Small working step &rarr; small change &rarr; small working step.
-    </li>
-    <li>
-      <strong>Ask the AI to explain anything you don&rsquo;t understand.</strong>
-      If it gives you code with <code>Math.pow(2, (note - 69) / 12)</code> or an
-      <code>hsvToRgb</code> function and you&rsquo;re not sure what those do, ask.
-      &ldquo;Explain this line&rdquo; or &ldquo;why did you choose this formula&rdquo; is a
-      legitimate prompt &mdash; you&rsquo;ll learn the technique and be able to modify it yourself
-      next time. Shipping code you can&rsquo;t read means you&rsquo;re stuck the moment it breaks.
-    </li>
-    <li>
-      <strong>Read the code you commit.</strong>
-      AI will confidently hand you code that uses a variable that doesn&rsquo;t exist, or listens
-      to a wrong event name. Open the file, skim it once, run it &mdash; don&rsquo;t paste-and-ship.
-    </li>
-    <li>
-      <strong>Tell the model what you&rsquo;ve ruled out.</strong>
-      &ldquo;I already checked that <code>WebMidi.enable()</code> succeeds and the listener fires &mdash; the bug is
-      in the render path&rdquo; saves five rounds of diagnostic suggestions.
-    </li>
-  </ol>
-</section>
+  <div class="alert">
+    <div class="alert-title">Requirements</div>
+    <p>
+      Use <strong>Chrome</strong> or <strong>Edge</strong> &mdash; they have built-in Web MIDI support.
+      Firefox needs the <a href="https://jazz-soft.net/download/Jazz-Plugin/">Jazz plugin</a>.
+    </p>
+    <p>
+      These pages must be served over HTTP, not opened as a file. From inside the
+      <code>Web/</code> directory:
+    </p>
+    <pre class="shell"><code>cd Web &amp;&amp; python3 -m http.server 8000</code></pre>
+    <p>
+      Then open <a href="http://localhost:8000"><code>http://localhost:8000</code></a>.
+    </p>
+  </div>
 
-<footer>
-  <p>Uses <a href="https://webmidijs.org">WebMIDI.js v3</a> and <a href="https://p5js.org">p5.js</a> &mdash; see <a href="README.md">README.md</a> for how each example was built.</p>
-</footer>
+  <h2>Shared setup</h2>
+  <p>All four examples are built from the same ingredients:</p>
+  <ul>
+    <li><strong>WebMIDI.js v3</strong> handles talking to MIDI devices from the browser &mdash; enumerating inputs, and subscribing to events like &ldquo;note on&rdquo; and &ldquo;control change&rdquo;.</li>
+    <li><strong>p5.js</strong> provides a drawing canvas and a 60 fps render loop.</li>
+  </ul>
+  <p>
+    The pattern shared by every example:
+    <strong>MIDI events update state; the render loop reads state.</strong>
+    MIDI messages arrive at unpredictable times, but p5 draws on a fixed tick.
+    Keeping the two decoupled is the single most important idea &mdash;
+    it&rsquo;s what stops the canvas from flashing, stuttering, or missing events
+    when your controller gets chatty.
+  </p>
+
+  <h2>Examples</h2>
+
+  <div class="examples">
+
+    <a class="card" href="01_midi_monitor.html">
+      <div class="card-header">
+        <span class="card-num">01</span>
+        <span class="card-title">MIDI Monitor</span>
+        <span class="tag">WebMIDI only</span>
+      </div>
+      <p class="card-desc">
+        List all connected MIDI devices and watch a live log of every incoming message &mdash;
+        notes, velocity, CC values. A useful debugging tool when building your own controllers.
+      </p>
+    </a>
+
+    <a class="card" href="02_note_visualizer.html">
+      <div class="card-header">
+        <span class="card-num">02</span>
+        <span class="card-title">Note Visualizer</span>
+        <span class="tag">WebMIDI + p5.js</span>
+      </div>
+      <p class="card-desc">
+        Press the four NeoKey buttons to spawn colorful ripples on a p5.js canvas.
+        Each button maps to a position and color; velocity controls the ring size.
+      </p>
+    </a>
+
+    <a class="card" href="03_cc_visualizer.html">
+      <div class="card-header">
+        <span class="card-num">03</span>
+        <span class="card-title">CC Visualizer</span>
+        <span class="tag">WebMIDI + p5.js</span>
+      </div>
+      <p class="card-desc">
+        Move the NeoSlider to see a live dial and scrolling waveform in p5.js.
+        Shows how to read Control Change messages and map them to visual parameters.
+      </p>
+    </a>
+
+    <a class="card" href="04_notes_and_cc.html">
+      <div class="card-header">
+        <span class="card-num">04</span>
+        <span class="card-title">Notes + CC</span>
+        <span class="tag">WebMIDI + p5.js</span>
+      </div>
+      <p class="card-desc">
+        Press keys to spawn glowing particle bursts; move the slider to change gravity.
+        Notes and CC are both auto-detected. Demonstrates using NoteOn/Off events
+        alongside a continuous CC value to control physics in real time.
+      </p>
+    </a>
+
+  </div>
+
+  <h2 id="tips">Tips for generating similar projects with AI</h2>
+
+  <div class="alert alert-tip">
+    <div class="alert-title">Tip</div>
+    <p>
+      These examples were built with Claude as a pair-programmer. The advice below
+      is useful whether you start from scratch or copy one of these and diff your
+      way to something new.
+    </p>
+  </div>
+
+  <div class="tips">
+    <ol>
+      <li>
+        <strong>Say what it should <em>do</em>, not just what it <em>is</em>.</strong>
+        &ldquo;A page where pressing a key spawns a coloured ripple that fades over ~1 second,
+        and the ripple&rsquo;s size grows with velocity&rdquo; beats &ldquo;a note visualiser&rdquo;.
+        Describe the behaviour a user would see &mdash; inputs, outputs, how things move,
+        what changes over time. The model will fill in reasonable code; it can&rsquo;t fill in your intent.
+      </li>
+      <li>
+        <strong>Point the AI at an existing file for hardware setup.</strong>
+        Instead of retyping pin numbers and I2C addresses, say
+        &ldquo;use the same hardware setup as <code>CircuitPython/spritekeys.py</code>&rdquo;
+        (or whichever file matches your rig). It will read it, pick up the NeoKey / NeoSlider
+        init code, and match the firmware you already have working &mdash; no guessing about
+        which addresses or which notes.
+      </li>
+      <li>
+        <strong>Ask for one example at a time.</strong>
+        Generating four visualisers in one prompt gives you four shallow visualisers.
+        Generating them sequentially &mdash; each building on the last &mdash; gives you one
+        that actually works and three that borrow from it.
+      </li>
+      <li>
+        <strong>When something breaks, show the model the <em>symptom</em>, not your theory.</strong>
+        &ldquo;The dial draws only the outer arc, the center is blank&rdquo; is more useful than
+        &ldquo;I think there&rsquo;s a scope problem with dialR&rdquo;. The model will find the real cause
+        faster from the observable behaviour.
+      </li>
+      <li>
+        <strong>Get it running first, then ask for changes.</strong>
+        Before asking the AI to add features, make sure the basic version actually opens in your
+        browser and responds to your controller. If the first version doesn&rsquo;t work, a second round of
+        &ldquo;also add sound and particles&rdquo; is going to pile new bugs on top of old ones.
+        Small working step &rarr; small change &rarr; small working step.
+      </li>
+      <li>
+        <strong>Ask the AI to explain anything you don&rsquo;t understand.</strong>
+        If it gives you code with <code>Math.pow(2, (note - 69) / 12)</code> or an
+        <code>hsvToRgb</code> function and you&rsquo;re not sure what those do, ask.
+        &ldquo;Explain this line&rdquo; or &ldquo;why did you choose this formula&rdquo; is a
+        legitimate prompt &mdash; you&rsquo;ll learn the technique and be able to modify it yourself
+        next time. Shipping code you can&rsquo;t read means you&rsquo;re stuck the moment it breaks.
+      </li>
+      <li>
+        <strong>Read the code you commit.</strong>
+        AI will confidently hand you code that uses a variable that doesn&rsquo;t exist, or listens
+        to a wrong event name. Open the file, skim it once, run it &mdash; don&rsquo;t paste-and-ship.
+      </li>
+      <li>
+        <strong>Tell the model what you&rsquo;ve ruled out.</strong>
+        &ldquo;I already checked that <code>WebMidi.enable()</code> succeeds and the listener fires &mdash; the bug is
+        in the render path&rdquo; saves five rounds of diagnostic suggestions.
+      </li>
+    </ol>
+  </div>
+
+  <footer>
+    <p>
+      Uses <a href="https://webmidijs.org">WebMIDI.js v3</a> and
+      <a href="https://p5js.org">p5.js</a>. See
+      <a href="README.md">README.md</a> for how each example was built.
+    </p>
+  </footer>
+
+</div>
 
 </body>
 </html>
