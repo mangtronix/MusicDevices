@@ -225,7 +225,7 @@ pre.shell code {
 .card details summary {
   cursor: pointer;
   color: var(--link);
-  font-size: 0.875em;
+  font-size: 1em;
   user-select: none;
   list-style: none;
   display: flex;
@@ -254,6 +254,12 @@ pre.shell code {
 .card details .detail-body h3 { font-size: 0.95em; margin: 12px 0 6px; color: var(--text); border: 0; }
 .card details .detail-body p:last-child,
 .card details .detail-body ul:last-child { margin-bottom: 0; }
+
+.card-source {
+  margin-top: 8px;
+  font-size: 0.9em;
+}
+.card-source a { color: var(--link); }
 
 /* ── AI tips list ────────────────────────────────────────────────────────── */
 
