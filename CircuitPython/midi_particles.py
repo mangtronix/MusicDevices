@@ -20,6 +20,9 @@
 # Setup
 #   1. Make sure boot.py enables USB MIDI (it should already do this).
 #   2. Copy this file to CIRCUITPY/code.py  (or import it from code.py).
+#
+# Custom keycaps
+#   Available at https://www.tinkercad.com/things/gZI03QlbHj2-04-p5-controller
 
 import time
 import board
