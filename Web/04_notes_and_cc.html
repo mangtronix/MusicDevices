@@ -264,10 +264,13 @@ function updateSoundIcon() {
   soundBtn.classList.toggle('on', soundOn);
 }
 
+let started = false;
+
 document.getElementById('start-btn').addEventListener('click', () => {
   if (!audioCtx) audioCtx = new AudioContext();
   audioCtx.resume();
   soundOn = true;
+  started = true;
   updateSoundIcon();
   document.getElementById('start-overlay').remove();
 });
@@ -479,10 +482,10 @@ new p5(function(p) {
     // ── Bottom UI ──────────────────────────────────────────────────────────
     drawBottomUI(g);
 
-    // ── Hint when nothing has happened yet ────────────────────────────────
+    // ── Hint when nothing has happened yet (only after start) ─────────────
     const hasNotes = Object.keys(midi.seenNotes).length > 0;
     const hasCc    = midi.activeCcKey !== null;
-    if (!hasNotes && !hasCc) {
+    if (started && !hasNotes && !hasCc) {
       p.noStroke();
       p.fill(55, 55, 80);
       p.textAlign(p.CENTER, p.CENTER);
