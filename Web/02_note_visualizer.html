@@ -58,26 +58,53 @@
 // ─── Shared MIDI state (written by WebMIDI, read by p5) ───────────────────────
 const midi = {
   activeNotes: new Set(),   // set of currently held note numbers
-  ripples: [],              // expanding ring animations
-  deviceName: 'no device',
+  seenNotes:   {},          // { noteNumber: { color } } — filled in as notes arrive
+  ripples:     [],          // expanding ring animations
+  deviceName:  'no device',
 };
 
-// ─── NeoKey 1x4 note mapping ──────────────────────────────────────────────────
-// Em pentatonic default from neokey_midi.ino: 64 67 69 71
-// Each note maps to an x position (0–1) and a color [r, g, b]
-const NOTE_CONFIG = {
-  64: { xFrac: 0.2, color: [80,  210, 255] },   // E4 — cyan
-  67: { xFrac: 0.4, color: [80,  255, 140] },   // G4 — green
-  69: { xFrac: 0.6, color: [255, 210,  60] },   // A4 — yellow
-  71: { xFrac: 0.8, color: [255,  90, 180] },   // B4 — pink
-};
+// ─── Note registration ────────────────────────────────────────────────────────
+// Nothing is pre-configured. Each incoming note gets registered on its first
+// NoteOn and assigned a color based on its pitch class. Positions are computed
+// at draw time by sorting all seen notes by pitch so they spread evenly.
 
-// Any note not in NOTE_CONFIG still gets a ripple at a default position
-function configForNote(note) {
-  if (NOTE_CONFIG[note]) return NOTE_CONFIG[note];
-  // Map arbitrary notes to hue using HSB
-  const hue = (note * 7) % 360;
-  return { xFrac: 0.5, hue };
+function registerNote(note) {
+  if (midi.seenNotes[note]) return;
+  // Hue = 12 evenly-spaced steps around the color wheel per octave
+  const hue = ((note % 12) * 30 + 200) % 360;
+  midi.seenNotes[note] = { color: hsvToRgb(hue, 0.75, 1.0) };
+}
+
+function sortedSeenNotes() {
+  return Object.keys(midi.seenNotes).map(Number).sort((a, b) => a - b);
+}
+
+// x fraction (0–1) for a note, based on its rank among all seen notes
+function noteXFrac(note) {
+  const sorted = sortedSeenNotes();
+  const i = sorted.indexOf(note);
+  return (i + 1) / (sorted.length + 1);
+}
+
+// MIDI note number → standard name with octave ("C4", "F#5", …)
+function noteName(n) {
+  const names = ['C','C#','D','D#','E','F','F#','G','G#','A','A#','B'];
+  return names[n % 12] + (Math.floor(n / 12) - 1);
+}
+
+// HSV (h: 0–360, s/v: 0–1) → [r, g, b] in 0–255
+function hsvToRgb(h, s, v) {
+  const c = v * s;
+  const x = c * (1 - Math.abs(((h / 60) % 2) - 1));
+  const m = v - c;
+  let r, g, b;
+  if      (h <  60) [r, g, b] = [c, x, 0];
+  else if (h < 120) [r, g, b] = [x, c, 0];
+  else if (h < 180) [r, g, b] = [0, c, x];
+  else if (h < 240) [r, g, b] = [0, x, c];
+  else if (h < 300) [r, g, b] = [x, 0, c];
+  else              [r, g, b] = [c, 0, x];
+  return [(r + m) * 255, (g + m) * 255, (b + m) * 255];
 }
 
 // ─── WebMIDI setup ────────────────────────────────────────────────────────────
@@ -89,21 +116,21 @@ WebMidi.enable()
       document.getElementById('device-name').classList.remove('none');
 
       input.addListener('noteon', e => {
-        const note   = e.note.number;
-        const vel    = e.rawVelocity;   // 0–127
-        const cfg    = configForNote(note);
+        const note = e.note.number;
+        const vel  = e.rawVelocity;   // 0–127
 
+        registerNote(note);           // first time we see this note, give it a color
         midi.activeNotes.add(note);
 
         // Queue a ripple for p5 to draw
         midi.ripples.push({
           note,
-          xFrac:    cfg.xFrac,
-          color:    cfg.color || hsvToRgb(cfg.hue, 0.8, 1.0),
-          radius:   0,
-          maxR:     map(vel, 0, 127, 80, 260),  // velocity → size
-          alpha:    255,
-          speed:    map(vel, 0, 127, 2, 5),     // velocity → speed
+          xFrac:  noteXFrac(note),
+          color:  midi.seenNotes[note].color,
+          radius: 0,
+          maxR:   map(vel, 0, 127, 80, 260),  // velocity → size
+          alpha:  255,
+          speed:  map(vel, 0, 127, 2, 5),     // velocity → speed
         });
       });
 
@@ -188,21 +215,34 @@ new p5(function(p) {
     // Remove fully faded ripples
     midi.ripples = midi.ripples.filter(r => r.alpha > 0);
 
-    // ── Button indicators at bottom ──────────────────────────────────────────
-    drawButtonRow();
+    // ── Button indicators at bottom (only for notes we've seen) ──────────────
+    const sorted = sortedSeenNotes();
+    if (sorted.length === 0) {
+      drawHint();
+    } else {
+      drawButtonRow(sorted);
+    }
   };
 
-  function drawButtonRow() {
-    const y       = p.height - 48;
-    const dotR    = 14;
-    const labelY  = y + 28;
+  function drawHint() {
+    p.noStroke();
+    p.fill(80, 80, 110, 200);
+    p.textFont('Courier New');
+    p.textAlign(p.CENTER, p.CENTER);
+    p.textSize(14);
+    p.text('press a key on your controller', p.width / 2, p.height / 2);
+  }
 
-    const noteNames = { 64:'E4', 67:'G4', 69:'A4', 71:'B4' };
+  function drawButtonRow(sorted) {
+    const y      = p.height - 48;
+    const dotR   = 14;
+    const labelY = y + 28;
 
-    for (const [noteStr, cfg] of Object.entries(NOTE_CONFIG)) {
-      const note   = parseInt(noteStr);
-      const x      = cfg.xFrac * p.width;
-      const active = midi.activeNotes.has(note);
+    for (let i = 0; i < sorted.length; i++) {
+      const note      = sorted[i];
+      const cfg       = midi.seenNotes[note];
+      const x         = ((i + 1) / (sorted.length + 1)) * p.width;
+      const active    = midi.activeNotes.has(note);
       const [r, g, b] = cfg.color;
 
       // Ring
@@ -224,7 +264,7 @@ new p5(function(p) {
       p.textFont('Courier New');
       p.textSize(10);
       p.textAlign(p.CENTER, p.CENTER);
-      p.text(noteNames[note] || note, x, labelY);
+      p.text(noteName(note), x, labelY);
     }
   }
 
