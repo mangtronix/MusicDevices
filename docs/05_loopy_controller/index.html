@@ -40,20 +40,11 @@
   </div>
 
   <p>
-    Two variants are included:
+    The firmware is
+    <a href="https://github.com/mangtronix/MusicDevices/blob/main/CircuitPython/loopy_simple.py"><code>loopy_simple.py</code></a>
+    &mdash; four clips in one row, each NeoKey triggers one clip, the slider
+    sends one CC.
   </p>
-  <ul>
-    <li>
-      <strong><a href="https://github.com/mangtronix/MusicDevices/blob/main/CircuitPython/loopy_simple.py"><code>loopy_simple.py</code></a></strong> &mdash;
-      4 clips in one row. Each NeoKey triggers one clip; the slider is one CC.
-      Start here.
-    </li>
-    <li>
-      <strong><a href="https://github.com/mangtronix/MusicDevices/blob/main/CircuitPython/loopy_grid.py"><code>loopy_grid.py</code></a></strong> &mdash;
-      a 4&times;4 grid of clips. The slider chooses which row of 4 the buttons
-      control, so all 16 clips are reachable from one row of NeoKeys.
-    </li>
-  </ul>
 
   <h2>Hardware</h2>
   <p>The same class kit used by every other example:</p>
@@ -247,37 +238,10 @@
     The script writes <code>CircuitPython/loopy_sprites.bmp</code> regardless of where you run it from. Copy that BMP to your <code>CIRCUITPY/</code> drive.
   </p>
 
-  <h2>Going further: 4&times;4 grid version</h2>
-
-  <p>
-    <a href="https://github.com/mangtronix/MusicDevices/blob/main/CircuitPython/loopy_grid.py"><code>loopy_grid.py</code></a>
-    extends the same idea to 16 clips arranged in 4 rows of 4. Each column is
-    still one instrument color (orange / yellow / lime / blue), but the slider
-    now chooses which row of 4 clips the buttons trigger. Move the slider up,
-    and the four buttons re-arm to the next row.
-  </p>
-
-  <p>
-    The CC grid uses CCs 20&ndash;35 (16 unassigned CCs in a row), four per row.
-    The four NeoSlider LEDs show which row is selected. Each NeoKey shows the
-    state of <em>its column at the currently selected row</em>, so you can
-    quickly see what's playing without leaving the screen of the controller.
-  </p>
-
-  <div class="alert alert-tip">
-    <div class="alert-title">Tip</div>
-    <p>
-      Loopy Pro can hold a lot of MIDI bindings without breaking a sweat &mdash;
-      mapping all 16 cells in the grid version takes a couple of minutes of
-      MIDI Learn but pays off as a comfortable performance interface.
-    </p>
-  </div>
-
   <h2>Files</h2>
   <ul>
     <li><a href="Loopy%20Simple%20Controller.lpproj"><code>Loopy Simple Controller.lpproj</code></a> &mdash; the example Loopy Pro project, ready to open</li>
-    <li><a href="https://github.com/mangtronix/MusicDevices/blob/main/CircuitPython/loopy_simple.py"><code>CircuitPython/loopy_simple.py</code></a> &mdash; firmware (4 clips)</li>
-    <li><a href="https://github.com/mangtronix/MusicDevices/blob/main/CircuitPython/loopy_grid.py"><code>CircuitPython/loopy_grid.py</code></a> &mdash; firmware (4&times;4 grid)</li>
+    <li><a href="https://github.com/mangtronix/MusicDevices/blob/main/CircuitPython/loopy_simple.py"><code>CircuitPython/loopy_simple.py</code></a> &mdash; firmware</li>
     <li><a href="https://github.com/mangtronix/MusicDevices/blob/main/CircuitPython/loopy_sprites.bmp"><code>CircuitPython/loopy_sprites.bmp</code></a> &mdash; screen graphic</li>
     <li><a href="https://github.com/mangtronix/MusicDevices/blob/main/Scripts/generate_loopy_sprites.py"><code>Scripts/generate_loopy_sprites.py</code></a> &mdash; sprite sheet generator</li>
   </ul>
