@@ -5,23 +5,29 @@
 # Reverse TFT Feather + NeoKey 1x4 + NeoSlider.
 #
 # Layout in Loopy Pro:
-#   - One row of 4 clips, left to right:
-#       button 0 = drums   (red)
+#   - One row of 4 clips, left to right (colors match Loopy Pro defaults):
+#       button 0 = drums   (orange)
 #       button 1 = voice   (yellow)
-#       button 2 = guitar  (green)
-#       button 3 = keys    (cyan)
+#       button 2 = guitar  (lime)
+#       button 3 = keys    (blue)
 #
-# Trigger protocol (controller -> Loopy Pro):
-#   - Each clip is mapped to a unique MIDI Control Change number.
-#   - Pressing a button sends that CC with value 127 (trigger).
-#   - Releasing sends value 0. Loopy Pro can map either edge to a clip action
-#     (toggle, start, stop, etc.) in its MIDI Learn dialog.
+# MIDI convention (matches https://wiki.loopypro.com/Troubleshooting_MIDI):
+#   - "ON event"  = CC value > 0  (we send 127, the preferred value)
+#   - "OFF event" = CC value == 0
+# Loopy Pro distinguishes ON from OFF on the same CC number, so the same CC
+# carries press / release on the way out and play / stop on the way back.
 #
-# Feedback (Loopy Pro -> controller):
-#   - When a clip starts, Loopy Pro sends the same CC back with value 127.
-#   - When a clip stops, Loopy Pro sends the same CC back with value 0.
-#   - The NeoKey for that clip lights bright in its column color when the clip
-#     is playing, dim otherwise.
+# Outgoing (controller -> Loopy Pro):
+#   - Press   -> ControlChange(cc, 127)   ON
+#   - Release -> ControlChange(cc, 0)     OFF
+#   In Loopy Pro's MIDI Learn dialog you can assign the ON edge to "start clip"
+#   and the OFF edge to "stop clip", or assign just the ON edge to "toggle".
+#
+# Incoming feedback (Loopy Pro -> controller):
+#   - Clip started -> ControlChange(cc, 127)   ON  -> NeoKey bright
+#   - Clip stopped -> ControlChange(cc, 0)     OFF -> NeoKey dim
+#   The LED state is driven only by feedback, so what you see on the keys is
+#   what Loopy Pro is actually doing -- not what you tried to do.
 #
 # Slider:
 #   - Sends a single CC (default CC 7 = Volume). Map it to whatever you like
@@ -33,6 +39,34 @@
 #   button 2 -> CC 22 (guitar)
 #   button 3 -> CC 23 (keys)
 #   slider   -> CC  7 (volume)
+#
+# === Setting up the mapping in Loopy Pro 2.0 =================================
+# 1. Plug the controller in. Loopy Pro picks it up automatically.
+#
+# 2. Enter MIDI Learn mode:
+#      Tap the hamburger icon (upper right) -> "MIDI Learn".
+#    The screen now shows a "MIDI Learn" panel along the bottom.
+#
+# 3. Map each clip to its button:
+#      a. Tap the clip you want to control.
+#      b. Press the matching NeoKey button on the controller -- the panel
+#         shows the CC it just learned.
+#      c. Tap the bottom panel to open the binding's options. Set the action
+#         to "Toggle" (one press starts the clip, next press stops it).
+#      Repeat for the other 3 clips.
+#
+#    Feedback (the CC that lights up the NeoKey when the clip is playing) is
+#    sent automatically -- there is no extra option to enable.
+#
+# 4. Map the slider (still in MIDI Learn mode):
+#      a. Tap the master volume fader (or any knob you want).
+#      b. Move the slider on the controller -- it learns CC 7.
+#
+# 5. Tap "Done" / exit MIDI Learn mode (hamburger -> MIDI Learn again).
+#
+# That's it. Press a button -> the clip toggles -> the NeoKey lights up.
+# Press again -> the clip stops -> the NeoKey dims.
+# =============================================================================
 
 import adafruit_simplemath
 import board
@@ -44,7 +78,7 @@ display.rotation = 180
 
 print("loopy_simple")
 
-serial_debug = True
+serial_debug = False
 if serial_debug:
     print("Serial debug ON - turn off for faster response")
 
@@ -128,23 +162,25 @@ CLIP_LABELS = ["drums", "voice", "guitar", "keys"]
 # CC per clip - 20..23 are unassigned in the MIDI spec
 CLIP_CCS = [20, 21, 22, 23]
 
-# Bright = clip playing; dim = idle
+# Bright = clip playing; dim = idle. Colors match Loopy Pro's default
+# clip palette: orange, yellow, lime, blue.
 CLIP_BRIGHT = [
-    0xFF0000,  # drums  - red
-    0xFFAA00,  # voice  - amber/yellow
-    0x00FF00,  # guitar - green
-    0x00AAFF,  # keys   - cyan/blue
+    0xFF6E00,  # drums  - orange
+    0xFFE600,  # voice  - yellow
+    0x9BFF1F,  # guitar - lime
+    0x1E82FF,  # keys   - blue
 ]
 CLIP_DIM = [
-    0x220000,
-    0x221100,
-    0x002200,
-    0x001122,
+    0x2A1200,
+    0x2A2600,
+    0x182A05,
+    0x05162A,
 ]
 
-# Values to send for press / release
-CC_TRIGGER = 127
-CC_RELEASE = 0
+# ON / OFF event values per the Loopy Pro wiki convention.
+# https://wiki.loopypro.com/Troubleshooting_MIDI
+CC_ON  = 127  # preferred ON value
+CC_OFF = 0    # OFF value
 
 # Track which clips Loopy Pro reports as currently playing
 playing = [False] * NUM_CLIPS
@@ -240,30 +276,33 @@ while True:
         slider_pixels.fill(colorwheel(slider_to_color(slider.value)))
         old_slider_cc_value = new_slider_cc_value
 
-    # --- Buttons -> trigger clip ------------------------------------------
+    # --- Buttons -> send ON on press, OFF on release ----------------------
     for i in range(NUM_CLIPS):
         cc = CLIP_CCS[i]
         if neokey[i] and not neokey_was_pressed[i]:
-            midi.send(ControlChange(cc, CC_TRIGGER))
+            midi.send(ControlChange(cc, CC_ON))
             if serial_debug:
-                print("trigger %s -> CC %d = %d" %
-                      (CLIP_LABELS[i], cc, CC_TRIGGER))
+                print("send ON  %s cc%d=%d" % (CLIP_LABELS[i], cc, CC_ON))
             neokey_was_pressed[i] = True
         elif neokey_was_pressed[i] and not neokey[i]:
-            midi.send(ControlChange(cc, CC_RELEASE))
+            midi.send(ControlChange(cc, CC_OFF))
+            if serial_debug:
+                print("send OFF %s cc%d=%d" % (CLIP_LABELS[i], cc, CC_OFF))
             neokey_was_pressed[i] = False
 
-    # --- Incoming MIDI from Loopy Pro --------------------------------------
+    # --- Incoming feedback from Loopy Pro ---------------------------------
+    # Per the wiki: ON  = CC value > 0  -> clip is playing
+    #               OFF = CC value == 0 -> clip is stopped
     msg = midi.receive()
     while msg is not None:
         if isinstance(msg, ControlChange) and msg.control in cc_to_clip:
             i = cc_to_clip[msg.control]
-            is_playing = msg.value > 0
-            if playing[i] != is_playing:
-                playing[i] = is_playing
+            is_on = msg.value > 0
+            if playing[i] != is_on:
+                playing[i] = is_on
                 if serial_debug:
-                    print("%s %s cc%d=%d" %
-                          ("PLAY" if is_playing else "STOP",
+                    print("recv %s %s cc%d=%d" %
+                          ("ON " if is_on else "OFF",
                            CLIP_LABELS[i], msg.control, msg.value))
                 update_neokey_lights()
         msg = midi.receive()
