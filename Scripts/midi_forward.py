@@ -3,7 +3,7 @@
 
 Usage:
   python midi_forward.py --list
-  python midi_forward.py <input_substring> <output_substring> [--monitor]
+  python midi_forward.py <a_substring> <b_substring> [--monitor] [--bidirectional]
 
 Example (CircuitPython controller → iPad over BLE MIDI on macOS):
   1. On the iPad, open a MIDI app that advertises BLE (e.g. AUM, MIDI Wrench).
@@ -14,6 +14,7 @@ Example (CircuitPython controller → iPad over BLE MIDI on macOS):
          python midi_forward.py --list
   5. Forward, matching on substrings of the port names:
          python midi_forward.py CircuitPython iPad --monitor
+     Add --bidirectional (or -b) to also route iPad → CircuitPython.
 """
 import sys
 
@@ -51,6 +52,14 @@ def print_ports():
         print(f"  {n}")
 
 
+def make_callback(out, label, monitor):
+    def _cb(msg):
+        out.send(msg)
+        if monitor:
+            print(f"[{label}] {msg}")
+    return _cb
+
+
 def main():
     args = sys.argv[1:]
 
@@ -67,25 +76,56 @@ def main():
         print(__doc__)
         return
 
-    if len(args) < 2:
-        raise SystemExit("Usage: midi_forward.py <input> <output> [--monitor]")
+    flags = {'--monitor', '-m', '--bidirectional', '-b'}
+    positional = [a for a in args if a not in flags]
+    if len(positional) < 2:
+        raise SystemExit(
+            "Usage: midi_forward.py <a> <b> [--monitor] [--bidirectional]"
+        )
 
-    in_name = find_port(mido.get_input_names(), args[0])
-    out_name = find_port(mido.get_output_names(), args[1])
     monitor = '--monitor' in args or '-m' in args
+    bidirectional = '--bidirectional' in args or '-b' in args
 
-    print(f"Forwarding:  {in_name}  →  {out_name}")
+    a_in = find_port(mido.get_input_names(), positional[0])
+    b_out = find_port(mido.get_output_names(), positional[1])
+
+    arrow = '↔' if bidirectional else '→'
+    print(f"Forwarding:  {a_in}  {arrow}  {b_out}")
     if monitor:
         print("Monitor on. Ctrl+C to quit.\n")
 
-    with mido.open_input(in_name) as inp, mido.open_output(out_name) as out:
-        try:
-            for msg in inp:
-                out.send(msg)
-                if monitor:
-                    print(msg)
-        except KeyboardInterrupt:
-            print("\nStopped.")
+    if not bidirectional:
+        with mido.open_input(a_in) as inp, mido.open_output(b_out) as out:
+            try:
+                for msg in inp:
+                    out.send(msg)
+                    if monitor:
+                        print(msg)
+            except KeyboardInterrupt:
+                print("\nStopped.")
+        return
+
+    # Bidirectional: need the reverse pair too.
+    b_in = find_port(mido.get_input_names(), positional[1])
+    a_out = find_port(mido.get_output_names(), positional[0])
+
+    inp_a = mido.open_input(a_in)
+    inp_b = mido.open_input(b_in)
+    out_a = mido.open_output(a_out)
+    out_b = mido.open_output(b_out)
+
+    inp_a.callback = make_callback(out_b, f"{positional[0]}→{positional[1]}", monitor)
+    inp_b.callback = make_callback(out_a, f"{positional[1]}→{positional[0]}", monitor)
+
+    try:
+        import time
+        while True:
+            time.sleep(0.1)
+    except KeyboardInterrupt:
+        print("\nStopped.")
+    finally:
+        for p in (inp_a, inp_b, out_a, out_b):
+            p.close()
 
 
 if __name__ == '__main__':
