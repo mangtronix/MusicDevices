@@ -42,15 +42,29 @@ def find_port(names, substring):
     return matches[0]
 
 
+def print_ports():
+    print("Inputs:")
+    for n in mido.get_input_names():
+        print(f"  {n}")
+    print("\nOutputs:")
+    for n in mido.get_output_names():
+        print(f"  {n}")
+
+
 def main():
     args = sys.argv[1:]
-    if not args or args[0] in ('-l', '--list'):
-        print("Inputs:")
-        for n in mido.get_input_names():
-            print(f"  {n}")
-        print("\nOutputs:")
-        for n in mido.get_output_names():
-            print(f"  {n}")
+
+    if not args:
+        print(__doc__)
+        print_ports()
+        return
+
+    if args[0] in ('-l', '--list'):
+        print_ports()
+        return
+
+    if args[0] in ('-h', '--help'):
+        print(__doc__)
         return
 
     if len(args) < 2:
