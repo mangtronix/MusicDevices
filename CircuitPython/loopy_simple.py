@@ -89,7 +89,6 @@ import displayio
 import adafruit_imageload
 
 # NeoKey / NeoSlider
-from rainbowio import colorwheel
 from adafruit_seesaw.seesaw import Seesaw
 from adafruit_seesaw.analoginput import AnalogInput
 from adafruit_seesaw import neopixel
@@ -197,14 +196,31 @@ def slider_to_cc_value(value):
     """Map slider 0..1023 to MIDI CC 0..127 (inverted to match physical fader)."""
     return int(adafruit_simplemath.map_range(value, 0, 1023, 127, 0))
 
-def slider_to_color(value):
-    return value / 1023 * 255
-
 
 ### LED HELPERS ---------------------------------------------------------------
 def update_neokey_lights():
     for i in range(NUM_CLIPS):
         neokey.pixels[i] = CLIP_BRIGHT[i] if playing[i] else CLIP_DIM[i]
+
+def update_slider_lights(cc_value):
+    """Show the slider's value (0..127) as a vertical level meter on the
+    NeoSlider's 4 LEDs, filling from bottom (LED 0) to top (LED 3) in pure
+    blue. Each LED covers a quarter of the range; the partially-filled LED
+    uses scaled brightness so the fill looks smooth between LED steps.
+
+    Called both locally (when the controller sends a CC update) and on
+    feedback from Loopy Pro, so the lights stay in sync regardless of which
+    side moved the value."""
+    step = 127.0 / 4  # 31.75 -- range each LED covers
+    for i in range(4):
+        led_min = i * step
+        if cc_value >= led_min + step:
+            blue = 255              # fully lit
+        elif cc_value <= led_min:
+            blue = 0                # off
+        else:
+            blue = int((cc_value - led_min) / step * 255)  # partial
+        slider_pixels[3 -i] = blue     # 0x0000BB -- pure blue, scaled brightness
 
 
 ### SPRITE / DISPLAY ----------------------------------------------------------
@@ -248,19 +264,22 @@ if len(usb_midi.ports) == 0:
     print("No MIDI ports found, check that MIDI is enabled in boot.py")
     raise Exception("No MIDI port found")
 
-midi_in_channel = 1
 midi_out_channel = 1
 midi = adafruit_midi.MIDI(
     midi_in=usb_midi.ports[0],
     midi_out=usb_midi.ports[1],
-    in_channel=(midi_in_channel - 1),
+    # Listen on ALL channels for incoming feedback. Loopy Pro can send echoes
+    # on a channel different from the one we send on, so a strict in_channel
+    # filter silently drops feedback messages.
+    in_channel=tuple(range(16)),
     out_channel=(midi_out_channel - 1),
     debug=False,
 )
-print("MIDI out ch %d, in ch %d" % (midi.out_channel + 1, midi.in_channel + 1))
+print("MIDI out ch %d, listening on all channels for feedback" % (midi.out_channel + 1))
 print("Clip CCs: %s   Slider CC: %d" % (CLIP_CCS, SLIDER_CC))
 
 update_neokey_lights()
+update_slider_lights(0)  # start the slider LEDs off; Loopy Pro feedback will fill them in
 time.sleep(0.5)  # let MIDI reconnect on board reset
 
 
@@ -268,12 +287,16 @@ time.sleep(0.5)  # let MIDI reconnect on board reset
 while True:
 
     # --- Slider -> CC ------------------------------------------------------
+    # Loopy Pro only sends fader feedback when the change originates inside
+    # the app (e.g. the on-screen fader is touched), so we drive the LEDs
+    # locally on physical slider movement and ALSO accept feedback below for
+    # changes that come from Loopy Pro.
     new_slider_cc_value = slider_to_cc_value(slider.value)
     if new_slider_cc_value != old_slider_cc_value:
         midi.send(ControlChange(SLIDER_CC, new_slider_cc_value))
         if serial_debug:
             print("slider CC %d = %d" % (SLIDER_CC, new_slider_cc_value))
-        slider_pixels.fill(colorwheel(slider_to_color(slider.value)))
+        update_slider_lights(new_slider_cc_value)
         old_slider_cc_value = new_slider_cc_value
 
     # --- Buttons -> send ON on press, OFF on release ----------------------
@@ -291,20 +314,36 @@ while True:
             neokey_was_pressed[i] = False
 
     # --- Incoming feedback from Loopy Pro ---------------------------------
-    # Per the wiki: ON  = CC value > 0  -> clip is playing
-    #               OFF = CC value == 0 -> clip is stopped
+    # Clip CCs:   ON  = value > 0  -> clip is playing  (NeoKey bright)
+    #             OFF = value == 0 -> clip is stopped  (NeoKey dim)
+    # Slider CC: value 0..127      -> slider LEDs fade off..full pure blue
+    # Anything else is logged when serial_debug is on so you can see what
+    # Loopy Pro is actually sending back -- useful for diagnosing missing
+    # feedback (e.g. CC numbers or channels you didn't expect).
     msg = midi.receive()
     while msg is not None:
-        if isinstance(msg, ControlChange) and msg.control in cc_to_clip:
-            i = cc_to_clip[msg.control]
-            is_on = msg.value > 0
-            if playing[i] != is_on:
-                playing[i] = is_on
+        if isinstance(msg, ControlChange):
+            if msg.control in cc_to_clip:
+                i = cc_to_clip[msg.control]
+                is_on = msg.value > 0
+                if playing[i] != is_on:
+                    playing[i] = is_on
+                    if serial_debug:
+                        print("recv %s %s cc%d=%d" %
+                              ("ON " if is_on else "OFF",
+                               CLIP_LABELS[i], msg.control, msg.value))
+                    update_neokey_lights()
+            elif msg.control == SLIDER_CC:
                 if serial_debug:
-                    print("recv %s %s cc%d=%d" %
-                          ("ON " if is_on else "OFF",
-                           CLIP_LABELS[i], msg.control, msg.value))
-                update_neokey_lights()
+                    print("recv slider cc%d=%d" % (msg.control, msg.value))
+                update_slider_lights(msg.value)
+            else:
+                if serial_debug:
+                    print("recv unknown cc%d=%d (ch %s)" %
+                          (msg.control, msg.value, getattr(msg, "channel", "?")))
+        else:
+            if serial_debug:
+                print("recv non-CC:", msg)
         msg = midi.receive()
 
     # --- Sprite reflects exactly which clips are playing -------------------
