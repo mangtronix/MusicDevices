@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>05 &mdash; Loopy Pro Controller</title>
+  <link rel="stylesheet" href="../site.css">
+</head>
+<body>
+
+<div class="container">
+
+  <h1>Loopy Pro Controller</h1>
+  <p class="subtitle">A CircuitPython MIDI controller for <a href="https://loopypro.com">Loopy Pro</a> &mdash; built from the class hardware kit.</p>
+
+  <p>
+    A small custom controller that triggers clips in <a href="https://loopypro.com">Loopy Pro</a>
+    over USB MIDI. Tap a button to start or stop a clip; long-press the same
+    button to clear it. The LED on the button follows what Loopy Pro is
+    actually doing, so the controller and the app stay in sync. The slider
+    sends a CC you can map to volume or any parameter you like.
+  </p>
+
+  <figure style="margin: 16px 0;">
+    <img src="01%20Loopy%20Simple%20Controller.png" alt="The example Loopy Pro project: Drums, Mic, Guitar, Keys clips in their default colors"
+         style="max-width: 100%; border: 1px solid var(--rule); border-radius: 6px; display: block;">
+    <figcaption class="subtitle" style="margin-top: 8px;">
+      The example project &mdash; four clips, one per NeoKey button, in Loopy Pro's default clip colors.
+    </figcaption>
+  </figure>
+
+  <div class="alert alert-tip">
+    <div class="alert-title">Example Loopy Pro project</div>
+    <p>
+      <a href="Loopy%20Simple%20Controller.lpproj"><code>Loopy Simple Controller.lpproj</code></a>
+      is included in this folder. Open it in Loopy Pro 2.0 to start with the
+      four clips already laid out and bound to CCs 20&ndash;23. If you'd rather
+      build it yourself, the walkthrough below shows every step.
+    </p>
+  </div>
+
+  <p>
+    Two variants are included:
+  </p>
+  <ul>
+    <li>
+      <strong><a href="https://github.com/mangtronix/MusicDevices/blob/main/CircuitPython/loopy_simple.py"><code>loopy_simple.py</code></a></strong> &mdash;
+      4 clips in one row. Each NeoKey triggers one clip; the slider is one CC.
+      Start here.
+    </li>
+    <li>
+      <strong><a href="https://github.com/mangtronix/MusicDevices/blob/main/CircuitPython/loopy_grid.py"><code>loopy_grid.py</code></a></strong> &mdash;
+      a 4&times;4 grid of clips. The slider chooses which row of 4 the buttons
+      control, so all 16 clips are reachable from one row of NeoKeys.
+    </li>
+  </ul>
+
+  <h2>Hardware</h2>
+  <p>The same class kit used by every other example:</p>
+  <ul>
+    <li><strong>Adafruit ESP32-S3 Reverse TFT Feather</strong> &mdash; runs CircuitPython, has a small color screen on the back.</li>
+    <li><strong>NeoKey 1x4</strong> &mdash; four mechanical-keyswitch buttons with RGB LEDs, on I2C address <code>0x30</code>.</li>
+    <li><strong>NeoSlider</strong> &mdash; analog slider with four RGB LEDs along its edge, on I2C address <code>0x38</code> (cut the A3 jumper to move it off the default <code>0x30</code> so it doesn't conflict with the NeoKey).</li>
+    <li>USB cable to your iPad / Mac running Loopy Pro.</li>
+  </ul>
+
+  <h2>Installation</h2>
+  <ol>
+    <li>Copy <a href="https://github.com/mangtronix/MusicDevices/blob/main/CircuitPython/loopy_simple.py"><code>loopy_simple.py</code></a> to your <code>CIRCUITPY/</code> drive as <code>code.py</code>.</li>
+    <li>Copy <a href="https://github.com/mangtronix/MusicDevices/blob/main/CircuitPython/loopy_sprites.bmp"><code>loopy_sprites.bmp</code></a> alongside it. (This is the screen graphic.)</li>
+    <li>Make sure your <code>lib/</code> folder has the Adafruit libraries the file imports: <code>adafruit_simplemath</code>, <code>adafruit_seesaw</code>, <code>adafruit_neokey</code>, <code>adafruit_midi</code>, <code>adafruit_imageload</code>.</li>
+    <li>Make sure USB MIDI is enabled in your <a href="https://github.com/mangtronix/MusicDevices/blob/main/CircuitPython/boot.py"><code>boot.py</code></a> &mdash; see <a href="https://learn.adafruit.com/customizing-usb-devices-in-circuitpython/circuitpy-midi-serial">the Adafruit guide</a>.</li>
+  </ol>
+
+  <h2 id="midi-mapping">MIDI mapping</h2>
+  <p>
+    Default CC assignments (Control Change numbers 20&ndash;23 are unassigned in
+    the MIDI spec, so they're safe to use for custom controllers):
+  </p>
+  <table style="border-collapse: collapse; margin: 0 0 16px;">
+    <thead>
+      <tr><th style="text-align:left; padding:6px 12px; border-bottom:1px solid var(--rule)">Control</th>
+          <th style="text-align:left; padding:6px 12px; border-bottom:1px solid var(--rule)">CC</th>
+          <th style="text-align:left; padding:6px 12px; border-bottom:1px solid var(--rule)">Loopy Pro clip color</th></tr>
+    </thead>
+    <tbody>
+      <tr><td style="padding:4px 12px">Button 0 (Drums)</td><td style="padding:4px 12px"><code>20</code></td><td style="padding:4px 12px">orange</td></tr>
+      <tr><td style="padding:4px 12px">Button 1 (Mic)</td><td style="padding:4px 12px"><code>21</code></td><td style="padding:4px 12px">yellow</td></tr>
+      <tr><td style="padding:4px 12px">Button 2 (Guitar)</td><td style="padding:4px 12px"><code>22</code></td><td style="padding:4px 12px">lime</td></tr>
+      <tr><td style="padding:4px 12px">Button 3 (Keys)</td><td style="padding:4px 12px"><code>23</code></td><td style="padding:4px 12px">blue</td></tr>
+      <tr><td style="padding:4px 12px">Slider</td><td style="padding:4px 12px"><code>7</code></td><td style="padding:4px 12px">(Volume)</td></tr>
+    </tbody>
+  </table>
+
+  <h3>ON / OFF events</h3>
+  <p>
+    Following the convention from
+    <a href="https://wiki.loopypro.com/Troubleshooting_MIDI">the Loopy Pro wiki</a>:
+  </p>
+  <ul>
+    <li><strong>ON event</strong> = CC value greater than 0. The controller sends <code>127</code>, which the wiki recommends as the preferred value.</li>
+    <li><strong>OFF event</strong> = CC value <code>0</code>.</li>
+  </ul>
+  <p>
+    Pressing a button sends ON; releasing sends OFF. Loopy Pro echoes the same
+    CC back when a clip starts (ON) or stops (OFF) &mdash; that's what lights up
+    the corresponding NeoKey.
+  </p>
+
+  <h2 id="loopy-setup">Setting up the mapping in Loopy Pro 2.0</h2>
+
+  <p>
+    If you opened the included
+    <a href="Loopy%20Simple%20Controller.lpproj"><code>Loopy Simple Controller.lpproj</code></a>,
+    everything below is already done &mdash; you can skip ahead to
+    <a href="#what-the-lights-show">What the lights and screen show</a>.
+    Otherwise, here's how to build the same mapping yourself.
+  </p>
+
+  <h3>1. Plug the controller in</h3>
+  <p>Loopy Pro picks up USB MIDI devices automatically &mdash; no settings dialog needed.</p>
+
+  <h3>2. Enter MIDI Learn mode</h3>
+  <p>
+    Tap the hamburger icon in the upper right and choose <strong>MIDI Learn</strong>.
+    A MIDI Learn panel appears along the bottom of the screen and the title bar
+    changes to <em>MIDI Learn</em>.
+  </p>
+  <figure style="margin: 16px 0;">
+    <img src="02%20MIDI%20learn.png" alt="The hamburger menu in the upper right with MIDI Learn highlighted"
+         style="max-width: 100%; border: 1px solid var(--rule); border-radius: 6px; display: block;">
+    <figcaption class="subtitle" style="margin-top: 8px;">
+      Hamburger icon (upper right) &rarr; <strong>MIDI Learn</strong>.
+    </figcaption>
+  </figure>
+
+  <h3>3. Map Play/Stop to the button's <em>On</em> message</h3>
+  <p>
+    Tap the first clip. Choose the <strong>Play/Stop</strong> action. In the
+    binding panel set <strong>Action</strong> to <strong>Toggle</strong> &mdash;
+    one tap starts the clip, the next tap stops it. Then press the matching
+    NeoKey button briefly. Loopy Pro learns the binding as <strong>CC 20, On</strong>
+    (the controller's ON event = CC value 127).
+  </p>
+  <figure style="margin: 16px 0;">
+    <img src="03%20Play%20Stop%20with%20on%20message.PNG" alt="Play/Stop binding panel showing Action set to Toggle and source binding CC 20 On"
+         style="max-width: 100%; border: 1px solid var(--rule); border-radius: 6px; display: block;">
+    <figcaption class="subtitle" style="margin-top: 8px;">
+      Play/Stop with <strong>Action: Toggle</strong> bound to <strong>CC 20, On</strong>. The bottom row shows the source MIDI message Loopy Pro learned from the controller.
+    </figcaption>
+  </figure>
+
+  <h3>4. Add a second action: Clear Clip on <em>Hold</em></h3>
+  <p>
+    Still in the same clip's bindings, add a new action and pick
+    <strong>Clear Clip</strong> from the list. This time, instead of tapping
+    the NeoKey button, <strong>press and hold</strong> it. Loopy Pro detects
+    that the ON didn't release quickly and learns the binding as
+    <strong>Hold CC 20</strong>. Now a tap toggles play, and a long-press of
+    the same button clears the clip &mdash; two actions on one button.
+  </p>
+  <figure style="margin: 16px 0;">
+    <img src="04%20Add%20action%20for%20clear%20clip.PNG" alt="Actions list with Play/Stop already bound to CC 20 On and Clear Clip bound to Hold CC 20"
+         style="max-width: 100%; border: 1px solid var(--rule); border-radius: 6px; display: block;">
+    <figcaption class="subtitle" style="margin-top: 8px;">
+      The Actions list. Play/Stop is already bound to <code>CC 20, On</code>; Clear Clip will be bound to <code>Hold CC 20</code>.
+    </figcaption>
+  </figure>
+  <figure style="margin: 16px 0;">
+    <img src="05%20Clear%20with%20hold%20message.PNG" alt="Clear Clip binding panel showing source Hold CC 20"
+         style="max-width: 100%; border: 1px solid var(--rule); border-radius: 6px; display: block;">
+    <figcaption class="subtitle" style="margin-top: 8px;">
+      Clear Clip bound to a <strong>Hold</strong> of CC 20. Tap = toggle play; hold = clear.
+    </figcaption>
+  </figure>
+
+  <h3>5. Repeat for the other three clips</h3>
+  <p>
+    Mic uses CC&nbsp;21, Guitar CC&nbsp;22, Keys CC&nbsp;23. For each clip, do
+    steps 3 and 4: Play/Stop on the On event, Clear Clip on the Hold event.
+    Feedback (the CC echoed back to light up the NeoKey when the clip plays
+    or stops) is sent automatically &mdash; no extra option to enable.
+  </p>
+
+  <h3>6. Map the slider</h3>
+  <p>
+    Still in MIDI Learn mode, tap the master volume fader (or any knob you
+    want) and move the slider on the controller. Loopy Pro learns CC&nbsp;7.
+  </p>
+
+  <h3>7. Exit MIDI Learn</h3>
+  <p>
+    Hamburger icon &rarr; <strong>MIDI Learn</strong> again, or tap
+    <strong>Close</strong> in the upper right. That's it. Tap a button to
+    toggle the clip; hold a button to clear it; the lights follow what Loopy
+    Pro is doing.
+  </p>
+
+  <h2 id="what-the-lights-show">What the lights and screen show</h2>
+
+  <ul>
+    <li>
+      <strong>NeoKey LEDs.</strong> Each button lights bright in its column color
+      when its clip is playing, dim when stopped. The LED state is driven only
+      by feedback from Loopy Pro, so what you see is what Loopy Pro is actually
+      doing &mdash; not what you tried to do. If a button press doesn't light its
+      LED, the routing back to the controller isn't working.
+    </li>
+    <li>
+      <strong>NeoSlider LEDs.</strong> Fill with a color that follows the slider's
+      position &mdash; useful as a quick visual confirmation that the slider is being
+      read.
+    </li>
+    <li>
+      <strong>Screen sprite.</strong> Four little vertical "VU" bars showing exactly
+      which clips are currently playing. The sprite sheet has 16 tiles &mdash; one
+      per combination of running clips &mdash; chosen by a 4-bit bitmask of the
+      playing state. So if drums and guitar are running, the screen shows tile
+      <code>0b0101</code> = 5: drums and guitar bars bright, voice and keys dim.
+    </li>
+  </ul>
+
+  <h2>Customizing</h2>
+
+  <h3>Different CC numbers</h3>
+  <p>
+    Edit <code>CLIP_CCS</code> near the top of <code>loopy_simple.py</code>. The
+    <code>SLIDER_CC</code> constant just below it controls the slider's CC.
+  </p>
+
+  <h3>Different colors</h3>
+  <p>
+    Edit <code>CLIP_BRIGHT</code> and <code>CLIP_DIM</code>. The defaults match
+    Loopy Pro's standard clip palette (orange, yellow, lime, blue) so the
+    physical buttons match what's on screen in the app.
+  </p>
+
+  <h3>Different sprite</h3>
+  <p>
+    The 16 tiles are generated by
+    <a href="https://github.com/mangtronix/MusicDevices/blob/main/Scripts/generate_loopy_sprites.py"><code>Scripts/generate_loopy_sprites.py</code></a>
+    using only Python's standard library. Edit the palette or
+    <code>state_tile()</code> function to change the look, then re-run:
+  </p>
+  <pre class="shell"><code>python3 Scripts/generate_loopy_sprites.py</code></pre>
+  <p>
+    The script writes <code>CircuitPython/loopy_sprites.bmp</code> regardless of where you run it from. Copy that BMP to your <code>CIRCUITPY/</code> drive.
+  </p>
+
+  <h2>Going further: 4&times;4 grid version</h2>
+
+  <p>
+    <a href="https://github.com/mangtronix/MusicDevices/blob/main/CircuitPython/loopy_grid.py"><code>loopy_grid.py</code></a>
+    extends the same idea to 16 clips arranged in 4 rows of 4. Each column is
+    still one instrument color (orange / yellow / lime / blue), but the slider
+    now chooses which row of 4 clips the buttons trigger. Move the slider up,
+    and the four buttons re-arm to the next row.
+  </p>
+
+  <p>
+    The CC grid uses CCs 20&ndash;35 (16 unassigned CCs in a row), four per row.
+    The four NeoSlider LEDs show which row is selected. Each NeoKey shows the
+    state of <em>its column at the currently selected row</em>, so you can
+    quickly see what's playing without leaving the screen of the controller.
+  </p>
+
+  <div class="alert alert-tip">
+    <div class="alert-title">Tip</div>
+    <p>
+      Loopy Pro can hold a lot of MIDI bindings without breaking a sweat &mdash;
+      mapping all 16 cells in the grid version takes a couple of minutes of
+      MIDI Learn but pays off as a comfortable performance interface.
+    </p>
+  </div>
+
+  <h2>Files</h2>
+  <ul>
+    <li><a href="Loopy%20Simple%20Controller.lpproj"><code>Loopy Simple Controller.lpproj</code></a> &mdash; the example Loopy Pro project, ready to open</li>
+    <li><a href="https://github.com/mangtronix/MusicDevices/blob/main/CircuitPython/loopy_simple.py"><code>CircuitPython/loopy_simple.py</code></a> &mdash; firmware (4 clips)</li>
+    <li><a href="https://github.com/mangtronix/MusicDevices/blob/main/CircuitPython/loopy_grid.py"><code>CircuitPython/loopy_grid.py</code></a> &mdash; firmware (4&times;4 grid)</li>
+    <li><a href="https://github.com/mangtronix/MusicDevices/blob/main/CircuitPython/loopy_sprites.bmp"><code>CircuitPython/loopy_sprites.bmp</code></a> &mdash; screen graphic</li>
+    <li><a href="https://github.com/mangtronix/MusicDevices/blob/main/Scripts/generate_loopy_sprites.py"><code>Scripts/generate_loopy_sprites.py</code></a> &mdash; sprite sheet generator</li>
+  </ul>
+
+  <p class="subtitle" style="margin-top: 24px;">
+    Note: the firmware uses the label <code>"voice"</code> for serial debug
+    output on button 1; the included project file labels the same clip
+    <strong>Mic</strong>. The labels are cosmetic &mdash; only the CC numbers
+    matter for the mapping.
+  </p>
+
+  <p style="margin-top: 32px;"><a href="../index.html">&larr; back to Music Devices</a></p>
+
+  <footer>
+    <p>Built on top of <a href="https://github.com/mangtronix/MusicDevices/blob/main/CircuitPython/spritekeys.py"><code>spritekeys.py</code></a>. Written with <a href="https://claude.ai">Claude</a>.</p>
+  </footer>
+
+</div>
+
+</body>
+</html>
