@@ -2,15 +2,23 @@
 """
 generate_particles_sprites.py
 Run this on your computer (not on CircuitPython) to create particles_sprites.bmp.
-Then copy particles_sprites.bmp to your CIRCUITPY drive.
+The BMP is written to ../CircuitPython/particles_sprites.bmp regardless of
+where you run the script from. Copy it to your CIRCUITPY drive when ready.
 
-  python3 generate_particles_sprites.py
+  python3 Scripts/generate_particles_sprites.py
 
 No external libraries needed — uses only the standard library.
 """
 
+import os
 import struct
 import math
+
+# Output goes alongside the CircuitPython sketches that use it
+OUTPUT_PATH = os.path.normpath(os.path.join(
+    os.path.dirname(os.path.abspath(__file__)),
+    "..", "CircuitPython", "particles_sprites.bmp",
+))
 
 # ─── Sprite sheet layout ──────────────────────────────────────────────────────
 # 5 tiles arranged horizontally, matching the spritesheet.gif convention.
@@ -187,5 +195,5 @@ tiles = [
     explosion_tile(C1, C2, C3),   # tile 4 — note 71 (B4) cyan
 ]
 
-write_bmp('particles_sprites.bmp', tiles)
-print("Copy particles_sprites.bmp to your CIRCUITPY drive.")
+write_bmp(OUTPUT_PATH, tiles)
+print(f"Copy {os.path.basename(OUTPUT_PATH)} to your CIRCUITPY drive.")
