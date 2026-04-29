@@ -458,6 +458,7 @@ Final project dress rehearsal
 
 ## Week 13.2
 Announcements
+- Can use [Webmidi browser (Apple Store](https://apps.apple.com/us/app/midiweb-browser/id6757226617) to use controller directly on iPhone / iPad
 - **Book** any equipment needed, e.g. speakers, now [Arts Booking](https://nyuad-artsbooking.nyu.edu/)
 - You're responsible for getting the equipment from the IM Lab and returning it immediately after the show
 - 
