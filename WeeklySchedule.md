@@ -96,13 +96,6 @@ How We Create Music Together (NIME proceedings pdf)](https://www.nime.org/procee
 Due before start of next class
 
 #### Reading 1 - Controllerism ####
-- **Watch** [Moldover's Approach to Controllerism (1 of 2) (YouTube)](https://www.youtube.com/watch?v=L2McDeSKiOU)
-- **Watch** [Moldover's Approach to Controllerism (2 of 2)
- (YouTube)](https://youtu.be/dznjQIarboY?si=oWTpcaw2dQ_p_V9q)
-- **Read** [Moldover-The Godfather of Controllerism
-(MIDI Association)](https://midi.org/moldover-the-godfather-of-controllerism)
-    - What makes Moldover's approach to controller design effective or not effective?
-    - How can combining controller design and sound design help you connect with an audience?
 - **Post** your response in the discussion forum
     - See Brightspace->Discussions->Readings for details
 - **Be ready** to discuss the topic in class
@@ -949,7 +942,7 @@ Sending MIDI from CircuitPython
 ### Homework - Week 5.2
 
 Due before start of next class
-- **Reading 3 - The Cave of Sounds** see Brightspace -> Discussions for details
+- **Reading 3 - The Cave of Sounds** see Brightspace -> Discussions -> Readings for details
 
 <!--
 - **Choose** a song you like and modify our MIDI controller so you can play along with the song
