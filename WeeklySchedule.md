@@ -949,7 +949,7 @@ Sending MIDI from CircuitPython
 ### Homework - Week 5.2
 
 Due before start of next class
-- **Reading 3 The Cave of Sounds** see Brightspace -> Discussions for details
+- **Reading 3 - The Cave of Sounds** see Brightspace -> Discussions for details
 
 <!--
 - **Choose** a song you like and modify our MIDI controller so you can play along with the song
