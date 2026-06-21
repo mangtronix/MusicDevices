@@ -1,3 +1,7 @@
+# Archived - S2026
+
+For current schedule refer to [WeeklySchedule](/WeeklySchedule.md)
+
 # Class Notes - Weeks 1-7
 
 [Weekly Overview / Dates (Spreadsheet)](https://docs.google.com/spreadsheets/d/14s9f2PLqj50BRLKKCZjZiCTpdnHFVN-IBkaVPIkFLVE/edit?usp=sharing)
